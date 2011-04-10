@@ -1,0 +1,165 @@
+# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.5.1.el5
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vlib work
+ls
+# analyzed
+# docs
+# mapped
+# modelsim.ini
+# reports
+# schematic
+# scripts
+# source
+# transcript
+# work
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(30): (vcom-1136) Unknown identifier "empty".
+# ** Error: source/rndCount.vhd(30): Bad expression in right operand of infix expression "or".
+# ** Error: source/rndCount.vhd(30): Type error resolving infix expression "or" as type std.standard.boolean.
+# ** Error: source/rndCount.vhd(38): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(44): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(44): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(44): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(45): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(47): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(38): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(44): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(44): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(44): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(45): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(47): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(42): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(42): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(42): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(43): Cannot read output "rnd_cnt".
+# ** Error: source/rndCount.vhd(45): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(42): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(42): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(46): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(42): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(42): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(46): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(42): (vcom-1136) Unknown identifier "unsigned".
+# ** Error: source/rndCount.vhd(42): Cannot resolve expression type of infix expression.
+# ** Error: source/rndCount.vhd(42): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
+# ** Error: source/rndCount.vhd(46): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(43): Ambiguous type in infix expression; ieee.std_logic_1164.std_logic_vector or ieee.std_logic_arith.unsigned.
+# ** Error: source/rndCount.vhd(43): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
+# ** Error: source/rndCount.vhd(47): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# ** Error: source/rndCount.vhd(43): No feasible entries for infix operator "+".
+# ** Error: source/rndCount.vhd(43): Type error resolving infix expression "+" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/rndCount.vhd(47): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/rndCount.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+vsim work.rndcount(behav)
+# vsim work.rndcount(behav) 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.rndcount(behav)#1
+# Updating msgviewer database...
+add wave sim:/rndcount/*
+force clk 1 0ns, 0 5ns -r 10ns
+force rst 1 0ns, 0 10ns
+force start 0 0ns, 1 15ns
+run 200ns
+# Updating msgviewer database...
+do source/rndCountTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# ** Error: (vcom-7) Failed to open design unit file "source/rndCount.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/rndCountTest line 1
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/rndCount.vhd"
+do source/rndCountTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity rndcount
+# -- Compiling architecture behav of rndcount
+# vsim work.rndcount(behav) 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.rndcount(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
