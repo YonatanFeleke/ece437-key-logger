@@ -16,20 +16,20 @@ ENTITY B_AppendAccessCode IS
 		port(		CLK 						:		in	std_logic;
 						RST							:		in	std_logic;
 						CODE_EN					:		in	std_logic;
-						ACESS_CODE			:		OUT	std_logic_vector(72 downto 0);
+						ACESS_CODE			:		OUT	std_logic_vector(71 downto 0);
 						STORE_EN				:		OUT	std_logic);
-END DECODE;
+END B_AppendAccessCode;
 
 
 architecture b_code of B_AppendAccessCode is
-			signal SYN					:	std_logic_vector(64 downto 0);
+			signal SYN					:	std_logic_vector(63 downto 0);
 --4 bit premable 1010 if start of syn in 1 else 0101 if synstart bit is a zero.
-			signal preamble			: std_logic_vector(4 downto 0);
+			signal preamble			: std_logic_vector(3 downto 0);
 --4 bit premable 1010 if start of syn in 1 else 0101 if synstart bit is a zero.			
-			signal trailer		 	: std_logic_vector(4 downto 0;
+			signal trailer		 	: std_logic_vector(3 downto 0);
 
 begin
-		assignprocess : process (CLK,RST,READ_EN)
+		assignprocess : process (CLK,RST,CODE_EN)
 			begin
 				SYN <= "0000000000000000000000000000000000000000000000000000000000000000";
 				if ( SYN(0) = '1') then
@@ -37,15 +37,14 @@ begin
 				else
 					preamble <= "1010";
 				end if;
-				if ( SYN(64) = '1' ) then 
+				if ( SYN(63) = '1' ) then 
 					trailer <= "0101";
 				else 
-					trailer <= "10101";
+					trailer <= "1010";
 				end if;
 		end process assignprocess;
 				
-begin
-		outputcode : process (CLK,RST,READ_EN)	
+outputcode : process (CLK,RST,CODE_EN)	
     begin 
       if ( RST = '1') then
 					ACESS_CODE <= "000000000000000000000000000000000000000000000000000000000000000000000000";	-- on reset what is the stop 
