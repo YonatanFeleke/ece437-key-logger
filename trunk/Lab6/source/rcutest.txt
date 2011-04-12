@@ -1,0 +1,8 @@
+rm -rf work
+vlib work
+vcom source/tb_rcu.vhd
+vcom source/rcu.vhd
+vsim -coverage -i work.tb_rcu
+add wave -recursive *
+add wave -r sim:/tb_rcu/dut/nextlogic/*
+run 10000 ns

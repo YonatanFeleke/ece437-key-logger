@@ -1,0 +1,8 @@
+rm -rf work
+vlib work
+vcom source/tb_edge_detect.vhd
+vcom source/EDGE_DETECT.vhd
+vsim -coverage -i work.tb_edge_detect
+add wave *
+add wave /tb_edge_detect/dut/*
+run 1400 ns

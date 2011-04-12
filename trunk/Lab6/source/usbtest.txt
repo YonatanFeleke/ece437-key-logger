@@ -1,0 +1,27 @@
+rm -rf work
+vlib work
+vcom source/USB_RCVR.vhd
+vcom source/DECODE.vhd
+vcom source/EDGE_DETECT.vhd
+vcom source/EOP_DETECT.vhd
+vcom source/RCU.vhd
+vcom source/TIMER.vhd
+vcom source/RCV_FIFO.vhd
+vcom source/SHIFT_REG.vhd
+vcom source/tb_usb_rcvr.vhd
+vcom source/SYNC.vhd
+vsim -coverage -i work.tb_usb_rcvr
+#add wave -r *
+add wave sim:/tb_usb_rcvr/dut/*
+add wave sim:/tb_usb_rcvr/*
+add wave sim:/tb_usb_rcvr/dut/u_0/*
+add wave sim:/tb_usb_rcvr/dut/u_1/*
+add wave sim:/tb_usb_rcvr/dut/u_2/*
+add wave sim:/tb_usb_rcvr/dut/u_6/*
+add wave sim:/tb_usb_rcvr/dut/u_5/*
+add wave sim:/tb_usb_rcvr/dut/u_3/*
+
+add wave \
+{sim:/tb_usb_rcvr/clk }
+
+run 16400 ns

@@ -1,0 +1,94 @@
+
+
+
+
+
+
+    25: signal state, nextstate: state_type;
+               ^
+TIMER.vhd:25: CLOCKS> [WARNING] G_546_1: Avoid internally generated reset/set/load USB_RCVR.U_0.STATE
+/home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd:37:13:BEHAV/TIMER:	--- Used as set/reset/load signal: 	USB_RCVR.U_0.STATE
+#UNIT: VHDL LEDA_WORK BEHAV/TIMER /home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd
+#RULE: RMM_RTL_CODING_GUIDELINES CLOCKS_AND_RESETS $LEDA_PATH/rules/rmm/./RMM.sl 1149 M_0296
+#HTM1: "pol_rmm.html#G_546_1"
+#HTM2: 
+#TRAK: $0®36®IN   0®OUT USB_RCVR°U_0°STATE 1®OBJ USB_RCVR°U_0°STATEREG°~ff80 33 (1)¦ $0®48®IN USB_RCVR°U_0°STATE 3®OUT USB_RCVR°U_0°CNT8 1®OBJ USB_RCVR°U_0°STATEREG°~ff0 33 (1)
+    18:   D_EDGE   :  OUT   std_logic );
+          ^
+EDGE_DETECT.vhd:18: CLOCKS> [WARNING] G_546_1: Avoid internally generated reset/set/load USB_RCVR.U_0.D_EDGE
+/home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd:43:18:BEHAV/TIMER:	--- Used as set/reset/load signal: 	USB_RCVR.U_0.D_EDGE
+#UNIT: VHDL LEDA_WORK BEHAV/EDGE_DETECT /home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd
+#RULE: RMM_RTL_CODING_GUIDELINES CLOCKS_AND_RESETS $LEDA_PATH/rules/rmm/./RMM.sl 1149 M_0296
+#HTM1: "pol_rmm.html#G_546_1"
+#HTM2: 
+#TRAK: $1®39®IN   0®OUT USB_RCVR°U_5°D_EDGE 1®OBJ USB_RCVR°U_5°STATELOGIC°~ff0 33 (1)¦ $2®182®IN USB_RCVR°U_5°D_EDGE 0®OUT USB_RCVR°D_EDGE 1®OBJ USB_RCVR°U_5 52¦ $2®224®IN USB_RCVR°D_EDGE 0®OUT USB_RCVR°U_0°D_EDGE 1®OBJ USB_RCVR°U_0 52¦ $0®48®IN USB_RCVR°U_0°D_EDGE 3®OUT USB_RCVR°U_0°CNT8 1®OBJ USB_RCVR°U_0°STATEREG°~ff0 33 (1)
+
+--- Executing block-level checks on library LEDA_WORK ... ---
+
+
+--- Block-level checks on library LEDA_WORK completed ---
+
+--- Executing block-level checks on unit LEDA_WORK.USB_RCVR ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.RCV_FIFO ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.RCU ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.EOP_DETECT ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.DECODE ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.EDGE_DETECT ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.SHIFT_REG ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.TIMER ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.STRUCT/USB_RCVR ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.DFLOW/EOP_DETECT ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.PORTING/RCV_FIFO ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.BEHAV/EDGE_DETECT ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.BEHAV/TIMER ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.BEHAV/DECODE ... ---
+
+
+--- Executing block-level checks on unit LEDA_WORK.BEHAV/RCU ... ---
+
+
+    58: 	nextlogic: process(state, D_EDGE, EOP, SHIFT_ENABLE, RCV_DATA, cnt)
+        	^^^^^^^^^
+RCU.vhd:58: STATE_> [WARNING] B_3607: The number of states in a state machine should be a power of 2
+#UNIT: VHDL LEDA_WORK BEHAV/RCU /home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd
+#RULE: LEDA STATE_MACHINES $LEDA_PATH/rules/leda/./LEDA.rl 1780 M_0800
+#HTM1: "pol_leda.html#B_3607"
+
+--- Executing block-level checks on unit LEDA_WORK.BEHAV/SHIFT_REG ... ---
+
+
+    31:   REG: process (CLK, RST_N)
+          ^^^
+SHIFT_REG.vhd:31: BASIC_> [ERROR] R_529_1: VHDL or Verilog reserved words (REG) cannot be used as identifiers
+#UNIT: VHDL LEDA_WORK BEHAV/SHIFT_REG /home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd
+#RULE: RMM_RTL_CODING_GUIDELINES BASIC_CODING_PRACTICES $LEDA_PATH/rules/rmm/./RMM.rl 1277 M_0288
+#HTM1: "pol_rmm.html#R_529_1"
+
+--- Executing block-level checks on library LEDA_WORK ...
+

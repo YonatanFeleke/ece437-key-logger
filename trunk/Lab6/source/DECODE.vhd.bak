@@ -1,0 +1,100 @@
+-- $Id: $
+-- File name:   decode.vhd
+-- Created:     2/15/2011
+-- Author:      Samuel Oshin
+-- Lab Section: 337-02
+-- Version:     1.0  Initial Design Entry
+-- Description: Decoder for the USB project.
+
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+ENTITY decode is
+	port(
+		CLK					:		IN			std_logic;
+		RST_N				:		IN 			std_logic;
+		D_PLUS			: 	IN			std_logic;
+		SHIFT_ENABLE: 	IN 			std_logic;
+		EOP					: 	IN			std_logic;
+		D_ORIG			:		OUT			std_logic );
+		
+end decode;
+
+architecture behav of decode is
+type state_type is (idle,shift,sRST);
+	signal state,nextstate: state_type;
+	signal A : std_logic;
+	begin
+	
+	stateReg: process(clk,RST_N)
+	begin
+		if (RST_N = '0') then
+			state <= sRST;
+		elsif (rising_edge(clk)) then
+			state <= nextstate;
+		end if;
+		
+	end process stateReg;
+	
+	nextup: process(EOP,SHIFT_ENABLE, state)
+	begin
+	
+		nextstate <= state;
+		
+		case state is 
+			when idle => 
+				if (EOP = '1') then
+					nextstate <= sRST;
+				elsif (SHIFT_ENABLE = '1') then
+					nextstate <= shift;
+									
+				end if;
+			when shift =>
+				nextstate <= idle;
+			when sRST =>
+				nextstate <= idle;
+			
+		end case;
+		
+	end process nextup;
+	
+	outlogic: process(state, D_PLUS,A)
+	begin 
+		
+		
+		
+		case state is
+		
+		when idle =>
+			if(A = D_PLUS) then
+				D_ORIG <= '1';
+			else
+				D_ORIG <= '0';
+			end if;
+		
+		when shift =>  -- should you check or change output during the shift enable state? 
+			if (SHIFT_ENABLE = '0') then
+			
+				A <= D_PLUS;
+			
+			end if;
+			--if(A = D_PLUS) then -- should change on the same cycle
+				--D_ORIG <= '1';
+--			else
+	--			D_ORIG <= '0';
+		--	end if;
+			
+		when sRST =>
+			A <= '1';
+			D_ORIG <= '1';
+		
+		end case;
+		
+	end process outlogic;
+	
+end behav;
+				
+		
+		
+		

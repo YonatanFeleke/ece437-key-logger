@@ -1,0 +1,196 @@
+-----------------------------------------------------------------
+Checker: LEDA v D-2010.03
+Date: Tue Mar  1 06:14:38 2011
+
+
+Command line: Run from GUI on the unit USB_RCVR of library /home/ecegrid/a/mg34/ece337/Lab6/leda-libs/LEDA_WORK of the project leda 
+    chip level checker options:  -top USB_RCVR
+
+-----------------------------------------------------------------
+Environment variables:
+LEDA_PATH /package/eda/synopsys/leda-D-2010.03
+LEDA_CONFIG /home/ecegrid/a/ece337/Class0.5u/.leda_config.tcl
+LEDA_RESOURCES Not defined
+search_path Not defined
+link_library Not defined
+leda plibs files: /package/eda/synopsys/leda-D-2010.03/resources/resource_93/plibs
+
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+--  Summary
+
+--  Rules violated	 :    3
+--	Including FATAL  :    0
+--	Including ERROR  :    1
+--	Including WARNING:    3
+--	Including NOTE  :    0
+
+--  Violations per rule:
+--
+--	   1 x B_3607: The number of states in a state machine should be a power of 2
+--	   2 x G_546_1: Avoid internally generated reset/set/load USB_RCVR.U_0.STATE
+--	   1 x R_529_1: VHDL or Verilog reserved words (REG) cannot be used as identifiers
+--  	---------------------
+--  	Total violations:    4
+
+--  Files with error   :    4
+
+--  Violations per file:
+--
+--	   1 in EDGE_DETECT.vhd
+--	   1 in RCU.vhd
+--	   1 in SHIFT_REG.vhd
+--	   1 in TIMER.vhd
+--  	---------------------
+--  	Total violations:    4
+
+
+-----------------------------------------------------------------
+Checker Deselection Pragma summary:
+
+-----------------------------------------------------------------
+--                  VHDL violations                            --
+-----------------------------------------------------------------
+
+	Violations in library /home/ecegrid/a/mg34/ece337/Lab6/leda-libs/LEDA_WORK 
+
+
+
+Violations per unit:
+	1 violations in unit BEHAV/RCU (/home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd)
+	1 violations in unit BEHAV/SHIFT_REG (/home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd)
+Unit without violation:
+	0 violations in unit USB_RCVR (/home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd)
+	0 violations in unit RCV_FIFO (/home/ecegrid/a/mg34/ece337/Lab6/source/RCV_FIFO.vhd)
+	0 violations in unit RCU (/home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd)
+	0 violations in unit EOP_DETECT (/home/ecegrid/a/mg34/ece337/Lab6/source/EOP_DETECT.vhd)
+	0 violations in unit DECODE (/home/ecegrid/a/mg34/ece337/Lab6/source/DECODE.vhd)
+	0 violations in unit EDGE_DETECT (/home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd)
+	0 violations in unit SHIFT_REG (/home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd)
+	0 violations in unit TIMER (/home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd)
+	0 violations in unit STRUCT/USB_RCVR (/home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd)
+	0 violations in unit DFLOW/EOP_DETECT (/home/ecegrid/a/mg34/ece337/Lab6/source/EOP_DETECT.vhd)
+	0 violations in unit PORTING/RCV_FIFO (/home/ecegrid/a/mg34/ece337/Lab6/source/RCV_FIFO.vhd)
+	0 violations in unit BEHAV/EDGE_DETECT (/home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd)
+	0 violations in unit BEHAV/TIMER (/home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd)
+	0 violations in unit BEHAV/DECODE (/home/ecegrid/a/mg34/ece337/Lab6/source/DECODE.vhd)
+
+Violations per file:
+	1 violations in file /home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd (295 lines)
+	1 violations in file /home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd (48 lines)
+File without violation:
+
+Total number of violations: 2
+Total number of source code lines: 897
+
+Violations per rule:
+
+Policy "FORMALITY", Ruleset "SIMULATION_MISMATCH":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/4 x FM_2_10 [ERROR]: "Using X,Z values or ? in case items is not recommended (such items may be ignored by synthesis tools)"
+	0/1261 x FM_2_4 [ERROR]: "Assignment to X is not recommended (handled differently by simulation and synthesis tools)"
+	0/9 x FM_2_7 [WARNING]: "Use named association in port map"
+	0/34 x FM_2_9 [ERROR]: "Using X,Z values or ? for comparison is not recommended (differently handled by simulation/synthesis tools)"
+
+Policy "RMM_RTL_CODING_GUIDELINES", Ruleset "BASIC_CODING_PRACTICES":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/14 x R_521_10 [ERROR]: "Always use descending range for multi-bit signals and ports"
+	1/474 x R_529_1 [ERROR]: "VHDL or Verilog reserved words (<%item>) cannot be used as identifiers"
+
+Policy "LEDA", Ruleset "CLOCKS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/5 x B_1204 [WARNING]: "Multi-bit expression used as clock"
+
+Policy "LEDA", Ruleset "DESIGN_STRUCTURE":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/155 x B_1002 [WARNING]: "Port declaration <%item> is unused or partially unused"
+
+Policy "LEDA", Ruleset "RTL_SYNTHESIS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/9 x B_2011 [WARNING]: "Variable is not always initialized in process body before being read"
+
+Policy "LEDA", Ruleset "STATEMENTS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/4 x B_3410 [WARNING]: "X in case expression"
+	0/9 x B_3419 [ERROR]: "Missing signal <%item> in sensitivity list"
+
+Policy "LEDA", Ruleset "STATE_MACHINES":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/2 x B_3602 [WARNING]: "Moore style description of state machines is recommended"
+	0/2 x B_3604 [WARNING]: "Assign a default state to the state machines"
+	0/2 x B_3605_B [WARNING]: "Use an enumerated type to define the state vector of a state machine"
+	1/2 x B_3607 [WARNING]: "The number of states in a state machine should be a power of 2"
+
+Policy "DC", Ruleset "RTL":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/9 x DCHDL_115 [ERROR]: "Illegal mixing of named and unnamed port association"
+
+
+-----------------------------------------------------------------
+--                    DESIGN violations                        --
+-----------------------------------------------------------------
+
+Violations per rule:
+
+Policy: LEDA  Ruleset: DESIGN_STRUCTURE
+	<violated>/<checked> x <label> [<severity>]:<message>
+	------- --------------------- ----------------------
+	0/1 x C_1000 [ERROR]: "Asynchronous feedback loop detected"
+	0/1 x C_1007 [WARNING]: "Pulse generator detected"
+	0/1 x C_1009 [ERROR]: "Multiple non-tristate drivers to signal <%item> detected"
+	0/1 x C_1001 [ERROR]: "Flipflop with fixed value data input is detected"
+	0/1 x C_1203 [ERROR]: "Internally generated clock detected (chip level)"
+	0/1 x C_1201 [ERROR]: "Clocks must not be used as data"
+	0/1 x C_1204 [ERROR]: "No gated clock except in clock generator CKGEN."
+	0/1 x C_1406 [ERROR]: "Register with no reset/set is detected"
+
+Policy: RMM_RTL_CODING_GUIDELINES  Ruleset: CLOCKS_AND_RESETS
+	<violated>/<checked> x <label> [<severity>]:<message>
+	------- --------------------- ----------------------
+	0/1 x G_546_1 [WARNING]: "Avoid internally generated reset/set/load <%item>"
+	2/1 x G_546_1 [WARNING]: "Avoid internally generated reset/set/load <%item>"
+
+Policy: ELAB  Ruleset: ELB
+	<violated>/<checked> x <label> [<severity>]:<message>
+	------- --------------------- ----------------------
+	2/1 x ELB093A [WARNING]: Instance %s of module/entity/cell %s is inferred as a black-box and will be considered so during the next checks.
+Total number of violations: 4
+
+-----------------------------------------------------------------
+--                    DESIGN REPORT                            --
+-----------------------------------------------------------------
+
+Name of the top:	USB_RCVR
+
+Library containing the top unit:	/home/ecegrid/a/mg34/ece337/Lab6/leda-libs/LEDA_WORK
+
+Number of design pins:	17
+
+Number of hierarchy levels in the design:	3
+
+Number of flipflops and latches that LEDA tools has inferred
+	Number of flipflops:	20
+	Number of latches:	0
+
+Number of clock origins:	1
+Number of reset origins:	2
+List of clock origins:
+	USB_RCVR.CLK
+
+List of reset origins:
+	USB_RCVR.RST_N
+	USB_RCVR.U_5.D_EDGE
+
+List of source paths:
+	$0 = /home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd
+	$1 = /home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd
+	$2 = /home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>ModelSim Coverage Report</title>
+  <!-- original name: _work.decode(behav)ContentFrame2.htm -->
+  <link rel="StyleSheet" media="print"  href="../css/ucdb2htmlP.css"/>
+  <link rel="StyleSheet" media="screen" href="../css/ucdb2html.css"/>
+  <script type="text/javascript" src="../scripts/showhide.js"></script>
+</head>
+<body id="ucdb2html_detail" onload="showLast()">
+  <h1><span class="strip">ModelSim</span> Branch Coverage Report</h1>
+  <h3>Scope: /<a href="z000003.htm">work.decode(behav)</a></h3>
+  <!-- use script block so buttons vanish when JavaScript is disabled -->
+  <script type="text/javascript">
+  <!--
+  document.write(
+    '<table class="buttons" cellspacing="2" cellpadding="2"><tr>' +
+       '<td id="showAll" width="100" onclick="showAll()" class="button_on" ' +
+           'title="Display all coverage scopes and bins.">Show All</td>' +
+       '<td id="showCov" width="100" onclick="showCov()" class="button_off" ' +
+           'title="Display only covered scopes and bins.">Show Covered</td>' +
+       '<td id="showMis" width="100" onclick="showMis()" class="button_off" ' +
+           'title="Display only uncovered scopes and bins.">Show Missing</td>' +
+    '</tr></table>');
+  //-->
+  </script>
+  <div class="covered"><a name="cvg18"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">32:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#32">		if (RST_N = '0') then</a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">IF</td><td class="even"><span style="color:red">32:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#32">		if (RST_N = '0') then</a></td><td class="odd_r">35</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">34:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#34">		elsif (rising_edge(clk)) then</a></td><td class="odd_r">123</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">ALL FALSE</td><td class="even"><span style="color:red">32:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#32">		if (RST_N = '0') then</a></td><td class="odd_r">137</td><td class="green">Covered</td></tr>
+  </table>
+  </div><div class="covered"><a name="cvg19"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">45:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#45">		case state is </a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">46:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#46">			when idle => </a></td><td class="odd_r">133</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">53:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#53">			when shift =></a></td><td class="odd_r">66</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">55:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#55">			when sRST =></a></td><td class="odd_r">49</td><td class="green">Covered</td></tr>
+  </table>
+  </div><div class="covered"><a name="cvg20"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">47:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#47">				if (EOP = '1') then</a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">IF</td><td class="even"><span style="color:red">47:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#47">				if (EOP = '1') then</a></td><td class="odd_r">44</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">49:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#49">				elsif (SHIFT_ENABLE = '1') then</a></td><td class="odd_r">47</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">ALL FALSE</td><td class="even"><span style="color:red">47:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#47">				if (EOP = '1') then</a></td><td class="odd_r">42</td><td class="green">Covered</td></tr>
+  </table>
+  </div><div class="covered"><a name="cvg21"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">67:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#67">		case state is</a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">69:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#69">		when idle =></a></td><td class="odd_r">78</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">76:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#76">		when shift =>  -- should you check or change output during th...</a></td><td class="odd_r">33</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">TRUE</td><td class="even"><span style="color:red">84:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#84">		when sRST =></a></td><td class="odd_r">46</td><td class="green">Covered</td></tr>
+  </table>
+  </div><div class="covered"><a name="cvg22"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">70:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#70">			if(A = D_PLUS) then</a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">IF</td><td class="even"><span style="color:red">70:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#70">			if(A = D_PLUS) then</a></td><td class="odd_r">50</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">ELSE</td><td class="even"><span style="color:red">72:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#72">			else</a></td><td class="odd_r">28</td><td class="green">Covered</td></tr>
+  </table>
+  </div><div class="covered"><a name="cvg23"/><hr/><table cellspacing="2" cellpadding="2">
+  <tr><td colspan="4"><span style="color:red">78:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#78">			if(A = D_PLUS) then -- should change on the same cycle</a></td><td class="bgGreen">100.00%</td></tr><tr><th class="odd" colspan="2">Branch</th><th class="even">Source</th><th class="odd">Hits</th><th class="even">Status</th></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">IF</td><td class="even"><span style="color:red">78:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#78">			if(A = D_PLUS) then -- should change on the same cycle</a></td><td class="odd_r">17</td><td class="green">Covered</td></tr>
+  <tr class="covered"><td class="invisible">&nbsp;</td><td class="odd">ELSE</td><td class="even"><span style="color:red">80:&nbsp;&nbsp;</span><a href="__source_decode.vhd.htm#80">			else</a></td><td class="odd_r">16</td><td class="green">Covered</td></tr>
+  </table>
+  </div>
+  <!-- make sure jumps to last few line nos work -->
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+</body>
+</html>

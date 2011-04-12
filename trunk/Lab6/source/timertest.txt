@@ -1,0 +1,9 @@
+rm -rf work
+vlib work
+vcom source/tb_timer.vhd
+vcom source/timer.vhd
+vsim -coverage -i work.tb_timer
+add wave *
+add wave /tb_timer/dut/*
+add wave /tb_timer/dut/statereg/*
+run 1400 ns
