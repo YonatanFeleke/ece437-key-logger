@@ -1,0 +1,94 @@
+#
+# File LEDA_Makefile, STANDARD Makefile
+# Created by LEDA VHDL*Verilog Makefile Generator (v2.1.0.MP), Feb 28, 2011
+# Input command file used : /home/ecegrid/a/mg34/ece337/Lab6/leda.cmd
+#
+
+TOUCH = touch
+NOT_COMPILE = 
+VCOMP = $(NOT_COMPILE) /package/eda/synopsys/leda-D-2010.03/amd64/bin/v -M +no_lvs_env  -c -z -i -k93e -log /home/ecegrid/a/mg34/ece337/Lab6/leda-logs/compiler.log -full_log -snote -config_file /home/ecegrid/a/ece337/Class0.5u/.leda_config.tcl comp
+VeCOMP = $(NOT_COMPILE) /package/eda/synopsys/leda-D-2010.03/amd64/bin/ve -M +no_lvs_env  -c -z -p2 -i -k95e -log /home/ecegrid/a/mg34/ece337/Lab6/leda-logs/compiler.log -full_log -snote +max_case+8 +max_casexz+8 -config_file /home/ecegrid/a/ece337/Class0.5u/.leda_config.tcl comp
+P     = $(LEDA_PATH)/amd64/bin/project.csh
+SHELL = /bin/csh -f
+GARBAGE = garbage
+
+WORK  = WORK
+HOMELESS  = LEDA_WORK
+LEDA_WORK  = LEDA_WORK
+IEEE  = ${LEDA_PATH}/amd64/resources/resource_93/IEEE
+STD   = ${LEDA_PATH}/amd64/resources/resource_93/STD
+ECE337_IP = ECE337_IP
+
+##############################################################################
+
+all: $(GARBAGE) create-libs compile
+	@ echo 'compilation end'
+
+.SILENT:
+
+$(GARBAGE):
+	if (! -e $(GARBAGE)) mkdir $(GARBAGE)
+
+create-libs:
+	$(MAKE_LIBRARY_COMMAND)
+
+clear:
+	 rm -rf WORK LEDA_WORK ECE337_IP 
+	 rm -f $(GARBAGE)/*
+
+##############################################################################
+### Dependencies :
+
+compile:\
+$(GARBAGE)/EOP_DETECT.vhd_2\
+$(GARBAGE)/TIMER.vhd_6\
+$(GARBAGE)/RCU.vhd_3\
+$(GARBAGE)/RCV_FIFO.vhd_4\
+$(GARBAGE)/DECODE.vhd_0\
+$(GARBAGE)/USB_RCVR.vhd_7\
+$(GARBAGE)/EDGE_DETECT.vhd_1\
+$(GARBAGE)/SHIFT_REG.vhd_5
+
+##############################################################################
+### Compilation lines :
+
+$(GARBAGE)/EOP_DETECT.vhd_2: /home/ecegrid/a/mg34/ece337/Lab6/source/EOP_DETECT.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/EOP_DETECT.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/EOP_DETECT.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/EOP_DETECT.vhd_2
+
+$(GARBAGE)/TIMER.vhd_6: /home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/TIMER.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/TIMER.vhd_6
+
+$(GARBAGE)/RCU.vhd_3: /home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/RCU.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/RCU.vhd_3
+
+$(GARBAGE)/RCV_FIFO.vhd_4: /home/ecegrid/a/mg34/ece337/Lab6/source/RCV_FIFO.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/RCV_FIFO.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/RCV_FIFO.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/RCV_FIFO.vhd_4
+
+$(GARBAGE)/DECODE.vhd_0: /home/ecegrid/a/mg34/ece337/Lab6/source/DECODE.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/DECODE.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/DECODE.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/DECODE.vhd_0
+
+$(GARBAGE)/USB_RCVR.vhd_7: /home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/USB_RCVR.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/USB_RCVR.vhd_7
+
+$(GARBAGE)/EDGE_DETECT.vhd_1: /home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/EDGE_DETECT.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/EDGE_DETECT.vhd_1
+
+$(GARBAGE)/SHIFT_REG.vhd_5: /home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd
+	echo read_files /home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd -work $(LEDA_WORK) >> /home/ecegrid/a/mg34/ece337/Lab6/leda.pro
+	$(VCOMP) /home/ecegrid/a/mg34/ece337/Lab6/source/SHIFT_REG.vhd -W $(LEDA_WORK)
+	$(TOUCH) $(GARBAGE)/SHIFT_REG.vhd_5
+

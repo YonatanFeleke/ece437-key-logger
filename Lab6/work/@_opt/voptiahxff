@@ -1,0 +1,505 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg34/ece337/Lab6
+T_opt
+Z1 VNm0JjU3YD^U5>89I=N]2Z3
+Z2 04 11 4 work tb_usb_rcvr test 1
+Z3 =1-0013723f6358-4d6d0010-78add-2a5d
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6b;45
+Z7 d/home/ecegrid/a/mg34/ece337/Lab6
+Pconv_pack_usb_rcvr
+Z8 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+Mx1 17 __model_tech/ieee 14 std_logic_1164
+Z9 w1298988680
+R7
+Z10 8mapped/USB_RCVR.vhd
+Z11 Fmapped/USB_RCVR.vhd
+l0
+L6
+Z12 V5OLL_kdbZZo_G9jP;J;]R0
+Z13 OL;C;6.6b;45
+Z14 tExplicit 1 Coverage 47 CoverOpt 1
+Z15 !s100 CC0z_kLCHfN9z`HLSF5KI2
+Edecode
+R9
+Z16 DPx4 work 18 conv_pack_usb_rcvr 0 22 5OLL_kdbZZo_G9jP;J;]R0
+Z17 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R7
+R10
+R11
+l0
+L1608
+Z18 V`4X]jZ6VJf[MNTUc^QRVR2
+R13
+31
+R14
+Z19 !s100 2SgBJT3bciIFC>lQ6jLnc2
+Asyn_behav
+R16
+R17
+Z20 DEx4 work 6 decode 0 22 `4X]jZ6VJf[MNTUc^QRVR2
+l1639
+L1615
+Z21 V@@96=hd[01j^P>Yge==KS2
+R13
+31
+Z22 Mx2 4 ieee 14 std_logic_1164
+Z23 Mx1 4 work 18 conv_pack_usb_rcvr
+R14
+Z24 !s100 WXISY]3ffz_8Rz1E7gf6e3
+Eedge_detect
+R9
+R16
+R17
+R7
+R10
+R11
+l0
+L1570
+Z25 V7hcI8ifkk]GRlKU37NP?`0
+R13
+31
+R14
+Z26 !s100 3LaRnb>OMdO]ez=fI4lX72
+Asyn_behav
+R16
+R17
+Z27 DEx4 work 11 edge_detect 0 22 7hcI8ifkk]GRlKU37NP?`0
+l1588
+L1576
+Z28 V3_@ngTYS9VEagEMI9SCE92
+R13
+31
+R22
+R23
+R14
+Z29 !s100 >MSan:38KZ8Y0W^nhPkaf0
+Eeop_detect
+R9
+R16
+R17
+R7
+R10
+R11
+l0
+L1546
+Z30 V7JXo0S3`jdo@V>UCbGa860
+R13
+31
+R14
+Z31 !s100 DKi^00cgm4@@_[5@o5<UR2
+Asyn_dflow
+R16
+R17
+Z32 DEx4 work 10 eop_detect 0 22 7JXo0S3`jdo@V>UCbGa860
+l1558
+L1552
+Z33 VUB8cU`91N_VchVcG8JBB31
+R13
+31
+R22
+R23
+R14
+Z34 !s100 VB_YzidgmgU9YYj4aeI4f3
+Efifo
+R9
+R16
+R17
+R7
+R10
+R11
+l0
+L1068
+Z35 VPb2aP86DJHMnGF66S21Yf2
+R13
+31
+R14
+Z36 !s100 GA_h36lTD@eI1R`7EFemZ1
+Asyn_rtl
+R16
+R17
+Z37 DEx4 work 4 fifo 0 22 Pb2aP86DJHMnGF66S21Yf2
+l1102
+L1076
+Z38 V`_oKZf@dI2iTH8AS@hRO]1
+R13
+31
+R22
+R23
+R14
+Z39 !s100 MSGL;58>9B4j;]0oKhR[M1
+Efiforam
+R9
+Z40 DPx37 /home/ecegrid/a/mg34/ece337/Lab6/work 18 conv_pack_usb_rcvr 0 22 5OLL_kdbZZo_G9jP;J;]R0
+R8
+31
+R7
+R10
+R11
+l0
+L440
+Z41 Vdb[d]koGIN?DbLjYoVQW83
+R13
+R14
+Z42 !s100 ^@b4Qe>7bSVJk:Ze0>?Ta0
+Asyn_rtl
+Z43 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 nand2x1 0 22 WJNXi_A:WDT[_c30imjbW1
+Z44 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 oai21x1 0 22 V=I>eU_Zo@Pe34eJoiWhK2
+Z45 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 aoi21x1 0 22 [KPc_PSDDck[OE;T1ManB2
+Z46 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 aoi22x1 0 22 `i^V_oEMZA?3EXh6_IL:g3
+Z47 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 oai22x1 0 22 T7niEhDMeITUU_da?ao2V2
+Z48 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 6 nor2x1 0 22 4TVG[@`a:1jeoCNYgMmUL1
+Z49 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 nand3x1 0 22 8fJo>0zm=;`KQVLnl?K2j3
+Z50 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 5 invx2 0 22 k59:Vf`HF0ofA<?eKK;C02
+Z51 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 8 dffposx1 0 22 76i8XZHLdE=b0[Si>mRAo2
+R40
+R8
+Z52 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 7 fiforam 0 22 db[d]koGIN?DbLjYoVQW83
+31
+Z53 Mx2 17 __model_tech/ieee 14 std_logic_1164
+Z54 Mx1 37 /home/ecegrid/a/mg34/ece337/Lab6/work 18 conv_pack_usb_rcvr
+l525
+L448
+Z55 VZ=MShQ[F^<cFBe473hYT;2
+R13
+R14
+Z56 !s100 fMbO0f;:0eQ1:?P7:mdLX1
+Ercu
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L1347
+Z57 VP8SEQjn7T_E<]=jzI8B_W1
+R13
+R14
+Z58 !s100 MSHI;0HKS<oblQ>gmZ?AT0
+Asyn_behav
+Z59 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 5 bufx2 0 22 S[V9:1EX6V`QoG==MVY7W2
+Z60 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 6 xor2x1 0 22 KzO]I8j6TT:;?O2@be1Yi2
+R47
+R45
+R48
+R43
+R46
+R49
+R44
+R50
+Z61 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 6 and2x2 0 22 LH?UYIG_>=_JzGboaP?RF2
+Z62 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 5 dffsr 0 22 l@Mm7lHeKNZ_f?2cAdNEc0
+R40
+R8
+Z63 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 3 rcu 0 22 P8SEQjn7T_E<]=jzI8B_W1
+31
+R53
+R54
+l1415
+L1355
+Z64 VdeW:cm7CeKPVfoYAjnkIe3
+R13
+R14
+Z65 !s100 B4Y^eR_agQ?X75h_H8bj:2
+Ercv_fifo
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L1663
+Z66 VZ4_Z`7KiH5ZG3cNoS?dZA3
+R13
+R14
+Z67 !s100 _`zjUY;DdamaC2R^J?=N42
+Asyn_porting
+Z68 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 14 read_fifo_ctrl 0 22 cN2HVlN1m6LR3C8z^HP>:3
+Z69 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 15 write_fifo_ctrl 0 22 38_hB1=N8_M9B<I6fiMem0
+R52
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 4 fifo 0 22 Pb2aP86DJHMnGF66S21Yf2
+R40
+R8
+Z70 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 8 rcv_fifo 0 22 Z4_Z`7KiH5ZG3cNoS?dZA3
+31
+R53
+R54
+l1679
+L1671
+Z71 Vmg=[FZF<iloA?ST_k9[T>3
+R13
+R14
+Z72 !s100 a1TLGIX66:eCLl_kjE20e1
+Eread_fifo_ctrl
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L205
+Z73 VcN2HVlN1m6LR3C8z^HP>:3
+R13
+R14
+Z74 !s100 33l=[j?YU;3h3P64VWleE1
+Asyn_rtl
+R60
+Z75 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 7 xnor2x1 0 22 0_]EAGjGhDRV9S5eLnA5H3
+R43
+R48
+R50
+R62
+Z76 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 8 read_ptr 0 22 cR;^2`@egkk8ENVKl2F<92
+R40
+R8
+R68
+31
+R53
+R54
+l251
+L213
+Z77 V2bn5GML^GA?2oX]oVKJ9g3
+R13
+R14
+Z78 !s100 M3CJ]=OjikgP:`aTgWZc42
+Eread_ptr
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L19
+Z79 VcR;^2`@egkk8ENVKl2F<92
+R13
+R14
+Z80 !s100 mMbQXNe<mj=l:?b`TldFe3
+Asyn_rtl
+R48
+R43
+R75
+R60
+R50
+R62
+R40
+R8
+R76
+31
+R53
+R54
+l57
+L26
+Z81 Vho4e?G9`9XmDBa?D2`B4>3
+R13
+R14
+Z82 !s100 AUHkKD]z1im;KCIFz_EAF1
+Eshift_reg
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L1251
+Z83 Va63jjVCo9^1<1:mj[;W5z1
+R13
+R14
+Z84 !s100 kUoZWedBlPOYZPEMZIUQB1
+Asyn_behav
+Z85 DEx54 /package/eda/cells/OSU/v2.7/cadence/lib/ami05/lib/work 5 invx1 0 22 W<AHa8^:dLSOSOUeO?>1:1
+R47
+R43
+R44
+R62
+R40
+R8
+Z86 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 9 shift_reg 0 22 a63jjVCo9^1<1:mj[;W5z1
+31
+R53
+R54
+l1285
+L1258
+Z87 VIaUjh3TjkCoUEa1h;0iBb0
+R13
+R14
+Z88 !s100 >3@`=zILZ@SeLfom9n_Zj2
+Etb_usb_rcvr
+Z89 w1298989061
+R8
+31
+R7
+Z90 8source/tb_usb_rcvr.vhd
+Z91 Fsource/tb_usb_rcvr.vhd
+l0
+L14
+Z92 V=oeELVmU0?]0^Hk;jnSeM2
+R13
+R14
+Z93 !s100 UoJgJQLD3_MbzK6WM8MHe1
+Atest
+R46
+R43
+R49
+R48
+R60
+R75
+R45
+R44
+R50
+R62
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 5 timer 0 22 HGLmBj[AYP4Z<k[z@ao:c3
+R86
+R63
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 10 eop_detect 0 22 7JXo0S3`jdo@V>UCbGa860
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 11 edge_detect 0 22 7hcI8ifkk]GRlKU37NP?`0
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 6 decode 0 22 `4X]jZ6VJf[MNTUc^QRVR2
+R70
+R40
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 8 usb_rcvr 0 22 48`b`S[>>0`g7;Pl>g]jf2
+R8
+DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 11 tb_usb_rcvr 0 22 =oeELVmU0?]0^Hk;jnSeM2
+31
+R53
+R54
+l67
+L18
+Z94 Vi2ROo^8IzCcoh`EnkE6>o1
+R13
+R14
+Z95 !s100 kaIIkg75<V9h;LG?^PzIC3
+Etimer
+R9
+R16
+R17
+R7
+R10
+R11
+l0
+L1140
+Z96 VHGLmBj[AYP4Z<k[z@ao:c3
+R13
+31
+R14
+Z97 !s100 BXV=<jfV_R@6IFlT;Z0PK3
+Asyn_behav
+R16
+R17
+Z98 DEx4 work 5 timer 0 22 HGLmBj[AYP4Z<k[z@ao:c3
+l1190
+L1147
+Z99 VZ>LocERQO7MEM^I<O^4ON3
+R13
+31
+R22
+R23
+R14
+Z100 !s100 A;FiX:6^DSO@Dahl>>hJ71
+Eusb_rcvr
+R9
+R16
+R17
+R7
+R10
+R11
+l0
+L1700
+Z101 V48`b`S[>>0`g7;Pl>g]jf2
+R13
+31
+R14
+Z102 !s100 ?=c<8bG8<EfMUFkiTOakM2
+Asyn_struct
+R16
+R17
+Z103 DEx4 work 8 usb_rcvr 0 22 48`b`S[>>0`g7;Pl>g]jf2
+l1749
+L1708
+Z104 V6mh^I[H0i@5N4bVC=ZmaL2
+R13
+31
+R22
+R23
+R14
+Z105 !s100 1=WViJTJ^OD0jX_B1l`aM1
+Ewrite_fifo_ctrl
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L321
+Z106 V38_hB1=N8_M9B<I6fiMem0
+R13
+R14
+Z107 !s100 [fga`@JTZ=ofJO]L=eLXg0
+Asyn_rtl
+R60
+R75
+R43
+R48
+R50
+R62
+Z108 DEx37 /home/ecegrid/a/mg34/ece337/Lab6/work 9 write_ptr 0 22 fSQj568zzDiFYE@[^`;c_1
+R40
+R8
+R69
+31
+R53
+R54
+l368
+L330
+Z109 VXIbACTZD?79;0nCVj5cKU3
+R13
+R14
+Z110 !s100 ojNBzFkhHjib0:cSJg5Rz2
+Ewrite_ptr
+R9
+R40
+R8
+31
+R7
+R10
+R11
+l0
+L112
+Z111 VfSQj568zzDiFYE@[^`;c_1
+R13
+R14
+Z112 !s100 fMGT^gKn=G7gEPUo3coLn3
+Asyn_rtl
+R48
+R43
+R75
+R60
+R50
+R62
+R40
+R8
+R108
+31
+R53
+R54
+l150
+L119
+Z113 VW5e<fcP?OXD0<3RJEhAl[3
+R13
+R14
+Z114 !s100 8T_e[=nnaTNa[=DY7hh:P1

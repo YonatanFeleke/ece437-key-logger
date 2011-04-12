@@ -1,0 +1,142 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Mar  1 09:11:19 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: U_2/state_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: U_3/FIFOMAP/UWFC/full_flag_r_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  U_2/state_reg[2]/CLK (DFFSR)                            0.00       0.00 r
+  U_2/state_reg[2]/Q (DFFSR)                              0.73       0.73 f
+  U_2/U26/Y (INVX2)                                       0.16       0.89 r
+  U_2/U101/Y (NOR2X1)                                     0.38       1.27 f
+  U_2/U95/Y (NAND3X1)                                     0.38       1.65 r
+  U_2/U23/Y (INVX2)                                       0.10       1.75 f
+  U_2/W_ENABLE (rcu)                                      0.00       1.75 f
+  U_3/W_ENABLE (RCV_FIFO)                                 0.00       1.75 f
+  U_3/FIFOMAP/wenable (fifo)                              0.00       1.75 f
+  U_3/FIFOMAP/UWFC/wenable (write_fifo_ctrl)              0.00       1.75 f
+  U_3/FIFOMAP/UWFC/U15/Y (INVX2)                          0.08       1.84 r
+  U_3/FIFOMAP/UWFC/U16/Y (NOR2X1)                         0.91       2.75 f
+  U_3/FIFOMAP/UWFC/WPU1/wenable (write_ptr)               0.00       2.75 f
+  U_3/FIFOMAP/UWFC/WPU1/U20/Y (NAND2X1)                   0.57       3.31 r
+  U_3/FIFOMAP/UWFC/WPU1/U18/Y (NOR2X1)                    0.34       3.66 f
+  U_3/FIFOMAP/UWFC/WPU1/U14/Y (NAND2X1)                   0.22       3.88 r
+  U_3/FIFOMAP/UWFC/WPU1/U13/Y (XNOR2X1)                   0.45       4.33 r
+  U_3/FIFOMAP/UWFC/WPU1/U12/Y (XOR2X1)                    0.34       4.67 f
+  U_3/FIFOMAP/UWFC/WPU1/wptr_nxt[2] (write_ptr)           0.00       4.67 f
+  U_3/FIFOMAP/UWFC/U21/Y (XOR2X1)                         0.29       4.97 f
+  U_3/FIFOMAP/UWFC/U20/Y (XOR2X1)                         0.19       5.16 r
+  U_3/FIFOMAP/UWFC/U18/Y (NAND2X1)                        0.07       5.23 f
+  U_3/FIFOMAP/UWFC/U17/Y (NOR2X1)                         0.08       5.31 r
+  U_3/FIFOMAP/UWFC/full_flag_r_reg/D (DFFSR)              0.00       5.31 r
+  data arrival time                                                  5.31
+
+  clock CLK (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  U_3/FIFOMAP/UWFC/full_flag_r_reg/CLK (DFFSR)            0.00      10.00 r
+  library setup time                                     -0.21       9.79
+  data required time                                                 9.79
+  --------------------------------------------------------------------------
+  data required time                                                 9.79
+  data arrival time                                                 -5.31
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.48
+
+
+1
+ 
+****************************************
+Report : area
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Mar  1 09:11:19 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               17
+Number of nets:                30
+Number of cells:                7
+Number of references:           7
+
+Combinational area:       126225.000000
+Noncombinational area:    163008.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          289233.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Mar  1 09:11:20 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+USB_RCVR                                  0.486   24.910   85.435   25.396 100.0
+  U_0 (timer)                             0.170    1.447    4.900    1.617   6.4
+  U_1 (shift_reg)                      2.01e-02    1.651    5.317    1.671   6.6
+  U_2 (rcu)                               0.214    1.888   10.024    2.102   8.3
+  U_4 (eop_detect)                     2.20e-02 5.20e-03 5.10e-02 2.72e-02   0.1
+  U_5 (edge_detect)                    3.34e-02    0.732    1.779    0.765   3.0
+  U_6 (decode)                         2.25e-02    0.713    1.983    0.735   2.9
+  U_3 (RCV_FIFO)                       3.50e-03   18.474   61.381   18.478  72.8
+    FIFOMAP (fifo)                     3.50e-03   18.474   61.381   18.478  72.8
+      URFC (read_fifo_ctrl)            3.50e-03    4.102   13.437    4.105  16.2
+        RPU1 (read_ptr)                1.35e-05    1.638    5.717    1.638   6.4
+      UWFC (write_fifo_ctrl)              0.000    4.094   13.437    4.094  16.1
+        WPU1 (write_ptr)                  0.000    1.638    5.717    1.638   6.4
+      UFIFORAM (fiforam)                  0.000   10.278   34.507   10.278  40.5
+1

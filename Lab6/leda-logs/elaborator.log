@@ -1,0 +1,8 @@
+ [WARNING] ELB093A: Instance usb_rcvr.u_3.fifomap of module/entity/cell Fifo is inferred as a black-box and will be considered so during the next checks.
+#UNIT: VHDL library unit filepath
+#RULE: ELAB ELB $LEDA_PATH/.leda_config/rule/compile/COMP.sl 0 ELB093A
+
+ [WARNING] ELB093A: Instance usb_rcvr.u_7 of module/entity/cell SYNC is inferred as a black-box and will be considered so during the next checks.
+#UNIT: VHDL library unit filepath
+#RULE: ELAB ELB $LEDA_PATH/.leda_config/rule/compile/COMP.sl 0 ELB093A
+

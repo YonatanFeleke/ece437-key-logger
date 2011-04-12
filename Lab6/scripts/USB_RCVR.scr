@@ -1,0 +1,2 @@
+#!/bin/csh -f
+dc_shell-t -f ./scripts/USB_RCVR.fcr | tee USB_RCVR.log

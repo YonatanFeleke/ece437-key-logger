@@ -1,0 +1,7 @@
+rm -rf work
+vlib work
+vcom source/tb_eop_detect.vhd
+vcom source/eop_detect.vhd
+vsim -coverage -i work.tb_eop_detect
+add wave *
+run 1400 ns

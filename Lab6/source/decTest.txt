@@ -1,0 +1,9 @@
+rm -rf work
+vlib work
+vcom source/tb_decode.vhd
+vcom source/DECODE.vhd
+vsim -coverage -i work.tb_decode
+add wave *
+add wave /tb_decode/dut/*
+run 1400 ns
+

@@ -1,0 +1,8 @@
+rm -rf work
+vlib work
+vcom source/tb_shift_reg.vhd
+vcom source/shift_reg.vhd
+vsim -coverage -i work.tb_shift_reg
+add wave *
+add wave /tb_shift_reg/dut/*
+run 1400 ns

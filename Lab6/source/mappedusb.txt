@@ -1,0 +1,13 @@
+rm -rf work
+vlib work
+vcom mapped/USB_RCVR.vhd
+vcom source/tb_usb_rcvr.vhd
+vsim -coverage -i work.tb_usb_rcvr
+add wave *
+add wave sim:/tb_usb_rcvr/dut/u_1/*
+add wave sim:/tb_usb_rcvr/dut/u_6/*
+add wave sim:/tb_usb_rcvr/dut/u_5/*
+add wave sim:/tb_usb_rcvr/dut/u_3/*
+add wave sim:/tb_usb_rcvr/dut/u_2/*
+add wave sim:/tb_usb_rcvr/dut/u_0/*
+run 16400 ns
