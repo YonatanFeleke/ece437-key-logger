@@ -1,6 +1,6 @@
 -- $Id: $
 -- File name:   tb_B_AppendAccessCode.vhd
--- Created:     4/12/2011
+-- Created:     4/17/2011
 -- Author:      Yonatan Feleke
 -- Lab Section: 337-02
 -- Version:     1.0  Initial Test Bench
@@ -11,26 +11,10 @@ use ieee.std_logic_1164.all;
 --use gold_lib.all;   --UNCOMMENT if you're using a GOLD model
 
 entity tb_B_AppendAccessCode is
+generic (Period : Time := 3.5 ns);
 end tb_B_AppendAccessCode;
 
 architecture TEST of tb_B_AppendAccessCode is
-
-  function INT_TO_STD_LOGIC( X: INTEGER; NumBits: INTEGER )
-     return STD_LOGIC_VECTOR is
-    variable RES : STD_LOGIC_VECTOR(NumBits-1 downto 0);
-    variable tmp : INTEGER;
-  begin
-    tmp := X;
-    for i in 0 to NumBits-1 loop
-      if (tmp mod 2)=1 then
-        res(i) := '1';
-      else
-        res(i) := '0';
-      end if;
-      tmp := tmp/2;
-    end loop;
-    return res;
-  end;
 
   component B_AppendAccessCode
     PORT(
@@ -52,6 +36,15 @@ architecture TEST of tb_B_AppendAccessCode is
 -- signal <name> : <type>;
 
 begin
+
+CLKGEN: process
+  variable CLK_tmp: std_logic := '0';
+begin
+  CLK_tmp := not CLK_tmp;
+  CLK <= CLK_tmp;
+  wait for Period/2;
+end process;
+
   DUT: B_AppendAccessCode port map(
                 CLK => CLK,
                 RST => RST,
@@ -67,8 +60,6 @@ process
   begin
 
 -- Insert TEST BENCH Code Here
-
-    CLK <= 
 
     RST <= 
 
