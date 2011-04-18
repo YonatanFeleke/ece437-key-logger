@@ -17,6 +17,7 @@ ENTITY rndCount is
 		RST					:		IN 			std_logic;
 		START				: 	IN			std_logic;
 		IN_SELECT		:		OUT			std_logic;
+		FIESTELCLK	:		OUT			std_logic;
 		RND_CNT			:		OUT			std_logic_vector(3 downto 0));
 end rndCount;
 
@@ -42,6 +43,7 @@ architecture behav of rndCount is
 		NXT_CNT <= CUR_CNT + "0001";
 		IN_SELECT <= CUR_CNT(3) or CUR_CNT(2) or CUR_CNT(1) or CUR_CNT(0);
 		RND_CNT <= CUR_CNT;
+		FIESTELCLK <= CLK when START = '1' else '0';
 		
 end behav;
 		
