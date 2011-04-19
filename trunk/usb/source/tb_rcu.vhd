@@ -16,7 +16,7 @@ end tb_rcu;
 
 architecture TEST of tb_rcu is
 
-  component rcu
+  component u_rcu
     PORT(
          clk : in std_logic;
          rst_n : in std_logic;
@@ -53,7 +53,7 @@ begin
   wait for Period/2;
 end process;
 
-  DUT: rcu port map(
+  DUT: u_rcu port map(
                 clk => clk,
                 rst_n => rst_n,
                 d_edge => d_edge,

@@ -1,0 +1,713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cyclic redundancy check - Wikipedia, the free encyclopedia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.17wmf1" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%7Cmediawiki.legacy.shared%7Cskins.vector&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<meta name="ResourceLoaderDynamicStyles" content="" /><link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<style type="text/css" media="all">a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: enwiki:resourceloader:filter:minify-css:5:f2a9127573a22335c2a9102b208c73e7 */</style>
+<script type="text/javascript">wgNamespaceNumber=0;wgAction="view";wgPageName="Cyclic_redundancy_check";wgMainPageTitle="Main Page";wgWikimediaMobileUrl="http:\/\/en.m.wikipedia.org\/wiki";</script><script src="http://bits.wikimedia.org/w/extensions-1.17/WikimediaMobile/MobileRedirect.js?8.2" type="text/javascript"></script><!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.17/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Cyclic_redundancy_check skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --><script type="text/javascript">
+/* <![CDATA[ */
+document.writeln("\x3cdiv id=\"localNotice\"\x3e\x3cp\x3e\x3c/p\x3e\n\x3c/div\x3e");
+/* ]]> */
+</script></div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Cyclic redundancy check</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+				<!-- tagline -->
+				<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<p>A <b>cyclic redundancy check</b> (CRC) is an <a href="/wiki/Error_detection_and_correction" title="Error detection and correction">error-detecting code</a> designed to detect accidental changes to raw computer data, and is commonly used in digital <a href="/wiki/Telecommunications_network" title="Telecommunications network">networks</a> and storage devices such as <a href="/wiki/Hard_disk_drive" title="Hard disk drive">hard disk drives</a>. A CRC-enabled device calculates a short, fixed-length binary sequence, known as the <i>check value</i> or improperly <i>the CRC</i>, for each block of data to be sent or stored and appends it to the data, forming a <i>codeword</i>. When a codeword is received or read, the device either compares its check value with one freshly calculated from the data block, or equivalently, performs a CRC on the whole codeword and compares the resulting check value with an expected <i>residue</i> constant. If the check values do not match, then the block contains a <i>data error</i> and the device may take corrective action such as rereading or requesting the block be sent again, otherwise the data is assumed to be error-free (though, with some small probability, it may contain undetected errors; this is the fundamental nature of error-checking).<sup id="cite_ref-ritter-1986_0-0" class="reference"><a href="#cite_note-ritter-1986-0"><span>[</span>1<span>]</span></a></sup></p>
+<p>CRCs are so called because the <i>check</i> (data verification) code is a <i>redundancy</i> (it adds zero <a href="/wiki/Entropy_(information_theory)" title="Entropy (information theory)">information</a> to the message) and the <a href="/wiki/Algorithm">algorithm</a> is based on <a href="/wiki/Cyclic_code" title="Cyclic code"><i>cyclic</i> codes</a>. CRCs are popular because they are simple to implement in binary <a href="/wiki/Computer_hardware" title="Computer hardware" class="mw-redirect">hardware</a>, are easy to analyze mathematically, and are particularly good at detecting common errors caused by <a href="/wiki/Noise">noise</a> in transmission channels. As the check value has a fixed length, the <a href="/wiki/Function_(mathematics)" title="Function (mathematics)">function</a> that generates it is occasionally used as a <a href="/wiki/Hash_function">hash function</a>. The CRC was invented by <a href="/wiki/W._Wesley_Peterson">W. Wesley Peterson</a> in 1961; the 32-bit polynomial used in the CRC function of Ethernet and many other standards is the work of several researchers and was published in 1975.</p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#CRCs_and_data_integrity"><span class="tocnumber">2</span> <span class="toctext">CRCs and data integrity</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Computation_of_CRC"><span class="tocnumber">3</span> <span class="toctext">Computation of CRC</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Mathematics_of_CRC"><span class="tocnumber">4</span> <span class="toctext">Mathematics of CRC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Designing_CRC_polynomials"><span class="tocnumber">4.1</span> <span class="toctext">Designing CRC polynomials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Specification_of_CRC"><span class="tocnumber">5</span> <span class="toctext">Specification of CRC</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Commonly_used_and_standardized_CRCs"><span class="tocnumber">6</span> <span class="toctext">Commonly used and standardized CRCs</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a>]</span> <span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>CRCs are based on the theory of <a href="/wiki/Cyclic_code" title="Cyclic code">cyclic</a> <a href="/wiki/Error-correcting_code" title="Error-correcting code" class="mw-redirect">error-correcting codes</a>. The use of <a href="/wiki/Systematic_code" title="Systematic code">systematic</a> cyclic codes, which encode messages by adding a fixed-length check value, for the purpose of error detection in communication networks was first proposed by <a href="/wiki/W._Wesley_Peterson">W. Wesley Peterson</a> in 1961.<sup id="cite_ref-PetersonBrown1961_1-0" class="reference"><a href="#cite_note-PetersonBrown1961-1"><span>[</span>2<span>]</span></a></sup> Cyclic codes are not only simple to implement but have the benefit of being particularly well suited for the detection of <a href="/wiki/Burst_error" title="Burst error">burst errors</a>, contiguous sequences of erroneous data symbols in messages. This is important because burst errors are common transmission errors in many <a href="/wiki/Communication_channel" title="Communication channel" class="mw-redirect">communication channels</a>, including magnetic and optical storage devices. Typically, an <i>n</i>-bit CRC, applied to a data block of arbitrary length, will detect any single error burst not longer than <i>n</i> bits, and will detect a fraction 1−2<sup>−<i>n</i></sup> of all longer error bursts.</p>
+<p>Specification of a CRC code requires definition of a so-called <a href="/wiki/Generator_polynomial" class="mw-redirect" title="Generator polynomial">generator polynomial</a>. This polynomial resembles the <a href="/wiki/Divisor">divisor</a> in a <a href="/wiki/Polynomial_long_division">polynomial long division</a>, which takes the message as the <a href="/wiki/Division_(mathematics)" title="Division (mathematics)">dividend</a> and in which the <a href="/wiki/Quotient">quotient</a> is discarded and the <a href="/wiki/Remainder">remainder</a> becomes the result, with the important distinction that the polynomial <a href="/wiki/Coefficient" title="Coefficient">coefficients</a> are calculated according to the carry-less arithmetic of a <a href="/wiki/Finite_field">finite field</a>. The length of the remainder is always less than the length of the generator polynomial, which therefore determines how long the result can be.</p>
+<p>In practice, all commonly used CRCs employ the finite field <a href="/wiki/GF(2)">GF(2)</a>. This is the field of two elements, usually called 0 and 1, comfortably matching computer architecture. The rest of this article will discuss only these binary CRCs, but the principles are more general.</p>
+<p>The simplest error-detection system, the <a href="/wiki/Parity_bit">parity bit</a>, is in fact a trivial 1-bit CRC: it uses the generator polynomial <i>x</i>+1.</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=2" title="Edit section: CRCs and data integrity">edit</a>]</span> <span class="mw-headline" id="CRCs_and_data_integrity">CRCs and data integrity</span></h2>
+<p>CRCs are specifically designed to protect against common types of errors on communication channels, where they can provide quick and reasonable assurance of the <a href="/wiki/Data_integrity" title="Data integrity">integrity</a> of messages delivered. However, they are not suitable for protecting against intentional alteration of data. Firstly, as there is no authentication, an attacker can edit a message and recalculate the CRC without the substitution being detected. This is even the case when the CRC is encrypted, leading to one of the design flaws of the <a href="/wiki/Wired_Equivalent_Privacy" title="Wired Equivalent Privacy">WEP</a> protocol.<sup id="cite_ref-wep_2-0" class="reference"><a href="#cite_note-wep-2"><span>[</span>3<span>]</span></a></sup> Secondly, the <a href="/wiki/Linear_algebra" title="Linear algebra">linear</a> properties of CRC codes even allow an attacker to modify a message in such a way as to leave the check value unchanged,<sup id="cite_ref-stigge-reversecrc_3-0" class="reference"><a href="#cite_note-stigge-reversecrc-3"><span>[</span>4<span>]</span></a></sup><sup id="cite_ref-anachriz-reversecrc_4-0" class="reference"><a href="#cite_note-anachriz-reversecrc-4"><span>[</span>5<span>]</span></a></sup> and otherwise permit efficient recalculation of the CRC for compact changes. Nonetheless, it is still often falsely assumed that when a message and its correct check value are received from an open channel then the message cannot have been altered in transit.<sup id="cite_ref-eurocontrol-faq_5-0" class="reference"><a href="#cite_note-eurocontrol-faq-5"><span>[</span>6<span>]</span></a></sup></p>
+<p><a href="/wiki/Cryptographic_hash_function" title="Cryptographic hash function">Cryptographic hash functions</a>, while still not providing security against intentional alteration, can provide stronger error checking in that they do not rely on specific error pattern assumptions. However, they are much slower than CRCs, and are therefore commonly used to protect off-line data, such as files on servers or databases.</p>
+<p>CRCs and cryptographic hash functions by themselves do not protect against <i>intentional</i> modification of data. Any application that requires protection against such attacks must use cryptographic authentication mechanisms, such as <a href="/wiki/Message_authentication_code" title="Message authentication code">message authentication codes</a>.</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=3" title="Edit section: Computation of CRC">edit</a>]</span> <span class="mw-headline" id="Computation_of_CRC">Computation of CRC</span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Computation_of_CRC">Computation of CRC</a></div>
+<p>To compute an <i>n</i>-bit binary CRC, line the bits representing the input in a row, and position the (<i>n</i>+1)-bit pattern representing the CRC's divisor (called a "<a href="/wiki/Polynomial">polynomial</a>") underneath the left-hand end of the row.</p>
+<p>Start with the message to be encoded:</p>
+<pre>
+11010011101100
+</pre>
+<p>This is first padded with zeroes corresponding to the bit length <i>n</i> of the CRC. Here is the first calculation for computing a 3-bit CRC:</p>
+<pre>
+11010011101100 000 &lt;--- input left shifted by 3 bits
+1011               &lt;--- divisor (4 bits)
+------------------
+01100011101100 000 &lt;--- result
+</pre>
+<p>If the input bit above the leftmost divisor bit is 0, do nothing and move the divisor to the right by one bit. If the input bit above the leftmost divisor bit is 1, the divisor is <a href="/wiki/Exclusive_or" title="Exclusive or">XORed</a> into the input (in other words, the input bit above each 1-bit in the divisor is toggled). The divisor is then shifted one bit to the right, and the process is repeated until the divisor reaches the right-hand end of the input row. Here is the entire calculation:</p>
+<pre>
+11010011101100 000 &lt;--- input left shifted by 3 bits
+1011               &lt;--- divisor
+01100011101100 000 &lt;--- result
+ 1011              &lt;--- divisor ...
+00111011101100 000
+  1011
+00010111101100 000
+   1011
+00000001101100 000
+       1011
+00000000110100 000
+        1011
+00000000011000 000
+         1011
+00000000001110 000
+          1011
+00000000000101 000 
+           101 1
+-----------------
+00000000000000 100 &lt;---remainder (3 bits)
+</pre>
+<p>Since the leftmost divisor bit zeroed every input bit it touched, when this process ends the only bits in the input row that can be nonzero are the n bits at the right-hand end of the row. These <i>n</i> bits are the remainder of the division step, and will also be the value of the CRC function (unless the chosen CRC specification calls for some postprocessing).</p>
+<p>The validity of a received message can easily be verified by performing the above calculation again, this time with the check value added instead of zeroes. The remainder should equal zero if there are no detectable errors.</p>
+<pre>
+11010011101100 100 &lt;--- input with check value
+1011               &lt;--- divisor
+01100011101100 100 &lt;--- result
+ 1011              &lt;--- divisor ...
+00111011101100 100
+</pre>
+<p>and so on until:</p>
+<pre>
+  
+00000000001110 100
+          1011
+00000000000101 100 
+           101 1
+------------------
+                 0 &lt;--- remainder
+</pre>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=4" title="Edit section: Mathematics of CRC">edit</a>]</span> <span class="mw-headline" id="Mathematics_of_CRC">Mathematics of CRC</span></h2>
+<div class="rellink relarticle mainarticle">Main article: <a href="/wiki/Mathematics_of_CRC">Mathematics of CRC</a></div>
+<table class="metadata plainlinks ambox ambox-content" style="">
+<tr>
+<td class="mbox-image">
+<div style="width: 52px;"><img alt="" src="http://upload.wikimedia.org/wikipedia/en/f/f4/Ambox_content.png" width="40" height="40" /></div>
+</td>
+<td class="mbox-text" style="">This section <b>needs attention from an expert on the subject</b>. See the <a href="/wiki/Talk:Cyclic_redundancy_check" title="Talk:Cyclic redundancy check">talk page</a> for details. <a href="/wiki/Wikipedia:WikiProject_Mathematics" title="Wikipedia:WikiProject Mathematics">WikiProject Mathematics</a> or the <a href="/wiki/Portal:Mathematics" title="Portal:Mathematics">Mathematics Portal</a> may be able to help recruit an expert. <small><i>(August 2010)</i></small></td>
+</tr>
+</table>
+<p>Mathematical analysis of this division-like process reveals how to pick a divisor that guarantees good error-detection properties. In this analysis, the digits of the bit strings are thought of as the coefficients of a polynomial in some variable <i>x</i>—coefficients that are elements of the finite field <a href="/wiki/GF(2)">GF(2)</a> instead of more familiar numbers. This binary polynomial is treated as a <a href="/wiki/Ring_(mathematics)" title="Ring (mathematics)">ring</a>. A ring is, loosely speaking, a set of elements somewhat like numbers, that can be operated on by an operation that somewhat resembles addition and another operation that somewhat resembles multiplication, these operations possessing many of the familiar arithmetic properties of commutativity, associativity, and distributivity. Ring theory is part of <a href="/wiki/Abstract_algebra">abstract algebra</a>.</p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=5" title="Edit section: Designing CRC polynomials">edit</a>]</span> <span class="mw-headline" id="Designing_CRC_polynomials">Designing CRC polynomials</span></h3>
+<p>The selection of generator polynomial is the most important part of implementing the CRC algorithm. The polynomial must be chosen to maximize the error detecting capabilities while minimizing overall collision probabilities.</p>
+<p>The most important attribute of the polynomial is its length (largest degree(exponent) +1 of any one term in the polynomial), because of its direct influence of the length of the computed check value.</p>
+<p>The most commonly used polynomial lengths are:</p>
+<ul>
+<li>9 bits (CRC-8)</li>
+<li>17 bits (CRC-16)</li>
+<li>33 bits (CRC-32)</li>
+<li>65 bits (CRC-64)</li>
+</ul>
+<p>The design of the CRC polynomial depends on the maximum total length of the block to be protected (data + CRC bits), the desired error protection features, and the type resources for implementing the CRC as well as the desired performance. A common misconception is that the "best" CRC polynomials are derived from either an <a href="/wiki/Irreducible_polynomial">irreducible polynomial</a> or an irreducible polynomial times the factor <span class="texhtml">(1 + <i>x</i>)</span>, which adds to the code the ability to detect all errors affecting an odd number of bits.<sup id="cite_ref-williams93_6-0" class="reference"><a href="#cite_note-williams93-6"><span>[</span>7<span>]</span></a></sup> In reality, all the factors described above should enter in the selection of the polynomial. However, choosing a non-irreducible polynomial can result in missed errors due to the ring having <a href="/wiki/Zero_divisor" title="Zero divisor">zero divisors</a>.</p>
+<p>The advantage of choosing a <a href="/wiki/Primitive_polynomial">primitive polynomial</a> as the generator for a CRC code is that the resulting code has maximal total block length; in here if r is the degree of the primitive generator polynomial then the maximal total blocklength is equal to <span class="texhtml">2<sup><i>r</i></sup> − 1</span>, and the associated code is able to detect any single bit or double errors. If instead, we used as generator polynomial <span class="texhtml"><i>g</i>(<i>x</i>) = <i>p</i>(<i>x</i>)(1 + <i>x</i>)</span>, where <span class="texhtml"><i>p</i>(<i>x</i>)</span> is a primitive polynomial of degree <span class="texhtml"><i>r</i> − 1</span>, then the maximal total blocklength would be equal to <span class="texhtml">2<sup><i>r</i> − 1</sup> − 1</span> but the code would be able to detect single, double, and triple errors.</p>
+<p>A polynomial <span class="texhtml"><i>g</i>(<i>x</i>)</span> that admits other factorizations may be chosen then so as to balance the maximal total blocklength with a desired error detection power. A powerful class of such polynomials, which subsumes the two examples described above, is that of <a href="/wiki/BCH_code" title="BCH code">BCH codes</a>. Regardless of the reducibility properties of a generator polynomial of degree r, assuming that it includes the "+1" term, such error detection code will be able to detect all error patterns that are confined to a window of r contiguous bits. These patterns are called "error bursts".</p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=6" title="Edit section: Specification of CRC">edit</a>]</span> <span class="mw-headline" id="Specification_of_CRC">Specification of CRC</span></h2>
+<p>The concept of the CRC as an error-detecting code gets complicated when an implementer or standards committee turns it into a practical system. Here are some of the complications:</p>
+<ul>
+<li>Sometimes an implementation <b>prefixes a fixed bit pattern</b> to the bitstream to be checked. This is useful when clocking errors might insert 0-bits in front of a message, an alteration that would otherwise leave the check value unchanged.</li>
+<li>Sometimes an implementation <b>appends n 0-bits</b> (n being the size of the CRC) to the bitstream to be checked before the polynomial division occurs. This has the convenience that the remainder of the original bitstream with the check value appended is exactly zero, so the CRC can be checked simply by performing the polynomial division on the received bitstream and comparing the remainder with zero.</li>
+<li>Sometimes an implementation <b>exclusive-ORs a fixed bit pattern</b> into the remainder of the polynomial division.</li>
+<li><b>Bit order:</b> Some schemes view the low-order bit of each byte as "first", which then during polynomial division means "leftmost", which is contrary to our customary understanding of "low-order". This convention makes sense when <a href="/wiki/Serial_port" title="Serial port">serial-port</a> transmissions are CRC-checked in hardware, because some widespread serial-port transmission conventions transmit bytes least-significant bit first.</li>
+<li><b><a href="/wiki/Byte_order" class="mw-redirect" title="Byte order">Byte order</a></b>: With multi-byte CRCs, there can be confusion over whether the byte transmitted first (or stored in the lowest-addressed byte of memory) is the least-significant byte or the most-significant byte. For example, some 16-bit CRC schemes swap the bytes of the check value.</li>
+<li><b>Omission of the high-order bit</b> of the divisor polynomial: Since the high-order bit is always 1, and since an <i>n</i>-bit CRC must be defined by an (<i>n</i>+1)-bit divisor which <a href="/wiki/Arithmetic_overflow" title="Arithmetic overflow">overflows</a> an <i>n</i>-bit <a href="/wiki/Processor_register" title="Processor register">register</a>, some writers assume that it is unnecessary to mention the divisor's high-order bit.</li>
+<li><b>Omission of the low-order bit</b> of the divisor polynomial: Since the low-order bit is always 1, authors such as Philip Koopman represent polynomials with their high-order bit intact, but without the low-order bit (the <span class="texhtml"><i>x</i><sup>0</sup></span> or 1 term). This convention encodes the polynomial complete with its degree in one integer.</li>
+</ul>
+<p>These complications mean that there are three common ways to express a polynomial as an integer: the first two, which are mirror images in binary, are the constants found in code; the third is the number found in Koopman's papers. <i>In each case, one term is omitted.</i> So the polynomial <span class="texhtml"><i>x</i><sup>4</sup> + <i>x</i> + 1</span> may be transcribed as:</p>
+<ul>
+<li>0x3 = 0011b, representing <s><span class="texhtml"><i>x</i><sup>4</sup> +</span></s> <span class="texhtml">0<i>x</i><sup>3</sup> + 0<i>x</i><sup>2</sup> + 1<i>x</i><sup>1</sup> + 1<i>x</i><sup>0</sup></span> (MSB-first code)</li>
+<li>0xC = 1100b, representing <span class="texhtml">1<i>x</i><sup>0</sup> + 1<i>x</i><sup>1</sup> + 0<i>x</i><sup>2</sup> + 0<i>x</i><sup>3</sup></span> <s><span class="texhtml">+ <i>x</i><sup>4</sup></span></s> (LSB-first code)</li>
+<li>0x9 = 1001b, representing <span class="texhtml">1<i>x</i><sup>4</sup> + 0<i>x</i><sup>3</sup> + 0<i>x</i><sup>2</sup> + 1<i>x</i><sup>1</sup></span> <s><span class="texhtml">+ <i>x</i><sup>0</sup></span></s> (Koopman notation)</li>
+</ul>
+<p>In the table below they are shown as:</p>
+<table class="wikitable" style="font-size: 70%">
+<tr>
+<th>Representations: normal / reversed / reverse of reciprocal</th>
+</tr>
+<tr>
+<td>0x3 / 0xC / 0x9</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=7" title="Edit section: Commonly used and standardized CRCs">edit</a>]</span> <span class="mw-headline" id="Commonly_used_and_standardized_CRCs">Commonly used and standardized CRCs</span></h2>
+<p>Numerous varieties of cyclic redundancy check have been incorporated into <a href="/wiki/Technical_standard" title="Technical standard">technical standards</a>. By no means does one algorithm, or one of each degree, suit every purpose; Koopman and Chakrabarty recommend selecting a polynomial according to the application requirements and the expected distribution of message lengths.<sup id="cite_ref-koop04_7-0" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup> The number of distinct CRCs in use have however led to confusion among developers which authors have sought to address.<sup id="cite_ref-williams93_6-1" class="reference"><a href="#cite_note-williams93-6"><span>[</span>7<span>]</span></a></sup> There are three polynomials reported for CRC-12,<sup id="cite_ref-koop04_7-1" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup> thirteen conflicting definitions of CRC-16, and six of CRC-32.<sup id="cite_ref-cook-catalogue_8-0" class="reference"><a href="#cite_note-cook-catalogue-8"><span>[</span>9<span>]</span></a></sup></p>
+<p>The polynomials commonly applied are not the most efficient ones possible. Between 1993 and 2004, Koopman, Castagnoli and others surveyed the space of polynomials up to 16 bits,<sup id="cite_ref-koop04_7-2" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup> and of 24 and 32 bits,<sup id="cite_ref-cast93_9-0" class="reference"><a href="#cite_note-cast93-9"><span>[</span>10<span>]</span></a></sup><sup id="cite_ref-koop02_10-0" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup> finding examples that have much better performance (in terms of <a href="/wiki/Hamming_distance">Hamming distance</a> for a given message size) than the polynomials of earlier protocols, and publishing the best of these with the aim of improving the error detection capacity of future standards.<sup id="cite_ref-koop02_10-1" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup> In particular, <a href="/wiki/ISCSI">iSCSI</a> and <a href="/wiki/SCTP" class="mw-redirect" title="SCTP">SCTP</a> have adopted one of the findings of this research, the <a href="#CRC-32C">CRC-32C</a> (Castagnoli) polynomial.</p>
+<p>The design of the 32-bit polynomial most commonly used by standards bodies, CRC-32-IEEE, was the result of a joint effort for the <a href="/wiki/Rome_Laboratory">Rome Laboratory</a> and the Air Force Electronic Systems Division by Joseph Hammond, James Brown and Shyan-Shiang Liu of the <a href="/wiki/Georgia_Institute_of_Technology">Georgia Institute of Technology</a> and Kenneth Brayer of the <a href="/wiki/MITRE" class="mw-redirect" title="MITRE">MITRE</a> Corporation. The earliest known appearances of the 32-bit polynomial were in their 1975 publications: Technical Report 2956 by Brayer for MITRE, published in January and released for public dissemination through <a href="/wiki/DTIC" class="mw-redirect" title="DTIC">DTIC</a> in August,<sup id="cite_ref-Brayer1975_11-0" class="reference"><a href="#cite_note-Brayer1975-11"><span>[</span>12<span>]</span></a></sup> and Hammond, Brown and Liu's report for the Rome Laboratory, published in May.<sup id="cite_ref-Hammond1975_12-0" class="reference"><a href="#cite_note-Hammond1975-12"><span>[</span>13<span>]</span></a></sup> Both reports contained contributions from the other team. In December 1975, Brayer and Hammond presented their work in a paper at the IEEE National Telecommunications Conference: the IEEE CRC-32 polynomial is the generating polynomial of a <a href="/wiki/Hamming_code">Hamming code</a> and was selected for its error detection performance.<sup id="cite_ref-BrayerHammond1975_13-0" class="reference"><a href="#cite_note-BrayerHammond1975-13"><span>[</span>14<span>]</span></a></sup> Even so, the Castagnoli CRC-32C polynomial used in iSCSI or SCTP matches its performance on messages from 58 bits–131 kbits, and outperforms it in several size ranges including the two most common sizes of Internet packet.<sup id="cite_ref-koop02_10-2" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup> The <a href="/wiki/ITU-T">ITU-T</a> <a href="/wiki/G.hn">G.hn</a> standard also uses CRC-32C to detect errors in the payload (although it uses CRC-16-CCITT for PHY headers).</p>
+<p>The table below lists only the polynomials of the various algorithms in use. Any particular protocol can impose pre-inversion, post-inversion and reversed bit ordering as described above. CRCs in proprietary protocols might use a non-trivial initial value and final XOR for <a href="/wiki/Obfuscation">obfuscation</a> but this does not add cryptographic strength to the algorithm.</p>
+<table class="wikitable" style="font-size: 70%">
+<tr>
+<th>Name</th>
+<th>Polynomial</th>
+<th>Representations: normal / reversed / reverse of reciprocal</th>
+</tr>
+<tr>
+<td>CRC-1</td>
+<td><span class="texhtml"><i>x</i> + 1</span> (most hardware; also known as <i><a href="/wiki/Parity_bit">parity bit</a></i>)</td>
+<td>0x1 / 0x1 / 0x1</td>
+</tr>
+<tr>
+<td>CRC-4-ITU</td>
+<td><span class="texhtml"><i>x</i><sup>4</sup> + <i>x</i> + 1</span> (<a href="/wiki/ITU-T">ITU-T</a> <a href="http://www.itu.int/rec/T-REC-G.704-199810-I/en" class="external text" rel="nofollow">G.704</a>, p.&#160;12)</td>
+<td>0x3 / 0xC / 0x9</td>
+</tr>
+<tr>
+<td>CRC-5-EPC</td>
+<td><span class="texhtml"><i>x</i><sup>5</sup> + <i>x</i><sup>3</sup> + 1</span> (<a href="/wiki/Radio-frequency_identification" title="Radio-frequency identification">Gen 2 RFID</a><sup id="cite_ref-gen-2-spec_14-0" class="reference"><a href="#cite_note-gen-2-spec-14"><span>[</span>15<span>]</span></a></sup>)</td>
+<td>0x09 / 0x12 / 0x14</td>
+</tr>
+<tr>
+<td>CRC-5-ITU</td>
+<td><span class="texhtml"><i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + 1</span> (ITU-T <a href="http://www.itu.int/rec/T-REC-G.704-199810-I/en" class="external text" rel="nofollow">G.704</a>, p.&#160;9)</td>
+<td>0x15 / 0x15 / 0x1A</td>
+</tr>
+<tr>
+<td>CRC-5-USB</td>
+<td><span class="texhtml"><i>x</i><sup>5</sup> + <i>x</i><sup>2</sup> + 1</span> (<a href="/wiki/Universal_Serial_Bus" title="Universal Serial Bus">USB</a> token packets)</td>
+<td>0x05 / 0x14 / 0x12</td>
+</tr>
+<tr>
+<td>CRC-6-ITU</td>
+<td><span class="texhtml"><i>x</i><sup>6</sup> + <i>x</i> + 1</span> (ITU-T <a href="http://www.itu.int/rec/T-REC-G.704-199810-I/en" class="external text" rel="nofollow">G.704</a>, p.&#160;3)</td>
+<td>0x03 / 0x30 / 0x21</td>
+</tr>
+<tr>
+<td>CRC-7</td>
+<td><span class="texhtml"><i>x</i><sup>7</sup> + <i>x</i><sup>3</sup> + 1</span> (telecom systems, ITU-T <a href="http://www.itu.int/rec/T-REC-G.707/en" class="external text" rel="nofollow">G.707</a>, ITU-T <a href="http://www.itu.int/rec/T-REC-G.832/en" class="external text" rel="nofollow">G.832</a>, <a href="/wiki/MultiMediaCard" title="MultiMediaCard">MMC</a>, <a href="/wiki/Secure_Digital_card" title="Secure Digital card" class="mw-redirect">SD</a>)</td>
+<td>0x09 / 0x48 / 0x44</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="/wiki/CCITT" class="mw-redirect" title="CCITT">CCITT</a></td>
+<td><span class="texhtml"><i>x</i><sup>8</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span> (<a href="/wiki/Asynchronous_Transfer_Mode" title="Asynchronous Transfer Mode">ATM</a> <a href="/wiki/Header_Error_Correction" title="Header Error Correction" class="mw-redirect">HEC</a>), <a href="/wiki/ISDN" class="mw-redirect" title="ISDN">ISDN</a> <a href="/wiki/HEC" title="HEC">Header Error Control</a> and <a href="/w/index.php?title=Cell_Delineation&amp;action=edit&amp;redlink=1" class="new" title="Cell Delineation (page does not exist)">Cell Delineation</a> ITU-T <a href="http://www.itu.int/rec/T-REC-I.432.1-199902-I/en" class="external text" rel="nofollow">I.432.1 (02/99)</a></td>
+<td>0x07 / 0xE0 / 0x83</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="/wiki/Dallas_Semiconductor" title="Dallas Semiconductor">Dallas</a>/<a href="/wiki/Maxim_Integrated_Products" title="Maxim Integrated Products">Maxim</a></td>
+<td><span class="texhtml"><i>x</i><sup>8</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + 1</span> (<a href="/wiki/1-Wire">1-Wire</a> <a href="/wiki/Bus_(computing)" title="Bus (computing)">bus</a>)</td>
+<td>0x31 / 0x8C / 0x98</td>
+</tr>
+<tr>
+<td>CRC-8</td>
+<td><span class="texhtml"><i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + 1</span></td>
+<td>0xD5 / 0xAB / 0xEA<sup id="cite_ref-koop04_7-3" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-8-SAE J1850</td>
+<td><span class="texhtml"><i>x</i><sup>8</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + 1</span></td>
+<td>0x1D / 0xB8 / 0x8E</td>
+</tr>
+<tr>
+<td>CRC-8-<a href="/wiki/W-CDMA_(UMTS)" title="W-CDMA (UMTS)">WCDMA</a></td>
+<td><span class="texhtml"><i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i> + 1</span><sup id="cite_ref-richardson-wcdma_15-0" class="reference"><a href="#cite_note-richardson-wcdma-15"><span>[</span>16<span>]</span></a></sup></td>
+<td>0x9B / 0xD9 / 0xCD<sup id="cite_ref-koop04_7-4" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-10</td>
+<td><span class="texhtml"><i>x</i><sup>10</sup> + <i>x</i><sup>9</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i> + 1</span> (ATM; ITU-T <a href="http://www.itu.int/rec/T-REC-I.610/en" class="external text" rel="nofollow">I.610</a>)</td>
+<td>0x233 / 0x331 / 0x319</td>
+</tr>
+<tr>
+<td>CRC-11</td>
+<td><span class="texhtml"><i>x</i><sup>11</sup> + <i>x</i><sup>9</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>2</sup> + 1</span> (<a href="/wiki/FlexRay">FlexRay</a><sup id="cite_ref-flexray-spec_16-0" class="reference"><a href="#cite_note-flexray-spec-16"><span>[</span>17<span>]</span></a></sup>)</td>
+<td>0x385 / 0x50E / 0x5C2</td>
+</tr>
+<tr>
+<td>CRC-12</td>
+<td><span class="texhtml"><i>x</i><sup>12</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>3</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span> (telecom systems<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>18<span>]</span></a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18"><span>[</span>19<span>]</span></a></sup>)</td>
+<td>0x80F / 0xF01 / 0xC07<sup id="cite_ref-koop04_7-5" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-15-<a href="/wiki/Controller_Area_Network" title="Controller Area Network" class="mw-redirect">CAN</a></td>
+<td><span class="texhtml"><i>x</i><sup>15</sup> + <i>x</i><sup>14</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + 1</span></td>
+<td>0x4599 / 0x4CD1 / 0x62CC</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="/wiki/IBM">IBM</a></td>
+<td><span class="texhtml"><i>x</i><sup>16</sup> + <i>x</i><sup>15</sup> + <i>x</i><sup>2</sup> + 1</span> (<a href="/wiki/Binary_Synchronous_Communications" title="Binary Synchronous Communications">Bisync</a>, <a href="/wiki/Modbus">Modbus</a>, <a href="/wiki/Universal_Serial_Bus" title="Universal Serial Bus">USB</a>, <a href="/wiki/ANSI" class="mw-redirect" title="ANSI">ANSI</a> <a href="http://www.incits.org/press/1997/pr97020.htm" class="external text" rel="nofollow">X3.28</a>, many others; also known as <i>CRC-16</i> and <i>CRC-16-ANSI</i>)</td>
+<td>0x8005 / 0xA001 / 0xC002</td>
+</tr>
+<tr>
+<td>CRC-16-CCITT</td>
+<td><span class="texhtml"><i>x</i><sup>16</sup> + <i>x</i><sup>12</sup> + <i>x</i><sup>5</sup> + 1</span> (<a href="/wiki/X.25">X.25</a>, <a href="/wiki/V.41" class="mw-redirect" title="V.41">V.41</a>, <a href="/wiki/HDLC" class="mw-redirect" title="HDLC">HDLC</a>, <a href="/wiki/XMODEM">XMODEM</a>, <a href="/wiki/Bluetooth">Bluetooth</a>, <a href="/wiki/Secure_Digital_card" title="Secure Digital card" class="mw-redirect">SD</a>, many others; known as <i>CRC-CCITT</i>)</td>
+<td>0x1021 / 0x8408 / 0x8810<sup id="cite_ref-koop04_7-6" class="reference"><a href="#cite_note-koop04-7"><span>[</span>8<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-16-<a href="/wiki/International_Committee_for_Information_Technology_Standards" title="International Committee for Information Technology Standards">T10</a>-<a href="/wiki/Data_Integrity_Field" title="Data Integrity Field">DIF</a></td>
+<td><span class="texhtml"><i>x</i><sup>16</sup> + <i>x</i><sup>15</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>9</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span> (<a href="/wiki/SCSI">SCSI</a> DIF)</td>
+<td>0x8BB7<sup id="cite_ref-thaler-t10-selection_19-0" class="reference"><a href="#cite_note-thaler-t10-selection-19"><span>[</span>20<span>]</span></a></sup> / 0xEDD1 / 0xC5DB</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="/wiki/DNP3" title="DNP3">DNP</a></td>
+<td><span class="texhtml"><i>x</i><sup>16</sup> + <i>x</i><sup>13</sup> + <i>x</i><sup>12</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>2</sup> + 1</span> (DNP, <a href="/wiki/IEC_60870-5" title="IEC 60870-5" class="mw-redirect">IEC 870</a>, <a href="/wiki/Meter-Bus" title="Meter-Bus">M-Bus</a>)</td>
+<td>0x3D65 / 0xA6BC / 0x9EB2</td>
+</tr>
+<tr>
+<td>CRC-16-<a href="/wiki/Digital_Enhanced_Cordless_Telecommunications" title="Digital Enhanced Cordless Telecommunications">DECT</a></td>
+<td><span class="texhtml"><i>x</i><sup>16</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>3</sup> + 1</span> (cordless telephones)<sup id="cite_ref-en-300-175-3_20-0" class="reference"><a href="#cite_note-en-300-175-3-20"><span>[</span>21<span>]</span></a></sup></td>
+<td>0x0589 / 0x91A0 / 0x82C4</td>
+</tr>
+<tr>
+<td>CRC-16-Fletcher</td>
+<td>Not a CRC; see <a href="/wiki/Fletcher%27s_checksum">Fletcher's checksum</a></td>
+<td>Used in <a href="/wiki/Adler-32">Adler-32</a> A &amp; B CRCs</td>
+</tr>
+<tr>
+<td>CRC-24</td>
+<td><span class="texhtml"><i>x</i><sup>24</sup> + <i>x</i><sup>22</sup> + <i>x</i><sup>20</sup> + <i>x</i><sup>19</sup> + <i>x</i><sup>18</sup> + <i>x</i><sup>16</sup> + <i>x</i><sup>14</sup> + <i>x</i><sup>13</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>3</sup> + <i>x</i> + 1</span> (<a href="/wiki/FlexRay">FlexRay</a><sup id="cite_ref-flexray-spec_16-1" class="reference"><a href="#cite_note-flexray-spec-16"><span>[</span>17<span>]</span></a></sup>)</td>
+<td>0x5D6DCB&#160;/ 0xD3B6BA&#160;/ 0xAEB6E5</td>
+</tr>
+<tr>
+<td>CRC-24-<a href="/wiki/Radix-64" class="mw-redirect" title="Radix-64">Radix-64</a></td>
+<td><span class="texhtml"><i>x</i><sup>24</sup> + <i>x</i><sup>23</sup> + <i>x</i><sup>18</sup> + <i>x</i><sup>17</sup> + <i>x</i><sup>14</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i> + 1</span> (<a href="/wiki/Pretty_Good_Privacy#OpenPGP" title="Pretty Good Privacy">OpenPGP</a>)</td>
+<td>0x864CFB&#160;/ 0xDF3261&#160;/ 0xC3267D</td>
+</tr>
+<tr>
+<td>CRC-30</td>
+<td><span class="texhtml"><i>x</i><sup>30</sup> + <i>x</i><sup>29</sup> + <i>x</i><sup>21</sup> + <i>x</i><sup>20</sup> + <i>x</i><sup>15</sup> + <i>x</i><sup>13</sup> + <i>x</i><sup>12</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span> (<a href="/wiki/CDMA" class="mw-redirect" title="CDMA">CDMA</a>)</td>
+<td>0x2030B9C7&#160;/ 0x38E74301&#160;/ 0x30185CE3</td>
+</tr>
+<tr>
+<td>CRC-32-Adler</td>
+<td>Not a CRC; see <a href="/wiki/Adler-32">Adler-32</a></td>
+<td>See <a href="/wiki/Adler-32">Adler-32</a></td>
+</tr>
+<tr>
+<td>CRC-32-<a href="/wiki/IEEE_802.3">IEEE 802.3</a></td>
+<td><span class="texhtml"><i>x</i><sup>32</sup> + <i>x</i><sup>26</sup> + <i>x</i><sup>23</sup> + <i>x</i><sup>22</sup> + <i>x</i><sup>16</sup> + <i>x</i><sup>12</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span> (<a href="/wiki/V.42" class="mw-redirect" title="V.42">V.42</a>, <a href="/wiki/Ethernet">Ethernet</a>, <a href="/wiki/SATA" class="mw-redirect" title="SATA">SATA</a>, <a href="/wiki/MPEG-2">MPEG-2</a>, <a href="/wiki/Portable_Network_Graphics" title="Portable Network Graphics">PNG</a>,<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>22<span>]</span></a></sup> <a href="/wiki/POSIX">POSIX</a> <a href="/wiki/Cksum">cksum</a>)</td>
+<td>0x04C11DB7&#160;/ 0xEDB88320&#160;/ 0x82608EDB<sup id="cite_ref-koop02_10-3" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td><span id="CRC-32C">CRC-32C</span> (Castagnoli)</td>
+<td><span class="texhtml"><i>x</i><sup>32</sup> + <i>x</i><sup>28</sup> + <i>x</i><sup>27</sup> + <i>x</i><sup>26</sup> + <i>x</i><sup>25</sup> + <i>x</i><sup>23</sup> + <i>x</i><sup>22</sup> + <i>x</i><sup>20</sup> + <i>x</i><sup>19</sup> + <i>x</i><sup>18</sup> + <i>x</i><sup>14</sup> + <i>x</i><sup>13</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>9</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>6</sup> + 1</span> (<a href="/wiki/ISCSI">iSCSI</a> &amp; <a href="/wiki/SCTP" class="mw-redirect" title="SCTP">SCTP</a>, <a href="/wiki/G.hn">G.hn</a> payload, <a href="/wiki/SSE4#SSE4.2" title="SSE4">SSE4.2</a>)</td>
+<td>0x1EDC6F41&#160;/ 0x82F63B78&#160;/ 0x8F6E37A0<sup id="cite_ref-koop02_10-4" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td><span id="CRC-32K">CRC-32K</span> (Koopman)</td>
+<td><span class="texhtml"><i>x</i><sup>32</sup> + <i>x</i><sup>30</sup> + <i>x</i><sup>29</sup> + <i>x</i><sup>28</sup> + <i>x</i><sup>26</sup> + <i>x</i><sup>20</sup> + <i>x</i><sup>19</sup> + <i>x</i><sup>17</sup> + <i>x</i><sup>16</sup> + <i>x</i><sup>15</sup> + <i>x</i><sup>11</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>6</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>2</sup> + <i>x</i> + 1</span></td>
+<td>0x741B8CD7&#160;/ 0xEB31D82E&#160;/ 0xBA0DC66B<sup id="cite_ref-koop02_10-5" class="reference"><a href="#cite_note-koop02-10"><span>[</span>11<span>]</span></a></sup></td>
+</tr>
+<tr>
+<td>CRC-32Q</td>
+<td><span class="texhtml"><i>x</i><sup>32</sup> + <i>x</i><sup>31</sup> + <i>x</i><sup>24</sup> + <i>x</i><sup>22</sup> + <i>x</i><sup>16</sup> + <i>x</i><sup>14</sup> + <i>x</i><sup>8</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>5</sup> + <i>x</i><sup>3</sup> + <i>x</i> + 1</span> (aviation; <a href="/wiki/AIXM">AIXM</a><sup id="cite_ref-aixm-primer_22-0" class="reference"><a href="#cite_note-aixm-primer-22"><span>[</span>23<span>]</span></a></sup>)</td>
+<td>0x814141AB&#160;/ 0xD5828281&#160;/ 0xC0A0A0D5</td>
+</tr>
+<tr>
+<td>CRC-40-<a href="/wiki/GSM">GSM</a></td>
+<td><span class="texhtml"><i>x</i><sup>40</sup> + <i>x</i><sup>26</sup> + <i>x</i><sup>23</sup> + <i>x</i><sup>17</sup> + <i>x</i><sup>3</sup> + 1</span> (GSM control channel<sup id="cite_ref-gammel_23-0" class="reference"><a href="#cite_note-gammel-23"><span>[</span>24<span>]</span></a></sup><sup id="cite_ref-geremia_24-0" class="reference"><a href="#cite_note-geremia-24"><span>[</span>25<span>]</span></a></sup>)</td>
+<td>0x0004820009 / 0x9000412000 / 0x8002410004</td>
+</tr>
+<tr>
+<td>CRC-64-ISO</td>
+<td><span class="texhtml"><i>x</i><sup>64</sup> + <i>x</i><sup>4</sup> + <i>x</i><sup>3</sup> + <i>x</i> + 1</span> (<a href="/wiki/High-Level_Data_Link_Control" title="High-Level Data Link Control">HDLC — ISO 3309</a>, <a href="/wiki/Swiss-Prot" class="mw-redirect" title="Swiss-Prot">Swiss-Prot</a>/<a href="/wiki/TrEMBL" class="mw-redirect" title="TrEMBL">TrEMBL</a>; considered weak for hashing<sup id="cite_ref-jones-improved64_25-0" class="reference"><a href="#cite_note-jones-improved64-25"><span>[</span>26<span>]</span></a></sup>)</td>
+<td>0x000000000000001B&#160;/ 0xD800000000000000&#160;/ 0x800000000000000D</td>
+</tr>
+<tr>
+<td>CRC-64-<a href="/wiki/Ecma_International" title="Ecma International">ECMA</a>-182</td>
+<td><span class="texhtml"><i>x</i><sup>64</sup> + <i>x</i><sup>62</sup> + <i>x</i><sup>57</sup> + <i>x</i><sup>55</sup> + <i>x</i><sup>54</sup> + <i>x</i><sup>53</sup> + <i>x</i><sup>52</sup> + <i>x</i><sup>47</sup> + <i>x</i><sup>46</sup> + <i>x</i><sup>45</sup> + <i>x</i><sup>40</sup> + <i>x</i><sup>39</sup> + <i>x</i><sup>38</sup> + <i>x</i><sup>37</sup> + <i>x</i><sup>35</sup> + <i>x</i><sup>33</sup> +</span> <span class="texhtml"><i>x</i><sup>32</sup> + <i>x</i><sup>31</sup> + <i>x</i><sup>29</sup> + <i>x</i><sup>27</sup> + <i>x</i><sup>24</sup> + <i>x</i><sup>23</sup> + <i>x</i><sup>22</sup> + <i>x</i><sup>21</sup> + <i>x</i><sup>19</sup> + <i>x</i><sup>17</sup> + <i>x</i><sup>13</sup> + <i>x</i><sup>12</sup> + <i>x</i><sup>10</sup> + <i>x</i><sup>9</sup> + <i>x</i><sup>7</sup> + <i>x</i><sup>4</sup> + <i>x</i> + 1</span> (as described in <a href="http://www.ecma-international.org/publications/standards/Ecma-182.htm" class="external text" rel="nofollow">ECMA-182</a> p.&#160;51)</td>
+<td>0x42F0E1EBA9EA3693&#160;/ 0xC96C5795D7870F42&#160;/ 0xA17870F5D4F51B49</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a>]</span> <span class="mw-headline" id="See_also">See also</span></h2>
+<ul>
+<li><a href="/wiki/Computation_of_CRC">Computation of CRC</a></li>
+<li><a href="/wiki/Error_correcting_code" class="mw-redirect" title="Error correcting code">Error correcting code</a></li>
+<li><a href="/wiki/Cyclic_code">Cyclic code</a></li>
+<li><a href="/wiki/Redundancy_check" class="mw-redirect" title="Redundancy check">Redundancy check</a></li>
+<li><a href="/wiki/List_of_checksum_algorithms" class="mw-redirect" title="List of checksum algorithms">List of checksum algorithms</a></li>
+<li><a href="/wiki/Parity_(telecommunication)" title="Parity (telecommunication)" class="mw-redirect">Parity</a></li>
+<li><a href="/wiki/Information_security">Information security</a></li>
+<li><a href="/wiki/Simple_file_verification">Simple file verification</a></li>
+<li><a href="/wiki/Cksum">cksum</a></li>
+<li><a href="/wiki/Header_Error_Correction" class="mw-redirect" title="Header Error Correction">Header Error Correction</a></li>
+<li><a href="/wiki/Adler-32">Adler-32</a></li>
+<li><a href="/wiki/Fletcher%27s_checksum">Fletcher's checksum</a></li>
+<li><a href="/wiki/Mathematics_of_CRC" title="Mathematics of CRC">Mathematics of CRCs</a></li>
+</ul>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=9" title="Edit section: References">edit</a>]</span> <span class="mw-headline" id="References">References</span></h2>
+<div class="reflist references-column-width" style="column-width: 30em; -moz-column-width: 30em; -webkit-column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-ritter-1986-0"><b><a href="#cite_ref-ritter-1986_0-0">^</a></b> <span class="citation Journal">Ritter, Terry (February 1986). <a href="http://www.ciphersbyritter.com/ARTS/CRCMYST.HTM" class="external text" rel="nofollow">"The Great CRC Mystery"</a>. <i><a href="/wiki/Dr._Dobb%27s_Journal">Dr. Dobb's Journal</a></i> <b>11</b> (2): 26–34, 76–83<span class="printonly">. <a href="http://www.ciphersbyritter.com/ARTS/CRCMYST.HTM" class="external free" rel="nofollow">http://www.ciphersbyritter.com/ARTS/CRCMYST.HTM</a></span><span class="reference-accessdate">. Retrieved 21 May 2009</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+Great+CRC+Mystery&amp;rft.jtitle=%5B%5BDr.+Dobb%27s+Journal%5D%5D&amp;rft.aulast=Ritter&amp;rft.aufirst=Terry&amp;rft.au=Ritter%2C%26%2332%3BTerry&amp;rft.date=February+1986&amp;rft.volume=11&amp;rft.issue=2&amp;rft.pages=26%E2%80%9334%2C+76%E2%80%9383&amp;rft_id=http%3A%2F%2Fwww.ciphersbyritter.com%2FARTS%2FCRCMYST.HTM&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-PetersonBrown1961-1"><b><a href="#cite_ref-PetersonBrown1961_1-0">^</a></b> <span class="citation Journal">Peterson, W. W. and Brown, D. T. (January 1961). "Cyclic Codes for Error Detection". <i>Proceedings of the IRE</i> <b>49</b>: 228. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2FJRPROC.1961.287814" class="external text" rel="nofollow">10.1109/JRPROC.1961.287814</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Cyclic+Codes+for+Error+Detection&amp;rft.jtitle=Proceedings+of+the+IRE&amp;rft.aulast=Peterson%2C+W.+W.+and+Brown%2C+D.+T.&amp;rft.au=Peterson%2C+W.+W.+and+Brown%2C+D.+T.&amp;rft.date=January+1961&amp;rft.volume=49&amp;rft.pages=228&amp;rft_id=info:doi/10.1109%2FJRPROC.1961.287814&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-wep-2"><b><a href="#cite_ref-wep_2-0">^</a></b> <span class="citation Journal">N. Cam-Winget, Nancy; R. Housley, Russ; D. Wagner, David; J. Walker, Jesse (May 2003). "Security Flaws in 802.11 Data Link Protocols". <i>Communications of the ACM</i> <b>46</b> (5): 35–39. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1145%2F769800.769823" class="external text" rel="nofollow">10.1145/769800.769823</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Security+Flaws+in+802.11+Data+Link+Protocols&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.aulast=N.+Cam-Winget&amp;rft.aufirst=Nancy&amp;rft.au=N.+Cam-Winget%2C%26%2332%3BNancy&amp;rft.au=R.+Housley%2C%26%2332%3BRuss&amp;rft.au=D.+Wagner%2C%26%2332%3BDavid&amp;rft.au=J.+Walker%2C%26%2332%3BJesse&amp;rft.date=May+2003&amp;rft.volume=46&amp;rft.issue=5&amp;rft.pages=35%E2%80%9339&amp;rft_id=info:doi/10.1145%2F769800.769823&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-stigge-reversecrc-3"><b><a href="#cite_ref-stigge-reversecrc_3-0">^</a></b> <span class="citation Journal">Stigge, Martin; Plötz, Henryk; Müller, Wolf; Redlich, Jens-Peter (May 2006). <a href="http://sar.informatik.hu-berlin.de/research/publications/SAR-PR-2006-05/SAR-PR-2006-05_.pdf" class="external text" rel="nofollow"><i>Reversing CRC – Theory and Practice</i></a>. Berlin: Humboldt University Berlin. p. 17<span class="printonly">. <a href="http://sar.informatik.hu-berlin.de/research/publications/SAR-PR-2006-05/SAR-PR-2006-05_.pdf" class="external free" rel="nofollow">http://sar.informatik.hu-berlin.de/research/publications/SAR-PR-2006-05/SAR-PR-2006-05_.pdf</a></span><span class="reference-accessdate">. Retrieved 4 February 2011</span>. "The presented methods offer a very easy and efficient way to modify your data so that it will compute to a CRC you want or at least know in advance. This is not a very difficult task, as CRC is not a cryptographical hash algorithm [...] So you should <i>never</i> consider the CRC as some kind of message authentication code [...] – it can easily be forged."</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Reversing+CRC+%E2%80%93+Theory+and+Practice&amp;rft.aulast=Stigge&amp;rft.aufirst=Martin&amp;rft.au=Stigge%2C%26%2332%3BMartin&amp;rft.au=Pl%C3%B6tz%2C%26%2332%3BHenryk&amp;rft.au=M%C3%BCller%2C%26%2332%3BWolf&amp;rft.au=Redlich%2C%26%2332%3BJens-Peter&amp;rft.date=May+2006&amp;rft.pages=p.+17&amp;rft.place=Berlin&amp;rft.pub=Humboldt+University+Berlin&amp;rft_id=http%3A%2F%2Fsar.informatik.hu-berlin.de%2Fresearch%2Fpublications%2FSAR-PR-2006-05%2FSAR-PR-2006-05_.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-anachriz-reversecrc-4"><b><a href="#cite_ref-anachriz-reversecrc_4-0">^</a></b> <span class="citation web">Anachriz (30 April 1999). <a href="http://www.woodmann.com/fravia/crctut1.htm" class="external text" rel="nofollow">"CRC and how to Reverse it"</a><span class="printonly">. <a href="http://www.woodmann.com/fravia/crctut1.htm" class="external free" rel="nofollow">http://www.woodmann.com/fravia/crctut1.htm</a></span><span class="reference-accessdate">. Retrieved 21 January 2010</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=CRC+and+how+to+Reverse+it&amp;rft.atitle=&amp;rft.aulast=Anachriz&amp;rft.au=Anachriz&amp;rft.date=30+April+1999&amp;rft_id=http%3A%2F%2Fwww.woodmann.com%2Ffravia%2Fcrctut1.htm&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span> Online essay with example x86 assembly code.</li>
+<li id="cite_note-eurocontrol-faq-5"><b><a href="#cite_ref-eurocontrol-faq_5-0">^</a></b> <span class="citation web"><a href="http://www.eurocontrol.int/aim/public/faq/chain_faq3.html" class="external text" rel="nofollow">"Eurocontrol – FAQ: Technologies"</a>. <a href="/wiki/European_Organisation_for_the_Safety_of_Air_Navigation" class="mw-redirect" title="European Organisation for the Safety of Air Navigation">European Organisation for the Safety of Air Navigation</a><span class="printonly">. <a href="http://www.eurocontrol.int/aim/public/faq/chain_faq3.html" class="external free" rel="nofollow">http://www.eurocontrol.int/aim/public/faq/chain_faq3.html</a></span><span class="reference-accessdate">. Retrieved 29 April 2009</span>. "A Cyclic Redundancy Check (CRC) is a means by which a data item may be assessed to verify that it has not been changed (either intentionally or unintentionally) since it the CRC value [<i><a href="/wiki/Sic">sic</a></i>] was applied to it."</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Eurocontrol+%E2%80%93+FAQ%3A+Technologies&amp;rft.atitle=&amp;rft.pub=%5B%5BEuropean+Organisation+for+the+Safety+of+Air+Navigation%5D%5D&amp;rft_id=http%3A%2F%2Fwww.eurocontrol.int%2Faim%2Fpublic%2Ffaq%2Fchain_faq3.html&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-williams93-6">^ <a href="#cite_ref-williams93_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-williams93_6-1"><sup><i><b>b</b></i></sup></a> <span class="citation web">Williams, Ross N. (24 September 1996). <a href="http://www.repairfaq.org/filipg/LINK/F_crc_v3.html" class="external text" rel="nofollow">"A Painless Guide to CRC Error Detection Algorithms V3.00"</a><span class="printonly">. <a href="http://www.repairfaq.org/filipg/LINK/F_crc_v3.html" class="external free" rel="nofollow">http://www.repairfaq.org/filipg/LINK/F_crc_v3.html</a></span><span class="reference-accessdate">. Retrieved 5 June 2010</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=A+Painless+Guide+to+CRC+Error+Detection+Algorithms+V3.00&amp;rft.atitle=&amp;rft.aulast=Williams&amp;rft.aufirst=Ross+N.&amp;rft.au=Williams%2C%26%2332%3BRoss+N.&amp;rft.date=24+September+1996&amp;rft_id=http%3A%2F%2Fwww.repairfaq.org%2Ffilipg%2FLINK%2FF_crc_v3.html&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span>Contains a rigorous explanation of how to generate the CRC table typically found in implementations.</li>
+<li id="cite_note-koop04-7">^ <a href="#cite_ref-koop04_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-koop04_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-koop04_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-koop04_7-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-koop04_7-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-koop04_7-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-koop04_7-6"><sup><i><b>g</b></i></sup></a> <span class="citation Journal">Koopman, Philip; Chakravarty, Tridib (June 2004). <a href="http://www.ece.cmu.edu/~koopman/roses/dsn04/koopman04_crc_poly_embedded.pdf" class="external text" rel="nofollow">"Cyclic Redundancy Code (CRC) Polynomial Selection For Embedded Networks"</a>. <i>The International Conference on Dependable Systems and Networks</i>: 145–154. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2FDSN.2004.1311885" class="external text" rel="nofollow">10.1109/DSN.2004.1311885</a><span class="printonly">. <a href="http://www.ece.cmu.edu/~koopman/roses/dsn04/koopman04_crc_poly_embedded.pdf" class="external free" rel="nofollow">http://www.ece.cmu.edu/~koopman/roses/dsn04/koopman04_crc_poly_embedded.pdf</a></span><span class="reference-accessdate">. Retrieved 14 January 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Cyclic+Redundancy+Code+%28CRC%29+Polynomial+Selection+For+Embedded+Networks&amp;rft.jtitle=The+International+Conference+on+Dependable+Systems+and+Networks&amp;rft.aulast=Koopman&amp;rft.aufirst=Philip&amp;rft.au=Koopman%2C%26%2332%3BPhilip&amp;rft.au=Chakravarty%2C%26%2332%3BTridib&amp;rft.date=June+2004&amp;rft.pages=145%E2%80%93154&amp;rft_id=info:doi/10.1109%2FDSN.2004.1311885&amp;rft_id=http%3A%2F%2Fwww.ece.cmu.edu%2F%7Ekoopman%2Froses%2Fdsn04%2Fkoopman04_crc_poly_embedded.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-cook-catalogue-8"><b><a href="#cite_ref-cook-catalogue_8-0">^</a></b> <span class="citation web">Cook, Greg (26 March 2010). <a href="http://regregex.bbcmicro.net/crc-catalogue.htm" class="external text" rel="nofollow">"Catalogue of parametrised CRC algorithms"</a><span class="printonly">. <a href="http://regregex.bbcmicro.net/crc-catalogue.htm" class="external free" rel="nofollow">http://regregex.bbcmicro.net/crc-catalogue.htm</a></span><span class="reference-accessdate">. Retrieved 5 June 2010</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Catalogue+of+parametrised+CRC+algorithms&amp;rft.atitle=&amp;rft.aulast=Cook&amp;rft.aufirst=Greg&amp;rft.au=Cook%2C%26%2332%3BGreg&amp;rft.date=26+March+2010&amp;rft_id=http%3A%2F%2Fregregex.bbcmicro.net%2Fcrc-catalogue.htm&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-cast93-9"><b><a href="#cite_ref-cast93_9-0">^</a></b> <span class="citation Journal">Castagnoli, G.; Bräuer, S.; Herrmann, M. (June 1993). "Optimization of Cyclic Redundancy-Check Codes with 24 and 32 Parity Bits". <i>IEEE Transactions on Communications</i> <b>41</b> (6): 883. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2F26.231911" class="external text" rel="nofollow">10.1109/26.231911</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Optimization+of+Cyclic+Redundancy-Check+Codes+with+24+and+32+Parity+Bits&amp;rft.jtitle=IEEE+Transactions+on+Communications&amp;rft.aulast=Castagnoli&amp;rft.aufirst=G.&amp;rft.au=Castagnoli%2C%26%2332%3BG.&amp;rft.au=Br%C3%A4uer%2C%26%2332%3BS.&amp;rft.au=Herrmann%2C%26%2332%3BM.&amp;rft.date=June+1993&amp;rft.volume=41&amp;rft.issue=6&amp;rft.pages=883&amp;rft_id=info:doi/10.1109%2F26.231911&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span> Castagnoli's <i>et al.</i> work on algorithmic selection of CRC polynomials.</li>
+<li id="cite_note-koop02-10">^ <a href="#cite_ref-koop02_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-koop02_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-koop02_10-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-koop02_10-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-koop02_10-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-koop02_10-5"><sup><i><b>f</b></i></sup></a> <span class="citation Journal">Koopman, Philip (July 2002). <a href="http://www.ece.cmu.edu/~koopman/networks/dsn02/dsn02_koopman.pdf" class="external text" rel="nofollow">"32-Bit Cyclic Redundancy Codes for Internet Applications"</a>. <i>The International Conference on Dependable Systems and Networks</i>: 459–468. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2FDSN.2002.1028931" class="external text" rel="nofollow">10.1109/DSN.2002.1028931</a><span class="printonly">. <a href="http://www.ece.cmu.edu/~koopman/networks/dsn02/dsn02_koopman.pdf" class="external free" rel="nofollow">http://www.ece.cmu.edu/~koopman/networks/dsn02/dsn02_koopman.pdf</a></span><span class="reference-accessdate">. Retrieved 14 January 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=32-Bit+Cyclic+Redundancy+Codes+for+Internet+Applications&amp;rft.jtitle=The+International+Conference+on+Dependable+Systems+and+Networks&amp;rft.aulast=Koopman&amp;rft.aufirst=Philip&amp;rft.au=Koopman%2C%26%2332%3BPhilip&amp;rft.date=July+2002&amp;rft.pages=459%E2%80%93468&amp;rft_id=info:doi/10.1109%2FDSN.2002.1028931&amp;rft_id=http%3A%2F%2Fwww.ece.cmu.edu%2F%7Ekoopman%2Fnetworks%2Fdsn02%2Fdsn02_koopman.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span> Verification of Castagnoli's results by exhaustive search and some new good polynomials.</li>
+<li id="cite_note-Brayer1975-11"><b><a href="#cite_ref-Brayer1975_11-0">^</a></b> <span class="citation Journal">Brayer, Kenneth (August 1975). <a href="http://www.dtic.mil/srch/doc?collection=t3&amp;id=ADA014825" class="external text" rel="nofollow"><i>Evaluation of 32 Degree Polynomials in Error Detection on the SATIN IV Autovon Error Patterns</i></a>. <a href="/wiki/National_Technical_Information_Service">National Technical Information Service</a>. p. 74<span class="printonly">. <a href="http://www.dtic.mil/srch/doc?collection=t3&amp;id=ADA014825" class="external free" rel="nofollow">http://www.dtic.mil/srch/doc?collection=t3&amp;id=ADA014825</a></span><span class="reference-accessdate">. Retrieved 3 February 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Evaluation+of+32+Degree+Polynomials+in+Error+Detection+on+the+SATIN+IV+Autovon+Error+Patterns&amp;rft.aulast=Brayer&amp;rft.aufirst=Kenneth&amp;rft.au=Brayer%2C%26%2332%3BKenneth&amp;rft.date=August+1975&amp;rft.pages=p.+74&amp;rft.pub=%5B%5BNational+Technical+Information+Service%5D%5D&amp;rft_id=http%3A%2F%2Fwww.dtic.mil%2Fsrch%2Fdoc%3Fcollection%3Dt3%26id%3DADA014825&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-Hammond1975-12"><b><a href="#cite_ref-Hammond1975_12-0">^</a></b> <span class="citation Journal">Hammond, Joseph L., Jr.; Brown, James E.; Liu, Shyan-Shiang (May 1975). <i>Development of a Transmission Error Model and an Error Control Model</i>. <a href="/wiki/National_Technical_Information_Service">National Technical Information Service</a>. p. 74. <a href="/wiki/Bibcode">Bibcode</a> <a href="http://adsabs.harvard.edu/abs/1975STIN...7615344H" class="external text" rel="nofollow">1975STIN...7615344H</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/100.2%2FADA013939" class="external text" rel="nofollow">100.2/ADA013939</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Development+of+a+Transmission+Error+Model+and+an+Error+Control+Model&amp;rft.aulast=Hammond&amp;rft.aufirst=Joseph+L.%2C+Jr.&amp;rft.au=Hammond%2C%26%2332%3BJoseph+L.%2C+Jr.&amp;rft.au=Brown%2C%26%2332%3BJames+E.&amp;rft.au=Liu%2C%26%2332%3BShyan-Shiang&amp;rft.date=May+1975&amp;rft.pages=p.+74&amp;rft.pub=%5B%5BNational+Technical+Information+Service%5D%5D&amp;rft_id=info:bibcode/1975STIN...7615344H&amp;rft_id=info:doi/100.2%2FADA013939&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-BrayerHammond1975-13"><b><a href="#cite_ref-BrayerHammond1975_13-0">^</a></b> <span class="citation book">Brayer, Kenneth; Hammond, Joseph L., Jr. (December 1975). "Evaluation of error detection polynomial performance on the AUTOVON channel". <i>Conference Record</i>. <b>1</b>. IEEE National Telecommunications Conference, New Orleans, La. New York: Institute of Electrical and Electronics Engineers. pp.&#160;8–21 to 8–25. <a href="/wiki/Bibcode">Bibcode</a> <a href="http://adsabs.harvard.edu/abs/1975ntc.....1....8B" class="external text" rel="nofollow">1975ntc.....1....8B</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Evaluation+of+error+detection+polynomial+performance+on+the+AUTOVON+channel&amp;rft.atitle=Conference+Record&amp;rft.aulast=Brayer&amp;rft.aufirst=Kenneth&amp;rft.au=Brayer%2C%26%2332%3BKenneth&amp;rft.au=Hammond%2C%26%2332%3BJoseph+L.%2C+Jr.&amp;rft.date=December+1975&amp;rft.volume=1&amp;rft.pages=pp.%26nbsp%3B8%E2%80%9321+to+8%E2%80%9325&amp;rft.place=New+York&amp;rft.pub=Institute+of+Electrical+and+Electronics+Engineers&amp;rft_id=info:bibcode/1975ntc.....1....8B&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-gen-2-spec-14"><b><a href="#cite_ref-gen-2-spec_14-0">^</a></b> <span class="citation Journal"><a href="http://www.epcglobalinc.org/standards/uhfc1g2/uhfc1g2_1_0_9-standard-20050126.pdf" class="external text" rel="nofollow"><i>Class-1 Generation-2 UHF RFID Protocol</i></a>. 1.2.0. <a href="/wiki/EPCglobal">EPCglobal</a>. 23 October 2008. p. 35<span class="printonly">. <a href="http://www.epcglobalinc.org/standards/uhfc1g2/uhfc1g2_1_0_9-standard-20050126.pdf" class="external free" rel="nofollow">http://www.epcglobalinc.org/standards/uhfc1g2/uhfc1g2_1_0_9-standard-20050126.pdf</a></span><span class="reference-accessdate">. Retrieved 21 May 2009</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Class-1+Generation-2+UHF+RFID+Protocol&amp;rft.date=23+October+2008&amp;rft.series=1.2.0&amp;rft.pages=p.+35&amp;rft.pub=%5B%5BEPCglobal%5D%5D&amp;rft_id=http%3A%2F%2Fwww.epcglobalinc.org%2Fstandards%2Fuhfc1g2%2Fuhfc1g2_1_0_9-standard-20050126.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-richardson-wcdma-15"><b><a href="#cite_ref-richardson-wcdma_15-0">^</a></b> <span class="citation book">Richardson, Andrew (17 March 2005). <i>WCDMA Handbook</i>. Cambridge, UK: Cambridge University Press. p.&#160;223. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0521828155" title="Special:BookSources/0521828155">0521828155</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=WCDMA+Handbook&amp;rft.aulast=Richardson&amp;rft.aufirst=Andrew&amp;rft.au=Richardson%2C%26%2332%3BAndrew&amp;rft.date=17+March+2005&amp;rft.pages=p.%26nbsp%3B223&amp;rft.place=Cambridge%2C+UK&amp;rft.pub=Cambridge+University+Press&amp;rft.isbn=0521828155&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-flexray-spec-16">^ <a href="#cite_ref-flexray-spec_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-flexray-spec_16-1"><sup><i><b>b</b></i></sup></a> <span class="citation Journal"><i>FlexRay Protocol Specification</i>. 2.1 Revision A. Flexray Consortium. 22 December 2005. p. 93.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=FlexRay+Protocol+Specification&amp;rft.date=22+December+2005&amp;rft.series=2.1+Revision+A&amp;rft.pages=p.+93&amp;rft.pub=Flexray+Consortium&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="citation Journal">Perez, A.; Wismer &amp; Becker (1983). "Byte-Wise CRC Calculations". <i>IEEE Micro</i> <b>3</b> (3): 40–50. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2FMM.1983.291120" class="external text" rel="nofollow">10.1109/MM.1983.291120</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Byte-Wise+CRC+Calculations&amp;rft.jtitle=IEEE+Micro&amp;rft.aulast=Perez&amp;rft.aufirst=A.&amp;rft.au=Perez%2C%26%2332%3BA.&amp;rft.date=1983&amp;rft.volume=3&amp;rft.issue=3&amp;rft.pages=40%E2%80%9350&amp;rft_id=info:doi/10.1109%2FMM.1983.291120&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="citation Journal">Ramabadran, T.V.; Gaitonde, S.S. (1988). "A tutorial on CRC computations". <i>IEEE Micro</i> <b>8</b> (4): 62–75. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a href="http://dx.doi.org/10.1109%2F40.7773" class="external text" rel="nofollow">10.1109/40.7773</a>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+tutorial+on+CRC+computations&amp;rft.jtitle=IEEE+Micro&amp;rft.aulast=Ramabadran&amp;rft.aufirst=T.V.&amp;rft.au=Ramabadran%2C%26%2332%3BT.V.&amp;rft.au=Gaitonde%2C%26%2332%3BS.S.&amp;rft.date=1988&amp;rft.volume=8&amp;rft.issue=4&amp;rft.pages=62%E2%80%9375&amp;rft_id=info:doi/10.1109%2F40.7773&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-thaler-t10-selection-19"><b><a href="#cite_ref-thaler-t10-selection_19-0">^</a></b> <span class="citation Journal">Thaler, Pat (28 August 2003). <a href="http://www.t10.org/ftp/t10/document.03/03-290r0.pdf" class="external text" rel="nofollow"><i>16-bit CRC polynomial selection</i></a>. INCITS T10<span class="printonly">. <a href="http://www.t10.org/ftp/t10/document.03/03-290r0.pdf" class="external free" rel="nofollow">http://www.t10.org/ftp/t10/document.03/03-290r0.pdf</a></span><span class="reference-accessdate">. Retrieved 11 August 2009</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=16-bit+CRC+polynomial+selection&amp;rft.aulast=Thaler&amp;rft.aufirst=Pat&amp;rft.au=Thaler%2C%26%2332%3BPat&amp;rft.date=28+August+2003&amp;rft.pub=INCITS+T10&amp;rft_id=http%3A%2F%2Fwww.t10.org%2Fftp%2Ft10%2Fdocument.03%2F03-290r0.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-en-300-175-3-20"><b><a href="#cite_ref-en-300-175-3_20-0">^</a></b> <span class="citation Journal"><i>ETSI EN 300 175-3</i>. V2.2.1. Sophia Antipolis, France: European Telecommunications Standards Institute. November 2008.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ETSI+EN+300+175-3&amp;rft.date=November+2008&amp;rft.series=V2.2.1&amp;rft.place=Sophia+Antipolis%2C+France&amp;rft.pub=European+Telecommunications+Standards+Institute&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="citation web">Boutell, Thomas; Randers-Pehrson, Glenn; <i>et al.</i> (14 July 1998). <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html" class="external text" rel="nofollow">"PNG (Portable Network Graphics) Specification, Version 1.2"</a><span class="printonly">. <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html" class="external free" rel="nofollow">http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html</a></span><span class="reference-accessdate">. Retrieved 3 February 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=PNG+%28Portable+Network+Graphics%29+Specification%2C+Version+1.2&amp;rft.atitle=&amp;rft.aulast=Boutell&amp;rft.aufirst=Thomas&amp;rft.au=Boutell%2C%26%2332%3BThomas&amp;rft.au=Randers-Pehrson%2C%26%2332%3BGlenn&amp;rft.date=14+July+1998&amp;rft_id=http%3A%2F%2Fwww.libpng.org%2Fpub%2Fpng%2Fspec%2F1.2%2FPNG-Structure.html&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-aixm-primer-22"><b><a href="#cite_ref-aixm-primer_22-0">^</a></b> <span class="citation Journal"><a href="http://www.eurocontrol.int/aim/gallery/content/public/aicm_aixm_4_5/aixm_primer/AIXM_Primer_4.5.pdf" class="external text" rel="nofollow"><i>AIXM Primer</i></a>. 4.5. <a href="/wiki/European_Organisation_for_the_Safety_of_Air_Navigation" class="mw-redirect" title="European Organisation for the Safety of Air Navigation">European Organisation for the Safety of Air Navigation</a>. 20 March 2006<span class="printonly">. <a href="http://www.eurocontrol.int/aim/gallery/content/public/aicm_aixm_4_5/aixm_primer/AIXM_Primer_4.5.pdf" class="external free" rel="nofollow">http://www.eurocontrol.int/aim/gallery/content/public/aicm_aixm_4_5/aixm_primer/AIXM_Primer_4.5.pdf</a></span><span class="reference-accessdate">. Retrieved 29 April 2009</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=AIXM+Primer&amp;rft.date=20+March+2006&amp;rft.series=4.5&amp;rft.pub=%5B%5BEuropean+Organisation+for+the+Safety+of+Air+Navigation%5D%5D&amp;rft_id=http%3A%2F%2Fwww.eurocontrol.int%2Faim%2Fgallery%2Fcontent%2Fpublic%2Faicm_aixm_4_5%2Faixm_primer%2FAIXM_Primer_4.5.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-gammel-23"><b><a href="#cite_ref-gammel_23-0">^</a></b> <span class="citation web">Gammel, B.M. (31 October 2005). <a href="http://users.physik.tu-muenchen.de/gammel/matpack/html/LibDoc/Crypto/MpCRC.html" class="external text" rel="nofollow">"Crypto - Codes"</a><span class="printonly">. <a href="http://users.physik.tu-muenchen.de/gammel/matpack/html/LibDoc/Crypto/MpCRC.html" class="external free" rel="nofollow">http://users.physik.tu-muenchen.de/gammel/matpack/html/LibDoc/Crypto/MpCRC.html</a></span><span class="reference-accessdate">. Retrieved 10 February 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Crypto+-+Codes&amp;rft.atitle=&amp;rft.aulast=Gammel&amp;rft.aufirst=B.M.&amp;rft.au=Gammel%2C%26%2332%3BB.M.&amp;rft.date=31+October+2005&amp;rft_id=http%3A%2F%2Fusers.physik.tu-muenchen.de%2Fgammel%2Fmatpack%2Fhtml%2FLibDoc%2FCrypto%2FMpCRC.html&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-geremia-24"><b><a href="#cite_ref-geremia_24-0">^</a></b> <span class="citation Journal">Geremia, Patrick (April 1999). <a href="http://focus.ti.com/lit/an/spra530/spra530.pdf" class="external text" rel="nofollow"><i>Cyclic redundancy check computation: an implementation using the TMS320C54x</i></a>. Texas Instruments. p. 5<span class="printonly">. <a href="http://focus.ti.com/lit/an/spra530/spra530.pdf" class="external free" rel="nofollow">http://focus.ti.com/lit/an/spra530/spra530.pdf</a></span><span class="reference-accessdate">. Retrieved 10 February 2011</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Cyclic+redundancy+check+computation%3A+an+implementation+using+the+TMS320C54x&amp;rft.aulast=Geremia&amp;rft.aufirst=Patrick&amp;rft.au=Geremia%2C%26%2332%3BPatrick&amp;rft.date=April+1999&amp;rft.issue=SPRA530&amp;rft.pages=p.+5&amp;rft.pub=Texas+Instruments&amp;rft_id=http%3A%2F%2Ffocus.ti.com%2Flit%2Fan%2Fspra530%2Fspra530.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+<li id="cite_note-jones-improved64-25"><b><a href="#cite_ref-jones-improved64_25-0">^</a></b> <span class="citation Journal">Jones, David T.. <a href="http://www.cs.ucl.ac.uk/staff/d.jones/crcnote.pdf" class="external text" rel="nofollow"><i>An Improved 64-bit Cyclic Redundancy Check for Protein Sequences</i></a>. University College London<span class="printonly">. <a href="http://www.cs.ucl.ac.uk/staff/d.jones/crcnote.pdf" class="external free" rel="nofollow">http://www.cs.ucl.ac.uk/staff/d.jones/crcnote.pdf</a></span><span class="reference-accessdate">. Retrieved 15 December 2009</span>.</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+Improved+64-bit+Cyclic+Redundancy+Check+for+Protein+Sequences&amp;rft.aulast=Jones&amp;rft.aufirst=David+T.&amp;rft.au=Jones%2C%26%2332%3BDavid+T.&amp;rft.pub=University+College+London&amp;rft_id=http%3A%2F%2Fwww.cs.ucl.ac.uk%2Fstaff%2Fd.jones%2Fcrcnote.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Cyclic_redundancy_check"><span style="display: none;">&#160;</span></span></li>
+</ol>
+</div>
+<h2><span class="editsection">[<a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a>]</span> <span class="mw-headline" id="External_links">External links</span></h2>
+<ul>
+<li><a href="http://www.mathpages.com/home/kmath458.htm" class="external text" rel="nofollow">MathPages - Cyclic Redundancy Checks</a>: overview with an explanation of error-detection of different polynomials.</li>
+<li><a href="http://www.networkdls.com/Software.Asp?Review=22" class="external text" rel="nofollow">Clean C++ CRC32 Source Code</a>; OS and Library Independent</li>
+<li><a href="http://www.ross.net/crc/" class="external text" rel="nofollow">The CRC Pitstop</a></li>
+<li>Black, R. (1994-02) <a href="http://www.cl.cam.ac.uk/Research/SRG/bluebook/21/crc/crc.html" class="external text" rel="nofollow">Fast CRC32 in Software</a>; algorithm 4 is used in Linux and info-zip's zip and unzip.</li>
+<li>Kounavis, M. and Berry, F. (2005). <a href="http://www.intel.com/technology/comms/perfnet/download/CRC_generators.pdf" class="external text" rel="nofollow">A Systematic Approach to Building High Performance, Software-based, CRC generators</a>, Slicing-by-4 and slicing-by-8 algorithms</li>
+<li><a href="http://www.tty1.net/pycrc/" class="external text" rel="nofollow">pycrc</a>, a free C/C++ source code generator</li>
+<li><a href="http://www.codeproject.com/KB/recipes/crc32.aspx" class="external text" rel="nofollow">CRC32: Generating a checksum for a file</a>, C++ implementation by Brian Friesen</li>
+<li><a href="http://www.aweiler.com/crc/" class="external text" rel="nofollow">The CRC++ Project</a> Implementation in C++ which uses template classes to deal with different bit order</li>
+<li><a href="http://einstein.informatik.uni-oldenburg.de/papers/CRC-BitfilterEng.pdf" class="external text" rel="nofollow">'CRC-Analysis with Bitfilters'.</a></li>
+<li><a href="http://www.hackersdelight.org/crc.pdf" class="external text" rel="nofollow">Cyclic Redundancy Check</a>: theory, practice, hardware, and software with emphasis on CRC-32. A sample chapter from Henry S. Warren, Jr. <i><a href="/wiki/Hacker%27s_Delight">Hacker's Delight</a></i>.</li>
+</ul>
+<table class="navbox" cellspacing="0" style=";">
+<tr>
+<td style="padding:2px;">
+<table cellspacing="0" class="nowraplinks collapsible autocollapse" style="width:100%;background:transparent;color:inherit;;">
+<tr>
+<th style=";" colspan="2" class="navbox-title"><span style="float:left;width:6em;text-align:left;"><span class="noprint plainlinks navbar" style=""><span style="white-space:nowrap;word-spacing:-.12em;"><a href="/wiki/Template:Ecma_International_Standards" title="Template:Ecma International Standards"><span style=";;background:none transparent;border:none;font-size:100%;" title="View this template">v</span></a> <span style=";;background:none transparent;border:none;font-size:100%;"><b>·</b></span> <a href="/w/index.php?title=Template_talk:Ecma_International_Standards&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Ecma International Standards (page does not exist)"><span style=";;background:none transparent;border:none;font-size:100%;" title="Discuss this template">d</span></a> <span style=";;background:none transparent;border:none;font-size:100%;"><b>·</b></span> <a href="http://en.wikipedia.org/w/index.php?title=Template:Ecma_International_Standards&amp;action=edit" class="external text" rel="nofollow"><span style=";;background:none transparent;border:none;font-size:100%;" title="Edit this template">e</span></a></span></span></span><span class="" style="font-size:110%;">Standards of <a href="/wiki/Ecma_International">Ecma International</a></span></th>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td colspan="2" style="width:100%;padding:0px;;;" class="navbox-list navbox-odd">
+<div style="padding:0em 0.25em"><a href="/wiki/Advanced_Intelligent_Tape" title="Advanced Intelligent Tape">AIT</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/ANSI_escape_code">ANSI escape code</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/C%2B%2B/CLI">C++/CLI</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Yellow_Book_(CD_standard)" title="Yellow Book (CD standard)">CD-ROM</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/ISO_9660" title="ISO 9660">CDFS</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Digital_Data_Storage" title="Digital Data Storage">DDS</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Digital_Linear_Tape" title="Digital Linear Tape">DLT</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/ECMAScript_for_XML" title="ECMAScript for XML">E4X</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/ECMAScript">ECMAScript</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Eiffel_(programming_language)" title="Eiffel (programming language)">Eiffel</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Floppy_disk" title="Floppy disk">FD</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Holographic_Versatile_Disc" title="Holographic Versatile Disc">HVD</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Near_Field_Communication" title="Near Field Communication" class="mw-redirect">NFC</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Office_Open_XML">Office Open XML</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Open_XML_Paper_Specification" title="Open XML Paper Specification">OpenXPS</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Digital_Linear_Tape" title="Digital Linear Tape">Super DLT</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Universal_3D" title="Universal 3D">U3D</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Universal_Disk_Format" title="Universal Disk Format">UDF</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Ultra_Density_Optical" title="Ultra Density Optical">UDO</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Linear_Tape-Open" title="Linear Tape-Open">Ultrium-1</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Universal_Media_Disc" title="Universal Media Disc">UMD</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/Ultra-wideband" title="Ultra-wideband">UWB</a>&#160;<span style="font-weight:bold;">·</span>  <a href="/wiki/VXA">VXA</a></div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" style=";" colspan="2"><a href="/wiki/List_of_Ecma_standards">List of Ecma standards</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 19356/1000000
+Post-expand include size: 135165/2048000 bytes
+Template argument size: 45168/2048000 bytes
+Expensive parser function count: 4/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:38838-0!1!0!!en!4 and timestamp 20110419095827 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/Cyclic_redundancy_check">http://en.wikipedia.org/wiki/Cyclic_redundancy_check</a>"</div>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/wiki/Category:Checksum_algorithms" title="Category:Checksum algorithms">Checksum algorithms</a></span> | <span dir='ltr'><a href="/wiki/Category:Finite_fields" title="Category:Finite fields">Finite fields</a></span> | <span dir='ltr'><a href="/wiki/Category:Hash_functions" title="Category:Hash functions">Hash functions</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden categories: <span dir='ltr'><a href="/wiki/Category:Mathematics_articles_needing_expert_attention" title="Category:Mathematics articles needing expert attention">Mathematics articles needing expert attention</a></span> | <span dir='ltr'><a href="/wiki/Category:Articles_needing_expert_attention_from_August_2010" title="Category:Articles needing expert attention from August 2010">Articles needing expert attention from August 2010</a></span> | <span dir='ltr'><a href="/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></span> | <span dir='ltr'><a href="/wiki/Category:Use_dmy_dates_from_September_2010" title="Category:Use dmy dates from September 2010">Use dmy dates from September 2010</a></span></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+					<li  id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Cyclic_redundancy_check" title="You are encouraged to log in; however, it is not mandatory. [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Cyclic_redundancy_check"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+					<li  id="ca-talk"><span><a href="/wiki/Talk:Cyclic_redundancy_check"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/wiki/Cyclic_redundancy_check" >Read</a></span></li>
+					<li id="ca-edit"><span><a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=edit"  title="You can edit this page. &#10;Please use the preview button before saving. [e]" accesskey="e">Edit</a></span></li>
+					<li id="ca-history" class="collapsible "><span><a href="/w/index.php?title=Cyclic_redundancy_check&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Special:Search"/>
+				<div id="simpleSearch">
+						<input id="searchInput" name="search" type="text"  title="Search Wikipedia [f]" accesskey="f"  value="" />
+						<button id="searchButton" type='submit' name='button'  title="Search Wikipedia for this text"><img src="http://bits.wikimedia.org/skins-1.17/vector/images/search-ltr.png?301-2" alt="Search" /></button>
+					</div>
+			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+				<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+					<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+					<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+					<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+					<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+					<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&amp;language=en&amp;utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20101204SB002" title="Support us">Donate to Wikipedia</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- interaction -->
+<div class="portal" id='p-interaction'>
+	<h5>Interaction</h5>
+	<div class="body">
+				<ul>
+					<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+					<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+					<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+					<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+					<li id="n-contact"><a href="/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /interaction -->
+
+<!-- TOOLBOX -->
+<div class="portal" id="p-tb">
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Cyclic_redundancy_check" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+						<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Cyclic_redundancy_check" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+																																					<li id="t-upload"><a href="/wiki/Wikipedia:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+											<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+											<li id="t-permalink"><a href="/w/index.php?title=Cyclic_redundancy_check&amp;oldid=422049135" title="Permanent link to this revision of the page">Permanent link</a></li>
+				<li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Cyclic_redundancy_check&amp;id=422049135" title="Information on how to cite this page">Cite this page</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- coll-print_export -->
+<div class="portal" id='p-coll-print_export'>
+	<h5>Print/export</h5>
+	<div class="body">
+				<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cyclic+redundancy+check" title="Create a book or page collection" rel="nofollow">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Cyclic+redundancy+check&amp;oldid=422049135&amp;writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Cyclic_redundancy_check&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>			</div>
+</div>
+
+<!-- /coll-print_export -->
+
+<!-- LANGUAGES -->
+<div class="portal" id="p-lang">
+	<h5>Languages</h5>
+	<div class="body">
+		<ul>
+					<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1_%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D8%A7%D8%B1_%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A" title="اختبار التكرار الدوري">العربية</a></li>
+					<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/CRC" title="CRC">Български</a></li>
+					<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Control_de_redund%C3%A0ncia_c%C3%ADclica" title="Control de redundància cíclica">Català</a></li>
+					<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Cyklick%C3%BD_redundantn%C3%AD_sou%C4%8Det" title="Cyklický redundantní součet">Česky</a></li>
+					<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Cyklisk_redundanstjek" title="Cyklisk redundanstjek">Dansk</a></li>
+					<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Zyklische_Redundanzpr%C3%BCfung" title="Zyklische Redundanzprüfung">Deutsch</a></li>
+					<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/%CE%9A%CF%85%CE%BA%CE%BB%CE%B9%CE%BA%CF%8C%CF%82_%CE%88%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%CF%82_%CE%A0%CE%BB%CE%B5%CE%BF%CE%BD%CE%B1%CF%83%CE%BC%CE%BF%CF%8D" title="Κυκλικός Έλεγχος Πλεονασμού">Ελληνικά</a></li>
+					<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Comprobaci%C3%B3n_de_redundancia_c%C3%ADclica" title="Comprobación de redundancia cíclica">Español</a></li>
+					<li class="interwiki-eu"><a href="http://eu.wikipedia.org/wiki/CRC" title="CRC">Euskara</a></li>
+					<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%DA%A9%D8%AF_%D8%A7%D9%81%D8%B2%D9%88%D9%86%DA%AF%DB%8C_%DA%86%D8%B1%D8%AE%D8%B4%DB%8C" title="کد افزونگی چرخشی">فارسی</a></li>
+					<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Contr%C3%B4le_de_redondance_cyclique" title="Contrôle de redondance cyclique">Français</a></li>
+					<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EC%88%9C%ED%99%98_%EC%A4%91%EB%B3%B5_%EA%B2%80%EC%82%AC" title="순환 중복 검사">한국어</a></li>
+					<li class="interwiki-id"><a href="http://id.wikipedia.org/wiki/CRC" title="CRC">Bahasa Indonesia</a></li>
+					<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check">Italiano</a></li>
+					<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%91%D7%93%D7%99%D7%A7%D7%AA_%D7%99%D7%AA%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%97%D7%96%D7%95%D7%A8%D7%99%D7%AA" title="בדיקת יתירות מחזורית">עברית</a></li>
+					<li class="interwiki-ml"><a href="http://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B5%88%E0%B4%95%E0%B5%8D%E0%B4%B2%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D_%E0%B4%B1%E0%B4%BF%E0%B4%A1%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%BB%E0%B4%B8%E0%B4%BF_%E0%B4%9A%E0%B5%86%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%8D" title="സൈക്ലിക്ക് റിഡണ്ടൻസി ചെക്ക്">മലയാളം</a></li>
+					<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check">Nederlands</a></li>
+					<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E5%B7%A1%E5%9B%9E%E5%86%97%E9%95%B7%E6%A4%9C%E6%9F%BB" title="巡回冗長検査">日本語</a></li>
+					<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Cykliczny_kod_nadmiarowy" title="Cykliczny kod nadmiarowy">Polski</a></li>
+					<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/CRC" title="CRC">Português</a></li>
+					<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check">Română</a></li>
+					<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D0%B7%D0%B1%D1%8B%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%B4" title="Циклический избыточный код">Русский</a></li>
+					<li class="interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Cyclic_redundancy_check" title="Cyclic redundancy check">Simple English</a></li>
+					<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Kontrola_cyklick%C3%BDm_k%C3%B3dom" title="Kontrola cyklickým kódom">Slovenčina</a></li>
+					<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/CRC" title="CRC">Suomi</a></li>
+					<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Cyclic_Redundancy_Check" title="Cyclic Redundancy Check">Svenska</a></li>
+					<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/CRC_(D%C3%B6ng%C3%BCsel_Art%C4%B1kl%C4%B1k_Denetimi)" title="CRC (Döngüsel Artıklık Denetimi)">Türkçe</a></li>
+					<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/CRC" title="CRC">Tiếng Việt</a></li>
+					<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/%E5%BE%AA%E7%92%B0%E5%86%97%E9%A4%98%E6%A0%A1%E9%A9%97" title="循環冗餘校驗">中文</a></li>
+				</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+											<ul id="footer-info">
+																	<li id="footer-info-lastmod"> This page was last modified on 2 April 2011 at 22:36.<br /></li>
+																							<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.
+See <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> for details.<br/>
+Wikipedia&reg; is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.<br /></li><li class="noprint"><a class='internal' href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact us</a></li>
+															</ul>
+															<ul id="footer-places">
+																	<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+																							<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+																							<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+															</ul>
+											<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="http://bits.wikimedia.org/skins-1.17/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Cyclic_redundancy_check", "wgTitle": "Cyclic redundancy check", "wgAction": "view", "wgArticleId": 38838, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 422049135, "wgCategories": ["Mathematics articles needing expert attention", "Articles needing expert attention from August 2010", "All articles needing expert attention", "Use dmy dates from September 2010", "Checksum algorithms", "Finite fields", "Hash functions"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0], "wgFlaggedRevsParams": {"tags": {"status": {"levels": 1, "quality": 2, "pristine": 3}}}, "wgStableRevisionId": null, "wgRevContents": {"error": "Unable to get content.", "waiting": "Waiting for content"}, "wgWikimediaMobileUrl": "http://en.m.wikipedia.org/wiki", "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": true, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "wgWikiEditorEnabledModules": {"toolbar": true, "dialogs": true, "templateEditor": false, "templates": false, "addMediaWizard": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "wgTrackingToken": "1015449a55adc570e80522acf01c3c7d", "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikipedia"});
+}
+</script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.legacy.wikibits", "mediawiki.util", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.editWarning", "ext.vector.simpleSearch", "ext.articleFeedback.startup"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script src="/w/index.php?title=Special:BannerController&amp;cache=/cn.js&amp;301-2" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":"3","watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"flaggedrevssimpleui":1,"flaggedrevsstable":false,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false});;mediaWiki.loader.state({"user.options":"ready"});
+	
+	/* cache key: enwiki:resourceloader:filter:minify-js:5:27c920e3d777c540f5f38bf4516bf8fd */
+}
+</script><script type="text/javascript" src="http://geoiplookup.wikimedia.org/"></script>		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<!-- Served by srv244 in 0.089 secs. -->			</body>
+</html>
