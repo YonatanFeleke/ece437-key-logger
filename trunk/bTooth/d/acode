@@ -1,0 +1,14 @@
+vdel -all -lib work
+vlib work
+vcom source/tb_B_AppendAccessCode.vhd
+vcom mapped/B_AppendAccessCode.vhd
+vsim work.b_appendaccesscode
+vsim work.tb_b_appendaccesscode
+add wave \
+{sim:/tb_b_appendaccesscode/period } \
+{sim:/tb_b_appendaccesscode/clk } \
+{sim:/tb_b_appendaccesscode/rst } \
+{sim:/tb_b_appendaccesscode/code_en } \
+{sim:/tb_b_appendaccesscode/acess_code } \
+{sim:/tb_b_appendaccesscode/store_en } 
+run 60 ns
