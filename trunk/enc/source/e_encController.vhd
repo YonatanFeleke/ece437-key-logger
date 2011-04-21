@@ -109,7 +109,7 @@ begin
 	
 	nxtrndCT <= rndCT + "0001";
 	
-	START <= '1' when compileCT ="111" else '0';
+	START <= '0' when rndCT ="000" else '1';
 	
 	W_ENABLE <= '1' when rndCT = "1111" else '0';
 	
