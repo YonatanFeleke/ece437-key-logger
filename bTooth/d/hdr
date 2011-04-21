@@ -1,0 +1,9 @@
+quit -sim
+vdel -all -lib work
+vlib work
+vcom source/tb_B_Header.vhd
+vcom source/B_Header.vhd
+vsim work.b_Header
+vsim work.tb_b_Header
+add wave -r sim:/tb_b_header/*
+run 120 ns
