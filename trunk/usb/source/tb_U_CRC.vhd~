@@ -132,11 +132,11 @@ process
 		end loop;
 
 		wait for PERIOD*4;
-		CRC_EN <= '0';
+		CRC_EN <= '0'
 		test_vector := "10001001" & "01100111" & "01000101" & "00100011";
 		crc := "00011100" & "00001110";
 		wait for PERIOD*4;
-		CRC_EN <= '1';
+		CRC_EN <= '1'
 
 		for i in 0 to 31 loop
 			D_ORIG <= test_vector(i);

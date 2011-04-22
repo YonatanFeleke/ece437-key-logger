@@ -1,0 +1,9 @@
+rm -rf work
+vlib work
+#vcom source/U_RCU.vhd
+vcom mapped/U_RCU.vhd
+vcom source/tb_rcu.vhd
+vsim -i work.tb_rcu
+add wave *
+
+run 3030 ns
