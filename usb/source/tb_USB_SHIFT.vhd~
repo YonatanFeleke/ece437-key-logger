@@ -1,0 +1,100 @@
+-- $Id: $
+-- File name:   tb_USB_SHIFT.vhd
+-- Created:     4/12/2011
+-- Author:      Brian Crone
+-- Lab Section: 337-02
+-- Version:     1.0  Initial Test Bench
+
+library ieee;
+--library gold_lib;   --UNCOMMENT if you're using a GOLD model
+use ieee.std_logic_1164.all;
+--use gold_lib.all;   --UNCOMMENT if you're using a GOLD model
+
+entity tb_USB_SHIFT is
+generic (Period : Time := 10.4167 ns);
+end tb_USB_SHIFT;
+
+architecture TEST of tb_USB_SHIFT is
+
+  component USB_SHIFT
+    PORT(
+         CLK : in std_logic;
+         RST : in std_logic;
+         EOP : in std_logic;
+         SHIFT_ENABLE : in std_logic;
+         D_ORIG : in std_logic;
+         RCV_DATA : out std_logic_vector(7 downto 0);
+         CRC_SHIFT : out std_logic;
+         STUFF_ERROR : out std_logic
+    );
+  end component;
+
+-- Insert signals Declarations here
+  signal CLK : std_logic;
+  signal RST : std_logic;
+  signal EOP : std_logic;
+  signal SHIFT_ENABLE : std_logic;
+  signal D_ORIG : std_logic;
+  signal RCV_DATA : std_logic_vector(7 downto 0);
+  signal CRC_SHIFT : std_logic;
+  signal STUFF_ERROR : std_logic;
+
+-- signal <name> : <type>;
+
+begin
+
+CLKGEN: process
+  variable clk_tmp: std_logic := '0';
+
+begin
+  clk_tmp := not clk_tmp;
+  clk <= clk_tmp;
+  wait for Period/2;
+end process;
+
+  DUT: USB_SHIFT port map(
+                CLK => CLK,
+                RST => RST,
+                EOP => EOP,
+                SHIFT_ENABLE => SHIFT_ENABLE,
+                D_ORIG => D_ORIG,
+                RCV_DATA => RCV_DATA,
+                CRC_SHIFT => CRC_SHIFT,
+                STUFF_ERROR => STUFF_ERROR
+                );
+
+--   GOLD: <GOLD_NAME> port map(<put mappings here>);
+
+process
+	variable test_vector	: std_logic_vector(23 downto 0) := "101111110101000101111110"; --1101011";
+
+  begin
+
+-- Insert TEST BENCH Code Here
+
+    RST <= '0';
+
+    EOP <= '0';
+
+    SHIFT_ENABLE <= '0'; 
+
+    D_ORIG <= '0';
+
+		wait for Period;
+		RST <= '1';
+		wait for Period;
+		RST <= '0';
+
+		for i in 0 to 23 loop
+			D_ORIG <= test_vector(i);
+			wait for Period*3;
+			SHIFT_ENABLE <= '1';
+			wait for Period;
+			SHIFT_ENABLE <= '0';
+			wait for PERIOD*4;
+		end loop;
+		wait;
+			
+
+  end process;
+end TEST;

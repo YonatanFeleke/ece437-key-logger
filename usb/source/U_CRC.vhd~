@@ -37,10 +37,7 @@ begin
 		if RST_N = '1' then
 		present_val <= "1111111111111111";
 		elsif (rising_edge(CLK)) then
-			if(CRC_EN = '1') then
 			present_val <= next_val;
-			else present_val <= "1111111111111111";
-			end if;
 		end if; 
 	end process;
 
@@ -57,7 +54,7 @@ begin
 								present_val(13 downto 2) & 
 							(present_val(1) xor (present_val(15) xor D_ORIG)) & 
 	  						present_val(0) & 
-								(present_val(15) xor D_ORIG) when ( '1' = CRC_SHIFT ) else present_val;
+								(present_val(15) xor D_ORIG) when ( '1' = CRC_SHIFT and '1' = CRC_EN ) else present_val;
 
 
 	CRC_ERROR <= '0' when ("1000000000001101" = present_val) else '1';

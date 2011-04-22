@@ -86,8 +86,8 @@ architecture behavioral of USB_SHIFT is
       end if;
     end case;
   end process Statelogic;
-  RCV_DATA <= current;
-  OutputLogic : process(STATE, SHIFT_ENABLE)
+  
+  OutputLogic : process(STATE, SHIFT_ENABLE, clk)
   begin
     --RCV_DATA <= current;
     case STATE is
@@ -118,6 +118,7 @@ architecture behavioral of USB_SHIFT is
       CRC_SHIFT <= '0';
       STUFF_ERROR <= '1';
     end case;
+		RCV_DATA <= current;
   end process OutputLogic;
 end behavioral;
       
