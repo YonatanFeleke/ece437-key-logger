@@ -1,6 +1,6 @@
 -- $Id: $
--- File name:   tb_e_encController.vhd
--- Created:     4/17/2011
+-- File name:   tb_encryption.vhd
+-- Created:     4/22/2011
 -- Author:      Samuel Oshin
 -- Lab Section: 337-02
 -- Version:     1.0  Initial Test Bench
@@ -10,11 +10,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 --use gold_lib.all;   --UNCOMMENT if you're using a GOLD model
 
-entity tb_e_encController is
-generic (Period : Time := 10 ns);
-end tb_e_encController;
+entity tb_encryption is
+generic (Period : Time := 3.5 ns);
+end tb_encryption;
 
-architecture TEST of tb_e_encController is
+architecture TEST of tb_encryption is
 
   function INT_TO_STD_LOGIC( X: INTEGER; NumBits: INTEGER )
      return STD_LOGIC_VECTOR is
@@ -33,32 +33,32 @@ architecture TEST of tb_e_encController is
     return res;
   end;
 
-  component e_encController
+  component encryption
     PORT(
-         DATA : IN std_logic_vector(7 downto 0);
-         FULL : IN std_logic;
-         EMPTY : IN std_logic;
          CLK : IN std_logic;
+         DATA : IN std_logic_vector (7 DOWNTO 0);
+         EMPTY : IN std_logic;
+         FULL : IN std_logic;
+         RENABLE : IN std_logic;
          RST : IN std_logic;
-         START : OUT std_logic;
-         R_ENABLE : OUT std_logic;
-         W_ENABLE : OUT std_logic;
-         ENC_LEFT : OUT std_logic_vector(31 downto 0);
-         ENC_RIGHT : OUT std_logic_vector(31 downto 0)
+         EMPTY1 : OUT std_logic;
+         FULL1 : OUT std_logic;
+         RDATA : OUT std_logic_vector (7 DOWNTO 0);
+         R_ENABLE : OUT std_logic
     );
   end component;
 
 -- Insert signals Declarations here
-  signal DATA : std_logic_vector(7 downto 0);
-  signal FULL : std_logic;
-  signal EMPTY : std_logic;
   signal CLK : std_logic;
+  signal DATA : std_logic_vector (7 DOWNTO 0);
+  signal EMPTY : std_logic;
+  signal FULL : std_logic;
+  signal RENABLE : std_logic;
   signal RST : std_logic;
-  signal START : std_logic;
+  signal EMPTY1 : std_logic;
+  signal FULL1 : std_logic;
+  signal RDATA : std_logic_vector (7 DOWNTO 0);
   signal R_ENABLE : std_logic;
-  signal W_ENABLE : std_logic;
-  signal ENC_LEFT : std_logic_vector(31 downto 0);
-  signal ENC_RIGHT : std_logic_vector(31 downto 0);
 
 -- signal <name> : <type>;
 
@@ -72,17 +72,17 @@ begin
   wait for Period/2;
 end process;
 
-  DUT: e_encController port map(
-                DATA => DATA,
-                FULL => FULL,
-                EMPTY => EMPTY,
+  DUT: encryption port map(
                 CLK => CLK,
+                DATA => DATA,
+                EMPTY => EMPTY,
+                FULL => FULL,
+                RENABLE => RENABLE,
                 RST => RST,
-                START => START,
-                R_ENABLE => R_ENABLE,
-                W_ENABLE => W_ENABLE,
-                ENC_LEFT => ENC_LEFT,
-                ENC_RIGHT => ENC_RIGHT
+                EMPTY1 => EMPTY1,
+                FULL1 => FULL1,
+                RDATA => RDATA,
+                R_ENABLE => R_ENABLE
                 );
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
@@ -93,55 +93,64 @@ process
 
 -- Insert TEST BENCH Code Here
 
-    DATA <= "11111111";
+    DATA <= "00000000";
+
+    EMPTY <= '1';
 
     FULL <= '0';
 
-    EMPTY <= '1';
+    RENABLE <= '0';
 
     RST <= '1';
     
-    wait for 2 *Period;
+    wait for 3*Period;
     
-    DATA <= "00000000";
-
-    FULL <= '0';
-
-    EMPTY <= '1';
-
     RST <= '0';
     
-    wait for Period;
+    wait for 3*Period;
     
-    FULL <='1'; 
-
+    DATA <= "01100001";
     
+    FULL <= '1';
     
+    EMPTY <= '0';
+        
     wait until R_ENABLE = '1';
     
-   	DATA <= "00000001";
+    FULL <= '0';
+    
+    DATA <= "01100010";
+    
+    wait for Period;
+    
+    DATA <= "01100011";
+    
+    wait for Period;
 
+    DATA <= "01100100";
     
-		wait for Period;
+    wait for Period;
 
-   	DATA <= "00000010";
+    DATA <= "01100101";
     
     wait for Period;
-    
-    DATA <= "00000011";
-        
-    wait for Period;
-   	DATA <= "00000100";
 
+    DATA <= "01100110";
+    
+    wait for Period;
+
+    DATA <= "01100111";
+    
     wait for Period;
     
-    DATA <= "00000101";
+    DATA <= "01101000";
+    
     wait for Period;
-		
-		DATA <= "00000110";
-    wait for Period;
-    DATA <= "00000111";
-		wait for 30*Period;
+    
+    EMPTY <= '1';
+    
+    wait for 50*Period;
+    
     
 
   end process;
