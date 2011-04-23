@@ -55,7 +55,7 @@ outputcode : process (CLK,RST,CODE_EN)
       			STORE_EN <= '1';
   				else -- value indicating not valid via premable => check on sram accept that all are complements
   				  STORE_EN <= '0';
-	      		ACESS_CODE <= "111100000000000000000000000000000000000000000000000000000000000000000000"; 
+	      		--ACESS_CODE <= "111100000000000000000000000000000000000000000000000000000000000000000000"; -- stays until next transmission
 	      	end if;
       end if;    
     end process outputcode;
