@@ -84,7 +84,7 @@ process
 
 -- Insert TEST BENCH Code Here
 
-    START <= '0';
+    START <= '1';
 
     ENC_LEFT <= "01100001011000100110001101100100";
     
@@ -94,10 +94,13 @@ process
 
     IN_SELECT <= '0';
     
-    wait for Period;
+    wait for 0.5*Period;
     
-    START <= '1';
+    --START <= '1';
+    
+    IN_SELECT <= '1';
   	
+  	wait for 0.5*Period;
 		
 		RKEY <= "110111010010111110001101001101100001011001001111";--2
 		wait for Period;
@@ -128,8 +131,8 @@ process
 		RKEY <= "010100111011111010101101110111101011000111100010";
 		wait for Period;
 		RKEY <= "110111010010111110001101001101100001011001001111";
-		wait for 1*Period;
-		START <= '0';
+		wait for 2*Period;
+--		START <= '0';
    
   end process;
 end TEST;

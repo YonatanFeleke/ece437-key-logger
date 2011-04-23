@@ -22,9 +22,9 @@ end e_DeCompile;
 
 architecture behav of e_DeCompile is
 --signal compileCT,nxtCompCT	: std_logic_vector(2 downto 0);
-type state_type is (idle, Chunk1,Chunk2,Chunk3,Chunk4,Chunk5,Chunk6,Chunk7,Chunk8);
+type state_type is (idle, Chunk1,Chunk2,Chunk3,Chunk4,Chunk5,Chunk6,Chunk7,Chunk8,write);
 signal state,nextstate : state_type;
-signal tDATA : std_logic_vector(7 downto 0);
+--signal tDATA : std_logic_vector(7 downto 0);
 
 begin
 
@@ -72,6 +72,8 @@ begin
 		when Chunk7 => 
 			nextstate <= Chunk8;
 		when Chunk8 => 
+			nextstate <= write;
+		when write =>
 			nextstate <= idle;
 		end case;
 		
@@ -117,8 +119,9 @@ begin
 				 OUTDATA(23 downto 16) when Chunk6,
 				 OUTDATA(15 downto 8) when Chunk7,
 				 OUTDATA(7 downto 0) when Chunk8,
+				 OUTDATA(7 downto 0) when write,
 				 "00000000" when others;				
 	
-	W_ENABLE <= '0' when state = idle or state = Chunk1 else '1';
+	W_ENABLE <= '0' when state = idle else '1';
 	
 end behav;

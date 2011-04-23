@@ -41,7 +41,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 USE IEEE.std_logic_unsigned.all;
-USE IEEE.NUMERIC_BIT.all;
+--USE IEEE.NUMERIC_BIT.all;
 LIBRARY ECE337_IP;
 USE ECE337_IP.ALL;
 

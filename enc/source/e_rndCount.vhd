@@ -40,8 +40,8 @@ architecture behav of e_rndCount is
 			end if;
 		end process stateReg;
 		
-		NXT_CNT <= CUR_CNT + "0001";
-		IN_SELECT <= CUR_CNT(3) or CUR_CNT(2) or CUR_CNT(1) or CUR_CNT(0);
+		NXT_CNT <= CUR_CNT when CUR_CNT = "1111" else CUR_CNT + "0001" ;
+		IN_SELECT <= CUR_CNT(3) or CUR_CNT(2) or CUR_CNT(1) or CUR_CNT(0) or START;
 		RND_CNT <= CUR_CNT;
 		FIESTELCLK <= CLK when (CUR_CNT(3) or CUR_CNT(2) or CUR_CNT(1) or CUR_CNT(0)) = '1' else '0';
 		
