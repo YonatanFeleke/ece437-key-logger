@@ -28,10 +28,10 @@ signal CUR_ENC_LEFT, CUR_ENC_RIGHT, NXT_ENC_LEFT, NXT_ENC_RIGHT1	: std_logic_vec
 
 begin
 
-	freg: process(FIESTELCLK,START)
+	freg: process(FIESTELCLK,IN_SELECT,ENC_LEFT,ENC_RIGHT,NXT_ENC_LEFT,NXT_ENC_RIGHT1)
 	begin
 		
-		if(START = '0') then
+		if(IN_SELECT = '0') then
 			CUR_ENC_LEFT <= ENC_LEFT;
 			CUR_ENC_RIGHT <= ENC_RIGHT;
 		elsif(rising_edge(FIESTELCLK)) then
@@ -40,7 +40,7 @@ begin
 		end if;
 	end process freg;
 	
-	func: process(RKEY,FIESTELCLK,START)
+	func: process(RKEY,FIESTELCLK,IN_SELECT,CUR_ENC_RIGHT,CUR_ENC_LEFT)
 	variable NXT_ENC_RIGHT,NXT_ENC_RIGHT2	: std_logic_vector(31 downto 0);
 	variable NXT_EXP_RIGHT,NXT_EXP_RIGHT2	: std_logic_vector(47 downto 0);
 	variable COLUMN,test3,test2: std_logic_vector(3 downto 0);
@@ -50,8 +50,8 @@ begin
 	begin
 		
 		--if(START = '0') then
-			--NXT_ENC_LEFT := ENC_LEFT;
-			--NXT_ENC_RIGHT := ENC_RIGHT;
+		--	NXT_ENC_LEFT <= ENC_RIGHT;
+		--	NXT_ENC_RIGHT1 <= ENC_LEFT;
 				
 		--else
 		NXT_ENC_LEFT <= CUR_ENC_RIGHT;
@@ -1346,7 +1346,7 @@ case Row is
 		
 		NXT_ENC_RIGHT1 <= NXT_ENC_RIGHT2 xor CUR_ENC_LEFT; -- XOR with LEFT to get new RIGHT
 		
-		--end if;
+--		end if;
 		
 	end process;
 				

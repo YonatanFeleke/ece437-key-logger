@@ -1,4 +1,4 @@
-# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.5.1.el5
+# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.9.1.el5
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.
@@ -21,6 +21,211 @@ do source/fiestel
 # -- Compiling entity e_fiestel
 # -- Compiling architecture behav of e_fiestel
 # vsim -coverage -i work.tb_e_fiestel 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+add wave sim:/tb_e_fiestel/dut/freg/*
+# (vish-4014) No objects found matching '/tb_e_fiestel/dut/freg/*'.
+add wave -r sim:/tb_e_fiestel/dut/freg/*
+# (vish-4014) No objects found matching '/tb_e_fiestel/dut/freg/*'.
+add wave -r sim:/tb_e_fiestel/dut/func/*
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/rndGenTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_e_rkeygen
+# -- Loading package conv_pack_e_rkeygen
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# vsim work.e_rkeygen(behav) 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.e_rkeygen(behav) because work.e_rkeygen has changed.
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.conv_pack_e_rkeygen
+# Loading work.e_rkeygen(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/rndGenTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# vsim work.e_rkeygen(behav) 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.e_rkeygen(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/rndGenTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# vsim work.e_rkeygen(behav) 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.e_rkeygen(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
@@ -65,385 +270,20 @@ do source/fiestel
 # Loading work.tb_e_fiestel(test)#1
 # Loading ieee.std_logic_arith(body)
 # Loading work.e_fiestel(behav)#1
-do source/fiestel
+do source/encrypt
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_fiestel
-# -- Compiling architecture test of tb_e_fiestel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity e_fiestel
-# -- Compiling architecture behav of e_fiestel
-# vsim -coverage -i work.tb_e_fiestel 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_e_fiestel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading work.e_fiestel(behav)#1
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
+# -- Compiling entity encryption
 # -- Loading package std_logic_unsigned
 # -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# ** Error: source/e_rkeyGen.vhd(40): Target of signal assignment is not a signal.
-# ** Error: source/e_rkeyGen.vhd(62): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/rndGenTest line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/e_rkeyGen.vhd"
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-add wave sim:/e_rkeygen/reg/*
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# ** Error: source/e_rkeyGen.vhd(59): Target of signal assignment is not a signal.
-# ** Error: source/e_rkeyGen.vhd(60): Target of signal assignment is not a signal.
-# ** Error: source/e_rkeyGen.vhd(70): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/rndGenTest line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/e_rkeyGen.vhd"
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# ** Error: source/e_rkeyGen.vhd(66): (vcom-1136) Unknown identifier "curleft".
-# ** Error: source/e_rkeyGen.vhd(66): (vcom-1136) Unknown identifier "curright".
-# ** Error: source/e_rkeyGen.vhd(66): Type error resolving infix expression "&" as type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_rkeyGen.vhd(70): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/rndGenTest line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/e_rkeyGen.vhd"
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# ** Error: source/e_rkeyGen.vhd(59): Signal "curleft" cannot be target of variable assignment statement.
-# ** Error: source/e_rkeyGen.vhd(59): Illegal concurrent statement.
-# ** Error: source/e_rkeyGen.vhd(60): Signal "curright" cannot be target of variable assignment statement.
-# ** Error: source/e_rkeyGen.vhd(60): Illegal concurrent statement.
-# ** Error: source/e_rkeyGen.vhd(70): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/rndGenTest line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/e_rkeyGen.vhd"
-do source/rndGenTest
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_rkeygen
-# -- Compiling architecture behav of e_rkeygen
-# vsim work.e_rkeygen(behav) 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_bit(body)
-# Loading work.e_rkeygen(behav)#1
-# Updating msgviewer database...
-# Updating msgviewer database...
-do source/encControl
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_enccontroller
-# -- Compiling architecture test of tb_e_enccontroller
+# -- Compiling architecture struct of encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -451,19 +291,115 @@ do source/encControl
 # -- Loading package std_logic_unsigned
 # -- Compiling entity e_enccontroller
 # -- Compiling architecture behav of e_enccontroller
-# vsim -coverage -i work.tb_e_enccontroller 
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_decompile
+# -- Compiling architecture behav of e_decompile
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_e_enccontroller(test)#1
-do source/encControl
+# Loading ieee.numeric_bit(body)
+# Loading work.tb_encryption(test)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_e_enccontroller
-# -- Compiling architecture test of tb_e_enccontroller
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/rndGenTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# vsim work.e_rkeygen(behav) 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.e_rkeygen(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/rndGenTest
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# vsim work.e_rkeygen(behav) 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.e_rkeygen(behav)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/encrypt
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_bit
+# -- Compiling architecture struct of encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -471,293 +407,255 @@ do source/encControl
 # -- Loading package std_logic_unsigned
 # -- Compiling entity e_enccontroller
 # -- Compiling architecture behav of e_enccontroller
-# vsim -coverage -i work.tb_e_enccontroller 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_e_enccontroller(test)#1
-vcom source/e_Decompile.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
 # -- Compiling entity e_decompile
 # -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(41): Symbol "nextstate" has already been declared in this region.
-# ** Error: source/e_Decompile.vhd(44): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(44): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(49): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(49): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(51): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(51): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(53): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(53): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(55): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(55): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(57): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(57): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(59): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(59): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(61): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(61): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(63): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(63): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(65): Illegal target for signal assignment.
-# ** Error: source/e_Decompile.vhd(65): Bad target (label "nextstate") for signal assignment.
-# ** Error: source/e_Decompile.vhd(66): near "if": expecting "CASE"
-# ** Error: source/e_Decompile.vhd(70): Illegal sequential statement.
-# ** Error: source/e_Decompile.vhd(75): near "=>": syntax error
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(66): near "if": expecting "CASE"
-# ** Error: source/e_Decompile.vhd(70): Illegal sequential statement.
-# ** Error: source/e_Decompile.vhd(75): near "=>": syntax error
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(70): Labels do not match: 'nextlogic' and 'nextstate'.
-# ** Error: source/e_Decompile.vhd(77): near "=>": syntax error
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(77): near "=>": syntax error
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(77): Enumeration literal "chunk1" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(79): Enumeration literal "chunk2" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(81): Enumeration literal "chunk3" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(83): Enumeration literal "chunk4" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Warning: [3] source/e_Decompile.vhd(84): (vcom-1246) Range 29 downto 32 is null.
-# ** Error: source/e_Decompile.vhd(85): Enumeration literal "chunk5" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(87): Enumeration literal "chunk6" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(89): Enumeration literal "chunk7" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(91): Enumeration literal "chunk8" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(93): Enumeration literal "idle" is type state_type; expecting type ieee.std_logic_1164.std_logic_vector.
-# ** Error: source/e_Decompile.vhd(98): Illegal sequential statement.
-# ** Error: source/e_Decompile.vhd(98): Integer literal 0 is not of type ieee.std_logic_1164.std_logic.
-# ** Error: source/e_Decompile.vhd(100): near "behav": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(98): Illegal sequential statement.
-# ** Error: source/e_Decompile.vhd(98): Integer literal 0 is not of type ieee.std_logic_1164.std_logic.
-# ** Error: source/e_Decompile.vhd(100): near "behav": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(98): Illegal sequential statement.
-# ** Error: source/e_Decompile.vhd(100): near "behav": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/e_Decompile.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-do source/decomp
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
-# ** Error: source/tb_e_Decompile.vhd(83): String literal found where non-array type ieee.std_logic_1164.std_logic was expected.
-# ** Error: source/tb_e_Decompile.vhd(87): String literal found where non-array type ieee.std_logic_1164.std_logic was expected.
-# ** Error: source/tb_e_Decompile.vhd(92): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/decomp line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/tb_e_Decompile.vhd"
-do source/decomp
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
-# ** Error: source/tb_e_Decompile.vhd(87): String literal found where non-array type ieee.std_logic_1164.std_logic was expected.
-# ** Error: source/tb_e_Decompile.vhd(92): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/decomp line 1
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/tb_e_Decompile.vhd"
-do source/decomp
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# vsim -coverage -i work.tb_e_decompile 
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_bit(body)
-# Loading work.tb_e_decompile(test)#1
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/data'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/full'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/empty'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/clk'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/rst'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/start'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/r_enable'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/w_enable'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/enc_left'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/enc_right'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/data'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/enc_left'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/enc_right'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/compilect'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/nxtcompct'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/rndct'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/nxtrndct'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/compdata'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/ctrnd'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb_e_enccontroller/dut/ctcomp'. 
-do source/decomp
+# Loading work.tb_encryption(test)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1
+do source/encrypt
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_bit
+# -- Compiling architecture struct of encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture behav of e_enccontroller
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
 # -- Compiling entity e_decompile
 # -- Compiling architecture behav of e_decompile
-# vsim -coverage -i work.tb_e_decompile 
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_bit(body)
-# Loading work.tb_e_decompile(test)#1
-do source/decomp
+# Loading work.tb_encryption(test)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1
+do source/encrypt
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_bit
+# -- Compiling architecture struct of encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
-# -- Compiling entity e_decompile
-# -- Compiling architecture behav of e_decompile
-# ** Error: source/e_Decompile.vhd(99): Integer literal 0 is not of type ieee.std_logic_1164.std_logic.
-# ** Error: source/e_Decompile.vhd(101): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/decomp line 2
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/e_Decompile.vhd"
-do source/decomp
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture behav of e_enccontroller
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
 # -- Compiling entity e_decompile
 # -- Compiling architecture behav of e_decompile
-# vsim -coverage -i work.tb_e_decompile 
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_bit(body)
-# Loading work.tb_e_decompile(test)#1
-do source/decomp
+# Loading work.encryption(struct)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1
+do source/fiestel
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_e_decompile
-# -- Compiling architecture test of tb_e_decompile
+# -- Compiling entity tb_e_fiestel
+# -- Compiling architecture test of tb_e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# vsim -coverage -i work.tb_e_fiestel 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_e_fiestel(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading work.e_fiestel(behav)#1
+do source/encrypt
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Loading package numeric_bit
+# -- Compiling architecture struct of encryption
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Loading package numeric_bit
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture behav of e_enccontroller
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
 # -- Compiling entity e_decompile
 # -- Compiling architecture behav of e_decompile
-# vsim -coverage -i work.tb_e_decompile 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_bit(body)
-# Loading work.tb_e_decompile(test)#1
+# Loading work.encryption(struct)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1

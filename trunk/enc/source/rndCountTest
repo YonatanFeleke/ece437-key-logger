@@ -1,4 +1,4 @@
-vcom source/e_rndCount.vhd
+vcom mapped/e_rndCount.vhd
 vsim work.rndcount(behav)
 add wave sim:/rndcount/*
 force clk 1 0ns, 0 5ns -r 10ns
