@@ -39,7 +39,7 @@ architecture TEST of tb_B_Header is
          RST : in std_logic;
          HEADER_EN : in std_logic;
          HEADER : OUT std_logic_vector(53 downto 0);
-         HSTORE_EN : OUT std_logic
+         ENCODE_EN : OUT std_logic
     );
   end component;
 
@@ -48,7 +48,7 @@ architecture TEST of tb_B_Header is
   signal RST : std_logic;
   signal HEADER_EN : std_logic;
   signal HEADER : std_logic_vector(53 downto 0);
-  signal HSTORE_EN : std_logic;
+  signal ENCODE_EN : std_logic;
 
 -- signal <name> : <type>;
 
@@ -67,9 +67,7 @@ end process;
                 RST => RST,
                 HEADER_EN => HEADER_EN,
                 HEADER => HEADER,
-                HSTORE_EN => HSTORE_EN
-                );
-
+                ENCODE_EN => ENCODE_EN);
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
 
 process
@@ -79,15 +77,14 @@ process
     HEADER_EN <= '0';
     wait for 14 ns;
     RST<= '0';
+    wait for 14 ns;
+    HEADER_EN <= '1';
     wait for 7 ns;
-    HEADER_EN <= '1';
-    wait for 35 ns;
     HEADER_EN <= '0';
-    wait for 21 ns;
+    wait for 49 ns;
     HEADER_EN <= '1';
-    wait for 35 ns;
+    wait for 7 ns;
     HEADER_EN <= '0';
-    wait;
     wait;
   end process;
 end TEST;
