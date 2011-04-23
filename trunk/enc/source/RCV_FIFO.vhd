@@ -42,14 +42,16 @@ architecture porting of RCV_FIFO is
 		EMPTY : out std_logic;
 		FULL : out std_logic);
 	end component;
+	signal RST : std_logic;
 	
 	begin
 	
+	RST <= not RST_N;
 	
 	FIFOMAP : Fifo port map(
 														RCLK => CLK,
 														WCLK => CLK,
-														RST_N => RST_N,
+														RST_N => RST,
 														RENABLE => R_ENABLE,
 														WENABLE => W_ENABLE,
 														WDATA => WDATA,

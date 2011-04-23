@@ -1352,7 +1352,8 @@ case Row is
 				
 				
 		
-		OUTDATA <= NXT_ENC_RIGHT1 & NXT_ENC_LEFT;
+		--OUTDATA <= NXT_ENC_RIGHT1 & NXT_ENC_LEFT when START = '1';
+		OUTDATA <= CUR_ENC_RIGHT&CUR_ENC_LEFT when START = '1';
 		
 		
 

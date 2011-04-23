@@ -92,7 +92,11 @@ process
   begin
 
 -- Insert TEST BENCH Code Here
-
+		
+		RST <= '0';
+		
+		wait for Period;
+		
     DATA <= "00000000";
 
     EMPTY <= '1';
@@ -103,11 +107,11 @@ process
 
     RST <= '1';
     
-    wait for 3*Period;
+    wait for 10*Period;
     
     RST <= '0';
     
-    wait for 3*Period;
+    wait for 20*Period;
     
     DATA <= "01100001";
     
@@ -117,13 +121,15 @@ process
         
     wait until R_ENABLE = '1';
     
+    wait for 0.3 ns;
+    
     FULL <= '0';
     
     DATA <= "01100010";
     
     wait for Period;
     
-    DATA <= "01100011";
+    DATA <= "01100011"; -- Change
     
     wait for Period;
 

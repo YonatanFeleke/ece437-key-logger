@@ -30,32 +30,47 @@ architecture behav of e_encController is
 type state_type is (idle, Chunk1, Chunk2, Chunk3, Chunk4,Chunk5,Chunk6,Chunk7,Chunk8,waitRnd);
 signal compileCT,nxtCompCT	: state_type;
 signal rndCT, nxtrndCT			: std_logic_vector(4 downto 0);
+--signal cData : std_logic_vector(7 downto 0);
+signal cD_ENABLE: std_logic;
 signal CompData,CompData2 	: std_logic_vector(63 downto 0);
-signal ctRnd,ctComp   : std_logic;
+
 
 
 begin
 
-	Compreg:process(CLK,RST,rndCT,ctComp, EMPTY)
+	Compreg:process(CLK,RST,rndCT, EMPTY,DATA)
+	--variable cData1,cData2,cData3,cData4,cData5,cData6,cData7,cData8 : std_logic_vector(7 downto 0);
 	begin
 		
 		if(RST = '1') then
 			compileCT <= idle;
+			--cData <= "00000000";
+--			CompData<="0000000000000000000000000000000000000000000000000000000000000000";
+
 									
-		elsif((rndCT = "00000" or rndCT = "01111")) then
-			if(rising_edge(clk)) then
+		elsif(rising_edge(clk)) then
 				compileCT <= nxtCompCT;
-				CompData2<=CompData;
---				r_enable <= '1';
+				--cData <= DATA;
+
+			if (rndCT < "11001" and rndCT > "01111") then
+				cD_ENABLE <= '1';
+			else
+				cD_ENABLE <= '0';
 			end if;
+
+--				CompData2 <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
+				--CompData2<=CompData;
+--				r_enable <= '1';
 			--if(falling_edge(clk)) then
 				--r_enable <= '1';
 			--end if;
 		end if;
 		
+		
 	end process;
 	
 	nxtCompState: process(compileCT,FULL,rndCT)
+	variable cData1,cData2,cData3,cData4,cData5,cData6,cData7,cData8 : std_logic_vector(7 downto 0);
 	begin
 	
 	case compileCT is
@@ -63,28 +78,50 @@ begin
 	when idle =>
 			if(FULL = '1') then
 				nxtCompCT <= Chunk1;
+				--CompData<= DATA&"00000000000000000000000000000000000000000000000000000000";
 			else
 				nxtCompCT <= idle;
 			end if;
+			
+			--CompData2<="0000000000000000000000000000000000000000000000000000000000000000";
+			
 	when Chunk1 => 
 				nxtCompCT <= Chunk2;
+				--CompData<=CompData(63 downto 56)& DATA &"000000000000000000000000000000000000000000000000" ;
+				--cData1 := DATA;
 	when Chunk2 => 
 				nxtCompCT <= Chunk3;
+				--CompData<=CompData(63 downto 48)& DATA &"0000000000000000000000000000000000000000" ;
+				--cData2 := DATA;
 	when Chunk3 => 
 				nxtCompCT <= Chunk4;
+				--CompData<=CompData(63 downto 40)& DATA &"00000000000000000000000000000000" ;
+				--cData3 := DATA;
 	when Chunk4 => 
 				nxtCompCT <= Chunk5;
+				--CompData<=CompData(63 downto 32)& DATA &"000000000000000000000000" ;
+				--cData4 := DATA;
 	when Chunk5 => 
 				nxtCompCT <= Chunk6;
+				--CompData<=CompData(63 downto 24)& DATA &"0000000000000000";
+				--cData5 := DATA;
 	when Chunk6 => 
 				nxtCompCT <= Chunk7;
+				--CompData<=CompData(63 downto 16)& DATA &"00000000" ;
+				--cData6 := DATA;
 	when Chunk7 => 
 				nxtCompCT <= Chunk8;
+				--CompData<=CompData(63 downto 8)& DATA ;
+				--cData7 := DATA;
 	when Chunk8 => 
 				nxtCompCT <= waitRnd;
+				--cData8 := DATA;
+				
 	when waitRnd =>
-		if(rndCT = "01111") then
+		--CompData2 <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
+		if(rndCT = "11000") then
 				nxtCompCT <= idle;
+				--CompData2<="0000000000000000000000000000000000000000000000000000000000000000";
 		else
 				nxtCompCT <= waitRnd;
 		end if;
@@ -92,23 +129,28 @@ begin
 	
 	end process nxtCompState;
 	
-	with compileCT select
-	CompData<= DATA&"00000000000000000000000000000000000000000000000000000000" when  Chunk1,
-							 CompData(63 downto 56)& DATA &CompData(47 downto 0) when Chunk2,
-							 CompData(63 downto 48)&DATA&CompData(39 downto 0) when Chunk3,
-							 CompData(63 downto 40)&DATA&CompData(31 downto 0) when Chunk4,
-							 CompData(63 downto 32)&DATA&CompData(23 downto 0) when Chunk5,
-							 CompData(63 downto 24)&DATA&CompData(15 downto 0) when Chunk6,
-							 CompData(63 downto 16)&DATA&CompData(7 downto 0) when Chunk7,
-							 CompData(63 downto 8)&DATA when Chunk8,
-							 CompData when waitRnd,
-							 "0000000000000000000000000000000000000000000000000000000000000000" when idle;
 	
 	
-	--process(compileCT, DATA, RST,CLK)
-	--process(CompData,CLK)
-	--variable cData1,cData2,cData3,cData4,cData5,cData6,cData7,cData8 : std_logic_vector(7 downto 0);
-	--begin
+	
+	
+	
+	--with nxtCompCT select
+	--CompData<= DATA&"00000000000000000000000000000000000000000000000000000000" when  Chunk1,
+	--						 CompData(63 downto 56)& DATA &"000000000000000000000000000000000000000000000000" when Chunk2,
+	--						 CompData(63 downto 48)& DATA &"0000000000000000000000000000000000000000" when Chunk3,
+	--						 CompData(63 downto 40)& DATA &"00000000000000000000000000000000" when Chunk4,
+	--						 CompData(63 downto 32)& DATA &"000000000000000000000000" when Chunk5,
+	--						 CompData(63 downto 24)& DATA &"0000000000000000" when Chunk6,
+	--						 CompData(63 downto 16)& DATA &"00000000" when Chunk7,
+	--						 CompData(63 downto 8)& DATA when Chunk8,
+	--						 CompData(63 downto 0) when waitRnd,
+	--						 "0000000000000000000000000000000000000000000000000000000000000000" when idle;
+	
+	
+--	process(compileCT, DATA, RST,CLK)
+	together:process(nxtCompCT,CLK,DATA)
+	variable cData1,cData2,cData3,cData4,cData5,cData6,cData7,cData8 : std_logic_vector(7 downto 0);
+	begin
 	
 	--if (RST = '1') then
 	--	CompData<="0000000000000000000000000000000000000000000000000000000000000000";
@@ -129,61 +171,75 @@ begin
 	--	ctComp <= '1';
 	--	ctRnd <= '0';
 	--end if;
-
-
-	--case compileCT is 
+--
+--
+	if(rising_edge(clk)) then
+	case nxtCompCT is 
 	
-	--when "0000" =>
-	--	cData1 := DATA;
-	--when "0001" =>
-	--	cData2 := DATA;
-	--when "0010" =>
-	--	cData3 := DATA;
-	--when "0011" =>
-	--	cData4 := DATA;
-	--when "0100" =>
-	--	cData5 := DATA;
-	--when "0101" =>
-	--	cData6 := DATA;
-	--when "0110" =>
-	--	cData7 := DATA;
-	--when "0111" =>
-	--	cData8 := DATA;
-	--when others =>
-		--cData8 := DATA;
-																
-	--end case;
+	when Chunk1 =>
+		cData1 := DATA;
+	when Chunk2 =>
+		cData2 := DATA;
+	when Chunk3 =>
+		cData3 := DATA;
+	when Chunk4 =>
+		cData4 := DATA;
+	when Chunk5 =>
+		cData5 := DATA;
+	when Chunk6 =>
+		cData6 := DATA;
+	when Chunk7 =>
+		cData7 := DATA;
+	when Chunk8 =>
+		cData8 := DATA;
+	when idle =>
+	  cData1 := "00000000";
+		cData2 := "00000000";
+		cData3 := "00000000";
+		cData4 := "00000000";
+		cData5 := "00000000";
+		cData6 := "00000000";
+		cData7 := "00000000";
+		cData8 := "00000000";
+	when waitRnd =>
+		CompData2 <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
+	end case;
 	--if(rising_edge(clk)) then
-	--	CompData <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
-	--	CompData2 <= CompData;
-	--end if;
-	--end process;
+	--	CompData2 <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
+		--CompData2 <= CompData;
+	end if;
+	end process together;
 	
 
 							 
 							 
 	
 	
-	rndReg:process(clk,RST,compileCT,ctRnd,nxtrndCT)
+	rndReg:process(clk,RST,compileCT,nxtrndCT)
 	begin
 	
 		if (RST ='1') then
 			rndCT <= "00000";
 		elsif((compileCT = waitRnd) and rising_edge(clk) ) then
 			rndCT <= nxtrndCT;
+
+			
 		end if;
 		
 	end process;
 	
-	nxtrndCT <= "00000" when rndCT = "01111" else rndCT + "00001" ;
+	nxtrndCT <= "00000" when rndCT = "11001" else rndCT + "00001" ;
 	
-	START <= '0' when rndCT ="0000" else '1';
+	START <= '1' when compileCT = waitRnd and rndCT < "10001" else '0';
 	
-	W_ENABLE <= '1' when rndCT = "01111" else '0';
-	R_ENABLE <= '0' when compileCT = idle or compileCT = Chunk1 or compileCT = waitRnd else '1';
+	W_ENABLE <= cD_ENABLE;
+	R_ENABLE <= '0' when compileCT = idle or compileCT = waitRnd else '1';
 	
 	ENC_LEFT <= CompData2(63 downto 32);
 	ENC_RIGHT <= CompData2(31 downto 0);
+	
+	
+	
 	
 	
 			

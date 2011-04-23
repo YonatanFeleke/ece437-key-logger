@@ -92,7 +92,8 @@ process
   begin
 
 -- Insert TEST BENCH Code Here
-
+		
+		
     DATA <= "11111111";
 
     FULL <= '0';
@@ -101,9 +102,9 @@ process
 
     RST <= '1';
     
-    wait for 2 *Period;
+    wait for 1.5 *Period;
     
-    DATA <= "00000000";
+    DATA <= "10000000";
 
     FULL <= '0';
 
@@ -118,6 +119,8 @@ process
     
     
     wait until R_ENABLE = '1';
+    
+    wait for 0.3 ns;
     
    	DATA <= "00000001";
 
