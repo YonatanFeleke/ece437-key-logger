@@ -91,12 +91,21 @@ process
 
   begin
 
--- Insert TEST BENCH Code Here
+-- Insert TEST BENCH Code Here   -- NEEEEEEEED 222222 RESETS FOR FIFO
 		
 		RST <= '0';
 		
-		wait for Period;
+		wait for 3*Period;
 		
+    RST <= '1';
+		
+		wait for 3*Period;
+		
+		RST <= '0';
+		
+		wait for 3*Period;
+		
+    
     DATA <= "00000000";
 
     EMPTY <= '1';
@@ -107,11 +116,11 @@ process
 
     RST <= '1';
     
-    wait for 10*Period;
+    wait for 3*Period;
     
     RST <= '0';
     
-    wait for 20*Period;
+    wait for 3*Period;
     
     DATA <= "01100001";
     
