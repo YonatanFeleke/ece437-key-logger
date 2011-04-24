@@ -23,64 +23,62 @@ ENTITY B_NextPacket IS
 END B_NextPacket;
 
 architecture b_next of B_NextPacket is
-		type	 state_type is	(idle,chkerr,transmit);
-		signal	state,nstate	: state_type;
 		signal	txbuff 				: std_logic_vector(7 downto 0);
 		signal 	cnt8					: integer range 0 to 8;
-		signal 	ncnt8					: integer range 0 to 8;
 		signal  bluewait			: integer range 0 to WAITBAK+1;
-		signal  nbluewait			: integer range 0 to WAITBAK +1;
-begin
+		signal  run,a,b,stop  :	std_logic;
+begin	
 	updatestate : process (CLK, RST)
 		begin
-			 if ( RST = '1') then
-					state <= idle;
-					bluewait <= 0;
-					cnt8 <= 0;
-				elsif (rising_edge(clk)) then
-					state <= nstate;
-					bluewait <= nbluewait;				
-					cnt8 <= ncnt8;
-				end if;	
-		end process updatestate;		
-	statelogic_next: process (CLK,cnt8,bluewait,STATE)
-		begin
-			if (CLK = '1') then
-     		case state is 
-					when idle =>						
-						txbuff <= "00000000";
-						ncnt8 <= 0;
-						nbluewait <= 0;
-						DATAOUT <= '0';
-						if ( REPLY_EN = '1') then
-							nstate <= chkerr;
-						else 
-							nstate <= idle;	
-						end if;
-						
-					when chkerr=>
-						nstate <= transmit;
-						if (ERR = '1') then
-							txbuff <= "01011111";
-						else
-							txbuff <= "10101111";
-						end if;					
-					
-					when transmit=>		
-						nstate <= transmit;				
-						if (cnt8 = 8) then 
-							nstate <= idle;
-							ncnt8 <= 0;
-						else
---							nstate <= transmit;
-							DATAOUT <= txbuff(cnt8);
-							nbluewait <= bluewait + 1;
-							if (bluewait = WAITBAK) then
-								ncnt8 <= cnt8 + 1;
-								nbluewait <= 0;
-							end if; -- bluewait							
-						end if; --cnt8
-				end case;
-			end if;
-			end process statelogic_next;
+      if ( RST = '1') then
+			  	bluewait <= 0;
+	   			cnt8 <= 0;
+	  			DATAOUT <= '0';
+	  			txbuff <= "00000000";	  
+	  			stop	<= '0';	
+  		elsif (rising_edge(clk)) then								  
+  			if (run = '1') then
+			  			DATAOUT <= txbuff(cnt8);
+	  			  	if bluewait = 0 then -- check if err for 1 clk after en
+	  			  		bluewait <= bluewait +1;
+	  			    	if (ERR = '1') then	
+	  			    		txbuff <= "01011111";
+	  						else
+	  							txbuff <= "10101111";
+	  						end if;	  						
+  		      	elsif (bluewait = WAITBAK) then						  	
+						  	cnt8 <= cnt8 + 1;
+					  		bluewait <= 0;
+				  	  	DATAOUT<= txbuff(cnt8);
+				  	  	if (cnt8 = 7) then 
+				  	  		stop <= '1';
+				  	  		cnt8 <= 0;
+				  	  	end if;				  	  		
+				  		else 
+					    		bluewait<= bluewait + 1;
+				    	end if;  -- blue wait
+				elsif ( REPLY_EN = '1') then		stop <= '0';				   		
+        end if;  -- run =1 
+     end if;  -- rst rising edge ..
+	end process updatestate;
+--_____________________________________________
+
+  RUN_EDGElogic: Process(clk,REPLY_EN, RST)
+		begin		
+			if (RST = '1') then
+				run <= '0';
+				B<= '0';
+				A <= '0';
+--	 		elsif (rising_edge(clk)) then	
+			elsif stop = '1' then	run <= '0';
+			else
+				A<= REPLY_EN;
+				B<= A;
+				if ( A = '1') then -- Rising Edge
+				  if( (A xor B)  = '1') then 
+				  	run <= '1';
+				  end if; -- Change in value
+				end if; -- rising edge new=1 old =0
+			end if;-- not edge synchronized!!!!!!!!!	
+		end process RUN_EDGElogic;		
 end b_next;
