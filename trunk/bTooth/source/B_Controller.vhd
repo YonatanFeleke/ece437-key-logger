@@ -10,3 +10,12 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 use ieee.std_logic_unsigned.all;
+
+ENTITY B_Controller IS
+		port (	CLK 						:		in	std_logic;
+						RST							:		in	std_logic;
+						NEXT_EN					:		in	std_logic;
+						ANTINL					:		in std_logic;
+						RESEND_EN				:		OUT std_logic;
+						TRANS_EN				:		OUT std_logic);
+END B_Controller;

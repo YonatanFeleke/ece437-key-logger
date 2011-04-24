@@ -15,7 +15,7 @@ ENTITY B_StripPayload IS
 						 WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS for LAG
 		port (	CLK 						:		in	std_logic;
 						RST							:		in	std_logic;
-						ANT							: 	in 	std_logic;
+						ANTINR					: 	in 	std_logic;
 						REPLY_EN				:		OUT	std_logic;
 						ERR							:		OUT std_logic;
 						DATAOUT					:		OUT std_logic_vector( 7 downto 0));
