@@ -10,28 +10,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 --use gold_lib.all;   --UNCOMMENT if you're using a GOLD model
 
+LIBRARY ECE337_IP;
+USE ECE337_IP.ALL;
+
 entity tb_encryption is
 generic (Period : Time := 3.5 ns);
 end tb_encryption;
 
 architecture TEST of tb_encryption is
-
-  function INT_TO_STD_LOGIC( X: INTEGER; NumBits: INTEGER )
-     return STD_LOGIC_VECTOR is
-    variable RES : STD_LOGIC_VECTOR(NumBits-1 downto 0);
-    variable tmp : INTEGER;
-  begin
-    tmp := X;
-    for i in 0 to NumBits-1 loop
-      if (tmp mod 2)=1 then
-        res(i) := '1';
-      else
-        res(i) := '0';
-      end if;
-      tmp := tmp/2;
-    end loop;
-    return res;
-  end;
 
   component encryption
     PORT(
@@ -47,6 +33,20 @@ architecture TEST of tb_encryption is
          R_ENABLE : OUT std_logic
     );
   end component;
+  
+  
+  component Fifo
+		port (
+		RCLK : in std_logic;
+		WCLK : in std_logic;
+		RST_N : in std_logic;
+		RENABLE : in std_logic;
+		WENABLE : in std_logic;
+		WDATA : in std_logic_vector(7 downto 0);
+		RDATA : out std_logic_vector(7 downto 0);
+		EMPTY : out std_logic;
+		FULL : out std_logic);
+	end component;
 
 -- Insert signals Declarations here
   signal CLK : std_logic;
@@ -54,11 +54,13 @@ architecture TEST of tb_encryption is
   signal EMPTY : std_logic;
   signal FULL : std_logic;
   signal RENABLE : std_logic;
-  signal RST : std_logic;
+  signal RST,RST_N : std_logic;
   signal EMPTY1 : std_logic;
   signal FULL1 : std_logic;
   signal RDATA : std_logic_vector (7 DOWNTO 0);
-  signal R_ENABLE : std_logic;
+  signal R_ENABLE,W_ENABLE : std_logic;
+  signal WDATA : std_logic_vector (7 DOWNTO 0);
+  
 
 -- signal <name> : <type>;
 
@@ -84,8 +86,23 @@ end process;
                 RDATA => RDATA,
                 R_ENABLE => R_ENABLE
                 );
+                
+  	
+	FIFOMAP : Fifo port map(
+														RCLK => CLK,
+														WCLK => CLK,
+														RST_N => RST_N,
+														RENABLE => R_ENABLE,
+														WENABLE => W_ENABLE,
+														WDATA => WDATA,
+														RDATA => DATA,
+														EMPTY => EMPTY,
+														FULL => FULL);
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
+
+RST_N <= NOT(RST);
+
 
 process
 
@@ -105,64 +122,69 @@ process
 		
 		wait for 3*Period;
 		
+		
+		
     
-    DATA <= "00000000";
+    WDATA <= "00000000";
 
-    EMPTY <= '1';
+    --EMPTY <= '1';
 
-    FULL <= '0';
+    --FULL <= '0';
 
-    RENABLE <= '0';
+    W_ENABLE <= '0';
 
     RST <= '1';
     
     wait for 3*Period;
     
     RST <= '0';
-    
+    -- End Reset
     wait for 3*Period;
     
-    DATA <= "01100001";
+    WDATA <= "01100001";
     
-    FULL <= '1';
+    --FULL <= '1';
     
-    EMPTY <= '0';
+    --EMPTY <= '0';
         
-    wait until R_ENABLE = '1';
+    W_ENABLE <= '1';
+    --wait until R_ENABLE = '1';
     
-    wait for 0.3 ns;
+--    wait for 0.3 ns;
+
+		wait for Period;
+		
+		--FULL <= '0';
     
-    FULL <= '0';
-    
-    DATA <= "01100010";
+    WDATA <= "01100010";
     
     wait for Period;
     
-    DATA <= "01100011"; -- Change
+    WDATA <= "01100011"; -- Change
     
     wait for Period;
 
-    DATA <= "01100100";
+    WDATA <= "01100100";
     
     wait for Period;
 
-    DATA <= "01100101";
+    WDATA <= "01100101";
     
     wait for Period;
 
-    DATA <= "01100110";
+    WDATA <= "01100110";
     
     wait for Period;
 
-    DATA <= "01100111";
+    WDATA <= "01100111";
     
     wait for Period;
     
-    DATA <= "01101000";
+    WDATA <= "01101000";
     
     wait for Period;
     
-    EMPTY <= '1';
+    --EMPTY <= '1';
     
     wait for 50*Period;
     
