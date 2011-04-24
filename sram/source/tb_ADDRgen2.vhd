@@ -274,7 +274,7 @@ process
     w_enable_in <= '0';
 
     read_ready <= '0';
-    wait for Period*; --goes to writedata and increments ADDR       
+    wait for Period; --goes to writedata and increments ADDR       
     
   end process;
 end TEST;
