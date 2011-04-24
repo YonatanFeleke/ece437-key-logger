@@ -4698,3 +4698,713 @@ do source/RCV
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
 # Loading ece337_ip.fifo(rtl)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt1__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+do source/encrypt
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Compiling architecture struct of encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture behav of e_enccontroller
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_decompile
+# -- Compiling architecture behav of e_decompile
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# ** Error: source/RCV_FIFO.vhd(54): (vcom-1136) Unknown identifier "rst".
+# ** Error: source/RCV_FIFO.vhd(62): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/encrypt line 10
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/RCV_FIFO.vhd"
+do source/encrypt
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity encryption
+# -- Loading package std_logic_unsigned
+# -- Compiling architecture struct of encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity e_fiestel
+# -- Compiling architecture behav of e_fiestel
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture behav of e_enccontroller
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture behav of e_rkeygen
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_rndcount
+# -- Compiling architecture behav of e_rndcount
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity e_decompile
+# -- Compiling architecture behav of e_decompile
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture porting of rcv_fifo
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_encryption(test)#1
+# Loading ece337_ip.fifo(rtl)#1
+# Loading work.e_fiestel(behav)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
+add wave sim:/tb_encryption/dut/*
+add wave sim:/tb_encryption/dut/*
+do source/encryptMap
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_encryption
+# -- Compiling architecture test of tb_encryption
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_encryption
+# -- Loading package conv_pack_encryption
+# -- Compiling entity read_ptr
+# -- Compiling architecture syn_rtl of read_ptr
+# -- Compiling entity write_ptr
+# -- Compiling architecture syn_rtl of write_ptr
+# -- Compiling entity read_fifo_ctrl
+# -- Compiling architecture syn_rtl of read_fifo_ctrl
+# -- Compiling entity write_fifo_ctrl
+# -- Compiling architecture syn_rtl of write_fifo_ctrl
+# -- Compiling entity fiforam
+# -- Compiling architecture syn_rtl of fiforam
+# -- Compiling entity fifo
+# -- Compiling architecture syn_rtl of fifo
+# -- Compiling entity e_rndcount
+# -- Compiling architecture syn_behav of e_rndcount
+# -- Compiling entity e_rkeygen
+# -- Compiling architecture syn_behav of e_rkeygen
+# -- Compiling entity e_fiestel
+# -- Compiling architecture syn_behav of e_fiestel
+# -- Compiling entity e_enccontroller
+# -- Compiling architecture syn_behav of e_enccontroller
+# -- Compiling entity e_decompile
+# -- Compiling architecture syn_behav of e_decompile
+# -- Compiling entity rcv_fifo
+# -- Compiling architecture syn_porting of rcv_fifo
+# -- Compiling entity encryption
+# -- Compiling architecture syn_struct of encryption
+# vsim -coverage -i work.tb_encryption 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg34/ece337/enc/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_encryption(test)#1
+# Loading work.conv_pack_encryption
+# Loading work.encryption(syn_struct)#1
+# Loading work.rcv_fifo(syn_porting)#1
+# Loading work.fiforam(syn_rtl)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.dffposx1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading work.write_fifo_ctrl(syn_rtl)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.write_ptr(syn_rtl)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading work.read_fifo_ctrl(syn_rtl)#1
+# Loading work.read_ptr(syn_rtl)#1
+# Loading work.e_decompile(syn_behav)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading work.e_enccontroller(syn_behav)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading work.e_fiestel(syn_behav)#1
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.e_rkeygen(syn_behav)#1
+# Loading work.e_rndcount(syn_behav)#1
