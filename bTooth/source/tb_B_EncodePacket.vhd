@@ -107,21 +107,8 @@ process
     wait for 37000 ns;
 --    wait for 666858.5 ns;
 	  report "Test 1 END for CORRECT EXEC" severity NOTE; 
-    wait for 1070 ns;
-    
-    
-    report "Test 2" severity NOTE;    	
-   	ENCODE_EN <= '1';
-   	DATA <= "01010101";
-    wait for 3.5 ns;
-    ENCODE_EN <= '0';
-    report "Test 2 BEGIN for data" severity NOTE; 
-    wait for 6000 ns;
-    DATA <= "11110000";
-  	wait for 6000 ns;
-  	DATA <= "00000000";
-		wait for 29000 ns;
-    wait;    
+    wait for 70 ns;
+   	wait;
   end process;
 end TEST;
 -- Note if further testing, create a fifo that when paged gives out a diferent data.
