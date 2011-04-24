@@ -6,4 +6,4 @@ vcom mapped/B_Header.vhd
 vsim work.b_Header
 vsim work.tb_b_Header
 add wave -r sim:/tb_b_header/*
-run 120 ns
+run 19000 ns

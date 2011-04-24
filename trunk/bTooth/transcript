@@ -8,3 +8,1480 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
+vlib work
+source d/hdr
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_header
+# -- Compiling architecture test of tb_b_header
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_header
+# -- Compiling architecture b_hdr of b_header
+# ** Error: source/B_Header.vhd(75): near ")": syntax error
+# ** Error: source/B_Header.vhd(82): near "else": expecting "END"
+# ** Error: source/B_Header.vhd(85): near "if": expecting "PROCESS"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/hdr
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_header
+# -- Compiling architecture test of tb_b_header
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_header
+# -- Compiling architecture b_hdr of b_header
+# vsim work.b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.b_header(b_hdr)#1
+# vsim work.tb_b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/tb_B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_header(test)#1
+# ** Fatal: (vsim-3421) Value 5265 is out of range 0 to 5264.
+#    Time: 18466 ns  Iteration: 1  Process: /tb_b_header/dut/outputheader File: source/B_Header.vhd
+# Fatal error in Process outputheader at source/B_Header.vhd line 80
+# 
+# HDL call sequence:
+# Stopped at source/B_Header.vhd 80 Process outputheader
+# 
+source d/hdr
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_header
+# -- Compiling architecture test of tb_b_header
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_header
+# -- Compiling architecture b_hdr of b_header
+# vsim work.b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.b_header(b_hdr)#1
+# vsim work.tb_b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/tb_B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_header(test)#1
+source d/hdr
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_header
+# -- Compiling architecture test of tb_b_header
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_header
+# -- Compiling architecture b_hdr of b_header
+# vsim work.b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.b_header(b_hdr)#1
+# vsim work.tb_b_Header 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: [13] source/tb_B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(48): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(53): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# ** Warning: [13] source/tb_B_Header.vhd(54): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_header(test)#1
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(187): near "EOF": syntax error
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(188): near "EOF": syntax error
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 10401 is out of range 0 to 10400.
+#    Time: 18245500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 88
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 88 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(39): near "signal": expecting ';'
+# ** Error: source/B_EncodePacket.vhd(79): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(79): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(80): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(80): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(88): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(88): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(88): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(90): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(90): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(93): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(93): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(96): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(96): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(97): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(97): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(108): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(108): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(110): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(110): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(112): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(112): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(117): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(117): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(117): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(118): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(118): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(120): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(120): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(121): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(121): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(125): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(126): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(126): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(126): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(127): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(127): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(130): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(130): (vcom-1136) Unknown identifier "cnt8".
+# ** Error: source/B_EncodePacket.vhd(143): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(143): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(143): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(144): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(144): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(145): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(145): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(147): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(147): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(147): Bad expression in left operand of infix expression "or".
+# ** Error: source/B_EncodePacket.vhd(147): Bad expression in right operand of infix expression "or".
+# ** Error: source/B_EncodePacket.vhd(147): Type error resolving infix expression "or" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(155): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(155): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(155): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(156): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(156): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(159): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(159): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(162): (vcom-1136) Unknown identifier "swcnt".
+# ** Error: source/B_EncodePacket.vhd(162): Type error resolving infix expression "=" as type std.standard.boolean.
+# ** Error: source/B_EncodePacket.vhd(187): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 10529 is out of range 0 to 10528.
+#    Time: 18469500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 88
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 88 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 10529 is out of range 0 to 10528.
+#    Time: 18469500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 88
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 88 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 42 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {45.5 ns} -cause sim:/tb_b_encodepacket/encode_en
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# ** Error: source/tb_B_EncodePacket.vhd(88): near "wait": expecting ';'
+# ** Error: source/tb_B_EncodePacket.vhd(126): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# ** Error: source/tb_B_EncodePacket.vhd(87): Real literal 36858.5 is not of type std.standard.time.
+# ** Error: source/tb_B_EncodePacket.vhd(126): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 36900500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 36900500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {568463 ns} -cause sim:/tb_b_encodepacket/dut/swcnt
+find drivers -source -time {599841.56 ns} -cause sim:/tb_b_encodepacket/dut/cnt8
+find drivers -source -time {599841.56 ns} -cause sim:/tb_b_encodepacket/dut/cnt8
+# Causality tracing is unavailable because the required debug information has not been generated.
+# Please refer to the documentation for additional details.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 10530 is out of range 0 to 10529.
+#    Time: 18464250 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 88
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 88 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(41): Nonresolved signal 'swcnt' has multiple sources.
+#   Drivers:
+#     source/B_EncodePacket.vhd(55):Process stateprocess
+#        Driven at:
+#           source/B_EncodePacket.vhd(60)
+#     source/B_EncodePacket.vhd(70):Process statelogic
+#        Driven at:
+#           source/B_EncodePacket.vhd(97)
+# ** Error: source/B_EncodePacket.vhd(199): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 10529 is out of range 0 to 10528.
+#    Time: 73734500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 97
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 97 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 666897 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 71038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 71108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 71112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# ** Error: source/tb_B_EncodePacket.vhd(106): Integer literal 70000 is not of type std.standard.time.
+# ** Error: source/tb_B_EncodePacket.vhd(127): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 70038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 70143500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 140147 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 140252 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 210255500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 210360500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 280364 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 280469 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 350472500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 350577500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 420581 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 420686 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 490689500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 490794500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 560798 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 560903 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 630906500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 631011500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 70038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/epm
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_b_encodepacket
+# -- Loading package conv_pack_b_encodepacket
+# -- Compiling entity b_encodepacket_dw01_inc_1
+# -- Compiling architecture syn_rpl of b_encodepacket_dw01_inc_1
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture syn_b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# Loading work.conv_pack_b_encodepacket
+# Loading work.b_encodepacket(syn_b_edata)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.b_encodepacket_dw01_inc_1(syn_rpl)#1
+# Loading osu_ami05.hax1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {85.11 ns} -cause sim:/tb_b_encodepacket/dut/estore_en
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(160): near "if": expecting ';'
+# ** Error: source/B_EncodePacket.vhd(163): near "elsif": expecting "END" or "WHEN"
+# ** Error: source/B_EncodePacket.vhd(166): near "elsif": expecting "END"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {36888.25 ns} -cause sim:/tb_b_encodepacket/dut/nstate
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(40): near "-": expecting ':'
+# ** Error: source/B_EncodePacket.vhd(60): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(61): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(80): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(80): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(81): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(81): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(92): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(92): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(95): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(95): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(99): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(99): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(107): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(107): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(123): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(123): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(150): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(150): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(153): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(153): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(155): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(155): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(161): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(161): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(164): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(164): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(167): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(167): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(174): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(40): near "-": expecting ':'
+# ** Error: source/B_EncodePacket.vhd(60): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(61): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(80): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(80): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(81): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(81): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(92): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(92): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(95): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(95): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(99): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(99): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(107): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(107): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(123): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(123): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(150): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(150): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(153): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(153): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(155): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(155): (vcom-1136) Unknown identifier "nread_en".
+# ** Error: source/B_EncodePacket.vhd(161): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(161): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(164): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(164): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(167): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(167): (vcom-1136) Unknown identifier "nestore_en".
+# ** Error: source/B_EncodePacket.vhd(174): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {36890.44 ns} -cause sim:/tb_b_encodepacket/dut/nswcnt
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+add wave -r sim:/tb_b_encodepacket/dut/statelogic/*
+add wave -r sim:/tb_b_encodepacket/dut/statelogic/*
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {2583.07 ns} -cause sim:/tb_b_encodepacket/next_en
+add wave -r sim:/tb_b_encodepacket/dut/statelogic/*
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(136): Signal "cnt8" cannot be target of variable assignment statement.
+# ** Error: source/B_EncodePacket.vhd(184): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(136): Signal "ncnt8" cannot be target of variable assignment statement.
+# ** Error: source/B_EncodePacket.vhd(184): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 8 is out of range 0 to 7.
+#    Time: 55431250 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/statelogic File: source/B_EncodePacket.vhd
+# Fatal error in Process statelogic at source/B_EncodePacket.vhd line 140
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 140 Process statelogic
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {55405.45 ns} -cause {}
+find drivers -source -time {55412.72 ns} -cause sim:/tb_b_encodepacket/dut/lfsr
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 529 is out of range 0 to 528.
+#    Time: 36060500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/stateprocess File: source/B_EncodePacket.vhd
+# Fatal error in Process stateprocess at source/B_EncodePacket.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 62 Process stateprocess
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Fatal: (vsim-3421) Value 529 is out of range 0 to 528.
+#    Time: 36060500 ps  Iteration: 1  Process: /tb_b_encodepacket/dut/stateprocess File: source/B_EncodePacket.vhd
+# Fatal error in Process stateprocess at source/B_EncodePacket.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at source/B_EncodePacket.vhd 62 Process stateprocess
+# 
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 38108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 38112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+source d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 38108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 38112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+vcom source/B_StripPayload.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# ** Error: source/B_StripPayload.vhd(22): near "END": expecting "IDENTIFIER"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_StripPayload.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# ** Error: source/B_StripPayload.vhd(22): near "END": expecting "IDENTIFIER"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_StripPayload.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# ** Error: source/B_StripPayload.vhd(27): near "end": expecting "BEGIN"
+# ** Error: source/B_StripPayload.vhd(28): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_StripPayload.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+vcom source/B_StripPayload.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
