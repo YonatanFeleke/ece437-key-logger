@@ -138,11 +138,32 @@ process
 
     rst <= '0';
 
+    r_enable_in <= '1';
+
+    w_enable_in <= '0';
+
+    read_ready <= '0'; --goes to read_control
+    wait for Period;
+    Resend <= '0';
+
+    rst <= '0';
+
+    r_enable_in <= '0';
+
+    w_enable_in <= '0';
+
+    read_ready <= '1'; --goes to read_data
+    wait for Period;
+    Resend <= '0';
+
+    rst <= '0';
+
     r_enable_in <= '0';
 
     w_enable_in <= '0';
 
     read_ready <= '0';
-    wait for Period;
+    wait for Period;        
+    
   end process;
 end TEST;
