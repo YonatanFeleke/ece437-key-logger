@@ -27,12 +27,12 @@ end e_encController;
 
 
 architecture behav of e_encController is
-type state_type is (idle, Chunk1, Chunk2, Chunk3, Chunk4,Chunk5,Chunk6,Chunk7,Chunk8,waitRnd);
+type state_type is (idle, Chunk1, Ch1Wait, Chunk2, Chunk3, Chunk4,Chunk5,Chunk6,Chunk7,Chunk8,waitRnd);  --Chunk 1 wait (R_Data doesnt change intime)
 signal compileCT,nxtCompCT	: state_type;
 signal rndCT, nxtrndCT			: std_logic_vector(4 downto 0);
 --signal cData : std_logic_vector(7 downto 0);
 signal cD_ENABLE: std_logic;
-signal CompData,CompData2 	: std_logic_vector(63 downto 0);
+signal CompData2 	: std_logic_vector(63 downto 0);
 
 
 
@@ -86,9 +86,11 @@ begin
 			--CompData2<="0000000000000000000000000000000000000000000000000000000000000000";
 			
 	when Chunk1 => 
-				nxtCompCT <= Chunk2;
+				nxtCompCT <= Ch1Wait;
 				--CompData<=CompData(63 downto 56)& DATA &"000000000000000000000000000000000000000000000000" ;
 				--cData1 := DATA;
+	when Ch1Wait => 
+				nxtCompCT <= Chunk2;
 	when Chunk2 => 
 				nxtCompCT <= Chunk3;
 				--CompData<=CompData(63 downto 48)& DATA &"0000000000000000000000000000000000000000" ;
@@ -201,6 +203,9 @@ begin
 		cData6 := "00000000";
 		cData7 := "00000000";
 		cData8 := "00000000";
+		CompData2<="0000000000000000000000000000000000000000000000000000000000000000";
+	when Ch1Wait =>
+		cData2 := "00000000"; -- Just to do something in this state
 	when waitRnd =>
 		CompData2 <= cData1&cData2&cData3&cData4&cData5&cData6&cData7&cData8;
 	end case;
