@@ -36,13 +36,13 @@ architecture b_edata of B_EncodePacket IS
 --		signal A,B,RUN					:			std_logic;
 		type	 state_type is	(idle,header,calccrc,getdata,outcrc);
 		signal	state,nstate	: state_type;
-		signal ncnt8										: integer range 0 to 8;
-		signal ncnt32 									: integer range 0 to 33; --  reloop for 32 => 256 bit data
+		signal ncnt8										: integer range 0 to 9;
+		signal ncnt32 									: integer range 0 to 34; --  reloop for 32 => 256 bit data
 		signal nswcnt 									: integer range 0 to WAITREG*2 + 1; --sram wait for finish of transmit 1 and then anotherc
 		signal nestore_en,nread_en			: std_logic;
-		signal cnt32 										: integer range 0 to 32; --  reloop for 32 => 256 bit data
+		signal cnt32 										: integer range 0 to 33; --  reloop for 32 => 256 bit data
 		signal swcnt 										: integer range 0 to WAITREG*2; --sram wait for finish of transmit 1 and then another
-		signal cnt8											: integer range 0 to 7;
+		signal cnt8											: integer range 0 to 8;
 		signal Data_in									: std_logic;
 		--PAYLOAD <= crc&DATA&length&flowBIT&LCH;
 begin
@@ -68,9 +68,11 @@ begin
 				end if;
 			end process stateprocess;
 --______________________________________________
+Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);				
+--______________________________________________
 	statelogic : process (CLK,STATE)
-			variable crc									: 		std_logic_vector(15 downto 0);
-			variable xor12,xor5,xor0			:			std_logic;
+--			variable crc									: 		std_logic_vector(15 downto 0);
+--			variable xor12,xor5,xor0			:			std_logic;
 			variable txwait								: 		std_logic;
 		begin
      		case state is 
@@ -79,7 +81,6 @@ begin
 							LCH <= "11";
 							flowBIT <= '1';
 							packet_hdr <= "0000"&length&flowBIT&LCH;
-							crc := "0000000011011001";
 							PAYLOAD<="00000000";
 							-- next state initializations
 							nlfsr<= "0000000011011001"; --innit with 8 bit 00000000&UAP[7 downto 0];
@@ -91,10 +92,10 @@ begin
 							NEXT_EN		<= '1';	 -- ask for next data to controller
 							nstate <= idle;
 							-- variable initializations
-							crc := "0000000011011001";
-							xor12 := '0';
-							xor5 := '0';
-							xor0 := '0';
+--							crc := "0000000011011001";
+--							xor12 := '0';
+--							xor5 := '0';
+--							xor0 := '0';
 							txwait := '0';
 							if (ENCODE_EN = '1') then nstate <= header;
 							end if;
@@ -119,7 +120,7 @@ begin
 							nestore_en <= '0';				
       				if (cnt32 = 0) then
       					nstate <= getdata; -- first request for data.
-      				elsif (cnt32 = 32) then -- 33rd run => 32 times looped all crc claculated
+      				elsif (cnt32 = 33) then -- 33rd run => 32 times looped all crc claculated -->>>>?
       					nstate <= outcrc;
       					nswcnt <= 0;
       					ncnt32 <= 0;
@@ -140,15 +141,17 @@ begin
 									end if;
 								else
 									ncnt8 <= cnt8 + 1;
-									if (cnt8 = 7) then
+									if (cnt8 = 8) then
 										nstate <= getData;
 										-- nswcnt <= '0'; -- not necessary but chk.
 										ncnt8 <= 0;
+										nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
 									else
-										xor0 	:= lfsr(15) xor Data_in ;--DATA(cnt8); -- Data(cnt8) is the dataval
-										xor12 := xor0 xor lfsr(11);						    
-										xor5  := xor0 xor lfsr(4);
-    			 					nlfsr	<= lfsr(14 downto 12) & xor12 & lfsr(10 downto 5) & xor5 & lfsr(3 downto 0) & xor0;
+--										xor0 	:= lfsr(15) xor Data_in ;--DATA(cnt8); -- Data(cnt8) is the dataval
+--										xor12 := lfsr(15) xor Data_in xor lfsr(11);						    
+--										xor5  :=  lfsr(15) xor Data_in  xor lfsr(4);
+--    			 					nlfsr	<= lfsr(14 downto 12) & xor12 & lfsr(10 downto 5) & xor5 & lfsr(3 downto 0) & xor0;
+										nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
 									end if; -- ncnt8
 								end if; -- txwait
 							end if; -- ncnt32						
@@ -168,15 +171,14 @@ begin
 								nread_en <= '0';
 							end if;						
       		when outcrc=>
-      				crc := lfsr;
 							nstate <= outcrc;
 							nswcnt <= swcnt + 1;
 							nestore_en <= '0';
 							if (swcnt = 0) then
-								PAYLOAD <= crc( 7 downto 0);
+								PAYLOAD <= lfsr( 7 downto 0);
 								nestore_en <= '1';
 							elsif ( swcnt = WAITREG) then
-								PAYLOAD <= crc( 15 downto 8);
+								PAYLOAD <= lfsr( 15 downto 8);
 								nestore_en <= '1';
 							elsif ( swcnt = 2*WAITREG) then -->>>>>>>>>>>>??? can u do 2* constant= compiler error.
 								nswcnt <= 0;
@@ -184,6 +186,5 @@ begin
 							end if;
 					end case;
 	    end process statelogic;
-			Data_in <= DATA(cnt8);
 end b_edata;
 
