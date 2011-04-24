@@ -12,20 +12,20 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_unsigned.ALL;
 
 Entity ADDRgen2 is
-  port(Resend  : in std_logic;
-      clk : in std_logic;
-      rst : in  std_logic;
-      r_enable_in : in std_logic;
-      w_enable_in : in std_logic;
-      read_ready : in std_logic;
-      ADDR  : out std_logic_vector(11 downto 0);
-      --empty  : out std_logic;
-      r_enable_out : out std_logic;
-      w_enable_out  : out std_logic;
-      read_done : out std_logic);
+  port(
+      	clk 		: in std_logic;
+      	rst 		: in  std_logic;
+	Resend  	: in std_logic;
+      	r_enable_in 	: in std_logic;
+      	w_enable_in 	: in std_logic;
+      	read_ready 	: in std_logic;
+      	ADDR  		: out std_logic_vector(11 downto 0);  --empty  : out std_logic;
+      	r_enable_out 	: out std_logic;
+      	w_enable_out  	: out std_logic;
+      	read_done 	: out std_logic);
     end ADDRgen2;
     
-    architecture statemachine of ADDRgen2 is
+architecture B_stmachine of ADDRgen2 is
       type stateType is (idle, read_data, write_data, read_control);
         signal state, nextState: stateType;
         signal addr_counter, new_addr, store_addr, new_store : std_logic_vector(11 downto 0);
@@ -114,4 +114,4 @@ begin
    read_done <= '1';
  end case;
  end process Out_logic;           
- end statemachine;
+ end B_stmachine;
