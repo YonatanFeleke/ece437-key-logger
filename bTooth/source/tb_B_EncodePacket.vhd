@@ -77,18 +77,14 @@ end process;
                 READ_EN => READ_EN
                 );
 
---   GOLD: <GOLD_NAME> port map(<put mappings here>);
-
 process
 
   begin
-
--- Insert TEST BENCH Code Here
-
-    RST <= '0';
-    ENCODE_EN <= '1';
-    DATA <= INT_TO_STD_LOGIC(12,8);
-    wait for 7 ns;
+--    RST <= '0';
+--    ENCODE_EN <= '1';
+--    DATA <= INT_TO_STD_LOGIC(12,8);
+--    wait for 7 ns;
+-- NOT TURN KEY IF ENCODE_EN IS ACCIDENTALLY HIGH FOR 3.5 NS
     RST <= '1';
     ENCODE_EN <= '0';
     DATA <= INT_TO_STD_LOGIC(56,8);
@@ -97,30 +93,35 @@ process
     ENCODE_EN <= '0';
     DATA <= INT_TO_STD_LOGIC(00,8);
     wait for 21 ns;
-    report "Test 1 BEGIN for data" severity NOTE; 
-    RST <= '0';
-    ENCODE_EN <= '1';
-    DATA <= INT_TO_STD_LOGIC(119,8);
-    wait for 896 ns;
-    ENCODE_EN <= '0';
-    wait for 35 ns;
-
-    wait for 7 ns;
-    report "Test 2" severity NOTE; 
-    wait for 14 ns;
-    RST <= '0';
-    ENCODE_EN <= '0';
-    DATA <= INT_TO_STD_LOGIC(00,8);
-    wait for 21 ns;
-    report "Test 2 BEGIN for data" severity NOTE; 
-    RST <= '0';
-    ENCODE_EN <= '1';
-    DATA <= INT_TO_STD_LOGIC(222,8);
-    wait for 896 ns;
-    wait for 35 ns;
-    RST <= '1';
-    DATA <= INT_TO_STD_LOGIC(199,8);    
-    wait;
     
+-- Test 1 : Correct execution    
+    report "Test 1 BEGIN for CORRECT EXEC" severity NOTE; 
+    RST <= '0';
+    ENCODE_EN <= '1';
+--    DATA <= INT_TO_STD_LOGIC(119,8);
+    DATA <= "10101010";
+    -- STATE = HEADER
+    wait for 3.5 ns;
+    ENCODE_EN <= '0';
+    -- see if 2 clk needed & falling edge doesn't mess up.
+    wait for 37000 ns;
+--    wait for 666858.5 ns;
+	  report "Test 1 END for CORRECT EXEC" severity NOTE; 
+    wait for 1070 ns;
+    
+    
+    report "Test 2" severity NOTE;    	
+   	ENCODE_EN <= '1';
+   	DATA <= "01010101";
+    wait for 3.5 ns;
+    ENCODE_EN <= '0';
+    report "Test 2 BEGIN for data" severity NOTE; 
+    wait for 6000 ns;
+    DATA <= "11110000";
+  	wait for 6000 ns;
+  	DATA <= "00000000";
+		wait for 29000 ns;
+    wait;    
   end process;
 end TEST;
+-- Note if further testing, create a fifo that when paged gives out a diferent data.

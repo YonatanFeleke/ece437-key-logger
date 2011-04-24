@@ -6,4 +6,6 @@ vcom source/B_Header.vhd
 vsim work.b_Header
 vsim work.tb_b_Header
 add wave -r sim:/tb_b_header/*
-run 120 ns
+add wave sim:/tb_b_header/dut/gethecprocess/*
+add wave -r sim:/tb_b_header/dut/outputheader/*
+run 295000 ns

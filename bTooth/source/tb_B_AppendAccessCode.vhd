@@ -63,15 +63,13 @@ process
 
     RST <= '1';
     CODE_EN <=  '0';
-    wait for 10 ns;
+    wait for 7 ns;
     RST <= '0';
     CODE_EN <=  '1';
     wait for 7 ns;
     CODE_EN <=  '0';
     RST<= '0';
     wait for 35 ns;
-    RST <= '1';
-    wait for 7 ns;
     CODE_EN <= '1';
     wait for 7 ns;
     CODE_EN <= '0';

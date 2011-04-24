@@ -1,14 +1,13 @@
 -- $Id: $
 -- File name:   tb_B_Header.vhd
--- Created:     4/17/2011
+-- Created:     4/23/2011
 -- Author:      Yonatan Feleke
 -- Lab Section: 337-02
 -- Version:     1.0  Initial Test Bench
 
 library ieee;
---library gold_lib;   --UNCOMMENT if you're using a GOLD model
 use ieee.std_logic_1164.all;
---use gold_lib.all;   --UNCOMMENT if you're using a GOLD model
+
 
 entity tb_B_Header is
 generic (Period : Time := 3.5 ns);
@@ -35,19 +34,21 @@ architecture TEST of tb_B_Header is
 
   component B_Header
     PORT(
-         CLK : in std_logic;
+				 CLK : in std_logic;
          RST : in std_logic;
          HEADER_EN : in std_logic;
          HEADER : OUT std_logic_vector(53 downto 0);
+         TRANS_EN : OUT std_logic;
          ENCODE_EN : OUT std_logic
     );
   end component;
 
 -- Insert signals Declarations here
-  signal CLK : std_logic;
+	signal CLK : std_logic;
   signal RST : std_logic;
   signal HEADER_EN : std_logic;
   signal HEADER : std_logic_vector(53 downto 0);
+  signal TRANS_EN : std_logic;
   signal ENCODE_EN : std_logic;
 
 -- signal <name> : <type>;
@@ -67,11 +68,16 @@ end process;
                 RST => RST,
                 HEADER_EN => HEADER_EN,
                 HEADER => HEADER,
-                ENCODE_EN => ENCODE_EN);
+                TRANS_EN => TRANS_EN,
+                ENCODE_EN => ENCODE_EN
+                );
+
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
 
 process
+
   begin
+
 -- Insert TEST BENCH Code Here
     RST <= '1';
     HEADER_EN <= '0';
