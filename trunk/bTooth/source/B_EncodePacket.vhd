@@ -43,6 +43,7 @@ architecture b_edata of B_EncodePacket IS
 		signal cnt32 										: integer range 0 to 32; --  reloop for 32 => 256 bit data
 		signal swcnt 										: integer range 0 to WAITREG*2; --sram wait for finish of transmit 1 and then another
 		signal cnt8											: integer range 0 to 7;
+		signal Data_in									: std_logic;
 		--PAYLOAD <= crc&DATA&length&flowBIT&LCH;
 begin
 --______________________________________			
@@ -69,7 +70,6 @@ begin
 --______________________________________________
 	statelogic : process (CLK,STATE)
 			variable crc									: 		std_logic_vector(15 downto 0);
-			variable data_in							: 		std_logic;
 			variable xor12,xor5,xor0			:			std_logic;
 			variable txwait								: 		std_logic;
 		begin
@@ -92,7 +92,6 @@ begin
 							nstate <= idle;
 							-- variable initializations
 							crc := "0000000011011001";
-							data_in := '0';
 							xor12 := '0';
 							xor5 := '0';
 							xor0 := '0';
@@ -140,14 +139,13 @@ begin
 									 	ncnt8 <= cnt8 + 1;
 									end if;
 								else
-	      					data_in := DATA(cnt8); -- also includes 0 not b/c of order
 									ncnt8 <= cnt8 + 1;
 									if (cnt8 = 7) then
 										nstate <= getData;
 										-- nswcnt <= '0'; -- not necessary but chk.
 										ncnt8 <= 0;
 									else
-										xor0 	:= lfsr(15) xor data_in;
+										xor0 	:= lfsr(15) xor Data_in ;--DATA(cnt8); -- Data(cnt8) is the dataval
 										xor12 := xor0 xor lfsr(11);						    
 										xor5  := xor0 xor lfsr(4);
     			 					nlfsr	<= lfsr(14 downto 12) & xor12 & lfsr(10 downto 5) & xor5 & lfsr(3 downto 0) & xor0;
@@ -186,6 +184,6 @@ begin
 							end if;
 					end case;
 	    end process statelogic;
-
+			Data_in <= DATA(cnt8);
 end b_edata;
 

@@ -1485,3 +1485,272 @@ vcom source/B_StripPayload.vhd
 # -- Loading package std_logic_1164
 # -- Compiling entity b_strippayload
 # -- Compiling architecture b_strip of b_strippayload
+vcom source/B_Contr*.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_controller
+# ** Error: source/B_Controller.vhd(21): near "END": expecting ';'
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_Contr*.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_controller
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 38108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 38112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+do d/epm
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_b_encodepacket
+# -- Loading package conv_pack_b_encodepacket
+# -- Compiling entity b_encodepacket_dw01_inc_0
+# -- Compiling architecture syn_rpl of b_encodepacket_dw01_inc_0
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture syn_b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# Loading work.conv_pack_b_encodepacket
+# Loading work.b_encodepacket(syn_b_edata)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading work.b_encodepacket_dw01_inc_0(syn_rpl)#1
+# Loading osu_ami05.hax1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 38108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 38112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2
+#    Time: 38108500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 2 BEGIN for data
+#    Time: 38112 ns  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 37038500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(68): (vcom-1136) Unknown identifier "ndata_in".
+# ** Error: source/B_EncodePacket.vhd(160): Illegal target for signal assignment.
+# ** Error: source/B_EncodePacket.vhd(160): (vcom-1136) Unknown identifier "dnstate".
+# ** Error: source/B_EncodePacket.vhd(192): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/ep line 5
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_EncodePacket.vhd"
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(96): Signal "data_in" cannot be target of variable assignment statement.
+# ** Error: source/B_EncodePacket.vhd(191): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/ep line 5
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_EncodePacket.vhd"
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+find drivers -source -time {2913.75 ns} -cause sim:/tb_b_encodepacket/dut/nlfsr
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# ** Error: source/B_EncodePacket.vhd(148): Illegal statement: data
+# ** Error: source/B_EncodePacket.vhd(188): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/ep line 5
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_EncodePacket.vhd"
+do d/ep
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
