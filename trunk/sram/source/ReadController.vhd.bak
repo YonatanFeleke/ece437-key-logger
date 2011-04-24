@@ -1,0 +1,24 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+Entity ReadController is
+  port(
+    num_writes :  in std_logic;
+    --Resend : in std_logic;
+    read_done :  in std_logic;
+    empty : out std_logic;
+    read_ready  : out std_logic);
+  end ReadController;
+  
+architecture dataflow of ReadController is
+begin
+  if (num_writes = '1' and read_done = '0') then
+    ready_ready <= '1';
+    empty <= '1';
+  else
+    read_ready <= '0';
+    empty <= '0'
+  end if;        
+
+
+end dataflow;

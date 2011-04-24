@@ -1,0 +1,53 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg31/ece337/FinalProject
+Ereadcontroller
+Z1 w1303610019
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 d/home/ecegrid/a/mg31/ece337/FinalProject
+Z4 8source/ReadController.vhd
+Z5 Fsource/ReadController.vhd
+l0
+L4
+VjVZ5kWzBzK^NOkjGM5_bG0
+Z6 OL;C;6.6b;45
+31
+Z7 tExplicit 1 Coverage 47 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+!s100 0gHW0gVbV41Fo2zNe=h9I1
+Adataflow
+R2
+DEx4 work 14 readcontroller 0 22 jVZ5kWzBzK^NOkjGM5_bG0
+l14
+L13
+ViEI7Ti0b<`1ni=Z3o<<Cc0
+R6
+31
+Z8 Mx1 4 ieee 14 std_logic_1164
+R7
+!s100 gjJJJBCLBSY_kI7TA7@:o3
+Etb_readcontroller
+Z9 w1303620960
+R2
+R3
+Z10 8source/tb_ReadController.vhd
+Z11 Fsource/tb_ReadController.vhd
+l0
+L13
+VL^g8:>HkDmDVZ6Rl`PV?D3
+!s100 oSX]ObTBKRn3j`^9mK`SX0
+R6
+31
+R7
+Atest
+R2
+DEx4 work 17 tb_readcontroller 0 22 L^g8:>HkDmDVZ6Rl`PV?D3
+l52
+L16
+V=a4T8WZYOP`Tk_eND<oa_3
+!s100 2SciSa6]F3PV8dV;G]35Q0
+R6
+31
+R8
+R7

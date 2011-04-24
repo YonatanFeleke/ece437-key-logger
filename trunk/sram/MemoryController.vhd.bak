@@ -1,0 +1,25 @@
+-- $Id: $
+-- File name:   MemoryController.vhd
+-- Created:     4/12/2011
+-- Author:      Evan Graves
+-- Lab Section: 337-02
+-- Version:     1.0  Initial Design Entry
+-- Description: Memory_controller file
+
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+Entity controller is
+  port(clk  : in std_logic;
+      rst  : in std_logic;
+      data_in : in std_logic_vector(7 downto 0);
+      full  : in std_logic;
+      empty : in std_logic;
+      r_enable_in : in std_logic;
+      r_error : in std_logic;
+      data_out  : out std_logic_vector(7 downto 0);
+      r_enable_out  : out std_logic);
+    end controller;
+    
+    
