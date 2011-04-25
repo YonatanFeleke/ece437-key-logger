@@ -72,7 +72,7 @@ begin
   				else -- value indicating not valid via premable => check on sram accept that all are complements
   				  TRANS_EN <= '0';
   				  if (waittx = '1') then
-  				  	if (waitcnt = WAITREG*16) then -->>>>>>>>>>>>> 126 bits to transmit should be 128???????
+  				  	if (waitcnt = WAITREG*16) then -->>128 bits but only 126 bits
   				  		waitcnt := 0;
   				  		ENCODE_EN <= '1';
   				  		waittx := '0';
