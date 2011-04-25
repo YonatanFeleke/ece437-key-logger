@@ -1,0 +1,10 @@
+rm -rf work
+vlib work
+vcom source/ReadController2.vhd
+vcom source/MemoryController.vhd
+vcom source/ADDRgen2.vhd
+vcom source/WinningTop.vhd
+vcom source/tb_WinningTop.vhd
+vsim -i work.tb_winningtop
+add wave -r *
+run 400 ns

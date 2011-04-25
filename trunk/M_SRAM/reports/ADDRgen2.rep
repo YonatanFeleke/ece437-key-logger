@@ -1,0 +1,103 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ADDRgen2
+Version: D-2010.03-SP3
+Date   : Sun Apr 24 03:53:27 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: ADDR[0] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  state_reg[1]/CLK (DFFSR)                 0.00       0.00 r
+  state_reg[1]/Q (DFFSR)                   0.57       0.57 r
+  U261/Y (INVX1)                           0.26       0.82 f
+  U145/Y (AND2X2)                          0.80       1.63 f
+  U260/Y (MUX2X1)                          0.33       1.95 f
+  U259/Y (INVX1)                           0.07       2.02 r
+  ADDR[0] (out)                            0.00       2.02 r
+  data arrival time                                   2.02
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : ADDRgen2
+Version: D-2010.03-SP3
+Date   : Sun Apr 24 03:53:27 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               21
+Number of nets:               209
+Number of cells:              150
+Number of references:          18
+
+Combinational area:       45243.000000
+Noncombinational area:    49104.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          94347.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : ADDRgen2
+Version: D-2010.03-SP3
+Date   : Sun Apr 24 03:53:28 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+ADDRgen2                                  2.348    4.372   29.812    6.720 100.0
+  sub_80 (ADDRgen2_DW01_dec_0)         8.11e-03 4.61e-03    1.839 1.27e-02   0.2
+  add_64 (ADDRgen2_DW01_inc_0)         3.67e-03 8.71e-03    2.871 1.24e-02   0.2
+1

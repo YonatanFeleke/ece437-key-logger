@@ -1,0 +1,2 @@
+#!/bin/csh -f
+dc_shell-t -f ./scripts/ADDRgen2.fcr | tee ADDRgen2.log

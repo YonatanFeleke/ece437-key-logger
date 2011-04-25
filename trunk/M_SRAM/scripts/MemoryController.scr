@@ -1,0 +1,2 @@
+#!/bin/csh -f
+dc_shell-t -f ./scripts/MemoryController.fcr | tee MemoryController.log

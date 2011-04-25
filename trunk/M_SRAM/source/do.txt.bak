@@ -1,0 +1,20 @@
+rm -rf work
+vlib work
+vcom source/ReadController2.vhd
+vcom source/MemoryController.vhd
+vcom source/ADDRgen2.vhd
+vcom source/WinningTop.vhd
+vcom source/tb_WinningTop.vhd
+vsim -i work.tb_winningtop
+add wave \
+{sim:/tb_winningtop/resend } \
+{sim:/tb_winningtop/clk } \
+{sim:/tb_winningtop/full } \
+{sim:/tb_winningtop/read_enable_in } \
+{sim:/tb_winningtop/rst } \
+{sim:/tb_winningtop/empty } \
+{sim:/tb_winningtop/r_enable_out } \
+{sim:/tb_winningtop/data }
+add wave sim:/tb_winningtop/dut/u_0/*
+add wave sim:/tb_winningtop/dut/u_1/*
+run 400 ns
