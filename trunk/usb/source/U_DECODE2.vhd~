@@ -1,0 +1,42 @@
+-- $Id: $
+-- File name:   edge_detect.vhd
+-- Created:     2/21/2011
+-- Author:      Brian Crone
+-- Lab Section: 337-02
+-- Version:     1.0  Initial Design Entry
+-- Description: Source code for Edge_detect for the USB receiver.
+
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+Entity U_DECODE is
+  port(D_CLK  : in  std_logic;
+       rst_n  : in std_logic;
+       d_plus : in  std_logic;
+       shift_enable : in  std_logic;
+       eop  : in  std_logic;
+       d_orig : out std_logic);
+ end U_DECODE;
+
+architecture behavioral of U_DECODE is
+	signal current, previous : std_logic;
+	begin
+		detect	:	process(D_CLK, rst_n)
+		begin
+			--current <= D_PLUS;
+			if(rst_n = '1') then
+				D_ORIG <= '1';
+				current <= '1';
+				previous <= '1';
+			elsif(rising_edge(D_CLK)) then
+				current <= D_PLUS;
+				previous <= current;
+				if (EOP = '0') then D_ORIG <= not(current xor previous);
+				else D_ORIG <= '1';
+				end if;
+			end if;
+		end process detect;
+	
+end behavioral;
+			

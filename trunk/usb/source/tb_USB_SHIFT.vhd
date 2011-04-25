@@ -18,7 +18,7 @@ architecture TEST of tb_USB_SHIFT is
 
   component USB_SHIFT
     PORT(
-         CLK : in std_logic;
+         D_CLK : in std_logic;
          RST : in std_logic;
          EOP : in std_logic;
          SHIFT_ENABLE : in std_logic;
@@ -30,7 +30,7 @@ architecture TEST of tb_USB_SHIFT is
   end component;
 
 -- Insert signals Declarations here
-  signal CLK : std_logic;
+  signal D_CLK : std_logic;
   signal RST : std_logic;
   signal EOP : std_logic;
   signal SHIFT_ENABLE : std_logic;
@@ -43,17 +43,17 @@ architecture TEST of tb_USB_SHIFT is
 
 begin
 
-CLKGEN: process
-  variable clk_tmp: std_logic := '0';
+D_CLKGEN: process
+  variable D_CLK_tmp: std_logic := '0';
 
 begin
-  clk_tmp := not clk_tmp;
-  clk <= clk_tmp;
+  D_CLK_tmp := not D_CLK_tmp;
+  D_CLK <= D_CLK_tmp;
   wait for Period/2;
 end process;
 
   DUT: USB_SHIFT port map(
-                CLK => CLK,
+                D_CLK => D_CLK,
                 RST => RST,
                 EOP => EOP,
                 SHIFT_ENABLE => SHIFT_ENABLE,
@@ -89,9 +89,9 @@ process
 			D_ORIG <= test_vector(i);
 			wait for Period*3;
 			SHIFT_ENABLE <= '1';
-			wait for Period;
+			wait for Period*2;
 			SHIFT_ENABLE <= '0';
-			wait for PERIOD*4;
+			wait for PERIOD*3;
 		end loop;
 		wait;
 			

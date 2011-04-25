@@ -1,0 +1,20 @@
+rm -rf work
+vlib work
+vcom source/U_CLKDIV.vhd
+vcom source/U_TIMER.vhd
+vcom source/U_EOP_DETECT.vhd
+vcom source/U_EDGE_DETECT.vhd
+vcom source/U_RCU.vhd
+vcom source/RCV_FIFO.vhd
+vcom source/U_DECODE.vhd
+vcom source/USB_SHIFT.vhd
+vcom source/U_CRC.vhd
+vcom source/U_BUFFER.vhd
+vcom source/USB_RCVR.vhd
+#vcom mapped/USB_RCVR.vhd
+vcom source/tb_USB_RCVR.vhd
+vsim -i work.tb_usb_rcvr
+#add wave *
+add wave -r /*
+run 8000 ns
+

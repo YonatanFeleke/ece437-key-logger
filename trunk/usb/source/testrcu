@@ -1,9 +1,17 @@
 rm -rf work
 vlib work
-vcom source/U_RCU.vhd
-#vcom mapped/U_RCU.vhd
+#vcom source/U_RCU.vhd
+vcom mapped/U_RCU.vhd
 vcom source/tb_rcu.vhd
 vsim -i work.tb_rcu
 add wave *
-
+add wave \
+{sim:/tb_rcu/dut/state_3_port } \
+{sim:/tb_rcu/dut/state_2_port } \
+{sim:/tb_rcu/dut/state_1_port } \
+{sim:/tb_rcu/dut/state_0_port } \
+{sim:/tb_rcu/dut/nextstate_3_port } \
+{sim:/tb_rcu/dut/nextstate_2_port } \
+{sim:/tb_rcu/dut/nextstate_1_port } \
+{sim:/tb_rcu/dut/nextstate_0_port } 
 run 3030 ns
