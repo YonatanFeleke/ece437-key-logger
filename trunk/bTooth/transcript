@@ -8,3 +8,1429 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# ** Error: Library work not found.
+# ** Error: VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vlib work 
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# ** Error: source/B_UAT.vhd(12): near "ENTITY": expecting '[' or '(' or '.' or '''
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(90): near "else": expecting ';'
+# ** Error: source/B_UAT.vhd(101): Enumeration literal "bit1" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(102): Enumeration literal "bit1" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(103): Enumeration literal "bit2" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(104): Enumeration literal "bit2" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(105): Enumeration literal "bit3" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(106): Enumeration literal "bit3" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(107): Enumeration literal "bit4" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(108): Enumeration literal "bit4" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(109): Enumeration literal "bit5" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(110): Enumeration literal "bit5" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(111): Enumeration literal "bit6" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(112): Enumeration literal "bit6" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(113): Enumeration literal "bit7" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(114): Enumeration literal "bit7" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(115): Enumeration literal "bit8" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(116): Enumeration literal "bit8" is type bit_send; expecting type state_type.
+# ** Error: source/B_UAT.vhd(119): near "nxtstate": expecting "GENERATE" or "THEN"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(90): near "else": expecting ';'
+# ** Error: source/B_UAT.vhd(119): near "nxtstate": expecting "GENERATE" or "THEN"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(119): near "nxtstate": expecting "GENERATE" or "THEN"
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(148): Illegal target for signal assignment.
+# ** Error: source/B_UAT.vhd(148): (vcom-1136) Unknown identifier "nxtcnt128".
+# ** Error: source/B_UAT.vhd(178): near "end": expecting ';'
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(148): Illegal target for signal assignment.
+# ** Error: source/B_UAT.vhd(148): (vcom-1136) Unknown identifier "nxtcnt128".
+# ** Warning: [14] source/B_UAT.vhd(161): (vcom-1272) Length of expected is 6; length of actual is 7.
+# ** Error: source/B_UAT.vhd(179): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(148): Illegal target for signal assignment.
+# ** Error: source/B_UAT.vhd(148): (vcom-1136) Unknown identifier "nxtcnt128".
+# ** Error: source/B_UAT.vhd(179): VHDL Compiler exiting
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+vcom source/B_UAT.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+vsim -i work.b_uat
+# vsim -i work.b_uat 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.b_uat(b_serialtx)#1
+# Updating msgviewer database...
+add wave *
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# ** Error: source/tb_B_UAT.vhd(108): near "wait": expecting ';'
+# ** Error: source/tb_B_UAT.vhd(124): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 1
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# ** Error: source/tb_B_UAT.vhd(106): (vcom-1272) Length of expected is 54; length of actual is 53.
+# ** Error: source/tb_B_UAT.vhd(124): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 1
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Warning: [14] source/B_UAT.vhd(145): (vcom-1272) Length of expected is 128; length of actual is 126.
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Warning: [14] source/B_UAT.vhd(170): (vcom-1272) Length of expected is 8; length of actual is 7.
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 8 (7 downto 0). Right is 7 (7 downto 1).
+#    Time: 0 ps  Iteration: 1  Process: /tb_b_uat/dut/output_reg File: source/B_UAT.vhd
+# Fatal error in Process output_reg at source/B_UAT.vhd line 170
+# 
+# HDL call sequence:
+# Stopped at source/B_UAT.vhd 170 Process output_reg
+# 
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Warning: [14] source/B_UAT.vhd(83): (vcom-1272) Length of expected is 10; length of actual is 11.
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 10 (9 downto 0). Right is 11 (10 downto 0).
+#    Time: 14 ns  Iteration: 2  Process: /tb_b_uat/dut/nxt_state File: source/B_UAT.vhd
+# Fatal error in Process nxt_state at source/B_UAT.vhd line 83
+# 
+# HDL call sequence:
+# Stopped at source/B_UAT.vhd 83 Process nxt_state
+# 
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(82): Illegal sequential statement.
+# ** Error: source/B_UAT.vhd(100): Illegal sequential statement.
+# ** Error: source/B_UAT.vhd(210): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 2
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(82): Illegal sequential statement.
+# ** Error: source/B_UAT.vhd(100): Illegal sequential statement.
+# ** Error: source/B_UAT.vhd(210): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 2
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(83): near "=": expecting "<=" or ":="
+# ** Error: source/B_UAT.vhd(85): near "+": expecting "<=" or ":="
+# ** Error: source/B_UAT.vhd(105): near "=": expecting "<=" or ":="
+# ** Error: source/B_UAT.vhd(107): near "+": expecting "<=" or ":="
+# ** Error: source/B_UAT.vhd(219): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 2
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Error: source/B_UAT.vhd(119): (vcom-1136) Unknown identifier "storeeight".
+# ** Error: source/B_UAT.vhd(210): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 2
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Warning: [14] source/B_UAT.vhd(112): (vcom-1272) Length of expected is 3; length of actual is 6.
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 3 (2 downto 0). Right is 6 (5 downto 0).
+#    Time: 294798 ns  Iteration: 2  Process: /tb_b_uat/dut/nxt_state File: source/B_UAT.vhd
+# Fatal error in Process nxt_state at source/B_UAT.vhd line 112
+# 
+# HDL call sequence:
+# Stopped at source/B_UAT.vhd 112 Process nxt_state
+# 
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# ** Warning: [14] source/B_UAT.vhd(168): (vcom-1272) Length of expected is 4; length of actual is 3.
+# ** Warning: [14] source/B_UAT.vhd(202): (vcom-1272) Length of expected is 4; length of actual is 3.
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 4 (3 downto 0). Right is 3 (3 downto 1).
+#    Time: 0 ps  Iteration: 1  Process: /tb_b_uat/dut/output_reg File: source/B_UAT.vhd
+# Fatal error in Process output_reg at source/B_UAT.vhd line 168
+# 
+# HDL call sequence:
+# Stopped at source/B_UAT.vhd 168 Process output_reg
+# 
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# ** Error: source/tb_B_UAT.vhd(129): Illegal target for signal assignment.
+# ** Error: source/tb_B_UAT.vhd(129): (vcom-1136) Unknown identifier "enstore_en".
+# ** Error: source/tb_B_UAT.vhd(133): Illegal target for signal assignment.
+# ** Error: source/tb_B_UAT.vhd(133): (vcom-1136) Unknown identifier "enstore_en".
+# ** Error: source/tb_B_UAT.vhd(146): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./source/uat line 1
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_UAT.vhd"
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
+find drivers -source -time {313222 ns} -cause sim:/tb_b_uat/clk
+find drivers -source -time {313222 ns} -cause sim:/tb_b_uat/clk
+# Causality tracing is unavailable because the required debug information has not been generated.
+# Please refer to the documentation for additional details.
+do source/uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_uat
+# -- Compiling architecture test of tb_b_uat
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity b_uat
+# -- Compiling architecture b_serialtx of b_uat
+# vsim -i work.tb_b_uat 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_b_uat(test)#1
+# Updating msgviewer database...
+# Updating msgviewer database...
