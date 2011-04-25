@@ -13,8 +13,8 @@ USE IEEE.std_logic_1164.ALL;
 ENTITY B_NextPacket IS
 		generic (WAITSRAM : natural := 24; -- wait for 24 cycles before data is present
 						 WAITREG	:	natural := 5264;-- Transmit wait time. FIX THIS for LAG
---						 WAITBAK	: natural := 4869 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
-						 WAITBAK	: natural := 48 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
+						 WAITBAK	: natural := 4869 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
+--						 WAITBAK	: natural := 48 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
 		port (	CLK 						:		in	std_logic;
 						RST							:		in	std_logic;
 						REPLY_EN				:		in	std_logic;
@@ -42,9 +42,9 @@ begin
 	  			  	if bluewait = 0 then -- check if err for 1 clk after en
 	  			  		bluewait <= bluewait +1;
 	  			    	if (ERR = '1') then	
-	  			    		txbuff <= "01011111";
+	  			    		txbuff <= "01011110";
 	  						else
-	  							txbuff <= "10101111";
+	  							txbuff <= "10101110";
 	  						end if;	  						
   		      	elsif (bluewait = WAITBAK) then						  	
 						  	cnt8 <= cnt8 + 1;

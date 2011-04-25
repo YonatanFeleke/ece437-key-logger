@@ -68,7 +68,8 @@ process
     REPLY_EN <= '1';
     wait for 3.5 ns;
     REPLY_EN <= '0';
-    wait for 1400 ns;
+--    wait for 1400 ns;
+    wait for 137000 ns;
     ERR <= '1';
     wait for 240 ns;
     REPLY_EN <= '1';

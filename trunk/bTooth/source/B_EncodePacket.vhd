@@ -9,14 +9,12 @@
 -- pAYLOAD : MSB  CRC(16) DATA(256) Length(9) FLOW(1) L_CH(2) LSB
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
---use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 ENTITY B_EncodePacket IS
 		generic (	
-							STROBCYC: integer := 15; -- MUST NOT EXCEED WAITREG!!!!!!!!
-							WAITSRAM : integer := 24; -- wait for 24 cycles before data is present after strobe??
+							STROBCYC: natural := 15; -- MUST NOT EXCEED WAITREG!!!!!!!!
+							WAITSRAM : natural := 24; -- wait for 24 cycles before data is present after strobe??
 						 -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en strobcyc clks Strobe
 						 	WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS DOESN'T HAVE LAG CLKS.							 
 --						 WAITREG	:	integer := 264 ); -- DEBUGGING PURPOSE
@@ -44,10 +42,10 @@ architecture b_edata of B_EncodePacket IS
 		signal	state,nstate	: state_type;
 		signal ncnt8										: integer range 0 to 9;
 		signal ncnt32 									: integer range 0 to 32; --  reloop for 32 => 256 bit data
-		signal nswcnt 									: integer range 0 to (WAITREG*2 + 1); --sram wait for finish of transmit 1 and then anotherc
+		signal nswcnt 									: integer range 0 to (WAITREG*4 + 4); --sram wait for finish of transmit 1 and then anotherc
 		signal nestore_en,nread_en			: std_logic;
 		signal cnt32 										: integer range 0 to 32; --  reloop for 32 => 256 bit data
-		signal swcnt 										: integer range 0 to (WAITREG*2); --sram wait for finish of transmit 1 and then another
+		signal swcnt 										: integer range 0 to (WAITREG*4); --sram wait for finish of transmit 1 and then another
 		signal cnt8											: integer range 0 to 8;
 		signal Data_in									: std_logic;
 		--PAYLOAD <= crc&DATA&length&flowBIT&LCH;
@@ -65,24 +63,20 @@ begin
 					lfsr<= "0000000011011001";
 				elsif (rising_edge(clk)) then
 					state <= nstate;
-					cnt32<= ncnt32;
-					swcnt<= nswcnt;
+					cnt32<= ncnt32;					
 					cnt8<= ncnt8;
 					ESTORE_EN <= nestore_en;
 					READ_EN <= nread_en;
 					lfsr <= nlfsr;
+					swcnt<= nswcnt;
 				end if;
 			end process stateprocess;
 --_____________________________________________________________________--
 Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);				
-
-
-
 --_____________________________________________________________________---
 	statelogic : process (CLK,STATE)
---			variable crc									: 		std_logic_vector(15 downto 0);
---			variable xor12,xor5,xor0			:			std_logic;
 			variable txwait								: 		std_logic;
+			variable cnt2 								: 		std_logic;
 		begin
      		case state is 
 	 		--IDLE_________________________________________________________________     		
@@ -107,22 +101,22 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);
 	 		--HEADER_________________________________________________________________		
       		when header =>
 	      			NEXT_EN		<= '0';	
-	      			nswcnt <= swcnt + 1; -- still on previous value until procees finished. SIGNAL ONLY!
+		      		nswcnt <= 2 + swcnt; -- still on previous value until procees finished. SIGNAL ONLY!
       				nestore_en <= '0';
 	      			nstate <= header;	 
 	      			if (swcnt = 0) then -- SAM**** Updated num cylces for ESTROBE
 --	      			if (swcnt < STROBCYC) then
 	      				PAYLOAD <= packet_hdr(7 downto 0);
 	      				nestore_en <= '1';     				
-	      			elsif (swcnt = WAITREG) then -- 8 bit data transmitted? done?
+	      			elsif (swcnt = 2*WAITREG) then -- 8 bit data transmitted? done?
 	      				PAYLOAD <= packet_hdr(15 downto 8);
 	      				nestore_en <= '1';
 --							elsif ( swcnt > WAITREG and swcnt < WAITREG + STROBCYC) then -- Longer cycle compilation
 --								PAYLOAD <= packet_hdr(15 downto 8);
 --								nestore_en <= '1';		
-	      			elsif ( swcnt = 2*WAITREG ) then
+	      			elsif ( swcnt = 4*WAITREG ) then
 	      				nswcnt <= 0;
-	      				nstate <= calccrc;	
+	      				nstate <= calccrc;
 							end if;
 	 		--CALCCRC_________________________________________________________________
       		when calccrc =>
