@@ -91,14 +91,25 @@ begin
     end if;
   when read_data =>
     new_addr <= addr_counter;
-    new_store <= store_addr - 1;
-    if(counter32 = "11111") then
-       newcounter32 <= "00000";
-       nextState <= read_control;
-    else
-       newcounter32 <= counter32 + 1;
-       nextState <= read_data;
-    end if;  
+    new_store <= store_addr;
+      
+      if(counter32 = "11111") then
+        newcounter32 <= "00000";
+        nextState <= read_control;
+      else
+        if (counter3 = "11") then
+          new_store <= store_addr - 1;
+          nxtcounter3 <= "00";
+          newcounter32 <= counter32 + 1;
+        else
+          new_addr <= addr_counter;
+          nxtcounter3 <= counter3 + 1;
+          newcounter32 <= counter32;
+        end if;
+        
+        nextState <= read_data;
+      end if;
+    --end if;  
    end case;
  end process Next_logic;
     

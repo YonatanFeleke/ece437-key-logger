@@ -18,202 +18,9 @@ vcom source/ADDRgen2.vhd
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
-rm -rf work
-vlib work
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontoller2
-# ** Error: (vcom-11) Could not find work.readcontoller2.
-# ** Error: source/ReadController2.vhd(16): VHDL Compiler exiting
+# ** Error: source/ADDRgen2.vhd(110): near "if": expecting "CASE"
 # /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/ReadController.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity readcontroller
-# -- Compiling architecture dataflow of readcontroller
-vcom source/ReadController.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity readcontroller
-# -- Compiling architecture dataflow of readcontroller
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontoller2
-# ** Error: (vcom-11) Could not find work.readcontoller2.
-# ** Error: source/ReadController2.vhd(16): VHDL Compiler exiting
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# ** Error: source/ReadController2.vhd(19): (vcom-1136) Unknown identifier "rst".
-# ** Error: source/ReadController2.vhd(19): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(19): (vcom-1136) Unknown identifier "clk".
-# ** Error: source/ReadController2.vhd(19): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(21): (vcom-1136) Unknown identifier "rst".
-# ** Error: source/ReadController2.vhd(21): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: source/ReadController2.vhd(22): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(22): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(23): (vcom-1136) Unknown identifier "clk".
-# ** Error: source/ReadController2.vhd(24): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(24): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(28): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(28): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(30): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(31): Enumeration literal "idle" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(32): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(32): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(33): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(33): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(35): Enumeration literal "read_data" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(36): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(36): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(37): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(37): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(38): near "case": expecting "IF"
-# ** Error: source/ReadController2.vhd(41): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(41): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(41): Illegal sequential statement.
-# ** Error: source/ReadController2.vhd(43): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(44): Enumeration literal "idle" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(47): Enumeration literal "read_data" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(52): near "statemachine": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# ** Error: source/ReadController2.vhd(24): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(24): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(26): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(26): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(30): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(30): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(32): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(33): Enumeration literal "idle" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(34): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(34): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(35): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(35): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(37): Enumeration literal "read_data" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(38): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(38): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(39): Illegal target for signal assignment.
-# ** Error: source/ReadController2.vhd(39): (vcom-1136) Unknown identifier "nextstate".
-# ** Error: source/ReadController2.vhd(40): near "case": expecting "IF"
-# ** Error: source/ReadController2.vhd(43): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(43): Expression is not a signal.
-# ** Error: source/ReadController2.vhd(43): Illegal sequential statement.
-# ** Error: source/ReadController2.vhd(45): (vcom-1136) Unknown identifier "state".
-# ** Error: source/ReadController2.vhd(46): Enumeration literal "idle" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(49): Enumeration literal "read_data" is type statetype; expecting type (error).
-# ** Error: source/ReadController2.vhd(54): near "statemachine": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# ** Error: source/ReadController2.vhd(41): near "case": expecting "IF"
-# ** Error: source/ReadController2.vhd(44): Illegal sequential statement.
-# ** Error: source/ReadController2.vhd(55): near "statemachine": expecting "PROCESS"
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-vcom source/ReadController2.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-vsim -i work.readcontroller2
-# vsim -i work.readcontroller2 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.readcontroller2(statemachine)#1
-add wave \
-{sim:/readcontroller2/state } \
-{sim:/readcontroller2/nextstate } \
-{sim:/readcontroller2/rst } \
-{sim:/readcontroller2/clk } \
-{sim:/readcontroller2/num_writes } \
-{sim:/readcontroller2/read_done } \
-{sim:/readcontroller2/empty } \
-{sim:/readcontroller2/read_ready } 
-force clk 0 0 ns, 1 1.75 ns -r 3.5 ns
-force rst 1 0 ns, 0 5 ns
-force num_writes 1 0 ns
-force read_done 0 0 ns, 1 50 ns
-run 75 ns
-restart
-force clk 0 0 ns, 1 1.75 ns -r 3.5 ns
-force rst 1 0 ns, 0 5 ns
-force num_writes 1 0 ns, 0 50 ns
-force read_done 0 0 ns, 1 50 ns
-run 75 ns
-rm -rf work
-vlib work
-vcom source/WinningTop.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-rm -rf work
-vlib work
-vcom source/tb_WinningTop.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -221,24 +28,66 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_addrgen2(test)#1
+add wave \
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave sim:/tb_addrgen2/dut/reg/*
+# (vish-4014) No objects found matching 'sim:/tb_addrgen2/dut/reg/*'.
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } 
+add wave \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 200 ns
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
-# -- Compiling entity winningtop
 # -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
+# -- Compiling entity addrgen2
+# -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-vsim -i work.winningtop
-# vsim -i work.winningtop 
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
@@ -246,110 +95,43 @@ vsim -i work.winningtop
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.winningtop(struct)#1
-# ** Fatal: (vsim-3347) Port 'dump_filename' is not constrained.
-#    Time: 0 ps  Iteration: 0  Instance: /winningtop File: source/WinningTop.vhd Line: 17
-# FATAL ERROR while loading design
-# Error loading design
-rm -rf work
-vlib work
-vcom source/WinningTop.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-rm -rf work
-vlib work
-vcom source/tb_WinningTop.vhd
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-vsim -i work.tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
 add wave \
-{sim:/tb_winningtop/resend } \
-{sim:/tb_winningtop/clk } \
-{sim:/tb_winningtop/full } \
-{sim:/tb_winningtop/read_enable_in } \
-{sim:/tb_winningtop/rst } \
-{sim:/tb_winningtop/empty } \
-{sim:/tb_winningtop/r_enable_out } \
-{sim:/tb_winningtop/data } 
-add wave sim:/tb_winningtop/dut/u_0/*
-add wave sim:/tb_winningtop/dut/u_1/*
-run 400 ns
-do source/do.txt
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period }
+add wave sim:/tb_addrgen2/dut/reg/*
+# (vish-4014) No objects found matching 'sim:/tb_addrgen2/dut/reg/*'.
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 200 ns
+rm -rf work
+vlib work
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -357,60 +139,116 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-vsim -i work.tb_winningtop
-# vsim -i work.tb_winningtop 
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
 add wave \
-{sim:/tb_winningtop/resend } \
-{sim:/tb_winningtop/clk } \
-{sim:/tb_winningtop/full } \
-{sim:/tb_winningtop/read_enable_in } \
-{sim:/tb_winningtop/rst } \
-{sim:/tb_winningtop/empty } \
-{sim:/tb_winningtop/r_enable_out } \
-{sim:/tb_winningtop/data } 
-add wave sim:/tb_winningtop/dut/u_0/*
-add wave sim:/tb_winningtop/dut/u_1/*
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 200 ns
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity addrgen2
+# -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_addrgen2(test)#1
+add wave \
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
 run 400 ns
 rm -rf work
 vlib work
-vcom source/ReadController2.vhd
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-vsim -i work.readcontroller2
-# vsim -i work.readcontroller2 
+# -- Compiling entity addrgen2
+# -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
@@ -418,52 +256,95 @@ vsim -i work.readcontroller2
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.readcontroller2(statemachine)#1
+# Loading work.tb_addrgen2(test)#1
 add wave \
-{sim:/readcontroller2/state } \
-{sim:/readcontroller2/nextstate } \
-{sim:/readcontroller2/rst } \
-{sim:/readcontroller2/clk } \
-{sim:/readcontroller2/num_writes } \
-{sim:/readcontroller2/read_done } \
-{sim:/readcontroller2/empty } \
-{sim:/readcontroller2/read_ready } 
-force clk 0 0 ns, 1 1.75 ns -r 3.5 ns
-force rst 1 0 ns, 0 5 ns
-force num_writes 0 0 ns, 1 10 ns, 0 15 ns
-force read_done 0 0 ns
-run 50 ns
-do source/do.txt
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 500 ns
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# ** Error: source/ReadController2.vhd(48): near "case": expecting "IF"
-# ** Error: source/ReadController2.vhd(51): Illegal sequential statement.
-# ** Error: source/ReadController2.vhd(62): near "statemachine": expecting "PROCESS"
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/do.txt line 3
+# -- Compiling entity addrgen2
+# -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+# ** Error: source/tb_ADDRgen2.vhd(186): near "'": syntax error
+# ** Error: source/tb_ADDRgen2.vhd(280): VHDL Compiler exiting
 # /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/ReadController2.vhd"
-do source/do.txt
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
+# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.tb_addrgen2(test)#1
+add wave \
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 500 ns
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -471,63 +352,39 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-vsim -i work.tb_winningtop
-# vsim -i work.tb_winningtop 
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
+add wave sim:/tb_addrgen2/*
 add wave \
-{sim:/tb_winningtop/resend } \
-{sim:/tb_winningtop/clk } \
-{sim:/tb_winningtop/full } \
-{sim:/tb_winningtop/read_enable_in } \
-{sim:/tb_winningtop/rst } \
-{sim:/tb_winningtop/empty } \
-{sim:/tb_winningtop/r_enable_out } \
-{sim:/tb_winningtop/data } 
-add wave sim:/tb_winningtop/dut/u_0/*
-add wave sim:/tb_winningtop/dut/u_1/*
-run 400  ns
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
+run 500 ns
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -535,63 +392,50 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-vsim -i work.tb_winningtop
-# vsim -i work.tb_winningtop 
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
 add wave \
-{sim:/tb_winningtop/resend } \
-{sim:/tb_winningtop/clk } \
-{sim:/tb_winningtop/full } \
-{sim:/tb_winningtop/read_enable_in } \
-{sim:/tb_winningtop/rst } \
-{sim:/tb_winningtop/empty } \
-{sim:/tb_winningtop/r_enable_out } \
-{sim:/tb_winningtop/data } 
-add wave sim:/tb_winningtop/dut/u_0/*
-add wave sim:/tb_winningtop/dut/u_1/*
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
 run 400 ns
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+rm -rf work
+vlib work
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -599,54 +443,54 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
 # ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
 # No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
 add wave \
-{sim:/tb_winningtop/readdata } 
-restart
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period } 
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store } 
 run 400 ns
-do source/do.txt
+vcom source/tb_ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
+# -- Compiling entity tb_addrgen2
+# -- Compiling architecture test of tb_addrgen2
+vcom source/ADDRgen2.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -654,653 +498,36 @@ do source/do.txt
 # -- Loading package std_logic_unsigned
 # -- Compiling entity addrgen2
 # -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
+vsim -i work.tb_addrgen2
+# vsim -i work.tb_addrgen2 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# ** Error: source/tb_WinningTop.vhd(377): (vcom-1167) Index value 0 is out of std.standard.positive range 1 to 2147483647.
-# ** Error: source/tb_WinningTop.vhd(379): (vcom-1136) Unknown identifier "tb_max_address".
-# ** Error: source/tb_WinningTop.vhd(377): (vcom-1272) Length of expected is 23; length of actual is 24.
-# ** Error: source/tb_WinningTop.vhd(419): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/do.txt line 7
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/tb_WinningTop.vhd"
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# ** Error: source/tb_WinningTop.vhd(118): (vcom-1136) Unknown identifier "tb_write_enable".
-# ** Error: source/tb_WinningTop.vhd(118): Expression is not a signal.
-# ** Error: source/tb_WinningTop.vhd(118): (vcom-1136) Unknown identifier "tb_read_enable".
-# ** Error: source/tb_WinningTop.vhd(118): Expression is not a signal.
-# ** Error: source/tb_WinningTop.vhd(118): (vcom-1136) Unknown identifier "tb_data".
-# ** Error: source/tb_WinningTop.vhd(118): Expression is not a signal.
-# ** Error: source/tb_WinningTop.vhd(118): (vcom-1136) Unknown identifier "tb_write_data".
-# ** Error: source/tb_WinningTop.vhd(118): Expression is not a signal.
-# ** Error: source/tb_WinningTop.vhd(122): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(122): (vcom-1136) Unknown identifier "tb_read_data".
-# ** Error: source/tb_WinningTop.vhd(123): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(123): (vcom-1136) Unknown identifier "tb_data".
-# ** Error: source/tb_WinningTop.vhd(126): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(126): (vcom-1136) Unknown identifier "tb_read_data".
-# ** Error: source/tb_WinningTop.vhd(127): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(127): (vcom-1136) Unknown identifier "tb_data".
-# ** Error: source/tb_WinningTop.vhd(130): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(130): (vcom-1136) Unknown identifier "tb_read_data".
-# ** Error: source/tb_WinningTop.vhd(131): Illegal target for signal assignment.
-# ** Error: source/tb_WinningTop.vhd(131): (vcom-1136) Unknown identifier "tb_data".
-# ** Error: source/tb_WinningTop.vhd(441): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./source/do.txt line 7
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/tb_WinningTop.vhd"
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
-do source/do.txt
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity readcontroller2
-# -- Compiling architecture statemachine of readcontroller2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity memorycontroller
-# -- Compiling architecture statemachine of memorycontroller
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity addrgen2
-# -- Compiling architecture b_stmachine of addrgen2
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity winningtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of winningtop
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity tb_winningtop
-# -- Compiling architecture test of tb_winningtop
-# vsim -i work.tb_winningtop 
-# ** Warning: (vsim-31) Unable to unlink file "/home/ecegrid/a/mg31/ece337/M_SRAM/work/_opt__lock".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading std.textio(body)
-# Loading ieee.std_logic_textio(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.tb_winningtop(test)#1
-# Loading ieee.numeric_std(body)
-# Loading ece337_ip.scalable_off_chip_sram(structural)#1
+# Loading work.tb_addrgen2(test)#1
+add wave \
+{sim:/tb_addrgen2/resend } \
+{sim:/tb_addrgen2/clk } \
+{sim:/tb_addrgen2/rst } \
+{sim:/tb_addrgen2/r_enable_in } \
+{sim:/tb_addrgen2/w_enable_in } \
+{sim:/tb_addrgen2/read_ready } \
+{sim:/tb_addrgen2/r_enable_out } \
+{sim:/tb_addrgen2/w_enable_out } \
+{sim:/tb_addrgen2/read_done } \
+{sim:/tb_addrgen2/addr } \
+{sim:/tb_addrgen2/period }
+add wave \
+{sim:/tb_addrgen2/dut/state } \
+{sim:/tb_addrgen2/dut/nextstate } \
+{sim:/tb_addrgen2/dut/counter3 } \
+{sim:/tb_addrgen2/dut/nxtcounter3 } \
+{sim:/tb_addrgen2/dut/counter32 } \
+{sim:/tb_addrgen2/dut/newcounter32 } \
+{sim:/tb_addrgen2/dut/addr } \
+{sim:/tb_addrgen2/dut/addr_counter } \
+{sim:/tb_addrgen2/dut/new_addr } \
+{sim:/tb_addrgen2/dut/store_addr } \
+{sim:/tb_addrgen2/dut/new_store }
+run 400 ns
