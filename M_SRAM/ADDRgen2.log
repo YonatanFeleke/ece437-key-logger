@@ -1,0 +1,207 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP3 for amd64 -- Jul 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# Step 1:  Read in the source file
+analyze -format vhdl -lib WORK {ADDRgen2.vhd}
+Running PRESTO HDLC
+Compiling Entity Declaration ADDRGEN2
+Compiling Architecture B_STMACHINE of ADDRGEN2
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+1
+elaborate ADDRgen2 -arch "B_stmachine" -lib WORK -update
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 49 in file
+	'./source/ADDRgen2.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 91 in file
+	'./source/ADDRgen2.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ADDRgen2 line 34 in file
+		'./source/ADDRgen2.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    counter32_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  addr_counter_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   store_addr_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'ADDRgen2'.
+1
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | D-2010.03-DWBB_1007 |    *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 3 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'ADDRgen2'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'ADDRgen2' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'ADDRgen2_DW01_inc_0'
+  Processing 'ADDRgen2_DW01_inc_1'
+  Processing 'ADDRgen2_DW01_dec_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'ADDRgen2'
+  Mapping 'ADDRgen2'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.2                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   93987.0      0.00       0.0       1.1                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   93987.0      0.00       0.0       1.1                          
+    0:00:04   94635.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04   94635.0      0.00       0.0       0.0                          
+    0:00:04   94635.0      0.00       0.0       0.0                          
+    0:00:04   94491.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+    0:00:04   94347.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Step 4: Output reports
+current_design .
+Current design is 'ADDRgen2'.
+{ADDRgen2}
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$current_design.rep
+report_area >> reports/$current_design.rep
+report_power -hier >> reports/$current_design.rep
+# Step 5: Output final VHDL and Verilog files
+write -format vhdl -hierarchy -output "mapped/$current_design.vhd"
+Writing vhdl file '/home/ecegrid/a/mg31/ece337/M_SRAM/mapped/ADDRgen2.vhd'.
+1
+write -format verilog -hierarchy -output "mapped/$current_design.v"
+Writing verilog file '/home/ecegrid/a/mg31/ece337/M_SRAM/mapped/ADDRgen2.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+Warning: In design 'ADDRgen2', output port 'r_enable_out' is connected directly to output port 'read_done'. (LINT-31)
+1
+exit
+
+Thank you...
