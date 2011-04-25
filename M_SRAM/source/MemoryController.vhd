@@ -28,6 +28,7 @@ architecture statemachine of MemoryController is
         signal state, nextState: stateType;
         signal counter, newcounter: std_logic_vector(2 downto 0);
         signal counter32, newcounter32 : std_logic_vector(4 downto 0);
+        signal counter3, newcounter3: std_logic_vector(1 downto 0);
         begin
         reg: process(rst, clk)
         begin
@@ -35,18 +36,21 @@ architecture statemachine of MemoryController is
             state <= idle;
             counter <= "000";
             counter32 <= "00000";
+            counter3 <= "00";
            
           elsif rising_edge(clk) then
             state<=nextState;
             counter <= newcounter;
             counter32 <= newcounter32;
+            counter3 <= newcounter3;
           end if;
         end process reg;
         
-Next_logic: process(state, full, read_enable_in, counter, counter32)
+Next_logic: process(state, full, read_enable_in, counter, counter32,counter3)
   begin
     newcounter <= "000";
     newcounter32 <= "00000";
+    newcounter3 <= "00";
     --nextState <= idle;
     case state is
       when idle =>
@@ -54,17 +58,28 @@ Next_logic: process(state, full, read_enable_in, counter, counter32)
         else nextState <= idle;
         end if; 
       when write_data =>
-        newcounter32 <= counter32 + 1;
+        
         if (counter32 = "11111") then     --possibly add handshaking to keep num_writes high until Address Generator is ready
           newcounter32 <= "00000";
         end if;
-        if (counter = "111") then
-          newcounter <= "000";
-          nextState <= wait_state;
-        else 
-        newcounter <= counter + 1;
-        nextState <= write_data;
-        end if;     
+        
+        if (counter3 = "11") then
+        
+        	newcounter32 <= counter32 + 1;
+	        if (counter = "111") then
+  	        newcounter <= "000";
+    	      nextState <= wait_state;
+      	  else 
+        	
+        		newcounter <= counter + 1;
+        		nextState <= write_data;
+        	end if;
+        else
+        	newcounter3 <= counter3 + 1;
+        	newcounter32 <= counter32;
+        	newcounter <= newcounter;     
+        end if;
+        
       when wait_state =>
         newcounter32 <= counter32;
         if (read_enable_in = '1') then nextState <= read_data;

@@ -33,6 +33,8 @@ Entity ReadController2 is
             
 Next_logic: process(state, num_writes, read_done, counter32)
 begin
+  newcounter32 <= "00000";
+  
 case state is
 when idle =>
   if (num_writes = '1') then nextState <= read_data;

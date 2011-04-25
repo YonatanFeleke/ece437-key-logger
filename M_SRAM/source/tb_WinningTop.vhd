@@ -59,6 +59,7 @@ architecture TEST of tb_WinningTop is
          empty : OUT std_logic;
          r_enable_out : OUT std_logic;
          data : INOUT std_logic_vector (7 DOWNTO 0)
+                  
     );
   end component;
 
@@ -79,7 +80,8 @@ architecture TEST of tb_WinningTop is
   signal empty : std_logic;
   signal r_enable_out : std_logic;
   signal data : std_logic_vector (7 DOWNTO 0);
-  signal readData : std_logic_vector (7 DOWNTO 0);
+  signal wdata : std_logic_vector (7 DOWNTO 0);
+
 
 -- signal <name> : <type>;
 
@@ -109,7 +111,7 @@ end process;
                 verbose => verbose,
                 empty => empty,
                 r_enable_out => r_enable_out,
-                data => data
+                data => wdata
                 );
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
@@ -171,10 +173,12 @@ process
    
    rst <= '0';
    
-   wait for 1.5*Period;
+   wait for 2*Period;
    
-   data <= "10000001";
-   wait for Period*3;--should be in write_data for 8 cycles and store 8 values
+   
+   wdata <= (others=>'Z');
+   wdata <= "10000001";
+   wait for Period*4;--should be in write_data for 8 cycles and store 8 values
    Resend <= '0';
    
    full <= '1';
@@ -183,8 +187,9 @@ process
    
    rst <= '0';
    
-   data <= "10000011";
-   wait for Period;
+   wdata <= (others=>'Z');   
+   wdata <= "10000011";
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -193,8 +198,8 @@ process
    
    rst <= '0';
    
-   data <= "10001001";
-   wait for Period;
+   wdata <= "10001001";
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -203,9 +208,9 @@ process
    
    rst <= '0';
    
-   data <= "10001101";
+   wdata <= "10001101";
       
-   wait for Period;
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -214,9 +219,9 @@ process
    
    rst <= '0';
    
-   data <= "10101101";
+   wdata <= "10101101";
       
-   wait for Period;
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -225,9 +230,9 @@ process
    
    rst <= '0';
    
-   data <= "10001111";
+   wdata <= "10001111";
       
-   wait for Period;
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -236,9 +241,9 @@ process
    
    rst <= '0';
    
-   data <= "10000101";
+   wdata <= "10000101";
       
-   wait for Period;
+   wait for Period*4;
    Resend <= '0';
    
    full <= '1';
@@ -247,123 +252,24 @@ process
    
    rst <= '0';
    
-   data <= "11110101";
+   wdata <= "11110101";
       
-   wait for Period;                    
+   wait for Period*4;                    
        
    Resend <= '0';
    
    full <= '0';
    
-   read_enable_in <= '0'; 
+   read_enable_in <= '1'; 
    
    rst <= '0';
    
-   data <= "10000000";
-   wait for Period;
-   Resend <= '0';
    
-   full <= '0';
    
-   read_enable_in <= '0'; 
+   wait for 4*Period;   
    
-   rst <= '0';
+   wait for 30*Period;
    
-   data <= "01000000";
-   wait for Period;   
-   
-   Resend <= '0';
-   
-   full <= '1';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10000100";
-   wait for Period*8;     --write in 8 packets of data
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10000000";
-   wait for Period;
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "01000000";
-   wait for Period;   
-   
-   Resend <= '0';
-   
-   full <= '1';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10000110";
-   wait for Period*8;     --write in 8 packets of data
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10000000";
-   wait for Period;
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "01000000";
-   wait for Period;   
-   
-   Resend <= '0';
-   
-   full <= '1';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10010011";
-   wait for Period*8;     --write in 8 packets of data  
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "10000000";
-   wait for Period;
-   Resend <= '0';
-   
-   full <= '0';
-   
-   read_enable_in <= '0'; 
-   
-   rst <= '0';
-   
-   data <= "01000000";
-   wait for Period;   
    
    Resend <= '0';
    
@@ -395,7 +301,7 @@ process
    read_enable_in <= '1'; 
    
    rst <= '0';
-   readData <= data;
+   --readData <= data;
    --data <= (others => 'Z');
    wait for Period;
    
@@ -408,7 +314,7 @@ process
    
    rst <= '0';
    
-   readData <= data;
+   --readData <= data;
    --data <= (others => 'Z');
    wait for Period;            
    Resend <= '0';
@@ -419,7 +325,7 @@ process
    
    rst <= '0';
    
-   data <= (others => 'Z');
+   wdata <= (others => 'Z');
    wait for Period*42;        
 
 
