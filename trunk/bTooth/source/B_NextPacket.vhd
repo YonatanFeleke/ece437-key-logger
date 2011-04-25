@@ -57,7 +57,8 @@ begin
 				  		else 
 					    		bluewait<= bluewait + 1;
 				    	end if;  -- blue wait
-				elsif ( REPLY_EN = '1') then		stop <= '0';				   		
+				elsif ( REPLY_EN = '1') then		stop <= '0';	
+				else	DATAOUT<= '0';									   		
         end if;  -- run =1 
      end if;  -- rst rising edge ..
 	end process updatestate;

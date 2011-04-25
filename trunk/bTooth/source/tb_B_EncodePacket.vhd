@@ -104,10 +104,10 @@ process
     wait for 3.5 ns;
     ENCODE_EN <= '0';
     -- see if 2 clk needed & falling edge doesn't mess up.
-    wait for 41000 ns;
-    RST <= '1';
---    wait for 666858.5 ns;
---	  report "Test 1 END for CORRECT EXEC" severity NOTE; 
+    wait for 669858.5 ns;
+	  report "Test 1 END for CORRECT EXEC" severity NOTE;
+--    wait for 100000 ns; 
+ --   RST <= '1';
    	wait;
   end process;
 end TEST;
