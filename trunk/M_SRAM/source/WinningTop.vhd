@@ -14,9 +14,9 @@ ENTITY WinningTop IS
    PORT( 
       Resend         : IN     std_logic;
       clk            : IN     std_logic;
-      dump_filename  : IN     string;
+      dump_filename  : IN     string(24 downto 1);
       full           : IN     std_logic;
-      init_filename  : IN     string;
+      init_filename  : IN     string(24 downto 1);
       last_address   : IN     natural;
       mem_clr        : IN     boolean;
       mem_dump       : IN     boolean;
@@ -28,6 +28,8 @@ ENTITY WinningTop IS
       empty          : OUT    std_logic;
       r_enable_out   : OUT    std_logic;
       data           : INOUT  std_logic_vector (7 DOWNTO 0)
+      
+      
    );
 
 -- Declarations
@@ -104,7 +106,7 @@ ARCHITECTURE struct OF WinningTop IS
       read_ready : OUT    std_logic
    );
    END COMPONENT;
-   COMPONENT scalable_off_chip_sram
+   COMPONENT SRAM
    PORT (
       addr          : IN     std_logic_vector (11 DOWNTO 0);
       dump_filename : IN     string;
@@ -118,6 +120,7 @@ ARCHITECTURE struct OF WinningTop IS
       verbose       : IN     boolean;
       w_enable      : IN     std_logic;
       data          : INOUT  std_logic_vector (7 DOWNTO 0)
+      
    );
    END COMPONENT;
 
@@ -166,7 +169,7 @@ BEGIN
          empty      => empty,
          read_ready => read_ready
       );
-   U_3 : scalable_off_chip_sram
+   U_3 : SRAM
       PORT MAP (
          mem_clr       => mem_clr,
          mem_init      => mem_init,
@@ -180,6 +183,7 @@ BEGIN
          w_enable      => w_enable_out,
          addr          => ADDR,
          data          => data
+         
       );
 
 END struct;

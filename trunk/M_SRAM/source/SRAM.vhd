@@ -3,7 +3,9 @@ USE IEEE.std_logic_1164.ALL;
 LIBRARY ECE337_IP;
 USE ECE337_IP.ALL;
 
-Entity scalable_off_chip_sram is
+Entity SRAM is
+ 
+  
   port(
     mem_clr : in boolean;
     mem_init  : in boolean;
@@ -16,11 +18,12 @@ Entity scalable_off_chip_sram is
     r_enable  : in std_logic;
     w_enable  : in std_logic;
     addr      : in std_logic_vector(11 downto 0);
-    data      : inout std_logic_vector(7 downto 0));
-end scalable_off_chip_sram;
+    data			:inout std_logic_vector(7 downto 0));
+    
+end SRAM;
 
 -- The declaration for the on-chip scalable sram model
-architecture comp of scalable_off_chip_sram is
+architecture comp of SRAM is
   component scalable_off_chip_sram is
     generic (
             -- Memory Model parameters
@@ -53,7 +56,18 @@ architecture comp of scalable_off_chip_sram is
   end component scalable_off_chip_sram;
   
   begin
-    portMap : scalable_off_chip_sram port map(
+       portMap : scalable_off_chip_sram 
+--       generic map (
+--           -- Memory interface parameters
+--       ADDR_SIZE_BITS  => 12,
+--       WORD_SIZE_BYTES  => 1,
+--       DATA_SIZE_WORDS  => 1,
+--       READ_DELAY      => (10 ns),  -- CLK is 2 ns longer than access delay for conservative padding for flipflop setup times and propagation delays from the external SRAM chip to the internal flipflops
+--       WRITE_DELAY      => (10 ns)    -- CLK is 2 ns longer than access delay for conservative padding for Real SRAM hold times and propagation delays from the internal flipflops to the external SRAM chip
+--       
+--       )
+     port map(
+      
       mem_clr => mem_clr,
       mem_init => mem_init,
       mem_dump => mem_dump,
@@ -66,6 +80,15 @@ architecture comp of scalable_off_chip_sram is
       w_enable => w_enable,
       addr => addr,
       data => data);
+      
+      
+
+
+
+
+
+
+
     end comp;
 
 -- An example of how to map an instance of the on-chip scalable sram model (Taken from my test bench)

@@ -30,6 +30,7 @@ architecture B_stmachine of ADDRgen2 is
         signal state, nextState: stateType;
         signal addr_counter, new_addr, store_addr, new_store : std_logic_vector(11 downto 0);
         signal counter32, newcounter32 : std_logic_vector(4 downto 0);
+        signal counter3, nxtcounter3 : std_logic_vector(1 downto 0);
           begin
           reg: process(rst, clk)
           begin
@@ -38,19 +39,22 @@ architecture B_stmachine of ADDRgen2 is
               addr_counter <= "000000000000";
               store_addr <= "000000000000";
               counter32 <= "00000";
+              counter3 <= "00";
             elsif rising_edge(clk) then
               state<=nextState;
               addr_counter <= new_addr;
               counter32 <= newcounter32;
+              counter3 <= nxtcounter3;
               store_addr <= new_store;
             end if;
           end process reg;
 
-Next_logic: process(state, Resend, r_enable_in, w_enable_in, read_ready, addr_counter, counter32, store_addr)
+Next_logic: process(state, Resend, r_enable_in, w_enable_in, read_ready, addr_counter, counter32, store_addr,counter3)
 begin
   new_addr <= "000000000000";
   newcounter32 <= "00000";
   new_store <= "000000000000";
+  nxtcounter3 <= "00";
   case state is
   when idle =>
     new_addr <= addr_counter;
@@ -62,7 +66,13 @@ begin
     end if;
   when write_data =>
     new_store <= store_addr;
-    new_addr <= addr_counter + 1;
+    if (counter3 = "11") then
+        new_addr <= addr_counter + 1;
+        nxtcounter3 <= "00";
+    else
+    	new_addr <= addr_counter;
+    	nxtcounter3 <= counter3 + 1;
+    end if;
     if (w_enable_in = '1') then nextState <= write_data;
     else
     nextState <= idle;
