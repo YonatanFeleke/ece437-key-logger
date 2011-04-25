@@ -38,8 +38,7 @@ architecture TEST of tb_CRC is
          CLK : in std_logic;
          RST_N : in std_logic;
          CRC_SHIFT : in std_logic;
-         D_ORIG : in std_logic;
-         RCV_DATA : out std_logic_vector(15 downto 0)
+         D_ORIG : in std_logic
     );
   end component;
 
@@ -48,7 +47,6 @@ architecture TEST of tb_CRC is
   signal RST_N : std_logic;
   signal CRC_SHIFT : std_logic;
   signal D_ORIG : std_logic;
-  signal RCV_DATA : std_logic_vector(15 downto 0);
 
 -- signal <name> : <type>;
 
@@ -66,8 +64,7 @@ end process;
                 CLK => CLK,
                 RST_N => RST_N,
                 CRC_SHIFT => CRC_SHIFT,
-                D_ORIG => D_ORIG,
-                RCV_DATA => RCV_DATA
+                D_ORIG => D_ORIG
                 );
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);

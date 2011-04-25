@@ -10,27 +10,30 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 
-Entity RCU is
-  PORT( clk		: in std_logic;
+Entity U_RCU is
+  PORT( D_CLK		: in std_logic;
 				rst_n	:	in	std_logic;
 				d_edge	:	in	std_logic;
 				eop	:	in	std_logic;
+				CRC_ERROR	:	in std_logic;
+				STUFF_ERROR	:	in std_logic;
 				shift_enable	:	in	std_logic;
 				rcv_data	:	in	std_logic_vector(7 downto 0);
 				rcving	:	out	std_logic;
 				w_enable	:	out	std_logic;
-				r_error	:	out std_logic);
-	end RCU;
+				r_error	:	out std_logic;
+				CRC_EN	:	out std_logic);
+	end U_RCU;
 
-architecture behavioral of RCU is
-	type state_type is(IDLE,RCVDATA,SYNCCHK,RCVDATA1,WRITE,EIDLE,SERROR,IDLEEDGE,ERROREDGE,RCVPID,PIDCHK);
+architecture behavioral of U_RCU is
+	type state_type is(IDLE,RCVDATA,SYNCCHK,RCVDATA1,WRITE,EIDLE,SERROR,IDLEEDGE,ERROREDGE,RCVPID,PIDCHK,CRCCHK);
 	signal state,nextstate	:	state_type;
-	signal shift_ctr	:	integer range 0 to 8;
+	signal shift_ctr	:	integer range 0 to 10;
 	begin
-		reg	:	process(clk,rst_n)
+		reg	:	process(D_CLK,rst_n)
 		begin	
-			if(Rst_n = '0') then state <= IDLE;
-			elsif(rising_edge(clk)) then state <= nextstate;
+			if(Rst_n = '1') then state <= IDLE;
+			elsif(rising_edge(D_CLK)) then state <= nextstate;
 				if((shift_enable = '1') and ((state = RCVDATA) or (state = RCVDATA1) or (state = RCVPID))) then shift_ctr <= shift_ctr + 1;
 				end if;
 			end if;
@@ -48,11 +51,16 @@ architecture behavioral of RCU is
 				else	nextstate <= IDLE;
 				end if;
 			when RCVDATA =>
+				if (STUFF_ERROR = '1') then nextstate <= SERROR;
+				else nextstate <= RCVDATA;
+				end if;
 				--if(EOP = '1') then nextstate <= EIDLE;
 				if(shift_ctr = 8) then nextstate <= SYNCCHK;
 				elsif (eop = '1') then nextstate <= EIDLE;
+				--elsif(STUFF_ERROR = '1') then nextstate <= SERROR;
 				else
 					nextstate <= RCVDATA;
+
 					--if(shift_enable = '1') then shift_ctr := shift_ctr + 1;
 					--end if;
 				end if;
@@ -65,13 +73,18 @@ architecture behavioral of RCU is
 				else	nextstate <= SERROR;
 				end if;
 			when RCVPID =>
+				if (STUFF_ERROR = '1') then nextstate <= SERROR;
+				else nextstate <= RCVPID;
+				end if;
 			  if(shift_ctr = 8) then nextstate <= PIDCHK;
 			  elsif (eop = '1') then nextstate <= EIDLE;
+				--elsif(STUFF_ERROR = '1') then nextstate <= SERROR;
 			  else nextstate <= RCVPID;
 				end if;
+
 			when PIDCHK =>
 				if(rcv_data(7 downto 4) = not(rcv_data(3 downto 0))) then
-					if(rcv_data(3 downto 0) = "0011" or rcv_data(3 downto 0) = "1011") then
+					if(rcv_data(3 downto 0) = "0011" or rcv_data(3 downto 0) = "0010") then
 						nextstate <= RCVDATA1;
 					else
 						nextstate <=SERROR;
@@ -79,17 +92,26 @@ architecture behavioral of RCU is
 				else nextstate <= SERROR;
 				end if;
 			when RCVDATA1 =>
+				if (STUFF_ERROR = '1') then nextstate <= SERROR;
+				else nextstate <= RCVDATA1;
+				end if;
 			  if(shift_ctr = 8) then nextstate <= WRITE;
+				--elsif(STUFF_ERROR = '1') then nextstate <= SERROR;
 			  elsif (eop = '1') then nextstate <= EIDLE;
 			  else nextstate <= RCVDATA1;
 			    --if (shift_enable = '1') then shift_ctr := shift_ctr + 1;
 			    --end if;
 			  end if;
+
 			when WRITE =>
 			  --shift_ctr <= 0;
 			  if (eop = '0') then nextstate <= RCVDATA1;
-			  else nextstate <= IDLEEDGE;
+			  else nextstate <= CRCCHK;
 			  end if;
+			when CRCCHK =>
+				if(CRC_ERROR = '0') then nextstate <= IDLEEDGE;
+				else nextstate <= EIDLE;
+				end if;
 			when EIDLE =>
 			  if (d_edge = '1') then nextstate <= ERROREDGE;
 			  else nextstate <= EIDLE;
@@ -115,36 +137,49 @@ architecture behavioral of RCU is
       rcving <= '0';
       W_enable <= '0';
       r_error <= '0';
+			CRC_EN <= '0';
     when RCVDATA =>
       rcving <= '1';
       r_error <= '0';
+			CRC_EN <= '0';
     when SYNCCHK =>
       rcving <= '1';
 		when RCVPID =>
 			rcving <= '1';
 			r_error <= '0';
+			CRC_EN <= '0';
 		when PIDCHK =>
 			rcving <= '1';
     when RCVDATA1 =>
+			CRC_EN <= '1';
       rcving <= '1';
       w_enable <= '0';
 			r_error <= '0';
     when WRITE =>
       w_enable <= '1';
 			r_error <= '0';
+			CRC_EN <= '1';
+			rcving <= '1';
+		when CRCCHK =>
+			w_enable <= '0';
+			r_error <= '0';
     when EIDLE =>
+			CRC_EN <= '0';
       rcving <= '0';
       w_enable <= '0';
       r_error <= '1';
     when SERROR =>
+			CRC_EN <= '0';
       rcving <= '1';
       w_enable <= '0';
       r_error <= '1';
 		when ERROREDGE =>
+			CRC_EN <= '0';
 			rcving <= '0';
 			w_enable <= '0';
 			r_error <= '1';
 		when IDLEEDGE =>
+			CRC_EN <= '0';
 			rcving <= '0';
 			w_enable <= '0';
 			r_error <= '0';

@@ -40,7 +40,6 @@ architecture TEST of tb_U_CRC is
          CRC_SHIFT : in std_logic;
          D_ORIG : in std_logic;
 				 CRC_EN	:	in std_logic;
-         RCV_DATA : out std_logic_vector(15 downto 0);
          CRC_ERROR : out std_logic
     );
   end component;
@@ -51,7 +50,6 @@ architecture TEST of tb_U_CRC is
   signal CRC_SHIFT : std_logic;
   signal D_ORIG : std_logic;
 	signal CRC_EN	:	std_logic;
-  signal RCV_DATA : std_logic_vector(15 downto 0);
   signal CRC_ERROR : std_logic;
 
 -- signal <name> : <type>;
@@ -72,7 +70,6 @@ end process;
                 CRC_SHIFT => CRC_SHIFT,
                 D_ORIG => D_ORIG,
 								CRC_EN => CRC_EN,
-                RCV_DATA => RCV_DATA,
                 CRC_ERROR => CRC_ERROR
                 );
 
@@ -132,11 +129,11 @@ process
 		end loop;
 
 		wait for PERIOD*4;
-		CRC_EN <= '0'
+		CRC_EN <= '0';
 		test_vector := "10001001" & "01100111" & "01000101" & "00100011";
 		crc := "00011100" & "00001110";
 		wait for PERIOD*4;
-		CRC_EN <= '1'
+		CRC_EN <= '1';
 
 		for i in 0 to 31 loop
 			D_ORIG <= test_vector(i);

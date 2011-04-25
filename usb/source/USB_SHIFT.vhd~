@@ -14,9 +14,9 @@ USE IEEE.std_logic_1164.ALL;
 entity USB_SHIFT is
   port
   (
-    CLK						: in	std_logic;
+    D_CLK						: in	std_logic;
     RST						: in	std_logic;
-    EOP : in std_logic;
+    EOP 					: in std_logic;
     SHIFT_ENABLE			: in	std_logic;
     D_ORIG			: in std_logic;
     RCV_DATA			: out std_logic_vector(7 downto 0);
@@ -31,11 +31,11 @@ architecture behavioral of USB_SHIFT is
   signal ctr  : integer range 0 to 7;
   signal current, next_val  : std_logic_vector(7 downto 0);
   begin
-  Statereg  : process(clk, RST)
+  Statereg  : process(D_CLK, RST)
   begin
     if(RST = '1') then state <= IDLE;
 		ctr <= 0;
-    elsif (rising_edge(CLK)) then 
+    elsif (rising_edge(D_CLK)) then 
 			state <= nextstate;
 			current <= next_val;
 			if(state = SHIFT) then 
@@ -51,7 +51,7 @@ architecture behavioral of USB_SHIFT is
     end if;
   end process statereg;
   
-  Statelogic  : process(STATE, SHIFT_ENABLE, D_ORIG, CLK)
+  Statelogic  : process(STATE, SHIFT_ENABLE, D_ORIG, D_CLK)
 	--variable ctr	:	integer range 0 to 20;
   begin
     --if (RCVING = '0') then nextstate <= IDLE;
@@ -86,13 +86,13 @@ architecture behavioral of USB_SHIFT is
       end if;
     end case;
   end process Statelogic;
-  
-  OutputLogic : process(STATE, SHIFT_ENABLE, clk)
+  RCV_DATA <= current;
+  OutputLogic : process(STATE, SHIFT_ENABLE)
   begin
     --RCV_DATA <= current;
     case STATE is
     when IDLE =>
-			next_val <= "00000000";
+			--next_val <= "00000000";
 			--rrent <= "00000000";
       --RCV_DATA <= "00000000";
       STUFF_ERROR <= '0';
@@ -107,10 +107,10 @@ architecture behavioral of USB_SHIFT is
 			end if;
 			--CRC_SHIFT <= SHIFT_ENABLE;
       --current <= RCV_DATA;
-      if(SHIFT_ENABLE = '1') then
-        next_val <= D_ORIG & current(7 downto 1);
+      --if(SHIFT_ENABLE = '1') then
+      --  next_val <= D_ORIG & current(7 downto 1);
 			
-      end if;
+      --end if;
     when REMOVE =>
       STUFF_ERROR <= '0';
       CRC_SHIFT <= '0';
@@ -118,7 +118,7 @@ architecture behavioral of USB_SHIFT is
       CRC_SHIFT <= '0';
       STUFF_ERROR <= '1';
     end case;
-		RCV_DATA <= current;
   end process OutputLogic;
+	next_val <= D_ORIG & current(7 downto 1) when (state  = SHIFT and SHIFT_ENABLE = '1') else current;
 end behavioral;
       

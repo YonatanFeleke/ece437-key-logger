@@ -6,3 +6,4 @@ vcom source/tb_U_CRC.vhd
 vsim -i work.tb_u_crc
 add wave *
 run 10000 ns
+

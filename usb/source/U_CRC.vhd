@@ -13,30 +13,30 @@ use ieee.std_logic_1164.all;
 entity U_CRC is
 	port
 	(
-		CLK						: in	std_logic;
+		D_CLK						: in	std_logic;
 		RST_N						: in	std_logic;
 		CRC_SHIFT			: in	std_logic;
 		D_ORIG			: in std_logic;
 		CRC_EN				:	in std_logic;
-		RCV_DATA			: out std_logic_vector(15 downto 0);
 		CRC_ERROR			:	out std_logic
 	);
 end U_CRC;
 
 
 architecture simple_shift_reg of U_CRC is
+	signal RCV_DATA	:	std_logic_vector(15 downto 0);
 	signal present_val : std_logic_vector(15 downto 0);
 	signal next_val : std_logic_vector(15 downto 0);
   
 begin
     
    
-  REG: process (CLK, RST_N)
+  REG: process (D_CLK, RST_N)
 	variable ctr	: integer range 0 to 2;
   begin  -- process
 		if RST_N = '1' then
 		present_val <= "1111111111111111";
-		elsif (rising_edge(CLK)) then
+		elsif (rising_edge(D_CLK)) then
 			if(CRC_EN = '1') then
 			present_val <= next_val;
 			else present_val <= "1111111111111111";
