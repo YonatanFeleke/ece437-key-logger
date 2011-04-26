@@ -12,7 +12,7 @@ use ieee.std_logic_unsigned.all;
 entity tb_B_Controller is
 generic (Period : Time := 3.5 ns;
 				 WAITBAK2	: natural := 24 ; 
-				 WAITBAK	: natural := 48 ;
+				 WAITBAK	: natural := 49 ;
 --						WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
 --						WAITBAK/2	: natural := 2435 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
 				 DATA_PERIOD : Time := 168 ns); -- WAIT BAK*3.5
@@ -77,6 +77,8 @@ dataassign : process
     	  	ANT_LIN	<= newsend(i);
 					wait for data_period;
 	    end loop;			
+	    ANT_LIN <= '0';
+	    wait for data_period;
   	  report "Test Done " severity NOTE; 
 	  end loop;
     wait;

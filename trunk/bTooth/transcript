@@ -8,23 +8,21 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-rm -rf work
-vlib work
-vcom source/bToothTop.vhd
+vcom source/B_NextPacket.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity btoothtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of btoothtop
-rm -rf work
-vlib work
-vcom source/bToothTOP2.vhd
+# -- Compiling entity b_nextpacket
+# -- Compiling architecture b_next of b_nextpacket
+vcom source/B_StripPayload.vhd
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Compiling entity btoothtop
-# -- Loading package std_logic_unsigned
-# -- Compiling architecture struct of btoothtop
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# ** Error: source/B_StripPayload.vhd(51): Expecting a type name, found library "std" instead.
+# ** Error: source/B_StripPayload.vhd(51): near "_": expecting ';'
+# ** Error: source/B_StripPayload.vhd(73): (vcom-1136) Unknown identifier "ncnt8".
+# ** Error: source/B_StripPayload.vhd(74): (vcom-1136) Unknown identifier "ncnt16".
+# ** Error: source/B_StripPayload.vhd(79): near "if": syntax error
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
