@@ -174,7 +174,7 @@ process
   begin
 
 -- Insert TEST BENCH Code Here
-		testdata <= "00000000" & "10000000" & "01000000" & "11000000" & "11000100" & "10100010" & "11100110" & "10010001";
+		testdata <= "00000000" & "11111111" & "01000000" & "11000000" & "11000100" & "10100010" & "11100110" & "10010001";
 		CRC <= "1101100010001000";
 		
     D_MINUS <= '0';
@@ -195,41 +195,19 @@ process
     RST <= '0';
 		wait for Period2;
 		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+		wait for Period2*3;
+		D_PLUS <= '1';
+		wait for Period2*4;
+		wait for Period2*32;
 		for I in 0 to 7 loop
 		R_ENABLE <= '1';
 		wait for Period;
 		R_ENABLE <= '0';
 		wait for Period2*8;
 		end loop;
-		--wait for Period2*8;
-		--D_PLUS <= '0';
-		--D_MINUS <= '1';
-		--wait for Period2*8;
-		--TestByte := NRZIencode("10000000",'1');
-		--for I in 0 to 7 loop
-		--	D_PLUS <= TestByte(I);
-		--	D_MINUS <= not(TestByte(I));
-		--	wait for Period2*8;
-		--testvector <= NRZIencode(SYNC,'1');
-		--wait for Period2;
-		--testvector <= NRZIencode("10101010",testvector(7));
-		--wait for Period2;
-    --outputdata(testvector,Period2*8,D_PLUS,D_MINUS);
-		--wait;
-    --outputdata(NRZIencode(DATA1,'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("01011100",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("10101001",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("01011100",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("10010101",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("00001111",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("11001101",'0'),Period2*8,D_PLUS,D_MINUS);
-		--utputdata(NRZIencode("00000000",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("11101000",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("10010000",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("11010100",'0'),Period2*8,D_PLUS,D_MINUS);
-		--outputdata(NRZIencode("11110110",'0'),Period2*8,D_PLUS,D_MINUS);
-		--D_PLUS <= '0';
-		--D_MINUS <= '0';
+		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+
+
 		wait;
   end process;
 end TEST;

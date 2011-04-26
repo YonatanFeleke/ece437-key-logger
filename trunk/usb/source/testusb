@@ -17,5 +17,5 @@ vcom source/tb_USB_RCVR.vhd
 vsim -i work.tb_usb_rcvr
 #add wave *
 add wave -r /*
-run 10000 ns
+run 20000 ns
 

@@ -16,14 +16,14 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity read_ptr_1 is
+entity read_ptr_0 is
 
    port( rclk, rst_n, renable : in std_logic;  rptr, rptr_nxt : out 
          std_logic_vector (3 downto 0));
 
-end read_ptr_1;
+end read_ptr_0;
 
-architecture SYN_rtl of read_ptr_1 is
+architecture SYN_rtl of read_ptr_0 is
 
    component XOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -110,14 +110,14 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity write_ptr_1 is
+entity write_ptr_0 is
 
    port( wclk, rst_n, wenable : in std_logic;  wptr, wptr_nxt : out 
          std_logic_vector (3 downto 0));
 
-end write_ptr_1;
+end write_ptr_0;
 
-architecture SYN_rtl of write_ptr_1 is
+architecture SYN_rtl of write_ptr_0 is
 
    component XOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -204,15 +204,15 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity read_fifo_ctrl_1 is
+entity read_fifo_ctrl_0 is
 
    port( rclk, rst_n, renable : in std_logic;  wptr : in std_logic_vector (3 
          downto 0);  rptr : out std_logic_vector (3 downto 0);  raddr : out 
          std_logic_vector (2 downto 0);  empty_flag : out std_logic);
 
-end read_fifo_ctrl_1;
+end read_fifo_ctrl_0;
 
-architecture SYN_rtl of read_fifo_ctrl_1 is
+architecture SYN_rtl of read_fifo_ctrl_0 is
 
    component XNOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -234,7 +234,7 @@ architecture SYN_rtl of read_fifo_ctrl_1 is
       port( A : in std_logic;  Y : out std_logic);
    end component;
    
-   component read_ptr_1
+   component read_ptr_0
       port( rclk, rst_n, renable : in std_logic;  rptr, rptr_nxt : out 
             std_logic_vector (3 downto 0));
    end component;
@@ -289,7 +289,7 @@ begin
    n23 <= '1';
    n22 <= '1';
    n21 <= '1';
-   RPU1 : read_ptr_1 port map( rclk => rclk, rst_n => rst_n, renable => 
+   RPU1 : read_ptr_0 port map( rclk => rclk, rst_n => rst_n, renable => 
                            renable_p2, rptr(3) => rptr(3), rptr(2) => rptr(2), 
                            rptr(1) => rptr(1), rptr(0) => rptr(0), rptr_nxt(3) 
                            => rptr_nxt_3_port, rptr_nxt(2) => rptr_nxt_2_port, 
@@ -320,16 +320,16 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity write_fifo_ctrl_1 is
+entity write_fifo_ctrl_0 is
 
    port( wclk, rst_n, wenable : in std_logic;  rptr : in std_logic_vector (3 
          downto 0);  wenable_fifo : out std_logic;  wptr : out std_logic_vector
          (3 downto 0);  waddr : out std_logic_vector (2 downto 0);  full_flag :
          out std_logic);
 
-end write_fifo_ctrl_1;
+end write_fifo_ctrl_0;
 
-architecture SYN_rtl of write_fifo_ctrl_1 is
+architecture SYN_rtl of write_fifo_ctrl_0 is
 
    component XNOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -355,7 +355,7 @@ architecture SYN_rtl of write_fifo_ctrl_1 is
       port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
-   component write_ptr_1
+   component write_ptr_0
       port( wclk, rst_n, wenable : in std_logic;  wptr, wptr_nxt : out 
             std_logic_vector (3 downto 0));
    end component;
@@ -411,7 +411,7 @@ begin
    n25 <= '1';
    n24 <= '1';
    n23 <= '1';
-   WPU1 : write_ptr_1 port map( wclk => wclk, rst_n => rst_n, wenable => 
+   WPU1 : write_ptr_0 port map( wclk => wclk, rst_n => rst_n, wenable => 
                            wenable_fifo_port, wptr(3) => wptr(3), wptr(2) => 
                            wptr(2), wptr(1) => wptr(1), wptr(0) => wptr(0), 
                            wptr_nxt(3) => wptr_nxt_3_port, wptr_nxt(2) => 
@@ -443,15 +443,15 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity fiforam_1 is
+entity fiforam_0 is
 
    port( wclk, wenable : in std_logic;  waddr, raddr : in std_logic_vector (2 
          downto 0);  wdata : in std_logic_vector (7 downto 0);  rdata : out 
          std_logic_vector (7 downto 0));
 
-end fiforam_1;
+end fiforam_0;
 
-architecture SYN_rtl of fiforam_1 is
+architecture SYN_rtl of fiforam_0 is
 
    component INVX1
       port( A : in std_logic;  Y : out std_logic);
@@ -977,30 +977,30 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity fifo_1 is
+entity fifo_0 is
 
    port( rclk, wclk, rst_n, renable, wenable : in std_logic;  wdata : in 
          std_logic_vector (7 downto 0);  rdata : out std_logic_vector (7 downto
          0);  empty, full : out std_logic);
 
-end fifo_1;
+end fifo_0;
 
-architecture SYN_RTL of fifo_1 is
+architecture SYN_RTL of fifo_0 is
 
-   component read_fifo_ctrl_1
+   component read_fifo_ctrl_0
       port( rclk, rst_n, renable : in std_logic;  wptr : in std_logic_vector (3
             downto 0);  rptr : out std_logic_vector (3 downto 0);  raddr : out 
             std_logic_vector (2 downto 0);  empty_flag : out std_logic);
    end component;
    
-   component write_fifo_ctrl_1
+   component write_fifo_ctrl_0
       port( wclk, rst_n, wenable : in std_logic;  rptr : in std_logic_vector (3
             downto 0);  wenable_fifo : out std_logic;  wptr : out 
             std_logic_vector (3 downto 0);  waddr : out std_logic_vector (2 
             downto 0);  full_flag : out std_logic);
    end component;
    
-   component fiforam_1
+   component fiforam_0
       port( wclk, wenable : in std_logic;  waddr, raddr : in std_logic_vector 
             (2 downto 0);  wdata : in std_logic_vector (7 downto 0);  rdata : 
             out std_logic_vector (7 downto 0));
@@ -1013,7 +1013,7 @@ architecture SYN_RTL of fifo_1 is
 
 begin
    
-   UFIFORAM : fiforam_1 port map( wclk => wclk, wenable => wenable_fifo, 
+   UFIFORAM : fiforam_0 port map( wclk => wclk, wenable => wenable_fifo, 
                            waddr(2) => waddr_2_port, waddr(1) => waddr_1_port, 
                            waddr(0) => waddr_0_port, raddr(2) => raddr_2_port, 
                            raddr(1) => raddr_1_port, raddr(0) => raddr_0_port, 
@@ -1025,7 +1025,7 @@ begin
                            => rdata(4), rdata(3) => rdata(3), rdata(2) => 
                            rdata(2), rdata(1) => rdata(1), rdata(0) => rdata(0)
                            );
-   UWFC : write_fifo_ctrl_1 port map( wclk => wclk, rst_n => rst_n, wenable => 
+   UWFC : write_fifo_ctrl_0 port map( wclk => wclk, rst_n => rst_n, wenable => 
                            wenable, rptr(3) => rptr_3_port, rptr(2) => 
                            rptr_2_port, rptr(1) => rptr_1_port, rptr(0) => 
                            rptr_0_port, wenable_fifo => wenable_fifo, wptr(3) 
@@ -1033,7 +1033,7 @@ begin
                            wptr_1_port, wptr(0) => wptr_0_port, waddr(2) => 
                            waddr_2_port, waddr(1) => waddr_1_port, waddr(0) => 
                            waddr_0_port, full_flag => full);
-   URFC : read_fifo_ctrl_1 port map( rclk => rclk, rst_n => rst_n, renable => 
+   URFC : read_fifo_ctrl_0 port map( rclk => rclk, rst_n => rst_n, renable => 
                            renable, wptr(3) => wptr_3_port, wptr(2) => 
                            wptr_2_port, wptr(1) => wptr_1_port, wptr(0) => 
                            wptr_0_port, rptr(3) => rptr_3_port, rptr(2) => 
@@ -1050,17 +1050,17 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity RCV_FIFO_1 is
+entity RCV_FIFO_0 is
 
    port( CLK, D_CLK, RST_N, R_ENABLE, W_ENABLE : in std_logic;  WDATA : in 
          std_logic_vector (7 downto 0);  R_DATA : out std_logic_vector (7 
          downto 0);  EMPTY, FULL : out std_logic);
 
-end RCV_FIFO_1;
+end RCV_FIFO_0;
 
-architecture SYN_wrapper of RCV_FIFO_1 is
+architecture SYN_wrapper of RCV_FIFO_0 is
 
-   component fifo_1
+   component fifo_0
       port( rclk, wclk, rst_n, renable, wenable : in std_logic;  wdata : in 
             std_logic_vector (7 downto 0);  rdata : out std_logic_vector (7 
             downto 0);  empty, full : out std_logic);
@@ -1068,7 +1068,7 @@ architecture SYN_wrapper of RCV_FIFO_1 is
 
 begin
    
-   MAPPING : fifo_1 port map( rclk => CLK, wclk => D_CLK, rst_n => RST_N, 
+   MAPPING : fifo_0 port map( rclk => CLK, wclk => D_CLK, rst_n => RST_N, 
                            renable => R_ENABLE, wenable => W_ENABLE, wdata(7) 
                            => WDATA(7), wdata(6) => WDATA(6), wdata(5) => 
                            WDATA(5), wdata(4) => WDATA(4), wdata(3) => WDATA(3)
@@ -1088,14 +1088,14 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity read_ptr_0 is
+entity read_ptr_1 is
 
    port( rclk, rst_n, renable : in std_logic;  rptr, rptr_nxt : out 
          std_logic_vector (3 downto 0));
 
-end read_ptr_0;
+end read_ptr_1;
 
-architecture SYN_rtl of read_ptr_0 is
+architecture SYN_rtl of read_ptr_1 is
 
    component XOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -1182,14 +1182,14 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity write_ptr_0 is
+entity write_ptr_1 is
 
    port( wclk, rst_n, wenable : in std_logic;  wptr, wptr_nxt : out 
          std_logic_vector (3 downto 0));
 
-end write_ptr_0;
+end write_ptr_1;
 
-architecture SYN_rtl of write_ptr_0 is
+architecture SYN_rtl of write_ptr_1 is
 
    component XOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -1276,15 +1276,15 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity read_fifo_ctrl_0 is
+entity read_fifo_ctrl_1 is
 
    port( rclk, rst_n, renable : in std_logic;  wptr : in std_logic_vector (3 
          downto 0);  rptr : out std_logic_vector (3 downto 0);  raddr : out 
          std_logic_vector (2 downto 0);  empty_flag : out std_logic);
 
-end read_fifo_ctrl_0;
+end read_fifo_ctrl_1;
 
-architecture SYN_rtl of read_fifo_ctrl_0 is
+architecture SYN_rtl of read_fifo_ctrl_1 is
 
    component XNOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -1306,7 +1306,7 @@ architecture SYN_rtl of read_fifo_ctrl_0 is
       port( A : in std_logic;  Y : out std_logic);
    end component;
    
-   component read_ptr_0
+   component read_ptr_1
       port( rclk, rst_n, renable : in std_logic;  rptr, rptr_nxt : out 
             std_logic_vector (3 downto 0));
    end component;
@@ -1361,7 +1361,7 @@ begin
    n12 <= '1';
    n13 <= '1';
    n14 <= '1';
-   RPU1 : read_ptr_0 port map( rclk => rclk, rst_n => rst_n, renable => 
+   RPU1 : read_ptr_1 port map( rclk => rclk, rst_n => rst_n, renable => 
                            renable_p2, rptr(3) => rptr(3), rptr(2) => rptr(2), 
                            rptr(1) => rptr(1), rptr(0) => rptr(0), rptr_nxt(3) 
                            => rptr_nxt_3_port, rptr_nxt(2) => rptr_nxt_2_port, 
@@ -1392,16 +1392,16 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity write_fifo_ctrl_0 is
+entity write_fifo_ctrl_1 is
 
    port( wclk, rst_n, wenable : in std_logic;  rptr : in std_logic_vector (3 
          downto 0);  wenable_fifo : out std_logic;  wptr : out std_logic_vector
          (3 downto 0);  waddr : out std_logic_vector (2 downto 0);  full_flag :
          out std_logic);
 
-end write_fifo_ctrl_0;
+end write_fifo_ctrl_1;
 
-architecture SYN_rtl of write_fifo_ctrl_0 is
+architecture SYN_rtl of write_fifo_ctrl_1 is
 
    component XNOR2X1
       port( A, B : in std_logic;  Y : out std_logic);
@@ -1427,7 +1427,7 @@ architecture SYN_rtl of write_fifo_ctrl_0 is
       port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
-   component write_ptr_0
+   component write_ptr_1
       port( wclk, rst_n, wenable : in std_logic;  wptr, wptr_nxt : out 
             std_logic_vector (3 downto 0));
    end component;
@@ -1483,7 +1483,7 @@ begin
    n12 <= '1';
    n13 <= '1';
    n14 <= '1';
-   WPU1 : write_ptr_0 port map( wclk => wclk, rst_n => rst_n, wenable => 
+   WPU1 : write_ptr_1 port map( wclk => wclk, rst_n => rst_n, wenable => 
                            wenable_fifo_port, wptr(3) => wptr(3), wptr(2) => 
                            wptr(2), wptr(1) => wptr(1), wptr(0) => wptr(0), 
                            wptr_nxt(3) => wptr_nxt_3_port, wptr_nxt(2) => 
@@ -1515,15 +1515,15 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity fiforam_0 is
+entity fiforam_1 is
 
    port( wclk, wenable : in std_logic;  waddr, raddr : in std_logic_vector (2 
          downto 0);  wdata : in std_logic_vector (7 downto 0);  rdata : out 
          std_logic_vector (7 downto 0));
 
-end fiforam_0;
+end fiforam_1;
 
-architecture SYN_rtl of fiforam_0 is
+architecture SYN_rtl of fiforam_1 is
 
    component INVX1
       port( A : in std_logic;  Y : out std_logic);
@@ -2049,30 +2049,30 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity fifo_0 is
+entity fifo_1 is
 
    port( rclk, wclk, rst_n, renable, wenable : in std_logic;  wdata : in 
          std_logic_vector (7 downto 0);  rdata : out std_logic_vector (7 downto
          0);  empty, full : out std_logic);
 
-end fifo_0;
+end fifo_1;
 
-architecture SYN_RTL of fifo_0 is
+architecture SYN_RTL of fifo_1 is
 
-   component read_fifo_ctrl_0
+   component read_fifo_ctrl_1
       port( rclk, rst_n, renable : in std_logic;  wptr : in std_logic_vector (3
             downto 0);  rptr : out std_logic_vector (3 downto 0);  raddr : out 
             std_logic_vector (2 downto 0);  empty_flag : out std_logic);
    end component;
    
-   component write_fifo_ctrl_0
+   component write_fifo_ctrl_1
       port( wclk, rst_n, wenable : in std_logic;  rptr : in std_logic_vector (3
             downto 0);  wenable_fifo : out std_logic;  wptr : out 
             std_logic_vector (3 downto 0);  waddr : out std_logic_vector (2 
             downto 0);  full_flag : out std_logic);
    end component;
    
-   component fiforam_0
+   component fiforam_1
       port( wclk, wenable : in std_logic;  waddr, raddr : in std_logic_vector 
             (2 downto 0);  wdata : in std_logic_vector (7 downto 0);  rdata : 
             out std_logic_vector (7 downto 0));
@@ -2085,7 +2085,7 @@ architecture SYN_RTL of fifo_0 is
 
 begin
    
-   UFIFORAM : fiforam_0 port map( wclk => wclk, wenable => wenable_fifo, 
+   UFIFORAM : fiforam_1 port map( wclk => wclk, wenable => wenable_fifo, 
                            waddr(2) => waddr_2_port, waddr(1) => waddr_1_port, 
                            waddr(0) => waddr_0_port, raddr(2) => raddr_2_port, 
                            raddr(1) => raddr_1_port, raddr(0) => raddr_0_port, 
@@ -2097,7 +2097,7 @@ begin
                            => rdata(4), rdata(3) => rdata(3), rdata(2) => 
                            rdata(2), rdata(1) => rdata(1), rdata(0) => rdata(0)
                            );
-   UWFC : write_fifo_ctrl_0 port map( wclk => wclk, rst_n => rst_n, wenable => 
+   UWFC : write_fifo_ctrl_1 port map( wclk => wclk, rst_n => rst_n, wenable => 
                            wenable, rptr(3) => rptr_3_port, rptr(2) => 
                            rptr_2_port, rptr(1) => rptr_1_port, rptr(0) => 
                            rptr_0_port, wenable_fifo => wenable_fifo, wptr(3) 
@@ -2105,7 +2105,7 @@ begin
                            wptr_1_port, wptr(0) => wptr_0_port, waddr(2) => 
                            waddr_2_port, waddr(1) => waddr_1_port, waddr(0) => 
                            waddr_0_port, full_flag => full);
-   URFC : read_fifo_ctrl_0 port map( rclk => rclk, rst_n => rst_n, renable => 
+   URFC : read_fifo_ctrl_1 port map( rclk => rclk, rst_n => rst_n, renable => 
                            renable, wptr(3) => wptr_3_port, wptr(2) => 
                            wptr_2_port, wptr(1) => wptr_1_port, wptr(0) => 
                            wptr_0_port, rptr(3) => rptr_3_port, rptr(2) => 
@@ -2337,15 +2337,7 @@ architecture SYN_behavioral of U_RCU is
       port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
-   component NOR3X1
-      port( A, B, C : in std_logic;  Y : out std_logic);
-   end component;
-   
    component AOI22X1
-      port( A, B, C, D : in std_logic;  Y : out std_logic);
-   end component;
-   
-   component OAI22X1
       port( A, B, C, D : in std_logic;  Y : out std_logic);
    end component;
    
@@ -2364,156 +2356,166 @@ architecture SYN_behavioral of U_RCU is
    signal state_3_port, state_2_port, state_1_port, state_0_port, 
       nextstate_3_port, nextstate_2_port, nextstate_1_port, nextstate_0_port, 
       shift_ctr_3_port, shift_ctr_2_port, shift_ctr_1_port, shift_ctr_0_port, 
-      N153, N154, N155, N156, N157, N159, n3, n4, n5, n6, n8, n9, n10, n12, 
-      n106, n107, n108, n109, n1, n2, n7, n11, n13, n14, n15, n16, n17, n18, 
+      N160, N161, N162, N163, N164, N165, n3, n4, n5, n6, n7, n9, n10, n12, 
+      n107, n108, n109, n110, n1, n2, n8, n11, n13, n14, n15, n16, n17, n18, 
       n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29, n30, n31, n32, n33
       , n34, n35, n36, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, 
       n48, n49, n50, n51, n52, n53, n54, n55, n56, n57, n58, n59, n60, n61, n62
       , n63, n64, n65, n66, n67, n68, n69, n70, n71, n72, n73, n74, n75, n76, 
       n77, n78, n79, n80, n81, n82, n83, n84, n85, n86, n87, n88, n89, n90, n91
-      , n92, n93, n94, n95, n96, n97, n98 : std_logic;
+      , n92, n93, n94, n95, n96, n97, n98, n99, n100, n101, n102, n103, n104, 
+      n105, n106, n111, n112 : std_logic;
 
 begin
    
    state_reg_0_inst : DFFSR port map( D => nextstate_0_port, CLK => D_CLK, R =>
-                           n98, S => n12, Q => state_0_port);
-   state_reg_3_inst : DFFSR port map( D => nextstate_3_port, CLK => D_CLK, R =>
-                           n98, S => n10, Q => state_3_port);
+                           n112, S => n12, Q => state_0_port);
    state_reg_1_inst : DFFSR port map( D => nextstate_1_port, CLK => D_CLK, R =>
-                           n98, S => n9, Q => state_1_port);
-   shift_ctr_reg_0_inst : DFFSR port map( D => n108, CLK => D_CLK, R => n97, S 
-                           => n8, Q => shift_ctr_0_port);
-   shift_ctr_reg_1_inst : DFFSR port map( D => n107, CLK => D_CLK, R => n97, S 
-                           => n6, Q => shift_ctr_1_port);
-   shift_ctr_reg_2_inst : DFFSR port map( D => n106, CLK => D_CLK, R => n97, S 
-                           => n5, Q => shift_ctr_2_port);
-   shift_ctr_reg_3_inst : DFFSR port map( D => n109, CLK => D_CLK, R => n97, S 
-                           => n4, Q => shift_ctr_3_port);
+                           n112, S => n10, Q => state_1_port);
+   shift_ctr_reg_0_inst : DFFSR port map( D => n109, CLK => D_CLK, R => n111, S
+                           => n9, Q => shift_ctr_0_port);
+   shift_ctr_reg_1_inst : DFFSR port map( D => n108, CLK => D_CLK, R => n111, S
+                           => n7, Q => shift_ctr_1_port);
+   shift_ctr_reg_2_inst : DFFSR port map( D => n107, CLK => D_CLK, R => n111, S
+                           => n6, Q => shift_ctr_2_port);
+   shift_ctr_reg_3_inst : DFFSR port map( D => n110, CLK => D_CLK, R => n111, S
+                           => n5, Q => shift_ctr_3_port);
+   state_reg_3_inst : DFFSR port map( D => nextstate_3_port, CLK => D_CLK, R =>
+                           n112, S => n4, Q => state_3_port);
    state_reg_2_inst : DFFSR port map( D => nextstate_2_port, CLK => D_CLK, R =>
-                           n98, S => n3, Q => state_2_port);
-   CRC_EN_reg : LATCH port map( CLK => n96, D => N159, Q => CRC_EN);
-   rcving_reg : LATCH port map( CLK => N153, D => N154, Q => rcving);
-   w_enable_reg : LATCH port map( CLK => N155, D => n95, Q => w_enable);
-   r_error_reg : LATCH port map( CLK => N156, D => N157, Q => r_error);
+                           n112, S => n3, Q => state_2_port);
+   CRC_EN_reg : LATCH port map( CLK => N165, D => n105, Q => CRC_EN);
+   rcving_reg : LATCH port map( CLK => N160, D => N161, Q => rcving);
+   w_enable_reg : LATCH port map( CLK => N162, D => n106, Q => w_enable);
+   r_error_reg : LATCH port map( CLK => N163, D => N164, Q => r_error);
    n3 <= '1';
    n4 <= '1';
    n5 <= '1';
    n6 <= '1';
-   n8 <= '1';
+   n7 <= '1';
    n9 <= '1';
    n10 <= '1';
    n12 <= '1';
-   U7 : OR2X1 port map( A => n1, B => n2, Y => nextstate_3_port);
-   U11 : OAI21X1 port map( A => n7, B => n11, C => n13, Y => n2);
-   U13 : MUX2X1 port map( B => n14, A => n15, S => d_edge, Y => n13);
-   U14 : NOR2X1 port map( A => n16, B => n17, Y => n14);
-   U15 : OAI21X1 port map( A => n18, B => n19, C => n20, Y => n1);
-   U16 : OAI21X1 port map( A => n21, B => n19, C => n22, Y => n20);
-   U17 : NAND3X1 port map( A => n23, B => n24, C => n25, Y => nextstate_2_port)
+   U8 : OR2X1 port map( A => n1, B => n2, Y => nextstate_3_port);
+   U11 : OAI21X1 port map( A => n8, B => n11, C => n13, Y => n2);
+   U13 : MUX2X1 port map( B => n14, A => n15, S => n16, Y => n13);
+   U14 : NOR2X1 port map( A => n17, B => n18, Y => n15);
+   U15 : OAI21X1 port map( A => n19, B => n20, C => n21, Y => n1);
+   U16 : OAI21X1 port map( A => n22, B => n20, C => n23, Y => n21);
+   U17 : INVX1 port map( A => n24, Y => n19);
+   U18 : OAI21X1 port map( A => n25, B => n26, C => n27, Y => n24);
+   U19 : OR2X1 port map( A => n28, B => n29, Y => nextstate_2_port);
+   U20 : NAND3X1 port map( A => n30, B => n31, C => n32, Y => n29);
+   U21 : INVX1 port map( A => n33, Y => n32);
+   U22 : OAI21X1 port map( A => n34, B => n22, C => n35, Y => n31);
+   U23 : INVX1 port map( A => n36, Y => n22);
+   U24 : OAI21X1 port map( A => n20, B => n37, C => n38, Y => n28);
+   U25 : AOI21X1 port map( A => n39, B => n40, C => n41, Y => n38);
+   U26 : AND2X1 port map( A => n42, B => n43, Y => n39);
+   U27 : NAND2X1 port map( A => n36, B => n44, Y => n37);
+   U28 : NAND3X1 port map( A => n45, B => n46, C => n47, Y => nextstate_1_port)
                            ;
-   U18 : AOI21X1 port map( A => eop, B => n26, C => n27, Y => n25);
-   U19 : OAI21X1 port map( A => n28, B => n29, C => n30, Y => n27);
-   U20 : NAND2X1 port map( A => n31, B => n32, Y => n29);
-   U21 : OAI22X1 port map( A => n33, B => n34, C => n35, D => n21, Y => n26);
-   U22 : INVX1 port map( A => n36, Y => n24);
-   U23 : AOI22X1 port map( A => n21, B => n37, C => n38, D => n11, Y => n23);
-   U24 : INVX1 port map( A => n39, Y => n11);
-   U25 : NAND3X1 port map( A => n40, B => n18, C => n41, Y => nextstate_1_port)
+   U29 : AOI21X1 port map( A => n48, B => n16, C => n49, Y => n47);
+   U30 : OAI21X1 port map( A => n50, B => n51, C => n27, Y => n49);
+   U31 : AOI21X1 port map( A => n52, B => n53, C => n43, Y => n50);
+   U32 : INVX1 port map( A => CRC_ERROR, Y => n52);
+   U33 : INVX1 port map( A => d_edge, Y => n16);
+   U34 : MUX2X1 port map( B => n44, A => n54, S => n36, Y => n46);
+   U35 : NOR2X1 port map( A => n34, B => n55, Y => n54);
+   U36 : NOR2X1 port map( A => n20, B => n56, Y => n34);
+   U37 : INVX1 port map( A => eop, Y => n20);
+   U38 : INVX1 port map( A => n57, Y => n45);
+   U39 : OAI21X1 port map( A => n58, B => eop, C => n30, Y => n57);
+   U40 : AOI22X1 port map( A => n35, B => STUFF_ERROR, C => n11, D => n59, Y =>
+                           n30);
+   U41 : INVX1 port map( A => n60, Y => n11);
+   U42 : NAND3X1 port map( A => n61, B => n62, C => n63, Y => nextstate_0_port)
                            ;
-   U26 : AOI21X1 port map( A => n21, B => n42, C => n43, Y => n41);
-   U27 : OAI21X1 port map( A => n44, B => n28, C => n45, Y => n43);
-   U28 : OAI21X1 port map( A => n46, B => n47, C => n19, Y => n45);
-   U29 : INVX1 port map( A => eop, Y => n19);
-   U30 : AOI21X1 port map( A => n48, B => n49, C => n31, Y => n44);
-   U31 : INVX1 port map( A => CRC_ERROR, Y => n48);
-   U32 : AOI21X1 port map( A => n33, B => n46, C => n95, Y => n18);
-   U33 : INVX1 port map( A => n50, Y => n40);
-   U34 : OAI22X1 port map( A => n7, B => n39, C => n51, D => d_edge, Y => n50);
-   U35 : NAND3X1 port map( A => n52, B => n53, C => n54, Y => nextstate_0_port)
+   U43 : NOR2X1 port map( A => n64, B => n65, Y => n63);
+   U44 : OAI21X1 port map( A => n42, B => n66, C => n67, Y => n65);
+   U45 : OAI21X1 port map( A => n59, B => n41, C => eop, Y => n67);
+   U46 : NAND2X1 port map( A => n40, B => n43, Y => n66);
+   U47 : NAND3X1 port map( A => n68, B => rcv_data(0), C => n69, Y => n42);
+   U48 : NOR2X1 port map( A => n70, B => n71, Y => n69);
+   U49 : NOR2X1 port map( A => n72, B => n73, Y => n68);
+   U50 : INVX1 port map( A => n74, Y => n73);
+   U51 : XNOR2X1 port map( A => rcv_data(3), B => rcv_data(7), Y => n72);
+   U52 : NAND2X1 port map( A => n27, B => n25, Y => n64);
+   U53 : NAND3X1 port map( A => n36, B => n75, C => n35, Y => n25);
+   U54 : INVX1 port map( A => STUFF_ERROR, Y => n75);
+   U55 : AOI22X1 port map( A => n76, B => d_edge, C => n36, D => n44, Y => n62)
                            ;
-   U36 : NOR2X1 port map( A => n55, B => n56, Y => n54);
-   U37 : OAI21X1 port map( A => n32, B => n57, C => n58, Y => n56);
-   U38 : OAI21X1 port map( A => n38, B => n47, C => eop, Y => n58);
-   U39 : NAND2X1 port map( A => n59, B => n31, Y => n57);
-   U40 : NAND3X1 port map( A => n60, B => rcv_data(0), C => n61, Y => n32);
-   U41 : NOR2X1 port map( A => n62, B => n63, Y => n61);
-   U42 : NOR2X1 port map( A => n64, B => n65, Y => n60);
-   U43 : INVX1 port map( A => n66, Y => n65);
-   U44 : XNOR2X1 port map( A => rcv_data(3), B => rcv_data(7), Y => n64);
-   U45 : OR2X1 port map( A => n95, B => n46, Y => n55);
-   U46 : NOR2X1 port map( A => n34, B => n21, Y => n46);
-   U47 : INVX1 port map( A => n67, Y => n21);
-   U48 : AOI22X1 port map( A => n68, B => d_edge, C => n67, D => n42, Y => n53)
-                           ;
-   U49 : NAND2X1 port map( A => shift_ctr_3_port, B => n33, Y => n67);
-   U50 : NOR3X1 port map( A => shift_ctr_1_port, B => shift_ctr_2_port, C => 
-                           shift_ctr_0_port, Y => n33);
-   U51 : INVX1 port map( A => n17, Y => n68);
-   U52 : AOI21X1 port map( A => n39, B => n38, C => n36, Y => n52);
-   U53 : OAI21X1 port map( A => d_edge, B => n69, C => n70, Y => n36);
-   U54 : INVX1 port map( A => n7, Y => n38);
-   U55 : NAND2X1 port map( A => n31, B => n71, Y => n7);
-   U56 : NOR2X1 port map( A => n72, B => n73, Y => n39);
-   U57 : NAND3X1 port map( A => n66, B => n74, C => rcv_data(7), Y => n73);
-   U58 : INVX1 port map( A => rcv_data(0), Y => n74);
-   U59 : NOR2X1 port map( A => rcv_data(2), B => n75, Y => n66);
-   U60 : OR2X1 port map( A => rcv_data(5), B => rcv_data(4), Y => n75);
-   U61 : NAND3X1 port map( A => n76, B => n63, C => n62, Y => n72);
-   U62 : INVX1 port map( A => rcv_data(1), Y => n62);
-   U63 : INVX1 port map( A => rcv_data(6), Y => n63);
-   U64 : INVX1 port map( A => rcv_data(3), Y => n76);
-   U65 : XOR2X1 port map( A => shift_ctr_3_port, B => n77, Y => n109);
-   U66 : NOR2X1 port map( A => n78, B => n79, Y => n77);
-   U67 : INVX1 port map( A => shift_ctr_2_port, Y => n79);
-   U68 : XNOR2X1 port map( A => shift_ctr_0_port, B => n80, Y => n108);
-   U69 : XOR2X1 port map( A => shift_ctr_1_port, B => n81, Y => n107);
-   U70 : XNOR2X1 port map( A => shift_ctr_2_port, B => n78, Y => n106);
-   U71 : NAND2X1 port map( A => shift_ctr_1_port, B => n81, Y => n78);
-   U72 : NOR2X1 port map( A => n82, B => n80, Y => n81);
-   U73 : NAND3X1 port map( A => n97, B => n98, C => shift_enable, Y => n80);
-   U74 : INVX1 port map( A => rst_n, Y => n98);
-   U75 : AND2X1 port map( A => n49, B => n28, Y => n97);
-   U76 : INVX1 port map( A => n59, Y => n28);
-   U77 : INVX1 port map( A => shift_ctr_0_port, Y => n82);
-   U78 : INVX1 port map( A => n83, Y => N159);
-   U79 : OAI21X1 port map( A => n16, B => n17, C => n84, Y => N157);
-   U80 : NOR2X1 port map( A => n15, B => n47, Y => n84);
-   U81 : INVX1 port map( A => n30, Y => n47);
-   U82 : INVX1 port map( A => n85, Y => n15);
-   U83 : OR2X1 port map( A => n42, B => N155, Y => N156);
-   U84 : NAND2X1 port map( A => n86, B => n70, Y => N155);
-   U85 : NAND2X1 port map( A => n59, B => n49, Y => n70);
-   U86 : NOR2X1 port map( A => n87, B => n16, Y => n59);
-   U87 : INVX1 port map( A => state_3_port, Y => n16);
-   U88 : NAND3X1 port map( A => n30, B => n83, C => n88, Y => N154);
-   U89 : AOI21X1 port map( A => n31, B => state_1_port, C => n42, Y => n88);
-   U90 : INVX1 port map( A => n35, Y => n42);
-   U91 : OR2X1 port map( A => n31, B => n96, Y => N153);
-   U92 : NAND2X1 port map( A => n35, B => n86, Y => n96);
-   U93 : INVX1 port map( A => n89, Y => n86);
-   U94 : NAND3X1 port map( A => n17, B => n83, C => n90, Y => n89);
-   U95 : AND2X1 port map( A => n30, B => n69, Y => n90);
-   U96 : AND2X1 port map( A => n85, B => n51, Y => n69);
-   U97 : NAND3X1 port map( A => n71, B => state_0_port, C => state_2_port, Y =>
-                           n51);
-   U98 : NAND3X1 port map( A => n91, B => state_0_port, C => state_2_port, Y =>
-                           n85);
-   U99 : NAND3X1 port map( A => n71, B => n92, C => state_2_port, Y => n30);
-   U100 : NOR2X1 port map( A => n37, B => n95, Y => n83);
-   U101 : INVX1 port map( A => n93, Y => n95);
-   U102 : NAND3X1 port map( A => n91, B => n92, C => state_2_port, Y => n93);
-   U103 : INVX1 port map( A => n34, Y => n37);
-   U104 : NAND2X1 port map( A => n71, B => n49, Y => n34);
-   U105 : NOR2X1 port map( A => n87, B => state_3_port, Y => n71);
-   U106 : NAND2X1 port map( A => n31, B => n87, Y => n17);
-   U107 : AOI21X1 port map( A => n49, B => n91, C => n22, Y => n35);
-   U108 : INVX1 port map( A => n94, Y => n22);
-   U109 : NAND3X1 port map( A => n49, B => n87, C => state_3_port, Y => n94);
-   U110 : INVX1 port map( A => state_1_port, Y => n87);
-   U111 : NOR2X1 port map( A => state_3_port, B => state_1_port, Y => n91);
-   U112 : NOR2X1 port map( A => n92, B => state_2_port, Y => n49);
-   U113 : INVX1 port map( A => state_0_port, Y => n92);
-   U114 : NOR2X1 port map( A => state_0_port, B => state_2_port, Y => n31);
+   U56 : NAND2X1 port map( A => shift_ctr_3_port, B => n56, Y => n36);
+   U57 : INVX1 port map( A => n26, Y => n56);
+   U58 : NAND3X1 port map( A => n77, B => n78, C => n79, Y => n26);
+   U59 : INVX1 port map( A => n18, Y => n76);
+   U60 : AOI21X1 port map( A => n60, B => n59, C => n33, Y => n61);
+   U61 : OAI21X1 port map( A => d_edge, B => n80, C => n81, Y => n33);
+   U62 : INVX1 port map( A => n8, Y => n59);
+   U63 : NAND2X1 port map( A => n43, B => n82, Y => n8);
+   U64 : NOR2X1 port map( A => n83, B => n84, Y => n60);
+   U65 : NAND3X1 port map( A => n74, B => n85, C => rcv_data(7), Y => n84);
+   U66 : INVX1 port map( A => rcv_data(0), Y => n85);
+   U67 : NOR2X1 port map( A => rcv_data(2), B => n86, Y => n74);
+   U68 : OR2X1 port map( A => rcv_data(5), B => rcv_data(4), Y => n86);
+   U69 : NAND3X1 port map( A => n87, B => n71, C => n70, Y => n83);
+   U70 : INVX1 port map( A => rcv_data(1), Y => n70);
+   U71 : INVX1 port map( A => rcv_data(6), Y => n71);
+   U72 : INVX1 port map( A => rcv_data(3), Y => n87);
+   U73 : INVX1 port map( A => n88, Y => n105);
+   U74 : XOR2X1 port map( A => shift_ctr_3_port, B => n89, Y => n110);
+   U75 : NOR2X1 port map( A => n90, B => n78, Y => n89);
+   U76 : INVX1 port map( A => shift_ctr_2_port, Y => n78);
+   U77 : XNOR2X1 port map( A => shift_ctr_0_port, B => n91, Y => n109);
+   U78 : XNOR2X1 port map( A => n77, B => n92, Y => n108);
+   U79 : INVX1 port map( A => shift_ctr_1_port, Y => n77);
+   U80 : XNOR2X1 port map( A => shift_ctr_2_port, B => n90, Y => n107);
+   U81 : NAND2X1 port map( A => shift_ctr_1_port, B => n92, Y => n90);
+   U82 : NOR2X1 port map( A => n79, B => n91, Y => n92);
+   U83 : NAND3X1 port map( A => n111, B => n112, C => shift_enable, Y => n91);
+   U84 : INVX1 port map( A => rst_n, Y => n112);
+   U85 : AND2X1 port map( A => n53, B => n51, Y => n111);
+   U86 : INVX1 port map( A => n40, Y => n51);
+   U87 : INVX1 port map( A => shift_ctr_0_port, Y => n79);
+   U88 : OAI21X1 port map( A => n17, B => n18, C => n93, Y => N164);
+   U89 : NOR2X1 port map( A => n14, B => n41, Y => n93);
+   U90 : INVX1 port map( A => n58, Y => n41);
+   U91 : OR2X1 port map( A => n44, B => N162, Y => N163);
+   U92 : NAND2X1 port map( A => n94, B => n81, Y => N162);
+   U93 : NAND2X1 port map( A => n40, B => n53, Y => n81);
+   U94 : NOR2X1 port map( A => n95, B => n17, Y => n40);
+   U95 : INVX1 port map( A => state_3_port, Y => n17);
+   U96 : NAND3X1 port map( A => n58, B => n88, C => n96, Y => N161);
+   U97 : AOI21X1 port map( A => n43, B => state_1_port, C => n44, Y => n96);
+   U98 : INVX1 port map( A => n97, Y => n44);
+   U99 : OR2X1 port map( A => n43, B => N165, Y => N160);
+   U100 : NAND2X1 port map( A => n97, B => n94, Y => N165);
+   U101 : INVX1 port map( A => n98, Y => n94);
+   U102 : NAND3X1 port map( A => n18, B => n88, C => n99, Y => n98);
+   U103 : AND2X1 port map( A => n58, B => n80, Y => n99);
+   U104 : NOR2X1 port map( A => n14, B => n48, Y => n80);
+   U105 : INVX1 port map( A => n100, Y => n48);
+   U106 : NAND3X1 port map( A => n82, B => state_0_port, C => state_2_port, Y 
+                           => n100);
+   U107 : INVX1 port map( A => n101, Y => n14);
+   U108 : NAND3X1 port map( A => n102, B => state_0_port, C => state_2_port, Y 
+                           => n101);
+   U109 : NAND3X1 port map( A => n82, B => n103, C => state_2_port, Y => n58);
+   U110 : NOR2X1 port map( A => n35, B => n106, Y => n88);
+   U111 : INVX1 port map( A => n27, Y => n106);
+   U112 : NAND3X1 port map( A => n102, B => n103, C => state_2_port, Y => n27);
+   U113 : INVX1 port map( A => n55, Y => n35);
+   U114 : NAND2X1 port map( A => n82, B => n53, Y => n55);
+   U115 : NOR2X1 port map( A => n95, B => state_3_port, Y => n82);
+   U116 : NAND2X1 port map( A => n43, B => n95, Y => n18);
+   U117 : AOI21X1 port map( A => n53, B => n102, C => n23, Y => n97);
+   U118 : INVX1 port map( A => n104, Y => n23);
+   U119 : NAND3X1 port map( A => n53, B => n95, C => state_3_port, Y => n104);
+   U120 : INVX1 port map( A => state_1_port, Y => n95);
+   U121 : NOR2X1 port map( A => state_3_port, B => state_1_port, Y => n102);
+   U122 : NOR2X1 port map( A => n103, B => state_2_port, Y => n53);
+   U123 : INVX1 port map( A => state_0_port, Y => n103);
+   U124 : NOR2X1 port map( A => state_0_port, B => state_2_port, Y => n43);
 
 end SYN_behavioral;
 
@@ -2532,10 +2534,6 @@ end U_FCU;
 
 architecture SYN_behavioral of U_FCU is
 
-   component NOR2X1
-      port( A, B : in std_logic;  Y : out std_logic);
-   end component;
-   
    component INVX1
       port( A : in std_logic;  Y : out std_logic);
    end component;
@@ -2544,24 +2542,32 @@ architecture SYN_behavioral of U_FCU is
       port( A, B, C : in std_logic;  Y : out std_logic);
    end component;
    
-   component NAND2X1
-      port( A, B : in std_logic;  Y : out std_logic);
-   end component;
-   
-   component OAI21X1
-      port( A, B, C : in std_logic;  Y : out std_logic);
-   end component;
-   
-   component MUX2X1
-      port( B, A, S : in std_logic;  Y : out std_logic);
-   end component;
-   
    component AND2X1
       port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
    component AOI21X1
       port( A, B, C : in std_logic;  Y : out std_logic);
+   end component;
+   
+   component NOR2X1
+      port( A, B : in std_logic;  Y : out std_logic);
+   end component;
+   
+   component MUX2X1
+      port( B, A, S : in std_logic;  Y : out std_logic);
+   end component;
+   
+   component OAI21X1
+      port( A, B, C : in std_logic;  Y : out std_logic);
+   end component;
+   
+   component NAND2X1
+      port( A, B : in std_logic;  Y : out std_logic);
+   end component;
+   
+   component OR2X1
+      port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
    component AOI22X1
@@ -2576,69 +2582,73 @@ architecture SYN_behavioral of U_FCU is
       port( D, CLK, R, S : in std_logic;  Q : out std_logic);
    end component;
    
-   signal R_ENABLE0_port, state_2_port, state_1_port, state_0_port, 
-      nextstate_2_port, nextstate_1_port, nextstate_0_port, ctr_1_port, 
-      ctr_0_port, n3, n4, n5, n35, n36, W_ENABLE1_port, n1, n2, n6, n7, n8, n9,
-      n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, n24
-      , n25, n26, n27, n28, n29, n30, n31, n32 : std_logic;
+   signal state_2_port, state_1_port, state_0_port, nextstate_2_port, 
+      nextstate_1_port, nextstate_0_port, ctr_1_port, ctr_0_port, n3, n4, n6, 
+      n40, W_ENABLE1_port, n1, n2, n5, n7, n8, n9, n10, n11, n12, n13, n14, n15
+      , n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29, 
+      n30, n31, n32, n33, n34, n35, n36, R_ENABLE0_port, n38 : std_logic;
 
 begin
    W_ENABLE1 <= W_ENABLE1_port;
    R_ENABLE0 <= R_ENABLE0_port;
    
    state_reg_0_inst : DFFSR port map( D => nextstate_0_port, CLK => D_CLK, R =>
-                           n5, S => n32, Q => state_0_port);
+                           n6, S => n38, Q => state_0_port);
    state_reg_1_inst : DFFSR port map( D => nextstate_1_port, CLK => D_CLK, R =>
-                           n4, S => n32, Q => state_1_port);
+                           n4, S => n38, Q => state_1_port);
    state_reg_2_inst : DFFSR port map( D => nextstate_2_port, CLK => D_CLK, R =>
-                           n32, S => n3, Q => state_2_port);
-   ctr_reg_1_inst : DFFPOSX1 port map( D => n36, CLK => D_CLK, Q => ctr_1_port)
+                           n38, S => n3, Q => state_2_port);
+   ctr_reg_1_inst : DFFPOSX1 port map( D => n40, CLK => D_CLK, Q => ctr_1_port)
                            ;
-   ctr_reg_0_inst : DFFPOSX1 port map( D => n35, CLK => D_CLK, Q => ctr_0_port)
+   ctr_reg_0_inst : DFFPOSX1 port map( D => n36, CLK => D_CLK, Q => ctr_0_port)
                            ;
    n3 <= '1';
    n4 <= '1';
-   n5 <= '1';
-   U6 : NAND2X1 port map( A => n1, B => n2, Y => nextstate_2_port);
-   U7 : AOI22X1 port map( A => n6, B => n7, C => n8, D => n9, Y => n2);
-   U8 : NOR2X1 port map( A => CRC_ERROR, B => n10, Y => n7);
-   U9 : NAND2X1 port map( A => n11, B => n12, Y => n10);
-   U10 : NOR2X1 port map( A => n13, B => n14, Y => n6);
-   U11 : AOI22X1 port map( A => EMPTY0, B => R_ENABLE0_port, C => 
-                           W_ENABLE1_port, D => FULL1, Y => n1);
-   U12 : OAI21X1 port map( A => n15, B => n9, C => n16, Y => nextstate_1_port);
-   U13 : AOI21X1 port map( A => n17, B => R_ENABLE0_port, C => n18, Y => n16);
-   U14 : NOR2X1 port map( A => EMPTY0, B => n19, Y => n17);
-   U15 : INVX1 port map( A => n20, Y => n9);
-   U16 : MUX2X1 port map( B => FULL1, A => EOP, S => state_0_port, Y => n20);
-   U17 : INVX1 port map( A => n8, Y => n15);
-   U18 : NAND2X1 port map( A => n21, B => n22, Y => nextstate_0_port);
-   U19 : AOI22X1 port map( A => n23, B => W_ENABLE1_port, C => R_ENABLE0_port, 
-                           D => EMPTY0, Y => n22);
-   U20 : INVX1 port map( A => FULL1, Y => n23);
-   U21 : AOI21X1 port map( A => state_0_port, B => n8, C => n18, Y => n21);
-   U22 : INVX1 port map( A => n24, Y => n18);
-   U23 : NAND3X1 port map( A => n25, B => n11, C => n26, Y => n24);
-   U24 : MUX2X1 port map( B => FULL0, A => n27, S => EOP, Y => n26);
-   U25 : NOR2X1 port map( A => ctr_1_port, B => n14, Y => n27);
-   U26 : INVX1 port map( A => R_ERROR, Y => n11);
-   U27 : NOR2X1 port map( A => n28, B => state_1_port, Y => n8);
-   U28 : AND2X1 port map( A => n29, B => ctr_1_port, Y => n36);
-   U29 : MUX2X1 port map( B => n13, A => n14, S => n29, Y => n35);
-   U30 : OAI21X1 port map( A => n13, B => n12, C => n32, Y => n29);
-   U31 : INVX1 port map( A => RST, Y => n32);
-   U32 : INVX1 port map( A => ctr_1_port, Y => n12);
-   U33 : INVX1 port map( A => ctr_0_port, Y => n14);
-   U34 : NAND2X1 port map( A => EOP, B => n25, Y => n13);
-   U35 : INVX1 port map( A => n30, Y => n25);
-   U36 : NAND3X1 port map( A => state_0_port, B => n28, C => state_1_port, Y =>
-                           n30);
-   U37 : INVX1 port map( A => n31, Y => W_ENABLE1_port);
-   U38 : NAND3X1 port map( A => n19, B => n28, C => state_1_port, Y => n31);
-   U39 : INVX1 port map( A => state_2_port, Y => n28);
-   U40 : INVX1 port map( A => state_0_port, Y => n19);
-   U41 : NOR2X1 port map( A => state_1_port, B => state_2_port, Y => 
+   n6 <= '1';
+   U5 : NAND3X1 port map( A => n1, B => n2, C => n5, Y => nextstate_2_port);
+   U7 : AOI22X1 port map( A => W_ENABLE1_port, B => FULL1, C => EMPTY0, D => 
+                           R_ENABLE0_port, Y => n5);
+   U8 : NAND3X1 port map( A => ctr_0_port, B => n7, C => n8, Y => n2);
+   U9 : NOR2X1 port map( A => CRC_ERROR, B => n9, Y => n8);
+   U10 : NAND2X1 port map( A => n10, B => n11, Y => n9);
+   U11 : NAND3X1 port map( A => n12, B => n13, C => state_2_port, Y => n1);
+   U12 : INVX1 port map( A => n14, Y => n12);
+   U13 : OAI21X1 port map( A => n15, B => n16, C => n17, Y => nextstate_1_port)
+                           ;
+   U14 : AOI21X1 port map( A => n18, B => n14, C => n19, Y => n17);
+   U15 : INVX1 port map( A => n20, Y => n19);
+   U16 : MUX2X1 port map( B => EOP, A => FULL1, S => n21, Y => n14);
+   U17 : NOR2X1 port map( A => state_1_port, B => n22, Y => n18);
+   U18 : OR2X1 port map( A => n21, B => EMPTY0, Y => n16);
+   U19 : INVX1 port map( A => R_ENABLE0_port, Y => n15);
+   U20 : OR2X1 port map( A => n23, B => n24, Y => nextstate_0_port);
+   U21 : OAI21X1 port map( A => FULL1, B => n25, C => n20, Y => n24);
+   U22 : NAND3X1 port map( A => n26, B => state_1_port, C => n27, Y => n20);
+   U23 : NOR2X1 port map( A => n21, B => n28, Y => n27);
+   U24 : NAND2X1 port map( A => n10, B => n22, Y => n28);
+   U25 : INVX1 port map( A => R_ERROR, Y => n10);
+   U26 : MUX2X1 port map( B => FULL0, A => n29, S => EOP, Y => n26);
+   U27 : NOR2X1 port map( A => ctr_1_port, B => n30, Y => n29);
+   U28 : MUX2X1 port map( B => n31, A => n32, S => n21, Y => n23);
+   U29 : NAND2X1 port map( A => EMPTY0, B => n22, Y => n32);
+   U30 : OAI21X1 port map( A => EMPTY0, B => state_2_port, C => n13, Y => n31);
+   U31 : INVX1 port map( A => state_1_port, Y => n13);
+   U32 : MUX2X1 port map( B => n30, A => n33, S => n34, Y => n36);
+   U33 : INVX1 port map( A => ctr_0_port, Y => n30);
+   U34 : NOR2X1 port map( A => state_1_port, B => state_2_port, Y => 
                            R_ENABLE0_port);
+   U35 : INVX1 port map( A => RST, Y => n38);
+   U36 : NOR2X1 port map( A => n34, B => n11, Y => n40);
+   U37 : INVX1 port map( A => ctr_1_port, Y => n11);
+   U38 : AOI21X1 port map( A => n7, B => ctr_1_port, C => RST, Y => n34);
+   U39 : INVX1 port map( A => n33, Y => n7);
+   U40 : NAND3X1 port map( A => state_1_port, B => state_0_port, C => n35, Y =>
+                           n33);
+   U41 : AND2X1 port map( A => n22, B => EOP, Y => n35);
+   U42 : INVX1 port map( A => n25, Y => W_ENABLE1_port);
+   U43 : NAND3X1 port map( A => n21, B => n22, C => state_1_port, Y => n25);
+   U44 : INVX1 port map( A => state_2_port, Y => n22);
+   U45 : INVX1 port map( A => state_0_port, Y => n21);
 
 end SYN_behavioral;
 
@@ -3476,17 +3486,17 @@ use IEEE.std_logic_1164.all;
 
 use work.CONV_PACK_USB_RCVR.all;
 
-entity RCV_FIFO_0 is
+entity RCV_FIFO_1 is
 
    port( CLK, D_CLK, RST_N, R_ENABLE, W_ENABLE : in std_logic;  WDATA : in 
          std_logic_vector (7 downto 0);  R_DATA : out std_logic_vector (7 
          downto 0);  EMPTY, FULL : out std_logic);
 
-end RCV_FIFO_0;
+end RCV_FIFO_1;
 
-architecture SYN_wrapper of RCV_FIFO_0 is
+architecture SYN_wrapper of RCV_FIFO_1 is
 
-   component fifo_0
+   component fifo_1
       port( rclk, wclk, rst_n, renable, wenable : in std_logic;  wdata : in 
             std_logic_vector (7 downto 0);  rdata : out std_logic_vector (7 
             downto 0);  empty, full : out std_logic);
@@ -3494,7 +3504,7 @@ architecture SYN_wrapper of RCV_FIFO_0 is
 
 begin
    
-   MAPPING : fifo_0 port map( rclk => CLK, wclk => D_CLK, rst_n => RST_N, 
+   MAPPING : fifo_1 port map( rclk => CLK, wclk => D_CLK, rst_n => RST_N, 
                            renable => R_ENABLE, wenable => W_ENABLE, wdata(7) 
                            => WDATA(7), wdata(6) => WDATA(6), wdata(5) => 
                            WDATA(5), wdata(4) => WDATA(4), wdata(3) => WDATA(3)
@@ -3582,13 +3592,13 @@ architecture SYN_struct of USB_RCVR is
             std_logic);
    end component;
    
-   component RCV_FIFO_1
+   component RCV_FIFO_0
       port( CLK, D_CLK, RST_N, R_ENABLE, W_ENABLE : in std_logic;  WDATA : in 
             std_logic_vector (7 downto 0);  R_DATA : out std_logic_vector (7 
             downto 0);  EMPTY, FULL : out std_logic);
    end component;
    
-   component RCV_FIFO_0
+   component RCV_FIFO_1
       port( CLK, D_CLK, RST_N, R_ENABLE, W_ENABLE : in std_logic;  WDATA : in 
             std_logic_vector (7 downto 0);  R_DATA : out std_logic_vector (7 
             downto 0);  EMPTY, FULL : out std_logic);
@@ -3609,7 +3619,7 @@ begin
    r_error <= r_error_port;
    rcving <= rcving_port;
    
-   U_5 : RCV_FIFO_0 port map( CLK => CLK, D_CLK => n3, RST_N => n4, R_ENABLE =>
+   U_5 : RCV_FIFO_1 port map( CLK => CLK, D_CLK => n3, RST_N => n4, R_ENABLE =>
                            R_ENABLE, W_ENABLE => W_ENABLE1, WDATA(7) => 
                            R_DATA1_7_port, WDATA(6) => R_DATA1_6_port, WDATA(5)
                            => R_DATA1_5_port, WDATA(4) => R_DATA1_4_port, 
@@ -3620,7 +3630,7 @@ begin
                            R_DATA(4), R_DATA(3) => R_DATA(3), R_DATA(2) => 
                            R_DATA(2), R_DATA(1) => R_DATA(1), R_DATA(0) => 
                            R_DATA(0), EMPTY => EMPTY, FULL => FULL_port);
-   U_11 : RCV_FIFO_1 port map( CLK => n2, D_CLK => n3, RST_N => n4, R_ENABLE =>
+   U_11 : RCV_FIFO_0 port map( CLK => n2, D_CLK => n3, RST_N => n4, R_ENABLE =>
                            R_ENABLE0, W_ENABLE => W_ENABLE_OUT, WDATA(7) => 
                            W_DATA_7_port, WDATA(6) => W_DATA_6_port, WDATA(5) 
                            => W_DATA_5_port, WDATA(4) => W_DATA_4_port, 

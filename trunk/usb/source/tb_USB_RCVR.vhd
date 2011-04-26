@@ -195,6 +195,10 @@ process
     RST <= '0';
 		wait for Period2;
 		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+		wait for Period2*3;
+		D_PLUS <= '1';
+		wait for Period2*4;
+		wait for Period2*32;
 		for I in 0 to 7 loop
 		R_ENABLE <= '1';
 		wait for Period;
@@ -202,6 +206,7 @@ process
 		wait for Period2*8;
 		end loop;
 		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+
 
 		wait;
   end process;
