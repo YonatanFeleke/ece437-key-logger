@@ -29,33 +29,35 @@ ENTITY B_Controller IS
 END B_Controller;
 
 architecture b_cont of B_Controller IS
-		type	 state_type is	(idle,listen,bit1,	bit2,bit3,bit4, waitnxt, pulse);
-		signal	state,nstate,resynstate		: 		state_type;
-		signal ebit												:			std_logic;
-		signal cnt4,ncnt4									:			integer range 0 to 5;
-		signal cnt2,ncnt2									:			integer range 0 to 2; -- ADJUST TO INCREASE ENABLE strobe cyc length
-		signal nbluewait,bluewait					: 		integer range 0 to WAITBAK +1;
-		signal a, b												:			std_logic;-- EDGE detect variable
+		type	 	state_type is	(idle,listen,bit1,	bit2,bit3,bit4, waitnxt, pulse);
+		signal	state,nstate,resynstate			: 		state_type;
+		signal 	ebit												:			std_logic;
+		signal	latch_not_empty 			: 				std_logic;
+		signal 	cnt4,ncnt4									:			integer range 0 to 5;
+		signal 	cnt2,ncnt2									:			integer range 0 to 2; -- ADJUST TO INCREASE ENABLE strobe cyc length
+		signal 	nbluewait,bluewait					: 		integer range 0 to WAITBAK +1;
 
 	begin
 		contstates : process (RST,CLK) 
+		variable	 prev												:			std_logic;-- EDGE detect variable
+		variable	 edge												:			std_logic;-- EDGE detect variable
 			begin
 				if ( RST = '1') then
 					state <= idle;
 					cnt4 <= 0;
 					cnt2 <= 0;
-					a<= '1';					
-					b<= '1';
 					bluewait <= 0;
+					prev := '0';
+					edge := '0';
 				elsif (rising_edge(clk)) then
 					state <= nstate;
 					cnt4	<= ncnt4;
 					bluewait <= nbluewait;
-					cnt2 <= ncnt2;
-					a <= ANT_LIN;
-					b <= a;
+					cnt2 <= ncnt2;	
+					edge := (ANT_LIN xor prev);
+					prev := ANT_LIN;
 				--RESYNC ON EVERY EDGE; throws 1/3 tolerance
-					if (((a xor b) = '1')) then 
+					if (edge = '1') then 
 						bluewait <= 0;
 						state <= resynstate;
 					end if;					
@@ -64,6 +66,7 @@ architecture b_cont of B_Controller IS
 --_______________________________________		
 		nextstatelogic : process (CLK, state) 
 			variable 	nnstate			: 		state_type;
+
 			begin
 				case state is
 		--IDLE_______________________________________-	
@@ -75,33 +78,36 @@ architecture b_cont of B_Controller IS
 							ebit <= '0';
 							ncnt2 <= 0;
 							nnstate := idle;
-							if (EMPTY = '0') then 
+							if (EMPTY = '0' or latch_not_empty = '1') then 
 								nstate <= listen;
-								resynstate <= idle;
+								resynstate <= listen;
 							end if;
 		--LISTEN______________________________________-	
  						when listen=> -- 4bits of 1 initiate enable
  							nstate <= listen;
 -- 							resynstate <= listen;
+							ncnt4 <= cnt4;
  							nbluewait <= bluewait + 1;
- 							if (cnt4 = 4) then
+ 							if (cnt4 = 4) then 							
  									if (bluewait = WAITBAK) then
  										nstate <= bit1;--
  										nbluewait <= 0;
  										ncnt4 <= 0;
  									elsif (bluewait = 2*WAITBAK/3) then resynstate <= bit1;	 									
- 									end if; -- wait for 4th one to finish form teh line
+ 									end if; -- wait for 4th one to finish form teh line 									
  							elsif (bluewait = WAITBAK/2) then-- mid data and cnt< 3 
  									if (cnt4 = 0) then
- 											if (ANT_LIN = '0')	 then ncnt4 <= cnt4+1; end if; -- start with a zero to sync
+ 											if (ANT_LIN = '0')	 then ncnt4 <= cnt4 + 1; end if; -- start with a zero to sync
  									elsif (ANT_LIN = '1') then ncnt4<= cnt4+1;
  									else ncnt4 <= 1; -- 00
- 									end if;-- mid data
+ 									end if;-- mid data 			 									
  							elsif (bluewait = WAITBAK) then
  									nbluewait<= 0;
  							elsif (bluewait = 2*WAITBAK/3) then resynstate <= listen;	 	
  							end if; -- bluewait
 -- 							end if; -- cnt4 
+
+
 		--BIT1_________________________________________-								
 						when bit1=> --4 bits verified looking for 01010 or 10101 patter
 							nbluewait <= bluewait + 1;
@@ -193,14 +199,21 @@ architecture b_cont of B_Controller IS
 				end case;
 			end process nextstatelogic;
 --_______________________________________
-		outlogic : process (RST,CLK, state) 			
-			begin
+		outlogic : process (RST,CLK, state) --0111_(1=ebit)010 => resend; if 01110101 => newsend			
+			begin	
 				RESEND_EN <= '0';
 				TRANS_EN	<= '0';
         if (state = pulse) then
-          	TRANS_EN	<= '1';	
-						RESEND_EN	<= ebit; --1111_ 1=ebit_010 => resend if 11110101 => not resend
+ 	        	RESEND_EN	<= ebit;-- empty doens't chagnge unless i get data ------->>>>>>>####
+ 	        	TRANS_EN <= '1';
+          	if ( empty = '1' and ebit = '0') 
+          			then 	TRANS_EN	<= '0';------------->>>>>>>????          
+          						RESEND_EN	<= '0';
+	          end if;-- DON'T enable on first empty found but others okay
 				end if;
+				if ( RST = '1') then latch_not_empty <= '0';-- LATCH 
+					elsif ( EMPTY = '0') then latch_not_empty <= '1'; -- nvr goes to zero
+				end if ;
 			end process outlogic;
 --________________________________________________			
 end b_cont;

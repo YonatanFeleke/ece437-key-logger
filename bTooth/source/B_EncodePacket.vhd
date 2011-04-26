@@ -158,7 +158,8 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);
 							if (swcnt = WAITSRAM) then 
 								nswcnt <= 0;
 								nstate <= calccrc;
-								txwait := '1'; -- new data got!
+								txwait := '1';																															 -- new data got!
+								
 							elsif (swcnt = 0 ) then 
 								nread_en <= '1';
 								ncnt32 <= cnt32 + 1;
