@@ -38,28 +38,40 @@ architecture b_strip of B_StripPayload is
           EMPTY						:		OUT std_logic;
           FULL						:		OUT std_logic); -- 
 	end component;	
+	--__________________________________________________________________________________________
 	type	 	state_type is	(idle,found01,found010,wait4zero,storefifo,calcnewcrc,oldcrc,seterr);
 	signal	state,nstate								: 		state_type;
 	signal cnt8,ncnt8										:		integer range 0 to 8;
 	signal cnt16 ,ncnt16								:		integer range 0 to 16;
 	signal cnt32, ncnt32								:		integer range 0 to 32;
-	signal cnt658												:		integer range 0 to WAITBIT; 
+	signal cnt658												:		integer range 0 to WAITBIT+1; 
 	signal fstzero,	middata, currbit		: 	std_logic;
 	signal errval												: 	std_logic;
-	signal newcrc												:		std_logic_vector (16 downto 0); -- init 0000000011011001
+	signal newcrc, oldcrcval								:		std_logic_vector (15 downto 0); -- init 0000000011011001
 	-- FIFO signals
-	signal strobefifo, fifofull				: 	std_logic;
+	signal strobefifo, fifofull					: 	std_logic;
 	signal fifobus											: 	std_logic_vector ( 7 downto 0);
 	begin	
 	
-	
-	--_______________________________________________________________________
+			--_________________________________________________________________
+				wrapper: Fifo port map(
+  	      RCLK 		=> 	CLK,
+          WCLK		=> 	CLK,  -- problem >> was wclk and rclk>>>>>>???????
+					RST_N  	=> 	RST,
+         	RENABLE => 	READ_EN,
+         	WENABLE	=> 	strobefifo,  -- used!
+         	WDATA		=> 	fifobus,			-- used
+         	RDATA		=> 	DATAOUT,
+         	EMPTY		=> 	EMPTY,
+         	FULL		=> 	fifofull);  -- NOT A USED SIGNAL     
+			--_________________________________________________________________
+--_______________________________________________________________________			
 	statelogic :process (CLK,RST)
 --		variable	 prev												:			std_logic;-- EDGE detect variable
 					-- Maybe add a synchronizer fo cnt658
 							--if ((prev xor currbit) = '1' ) then cnt658 <= 0;	end if;
 							--prev : = currbit;
-		begin
+		begin--
 				if ( RST = '1') then
 					state <= idle;
 					cnt8 <= 0;
@@ -106,7 +118,11 @@ architecture b_strip of B_StripPayload is
 								ncnt8 <= 0;
 								ncnt16 <= 0;
 								ncnt32 <= 0;
-															
+							--Signal initializations
+								newcrc <= "0000000011011001";
+								oldcrcval <= "0000000011011001";
+								strobefifo <= '0';
+								fifobus <= "00000000";								
 		--found01______________________________________-	
  						when found01 =>
  								nstate <= found010;		 							
@@ -132,15 +148,5 @@ architecture b_strip of B_StripPayload is
 								nstate <= idle;
 				end case;
 	end process nextstatelogic;
---___________________________________________________________________________________________
-		wrapper: Fifo port map(
-  	      RCLK 		=> 	CLK,
-          WCLK		=> 	CLK,  -- problem >> was wclk and rclk>>>>>>???????
-					RST_N  	=> 	RST,
-         	RENABLE => 	READ_EN,
-         	WENABLE	=> 	strobefifo,  -- used!
-         	WDATA		=> 	fifobus,			-- used
-         	RDATA		=> 	DATAOUT,
-         	EMPTY		=> 	EMPTY,
-         	FULL		=> 	fifofull);  -- NOT A USED SIGNAL         				
+    				
 end b_strip;
