@@ -1,4 +1,4 @@
-# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.5.1.el5
+# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.9.1.el5
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.
@@ -8,3 +8,436 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(17): near ")": syntax error
+# ** Error: source/tb_B_StripPayload.vhd(18): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(17): near ")": syntax error
+# ** Error: source/tb_B_StripPayload.vhd(18): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(90): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(90): Target type (error) in variable assignment is different from expression type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/tb_B_StripPayload.vhd(90): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(92): Illegal target for signal assignment.
+# ** Error: source/tb_B_StripPayload.vhd(92): (vcom-1136) Unknown identifier "ant_lin".
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(97): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(97): Target type (error) in variable assignment is different from expression type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/tb_B_StripPayload.vhd(97): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(99): Illegal target for signal assignment.
+# ** Error: source/tb_B_StripPayload.vhd(99): (vcom-1136) Unknown identifier "ant_lin".
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(106): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(106): Target type (error) in variable assignment is different from expression type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/tb_B_StripPayload.vhd(106): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(108): Illegal target for signal assignment.
+# ** Error: source/tb_B_StripPayload.vhd(108): (vcom-1136) Unknown identifier "ant_lin".
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(114): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(114): Target type (error) in variable assignment is different from expression type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/tb_B_StripPayload.vhd(114): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(116): Illegal target for signal assignment.
+# ** Error: source/tb_B_StripPayload.vhd(116): (vcom-1136) Unknown identifier "ant_lin".
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(120): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(120): Target type (error) in variable assignment is different from expression type ieee.std_logic_1164.std_logic_vector.
+# ** Error: source/tb_B_StripPayload.vhd(120): (vcom-1136) Unknown identifier "newsend".
+# ** Error: source/tb_B_StripPayload.vhd(122): Illegal target for signal assignment.
+# ** Error: source/tb_B_StripPayload.vhd(122): (vcom-1136) Unknown identifier "ant_lin".
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(87): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(139): near "end": expecting ';'
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(92): Signal "newsend" cannot be target of variable assignment statement.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(99): Signal "newsend" cannot be target of variable assignment statement.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(108): Signal "newsend" cannot be target of variable assignment statement.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(116): Signal "newsend" cannot be target of variable assignment statement.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(122): Signal "newsend" cannot be target of variable assignment statement.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(89): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(141): near "end": expecting ';'
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(88): (vcom-1226) A wait statement is illegal for a process with a sensitivity list.
+# ** Error: source/tb_B_StripPayload.vhd(142): near "end": expecting ';'
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# ** Error: source/tb_B_StripPayload.vhd(142): near "end": expecting ';'
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 4
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/tb_B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# vsim work.tb_b_strippayload 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_strippayload(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ece337_ip.fifo(rtl)#1
+# ** Fatal: (vsim-3421) Value 659 is out of range 0 to 658.
+#    Time: 2310 ns  Iteration: 1  Process: /tb_b_strippayload/dut/statelogic File: source/B_StripPayload.vhd
+# Fatal error in Process statelogic at source/B_StripPayload.vhd line 75
+# 
+# HDL call sequence:
+# Stopped at source/B_StripPayload.vhd 75 Process statelogic
+# 
+# A    bTooth/Wireless Keylogger.pptx
+# A    bTooth/schematic
+# A    bTooth/source
+# A    bTooth/source/B_Controller.vhd
+# A    bTooth/source/B_AppendAccessCode.vhd
+# A    bTooth/source/B_EncodePacket.vhd
+# A    bTooth/source/B_NextPacket.vhd
+# A    bTooth/source/B_Header.vhd
+# A    bTooth/source/tb_B_Controller.vhd
+# A    bTooth/source/B_UAT.vhd
+# A    bTooth/source/tb_B_AppendAccessCode.vhd
+# A    bTooth/source/tb_B_EncodePacket.vhd
+# A    bTooth/source/B_StripPayload.vhd
+# A    bTooth/source/tb_B_NextPacket.vhd
+# A    bTooth/source/tb_B_Header.vhd
+# A    bTooth/d
+# A    bTooth/d/HEC_CRC8_10B.vhd
+# A    bTooth/d/hdrm
+# A    bTooth/d/acode
+# A    bTooth/d/hdr
+# A    bTooth/d/CRC16.vhd
+# A    bTooth/.~lock.Wireless Keylogger.pptx#
+# A    bTooth/mapped
+# A    bTooth/analyzed
+# A    bTooth/Wireless Keylogger.odp
+# A    bTooth/scripts
+# A    bTooth/modelsim.ini
+# A    bTooth/docs
+# A    bTooth/docs/Encoding.png
+# A    bTooth/docs/EncodingWave.png
+# A    bTooth/transcript
+# A    bTooth/B_TopLevel.vhd
+# A    bTooth/reports
+# Checked out revision 57.
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# vsim work.tb_b_strippayload 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_strippayload(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ece337_ip.fifo(rtl)#1
+# ** Note: Byte sent
+#    Time: 36800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 55200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 73600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 92 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 110400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 128800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 147200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 165600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 184 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 202400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 220800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 239200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 257600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 276 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 294400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 312800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 331200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 349600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 368 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 386400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 404800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 423200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 441600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 460 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 478400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 496800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 515200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 533600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 552 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 570400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 588800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 607200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 625600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 644 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 662400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 680800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 699200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 717600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 736 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 754400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 772800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 791200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 809600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 828 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 846400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 864800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 883200 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 901600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 920 us  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 938400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: Byte sent
+#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# ** Error: source/B_StripPayload.vhd(50): (vcom-1294) Declaration with designator "oldcrc" already exists in this region.
+# ** Prior declaration of "oldcrc" is at source/B_StripPayload.vhd(42).
+# ** Error: source/B_StripPayload.vhd(138): Signal "oldcrc" is type ieee.std_logic_1164.std_logic_vector; expecting type state_type.
+# ** Error: source/B_StripPayload.vhd(143): Signal "oldcrc" is type ieee.std_logic_1164.std_logic_vector; expecting type state_type.
+# ** Error: source/B_StripPayload.vhd(143): Case choice must be a locally static expression.
+# ** Warning: [14] source/B_StripPayload.vhd(122): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Warning: [14] source/B_StripPayload.vhd(123): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Error: source/B_StripPayload.vhd(151): VHDL Compiler exiting
+# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./d/strp line 5
+# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom source/B_StripPayload.vhd"
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# ** Warning: [14] source/B_StripPayload.vhd(122): (vcom-1272) Length of expected is 17; length of actual is 16.
+# ** Warning: [14] source/B_StripPayload.vhd(123): (vcom-1272) Length of expected is 17; length of actual is 16.
+# vsim work.tb_b_strippayload 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_strippayload(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ece337_ip.fifo(rtl)#1
+# ** Note: Access Code
+#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 17 (16 downto 0). Right is 16 (16 downto 1).
+#    Time: 0 ps  Iteration: 0  Process: /tb_b_strippayload/dut/nextstatelogic File: source/B_StripPayload.vhd
+# Fatal error in Process nextstatelogic at source/B_StripPayload.vhd line 122
+# 
+# HDL call sequence:
+# Stopped at source/B_StripPayload.vhd 122 Process nextstatelogic
+# 
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# vsim work.tb_b_strippayload 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_strippayload(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ece337_ip.fifo(rtl)#1
+# ** Note: Access Code
+#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: 136 bits incoming headers
+#    Time: 18400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: 256 bits Data
+#    Time: 349600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: CRC1 0- 7 incoming
+#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
+do d/strp
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is mg35@ecelinux24.ecn.purdue.edu.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_strippayload
+# -- Compiling architecture test of tb_b_strippayload
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity b_strippayload
+# -- Compiling architecture b_strip of b_strippayload
+# vsim work.tb_b_strippayload 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_strippayload(test)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ece337_ip.fifo(rtl)#1
+# ** Note: Access Code
+#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: 136 bits incoming headers
+#    Time: 18400 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: 256 bits Data
+#    Time: 349600 ns  Iteration: 0  Instance: /tb_b_strippayload
+# ** Note: CRC1 0- 7 incoming
+#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
