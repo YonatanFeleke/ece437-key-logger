@@ -130,6 +130,8 @@ process
     --EMPTY <= '1';
 
     --FULL <= '0';
+    
+    RENABLE <= '0';
 
     W_ENABLE <= '0';
 
@@ -183,6 +185,75 @@ process
     WDATA <= "01101000";
     
     wait for Period;
+    
+    --EMPTY <= '1';
+    
+    W_ENABLE <= '0';
+    wait until full1 = '1'; 
+    
+    RENABLE <= '1';
+    
+    wait for 20*Period;
+    
+--    wait for 100*Period;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    WDATA <= "01111001";
+    
+    --FULL <= '1';
+    
+    --EMPTY <= '0';
+        
+    W_ENABLE <= '1';
+    --wait until R_ENABLE = '1';
+    
+--    wait for 0.3 ns;
+
+		wait for Period;
+		
+		--FULL <= '0';
+    
+    WDATA <= "01100001";
+    
+    wait for Period;
+    
+    WDATA <= "01101101"; -- Change
+    
+    wait for Period;
+
+    WDATA <= "01101001";
+    
+    wait for Period;
+
+    WDATA <= "01110011";
+    
+    wait for Period;
+
+    WDATA <= "01100001";
+    
+    wait for Period;
+
+    WDATA <= "01101101";
+    
+    wait for Period;
+    
+    WDATA <= "01101111";
+    
+    wait for Period;
+    
+    W_ENABLE <= '0';
     
     --EMPTY <= '1';
     
