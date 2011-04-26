@@ -1,0 +1,9 @@
+vdel -all -lib work
+vlib work
+vcom mapped/USB_RCVR.vhd
+vcom source/tb_USB_RCVR.vhd
+vsim -i work.tb_usb_rcvr
+add wave -r /*
+add wave \
+force -freeze sim:/tb_usb_rcvr/dut/crc_error 0 0
+run 8000 ns
