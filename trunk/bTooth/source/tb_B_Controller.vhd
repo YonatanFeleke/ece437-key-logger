@@ -65,6 +65,7 @@ end process;
 dataassign : process
 	variable newsend 			: 		std_logic_vector( 7 downto 0);
   begin
+  	ANT_LIN <= '0';
     RST <= '1';
     wait FOR 49 ns;
     RST <= '0';
@@ -83,17 +84,20 @@ dataassign : process
   
 next_enprocess : process
 	begin
-    NEXT_EN <= '0';
+    NEXT_EN <= '1';
     EMPTY <= '0';
-		wait for 70 ns;
-		NEXT_EN <= '1';
-		EMPTY <= '0';
-		wait for 20 * data_period;
-		NEXT_EN <= '0';
-	  EMPTY <= '0';
-		wait for 16 ns;
-		NEXT_EN <= '0';		
-	  EMPTY <= '1';
+--    EMPTY <= '1';
+--	wait for 70 ns;
+--		NEXT_EN <= '1';
+--		EMPTY <= '1';
+--		EMPTY <= '0';
+--		wait for 10*data_period;
+ --	  report "Switch EMPTY for idle to listen\n shows that the latch works" severity NOTE;
+--		NEXT_EN <= '0';
+--		EMPTY <= '0';
+--		wait for 10 * data_period;
+--		NEXT_EN <= '1';		
+--	  EMPTY <= '0';
 	  wait;
 	end process next_enprocess;
 end TEST;

@@ -1,6 +1,6 @@
 -- $Id: $
 -- File name:   tb_B_AppendAccessCode.vhd
--- Created:     4/17/2011
+-- Created:     4/26/2011
 -- Author:      Yonatan Feleke
 -- Lab Section: 337-02
 -- Version:     1.0  Initial Test Bench
@@ -16,41 +16,58 @@ end tb_B_AppendAccessCode;
 
 architecture TEST of tb_B_AppendAccessCode is
 
+  function INT_TO_STD_LOGIC( X: INTEGER; NumBits: INTEGER )
+     return STD_LOGIC_VECTOR is
+    variable RES : STD_LOGIC_VECTOR(NumBits-1 downto 0);
+    variable tmp : INTEGER;
+  begin
+    tmp := X;
+    for i in 0 to NumBits-1 loop
+      if (tmp mod 2)=1 then
+        res(i) := '1';
+      else
+        res(i) := '0';
+      end if;
+      tmp := tmp/2;
+    end loop;
+    return res;
+  end;
+
   component B_AppendAccessCode
     PORT(
          CLK : in std_logic;
          RST : in std_logic;
-         CODE_EN : in std_logic;
+         TRANS_EN : in std_logic;
          ACESS_CODE : OUT std_logic_vector(71 downto 0);
-         STORE_EN : OUT std_logic
+         HEADER_EN : OUT std_logic
     );
   end component;
 
 -- Insert signals Declarations here
   signal CLK : std_logic;
   signal RST : std_logic;
-  signal CODE_EN : std_logic;
+  signal TRANS_EN : std_logic;
   signal ACESS_CODE : std_logic_vector(71 downto 0);
-  signal STORE_EN : std_logic;
+  signal HEADER_EN : std_logic;
 
 -- signal <name> : <type>;
 
 begin
 
 CLKGEN: process
-  variable CLK_tmp: std_logic := '0';
+  variable clk_tmp: std_logic := '0';
 begin
-  CLK_tmp := not CLK_tmp;
-  CLK <= CLK_tmp;
+  clk_tmp := not clk_tmp;
+  clk <= clk_tmp;
   wait for Period/2;
 end process;
 
   DUT: B_AppendAccessCode port map(
                 CLK => CLK,
                 RST => RST,
-                CODE_EN => CODE_EN,
+                TRANS_EN => TRANS_EN,
                 ACESS_CODE => ACESS_CODE,
-                STORE_EN => STORE_EN
+                HEADER_EN => HEADER_EN
                 );
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);
@@ -59,21 +76,20 @@ process
 
   begin
 
--- Insert TEST BENCH Code Here
+-- Insert TEST BENCH Code Here    RST <=     TRANS_EN <= 
 
     RST <= '1';
-    CODE_EN <=  '0';
+    TRANS_EN <=  '0';
     wait for 7 ns;
     RST <= '0';
-    CODE_EN <=  '1';
+    TRANS_EN <=  '1';
     wait for 7 ns;
-    CODE_EN <=  '0';
+    TRANS_EN <=  '0';
     RST<= '0';
     wait for 35 ns;
-    CODE_EN <= '1';
+    TRANS_EN <= '1';
     wait for 7 ns;
-    CODE_EN <= '0';
-    wait;
-    
+    TRANS_EN <= '0';
+
   end process;
 end TEST;
