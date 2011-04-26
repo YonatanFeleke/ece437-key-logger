@@ -161,7 +161,7 @@ ARCHITECTURE struct OF USB_RCVR IS
       CRC_ERROR : IN     std_logic;
       D_CLK     : IN     std_logic;
       EMPTY0    : IN     std_logic;
-      EMPTY1    : IN     std_logic;
+      --EMPTY1    : IN     std_logic;
       EOP       : IN     std_logic;
       FULL0     : IN     std_logic;
       FULL1     : IN     std_logic;
@@ -312,8 +312,8 @@ BEGIN
          R_ENABLE0 => R_ENABLE0,
          EMPTY0    => EMPTY1,
          FULL0     => FULL1,
-         FULL1     => FULL_internal,
-         EMPTY1    => EMPTY_internal
+         FULL1     => FULL_internal
+         --EMPTY1    => EMPTY_internal
       );
    U_4 : U_RCU
       PORT MAP (

@@ -97,7 +97,10 @@ architecture behavioral of U_RCU is
 				end if;
 			  if(shift_ctr = 8) then nextstate <= WRITE;
 				--elsif(STUFF_ERROR = '1') then nextstate <= SERROR;
-			  elsif (eop = '1') then nextstate <= EIDLE;
+			  elsif (eop = '1') then 
+					if(shift_ctr = 0) then nextstate <= CRCCHK;
+					else	nextstate <= EIDLE;
+					end if;
 			  else nextstate <= RCVDATA1;
 			    --if (shift_enable = '1') then shift_ctr := shift_ctr + 1;
 			    --end if;

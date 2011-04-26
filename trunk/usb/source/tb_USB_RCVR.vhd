@@ -33,7 +33,7 @@ architecture TEST of tb_USB_RCVR is
     end loop;
     return res;
   end;
-	function NRZIencode(DATA: std_logic_vector; Prevbit: std_logic)
+	function NRZIencode(DATA: std_logic_vector(7 downto 0); Prevbit: std_logic)
 		return	STD_LOGIC_VECTOR is
 		variable encoded: std_logic_vector(7 downto 0) := "00000000";
 	begin
@@ -45,7 +45,7 @@ architecture TEST of tb_USB_RCVR is
 			else encoded(I) := not(encoded(I-1));
 			end if;
 		end loop;
-		return encoded;
+		return encoded(7 downto 0);
 	end;
 
   component USB_RCVR
@@ -74,7 +74,9 @@ architecture TEST of tb_USB_RCVR is
   signal R_DATA : std_logic_vector (7 DOWNTO 0);
   signal r_error : std_logic;
   signal rcving : std_logic;
-	signal testvector	:	std_logic_vector(7 downto 0);
+	signal testvector	:	std_logic_vector(7 downto 0);		
+	signal CRC	:	std_logic_vector(15 downto 0);
+	signal testdata	:	std_logic_vector(63 downto 0);
 	
 
 	procedure outputdata(
@@ -95,8 +97,48 @@ architecture TEST of tb_USB_RCVR is
 			--edge <= '0';
 			--wait for 6*period;
 		end loop;
-	END PROCEDURE outputdata; 
+	END PROCEDURE outputdata;
 
+	procedure outputpacket(
+		constant data : in std_logic_vector(63 downto 0);
+		constant CRC	: in std_logic_vector(15 downto 0);
+		signal	DPLUS	:	inout std_logic;
+		signal	DMINUS	:	inout	std_logic;
+		signal	testvector1	:	inout	std_logic_vector(7 downto 0)) 
+		is
+		variable tmpbyte : std_logic_vector(7 downto 0);
+		variable revData	:	std_logic_vector(63 downto 0);
+		variable revCRC	:	std_logic_vector(15 downto 0); 
+		begin
+			for I in 0 to 63 loop
+				revData(I) := data(63-I);
+			end loop;
+			for I in 0 to 15 loop
+				revCRC(I) := CRC(15 - I);	
+			end loop;
+			tmpbyte := NRZIencode("10000000", '1');--SYNC Byte;
+			testvector1 <= tmpbyte;
+			wait for Period2;
+			outputdata(tmpbyte, Period2*8, DPLUS, DMINUS);
+			tmpbyte := NRZIencode("11000011",tmpbyte(7));
+			testvector1 <= tmpbyte;
+			outputdata(tmpbyte,Period2*8,DPLUS,DMINUS);
+			for I in 1 to 8 loop
+				tmpbyte := NRZIencode(revData((8*I - 1) downto (8*I-8)),tmpbyte(7));
+				testvector1 <= tmpbyte;
+				outputdata(tmpbyte, Period2*8, DPLUS, DMINUS);
+			end loop;
+			tmpbyte := NRZIencode(revCRC(7 downto 0), tmpbyte(7));
+			testvector1 <= tmpbyte;
+			outputdata(tmpbyte,Period2*8,DPLUS,DMINUS); 
+			tmpbyte := NRZIencode(revCRC(15 downto 8), tmpbyte(7));
+			testvector1 <= tmpbyte;
+			outputdata(tmpbyte,Period2*8,DPLUS,DMINUS);
+			DPLUS <= '0';
+			DMINUS <= '0';
+
+
+		END PROCEDURE outputpacket;
 -- signal <name> : <type>;
 
 begin
@@ -132,7 +174,9 @@ process
   begin
 
 -- Insert TEST BENCH Code Here
-
+		testdata <= "00000000" & "10000000" & "01000000" & "11000000" & "11000100" & "10100010" & "11100110" & "10010001";
+		CRC <= "1101100010001000";
+		
     D_MINUS <= '0';
 
     D_PLUS <= '1';
@@ -145,31 +189,20 @@ process
     RST <= '1';
     wait for Period2*8;
     RST <= '0';
-		--wait for Period2*8;
-		--D_PLUS <= '0';
-		--D_MINUS <= '1';
-		--wait for Period2*8;
-		--TestByte := NRZIencode("10000000",'1');
-		--for I in 0 to 7 loop
-		--	D_PLUS <= TestByte(I);
-		--	D_MINUS <= not(TestByte(I));
-		--	wait for Period2*8;
-		--end loop;
-    outputdata(NRZIencode(SYNC,'1'),Period2*8,D_PLUS,D_MINUS);
-    outputdata(NRZIencode(DATA1,'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("01011100",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("10101001",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("01011100",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("10010101",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("00001111",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("11001101",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("00000000",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("11101000",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("10010000",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("11010100",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("11110110",'0'),Period2*8,D_PLUS,D_MINUS);
-		D_PLUS <= '0';
-		D_MINUS <= '0';
+		wait for Period2*8;
+    RST <= '1';
+    wait for Period2*8;
+    RST <= '0';
+		wait for Period2;
+		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+		for I in 0 to 7 loop
+		R_ENABLE <= '1';
+		wait for Period;
+		R_ENABLE <= '0';
+		wait for Period2*8;
+		end loop;
+		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
+
 		wait;
   end process;
 end TEST;
