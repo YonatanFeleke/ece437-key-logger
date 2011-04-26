@@ -36,26 +36,27 @@ architecture b_cont of B_Controller IS
 		signal 	cnt4,ncnt4									:			integer range 0 to 5;
 		signal 	cnt2,ncnt2									:			integer range 0 to 2; -- ADJUST TO INCREASE ENABLE strobe cyc length
 		signal 	nbluewait,bluewait					: 		integer range 0 to WAITBAK +1;
+		signal 	edge												: 		std_logic;
 
 	begin
 		contstates : process (RST,CLK) 
-		variable	 prev												:			std_logic;-- EDGE detect variable
-		variable	 edge												:			std_logic;-- EDGE detect variable
+--		variable	 prev												:			std_logic;-- EDGE detect variable
+--		variable	 edge												:			std_logic;-- EDGE detect variable
 			begin
 				if ( RST = '1') then
 					state <= idle;
 					cnt4 <= 0;
 					cnt2 <= 0;
 					bluewait <= 0;
-					prev := '0';
-					edge := '0';
+--					prev := '0';
+--					edge := '0';
 				elsif (rising_edge(clk)) then
 					state <= nstate;
 					cnt4	<= ncnt4;
 					bluewait <= nbluewait;
 					cnt2 <= ncnt2;	
-					edge := (ANT_LIN xor prev);
-					prev := ANT_LIN;
+--					edge := (ANT_LIN xor prev);
+--					prev := ANT_LIN;
 				--RESYNC ON EVERY EDGE; throws 1/3 tolerance
 					if (edge = '1') then 
 						bluewait <= 0;
@@ -214,6 +215,19 @@ architecture b_cont of B_Controller IS
 				if ( RST = '1') then latch_not_empty <= '0';-- LATCH 
 					elsif ( EMPTY = '0') then latch_not_empty <= '1'; -- nvr goes to zero
 				end if ;
-			end process outlogic;
+			end process outlogic;	
 --________________________________________________			
+    EDGElogic: Process(clk, RST)
+    variable prev		: std_logic;
+		begin			
+			if (RST = '1') then
+					prev := ANT_LIN;
+					edge <= '0';			
+			else
+					if ((ANT_LIN xor prev ) = '1') then 	edge <= '1'; end if;
+					if ( bluewait = 0) then edge <= '0'; end if; -- edge is turned off when bluewait is changed
+					prev := ANT_LIN;	
+			end if;
+		end process EDGElogic;			
+--_________________________________________________
 end b_cont;
