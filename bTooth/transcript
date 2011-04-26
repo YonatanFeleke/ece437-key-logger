@@ -18,3 +18,13 @@ vcom source/bToothTop.vhd
 # -- Compiling entity btoothtop
 # -- Loading package std_logic_unsigned
 # -- Compiling architecture struct of btoothtop
+rm -rf work
+vlib work
+vcom source/bToothTOP2.vhd
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity btoothtop
+# -- Loading package std_logic_unsigned
+# -- Compiling architecture struct of btoothtop
