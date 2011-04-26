@@ -38,61 +38,109 @@ architecture b_strip of B_StripPayload is
           EMPTY						:		OUT std_logic;
           FULL						:		OUT std_logic); -- 
 	end component;	
-	type	 	state_type is	(idle,found01,found010,wait4zero,calnewcrc,storefifo,oldcrc,seterr);
-	signal	state,nstate,resynstate			: 		state_type;
-	signal cnt8													:		integer range 0 to 8;
-	signal cnt16												:		integer range 0 to 16;
-	signal cnt32												:		integer range 0 to 32;
+	type	 	state_type is	(idle,found01,found010,wait4zero,storefifo,calcnewcrc,oldcrc,seterr);
+	signal	state,nstate								: 		state_type;
+	signal cnt8,ncnt8										:		integer range 0 to 8;
+	signal cnt16 ,ncnt16								:		integer range 0 to 16;
+	signal cnt32, ncnt32								:		integer range 0 to 32;
 	signal cnt658												:		integer range 0 to WAITBIT; 
 	signal fstzero,	middata, currbit		: 	std_logic;
-	signal errval		: 	std_logic;
+	signal errval												: 	std_logic;
+	signal newcrc												:		std_logic_vector (16 downto 0); -- init 0000000011011001
 	-- FIFO signals
-	signal storbe_fifo, sramfull				: 	std_logic;
-	signal fifobus											: 	std _logic_vector ( 7 downto 0);
+	signal strobefifo, fifofull				: 	std_logic;
+	signal fifobus											: 	std_logic_vector ( 7 downto 0);
 	begin	
+	
+	
+	--_______________________________________________________________________
 	statelogic :process (CLK,RST)
 --		variable	 prev												:			std_logic;-- EDGE detect variable
+					-- Maybe add a synchronizer fo cnt658
+							--if ((prev xor currbit) = '1' ) then cnt658 <= 0;	end if;
+							--prev : = currbit;
 		begin
 				if ( RST = '1') then
 					state <= idle;
 					cnt8 <= 0;
 					cnt16 <= 0;
+					cnt32 <= 0;
 					cnt658 <= 0;
+					errval <= '0';
+					fstzero <= '0';
+					middata <= '0';
+					currbit <= '0';
 				elsif (rising_edge(clk)) then
 					state <= state;
 					cnt658 <= cnt658 + 1;					
 					if ( cnt658 = WAITBIT/2 ) then middata <= '1';
 					elsif (cnt658 = WAITBIT) then cnt658 <= 0; 					
 					else middata <= '0';  
-					-- Maybe add a synchronizer fo cnt658
-							--if ((prev xor currbit) = '1' ) then cnt658 <= 0;	end if;
-							--prev : = currbit;
 					end if; -- cnt 658
 					if ( cnt658 = 0) then 
 							state<= nstate; -- if implemented no need for nnstate and a fin state			
 							cnt8 <= ncnt8;
 							cnt16 <= ncnt16;
+							cnt32 <= ncnt32;
 					end if;-- cnt658 = 0 a clock divider
 				end if;
 		end process statelogic;
+--_____________________________________________--		
 	outputlogic : process (state)
-		if (state = seterr) then
-				
-			
+	begin
+			REPLY_EN <= '0';
+			if ( RSt = '1') then 
+					ERR <= '0';
+			elsif (state = seterr) then 
+						ERR <= errval;
+					 	REPLY_EN <= '1';
+			end if;
+		end process outputlogic;
+	
+	nextstatelogic : process(CLK, RST, middata)
+	begin
+		case state is
+		--IDLE_______________________________________-	
+						when idle =>
+								nstate <= found01;
+								ncnt8 <= 0;
+								ncnt16 <= 0;
+								ncnt32 <= 0;
+															
+		--found01______________________________________-	
+ 						when found01 =>
+ 								nstate <= found010;		 							
+		--found010_________________________________________-								
+						when found010=> 
+								nstate <= wait4zero;
+															
+		--wait4zero________________________________________	 									
+						when wait4zero=>
+								nstate <= calcnewcrc;
 
-
+		--STOREFIFO________________________________________	 														
+						when storefifo=>-- 7 bits work = command recieved to do either
+								nstate <= oldcrc;
+		--CALCNEWCRC_________________________________________	 									
+						when calcnewcrc=>
+								nstate <= storefifo;	
+		--OLDCRC______________________________________	 														
+					when oldcrc=>-- wait for NEXTEN to be asserted before sending the next val
+								nstate <= seterr;
+		--SETERR________________________________________	 														
+					when seterr=>				
+								nstate <= idle;
+				end case;
+	end process nextstatelogic;
 --___________________________________________________________________________________________
 		wrapper: Fifo port map(
   	      RCLK 		=> 	CLK,
           WCLK		=> 	CLK,  -- problem >> was wclk and rclk>>>>>>???????
 					RST_N  	=> 	RST,
          	RENABLE => 	READ_EN,
-         	WENABLE	=> 	strobe_sram,  -- used!
+         	WENABLE	=> 	strobefifo,  -- used!
          	WDATA		=> 	fifobus,			-- used
          	RDATA		=> 	DATAOUT,
          	EMPTY		=> 	EMPTY,
-         	FULL		=> 	sramfull);  -- NOT A USED SIGNAL         				
+         	FULL		=> 	fifofull);  -- NOT A USED SIGNAL         				
 end b_strip;
-
-
-idle,found01,found010,wait4zero,calnewcrc,storefifo,oldcrc,seterr);
