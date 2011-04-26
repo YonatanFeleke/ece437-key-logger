@@ -4,4 +4,4 @@ vcom mapped/USB_RCVR.vhd
 vcom source/tb_USB_RCVR.vhd
 vsim -i work.tb_usb_rcvr
 add wave -r /*
-run 8000 ns
+run 20000 ns
