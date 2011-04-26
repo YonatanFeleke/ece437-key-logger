@@ -108,7 +108,7 @@ end process;
 
 process
 	variable test_byte	: std_logic_vector(7 downto 0) := "00101010";
-	variable sync_byte	:	std_logic_vector(7 downto 0) := "00101010";
+	variable sync_byte	:	std_logic_vector(7 downto 0) := "00101010";           
   begin
 
 -- Insert TEST BENCH Code Here

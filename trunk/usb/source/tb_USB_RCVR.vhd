@@ -164,7 +164,12 @@ process
 		outputdata(NRZIencode("00001111",'0'),Period2*8,D_PLUS,D_MINUS);
 		outputdata(NRZIencode("11001101",'0'),Period2*8,D_PLUS,D_MINUS);
 		outputdata(NRZIencode("00000000",'0'),Period2*8,D_PLUS,D_MINUS);
-		outputdata(NRZIencode("11110000",'0'),Period2*8,D_PLUS,D_MINUS);
+		outputdata(NRZIencode("11101000",'0'),Period2*8,D_PLUS,D_MINUS);
+		outputdata(NRZIencode("10010000",'0'),Period2*8,D_PLUS,D_MINUS);
+		outputdata(NRZIencode("11010100",'0'),Period2*8,D_PLUS,D_MINUS);
+		outputdata(NRZIencode("11110110",'0'),Period2*8,D_PLUS,D_MINUS);
+		D_PLUS <= '0';
+		D_MINUS <= '0';
 		wait;
   end process;
 end TEST;

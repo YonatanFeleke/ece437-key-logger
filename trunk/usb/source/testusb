@@ -1,4 +1,4 @@
-rm -rf work
+vdel -all -lib work
 vlib work
 vcom source/U_CLKDIV.vhd
 vcom source/U_TIMER.vhd
@@ -10,11 +10,50 @@ vcom source/U_DECODE.vhd
 vcom source/USB_SHIFT.vhd
 vcom source/U_CRC.vhd
 vcom source/U_BUFFER.vhd
+vcom source/U_FCU.vhd
 vcom source/USB_RCVR.vhd
 #vcom mapped/USB_RCVR.vhd
 vcom source/tb_USB_RCVR.vhd
 vsim -i work.tb_usb_rcvr
 #add wave *
-add wave -r /*
+#add wave -r /*
+add wave \
+{sim:/tb_usb_rcvr/clk } \
+{sim:/tb_usb_rcvr/d_minus } \
+{sim:/tb_usb_rcvr/d_plus } \
+{sim:/tb_usb_rcvr/rst } \
+{sim:/tb_usb_rcvr/r_enable } \
+{sim:/tb_usb_rcvr/empty } \
+{sim:/tb_usb_rcvr/full } \
+{sim:/tb_usb_rcvr/r_data } \
+{sim:/tb_usb_rcvr/r_error } \
+{sim:/tb_usb_rcvr/rcving } 
+add wave \
+{sim:/tb_usb_rcvr/dut/u_5/wdata } \
+{sim:/tb_usb_rcvr/dut/u_5/r_data } 
+add wave \
+{sim:/tb_usb_rcvr/dut/u_11/wdata } \
+{sim:/tb_usb_rcvr/dut/u_11/r_data } 
+add wave \
+{sim:/tb_usb_rcvr/dut/u_12/state } \
+{sim:/tb_usb_rcvr/dut/u_12/nextstate } 
+add wave \
+{sim:/tb_usb_rcvr/dut/crc_error } 
+add wave \
+{sim:/tb_usb_rcvr/dut/eop } 
+add wave \
+{sim:/tb_usb_rcvr/dut/empty1 } \
+{sim:/tb_usb_rcvr/dut/full1 } 
+add wave \
+{sim:/tb_usb_rcvr/dut/empty_internal } \
+{sim:/tb_usb_rcvr/dut/full_internal } 
+add wave \
+{sim:/tb_usb_rcvr/dut/r_error_internal } 
+add wave \
+{sim:/tb_usb_rcvr/dut/d_clk } 
+add wave \
+{sim:/tb_usb_rcvr/dut/w_enable1 } 
+add wave \
+{sim:/tb_usb_rcvr/dut/r_enable0 } 
 run 8000 ns
 

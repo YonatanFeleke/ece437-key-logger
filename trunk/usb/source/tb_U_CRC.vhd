@@ -35,7 +35,7 @@ architecture TEST of tb_U_CRC is
 
   component U_CRC
     PORT(
-         CLK : in std_logic;
+         D_CLK : in std_logic;
          RST_N : in std_logic;
          CRC_SHIFT : in std_logic;
          D_ORIG : in std_logic;
@@ -45,7 +45,7 @@ architecture TEST of tb_U_CRC is
   end component;
 
 -- Insert signals Declarations here
-  signal CLK : std_logic;
+  signal D_CLK : std_logic;
   signal RST_N : std_logic;
   signal CRC_SHIFT : std_logic;
   signal D_ORIG : std_logic;
@@ -60,12 +60,12 @@ CLKGEN: process
   variable clk_tmp: std_logic := '0';
 begin
   clk_tmp := not clk_tmp;
-  clk <= clk_tmp;
+  D_clk <= clk_tmp;
   wait for Period/2;
 end process;
 
   DUT: U_CRC port map(
-                CLK => CLK,
+                D_CLK => D_CLK,
                 RST_N => RST_N,
                 CRC_SHIFT => CRC_SHIFT,
                 D_ORIG => D_ORIG,

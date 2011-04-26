@@ -1,0 +1,8 @@
+rm -rf work
+vlib work
+#vcom source/U_FCU.vhd
+vcom mapped/U_FCU.vhd
+vcom source/tb_U_FCU.vhd
+vsim -i work.tb_u_fcu
+add wave -r /*
+run 1000 ns
