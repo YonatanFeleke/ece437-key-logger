@@ -62,6 +62,7 @@ architecture behavioral of U_FCU is
 				end if;
 			when WENABLE =>
 				if(FULL1 = '0') then nextstate <= RENABLE;
+				elsif (EMPTY0 = '1') then nextstate <= EOPWAIT;
 				else nextstate <= WWAIT;
 				end if;
 			when RENABLE =>

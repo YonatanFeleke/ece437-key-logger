@@ -46,6 +46,7 @@ architecture behavioral of U_FCU is
 
 		nextstatelogic	:	process(STATE, EOP, R_ERROR, EMPTY0, FULL1, CTR, FULL0, CRC_ERROR)
 		begin
+			nextstate <= idle;
 			case state is
 			when IDLE =>
 				if(R_ERROR = '1' or (FULL0 = '1' and EOP = '0')) then nextstate <= DUMP;
