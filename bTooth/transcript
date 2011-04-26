@@ -276,3 +276,50 @@ vcom source/B_StripPayload.vhd
 # -- Loading package std_logic_1164
 # -- Compiling entity b_strippayload
 # -- Compiling architecture b_strip of b_strippayload
+do d/epm
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_b_encodepacket
+# -- Loading package conv_pack_b_encodepacket
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture syn_b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# Loading work.conv_pack_b_encodepacket
+# Loading work.b_encodepacket(syn_b_edata)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 669897 ns  Iteration: 0  Instance: /tb_b_encodepacket
