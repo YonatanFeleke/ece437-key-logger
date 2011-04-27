@@ -10,16 +10,17 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 ENTITY B_UAT IS
-		generic (WAITSRAM : natural := 24; -- wait for 24 cycles before data is present after strobe??
-						 WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS DOESN'T HAVE LAG CLKS.
+		generic (WAITSRAM : natural := 10;
 						 -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en 1 clk Strobe
+						 WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS DOESN'T HAVE LAG CLKS.
+
     port	(
     		 		CLK 						: in std_logic;
          		RST 						: in std_logic;
          		ACCESS_CODE			: in std_logic_vector(71 downto 0);
          		HEADER 					: in std_logic_vector(53 downto 0);
          		PAYLOAD 				: in std_logic_vector(7 downto 0);
-	         	TRAN_EN		 			: in std_logic; -- 1 CLK cycle clk to start transmit 126 bits
+	         	TRANS_EN		 			: in std_logic; -- 1 CLK cycle clk to start transmit 126 bits
 	         	ESTORE_EN				: in std_logic; -- 1 CLK strobe for 8 bit data
 	         	ANT_LOUT 				: OUT std_logic); -- LEFT ANTENNA OUTPUT
 END B_UAT;
@@ -34,7 +35,7 @@ architecture b_serialtx of B_UAT is
 	signal cnt8,nxtcnt8: std_logic_vector(3 downto 0);
 	signal cnt128,nxtcnt128: std_logic_vector(7 downto 0);
 	signal nxtANT: std_logic;
-	signal tHeader: std_logic_vector(127 downto 0);
+	signal tHeader: std_logic_vector(127 downto 0);  -- possibility of removing this
 	signal pLoad: std_logic_vector(7 downto 0);
 begin
 		
@@ -50,11 +51,11 @@ begin
   end process state_reg;
   --__________________________________
   
-  nxt_state: process(state,TRAN_EN,cnt128,ESTORE_EN,bitstate,cnt34,cnt658)
+  nxt_state: process(state,TRANS_EN,cnt128,ESTORE_EN,bitstate,cnt34,cnt658)
   begin   
   case state is 
   	when idle => 
-  		if (TRAN_EN = '1') then
+  		if (TRANS_EN = '1') then
   			nxtstate <= sendHA;
   		else
   			nxtstate <= idle;
@@ -64,29 +65,27 @@ begin
   			nxtstate <= eStoreidle;
   		else
   			nxtstate <= sendHA;
+  		end if;-- count 128 bits
+  		if(cnt658 = "1010010010") then
+  			nxtcnt658 <= "0000000000";
+  		else -- wait 658 clk cycles
+  			nxtcnt658 <= cnt658 + "0000000001";
   		end if;
-  			if(cnt658 = "1010010010") then
-  				nxtcnt658 <= "0000000000";
-  			else
-  				nxtcnt658 <= cnt658 + "0000000001";
-  			end if;
-  			--nxtcnt658 <= "0000000001" + "0000000001";
-	  		nxtcnt128 <= cnt128 + "0000001";		
+	  	nxtcnt128 <= cnt128 + "0000001";		
 		when eStoreidle =>
 			if(ESTORE_EN = '1') then			
 				nxtstate <= sendEight;  			
-  		else
+  		else-- transmit 8 if enabled
   			nxtstate <= eStoreidle;  		
-  		end if;  	
+  		end if;-- wait for ESTORE_EN
   	when sendEight =>
   		if(cnt658 = "1010010010") then
   			nxtcnt658 <= "0000000000";
   		else
   			nxtcnt658 <= cnt658 + "0000000001";
-  		end if;  		
-  		nxtcnt34 <= cnt34 + "000001";
+  		end if;-- wait 658 cycles before sendign bit
+  		nxtcnt34 <= cnt34 + "000001"; -- 32 data + 16 crc
   		nxtcnt8 <= cnt8 + "001";
-
 			if(cnt8 = "1000") then
 				nxtstate <= eStoreidle;
 			else
@@ -94,8 +93,8 @@ begin
 					nxtstate <= idle;
 				else
 					nxtstate <= sendEight;
-				end if;
-			end if;
+				end if;-- chk if all sent else send next
+			end if; -- reloop 8 times for 8 bits in pload
   	end case;  
   end process nxt_state;
 --_______________________________________________    

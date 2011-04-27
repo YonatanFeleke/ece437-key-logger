@@ -1,4 +1,4 @@
--- VHDL Entity My_lib.bToothTop.symbol
+-- VHDL Entity My_lib.B_TopLevelTop.symbol
 --
 -- Created:
 --          by - mg31.bin (ecelinux25.ecn.purdue.edu)
@@ -10,12 +10,12 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-ENTITY bToothTop IS
+ENTITY B_TopLevel IS
    PORT( 
       CLK        : IN     std_logic;
       DATA       : IN     std_logic_vector (7 DOWNTO 0);
       EMPTY      : IN     std_logic;
-      READ_EN1   : IN     std_logic;
+      R_ENABLE   : IN     std_logic;
       RST        : IN     std_logic;
       DATAOUT    : OUT    std_logic_vector ( 7 DOWNTO 0);
       EMPTY_SRAM : OUT    std_logic;
@@ -25,10 +25,10 @@ ENTITY bToothTop IS
 
 -- Declarations
 
-END bToothTop ;
+END B_TopLevel ;
 
 --
--- VHDL Architecture My_lib.bToothTop.struct
+-- VHDL Architecture My_lib.B_TopLevelTop.struct
 --
 -- Created:
 --          by - mg31.bin (ecelinux25.ecn.purdue.edu)
@@ -43,13 +43,13 @@ USE ieee.std_logic_unsigned.all;
 
 --LIBRARY My_lib;
 
-ARCHITECTURE struct OF bToothTop IS
+ARCHITECTURE struct OF B_TopLevel IS
 
    -- Architecture declarations
 
    -- Internal signal declarations
    SIGNAL ACESS_CODE : std_logic_vector(71 DOWNTO 0);
-   SIGNAL ANTINR     : std_logic;
+   SIGNAL ANT_INR     : std_logic;
    SIGNAL DATAOUT1   : std_logic;
    SIGNAL ENCODE_EN  : std_logic;
    SIGNAL ERR        : std_logic;
@@ -60,7 +60,7 @@ ARCHITECTURE struct OF bToothTop IS
    SIGNAL PAYLOAD    : std_logic_vector(7 DOWNTO 0);
    SIGNAL REPLY_EN   : std_logic;
    SIGNAL TRANS_EN   : std_logic;
-   SIGNAL TRANS_EN1  : std_logic;
+   SIGNAL BLUE_EN  : std_logic;
 
 
    -- Component Declarations
@@ -68,19 +68,16 @@ ARCHITECTURE struct OF bToothTop IS
    PORT (
       CLK        : IN     std_logic;
       RST        : IN     std_logic;
-      TRANS_EN   : IN     std_logic;
+      BLUE_EN   : IN     std_logic;
       ACESS_CODE : OUT    std_logic_vector (71 DOWNTO 0);
       HEADER_EN  : OUT    std_logic
    );
    END COMPONENT;
    COMPONENT B_Controller
    GENERIC (
-      WAITSRAM : natural := 24;        -- wait for 24 cycles before data is present
-      WAITREG  : natural := 5264;      -- Transmit wait time. FIX THIS for LAG
-      --						WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
-      --						WAITBAK/2	: natural := 2435 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
-      --					 	WAITBAK/2	: natural := 24 ;
-      WAITBAK  : natural := 49
+      WAITSRAM  : natural := 10;        -- wait for 10>8 cycles before data is present
+      WAITREG   : natural := 5264;      -- Transmit wait time. FIX THIS for LAG
+      WAITBAK   : natural := 4869 -- back transmit 57.6 kb/s or 4869 cycles/bit
    );
    PORT (
       ANT_LIN   : IN     std_logic;
@@ -89,13 +86,13 @@ ARCHITECTURE struct OF bToothTop IS
       NEXT_EN   : IN     std_logic;
       RST       : IN     std_logic;
       RESEND_EN : OUT    std_logic;
-      TRANS_EN  : OUT    std_logic
+      BLUE_EN  : OUT    std_logic
    );
    END COMPONENT;
    COMPONENT B_EncodePacket
    GENERIC (
       STROBCYC : natural := 15;      -- MUST NOT EXCEED WAITREG!!!!!!!!
-      WAITSRAM : natural := 24;      -- wait for 24 cycles before data is present after strobe??
+      WAITSRAM : natural := 10;      -- wait for 10 cycles before data is present after strobe??
       -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en strobcyc clks Strobe
       WAITREG  : natural := 5264
    );
@@ -125,7 +122,7 @@ ARCHITECTURE struct OF bToothTop IS
    END COMPONENT;
    COMPONENT B_NextPacket
    GENERIC (
-      WAITSRAM : natural := 24;        -- wait for 24 cycles before data is present
+      WAITSRAM : natural := 10;        -- wait for 10 cycles before data is present
       WAITREG  : natural := 5264;      -- Transmit wait time. FIX THIS for LAG
       WAITBAK  : natural := 4869
    );
@@ -134,18 +131,19 @@ ARCHITECTURE struct OF bToothTop IS
       ERR      : IN     std_logic;
       REPLY_EN : IN     std_logic;
       RST      : IN     std_logic;
-      DATAOUT  : OUT    std_logic
+      ANT_ROUT  : OUT    std_logic
    );
    END COMPONENT;
    COMPONENT B_StripPayload
    GENERIC (
-      WAITSRAM : natural := 24;      -- wait for 24 cycles before data is present
+      WAITSRAM 	: natural := 10;      -- wait for 10 cycles before data is present
+      WAITBIT		:	natural := 658;
       WAITREG  : natural := 5264
    );
    PORT (
-      ANTINR     : IN     std_logic;
+      ANT_INR    : IN     std_logic;
       CLK        : IN     std_logic;
-      READ_EN    : IN     std_logic;
+      R_ENABLE   : IN     std_logic;
       RST        : IN     std_logic;
       DATAOUT    : OUT    std_logic_vector ( 7 DOWNTO 0);
       EMPTY_SRAM : OUT    std_logic;
@@ -155,7 +153,7 @@ ARCHITECTURE struct OF bToothTop IS
    END COMPONENT;
    COMPONENT B_UAT
    GENERIC (
-      WAITSRAM : natural := 24;      -- wait for 24 cycles before data is present after strobe??
+      WAITSRAM : natural := 10;      -- wait for 10 >8 cycles before data is present after strobe
       WAITREG  : natural := 5264
    );
    PORT (
@@ -165,7 +163,7 @@ ARCHITECTURE struct OF bToothTop IS
       HEADER      : IN     std_logic_vector (53 DOWNTO 0);
       PAYLOAD     : IN     std_logic_vector (7 DOWNTO 0);
       RST         : IN     std_logic;
-      TRAN_EN     : IN     std_logic;
+      TRANS_EN     : IN     std_logic;
       ANT_LOUT    : OUT    std_logic
    );
    END COMPONENT;
@@ -185,22 +183,19 @@ ARCHITECTURE struct OF bToothTop IS
 BEGIN
 
    -- Instance port mappings.
-   U_0 : B_AppendAccessCode
+   Acode : B_AppendAccessCode
       PORT MAP (
          CLK        => CLK,
          RST        => RST,
-         TRANS_EN   => TRANS_EN,
+         BLUE_EN   => BLUE_EN,
          ACESS_CODE => ACESS_CODE,
          HEADER_EN  => HEADER_EN
       );
-   U_4 : B_Controller
+   cont : B_Controller
       GENERIC MAP (
-         WAITSRAM => 24,           -- wait for 24 cycles before data is present
-         WAITREG  => 5264,         -- Transmit wait time. FIX THIS for LAG
-         --						WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
-         --						WAITBAK/2	: natural := 2435 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
-         --					 	WAITBAK/2	: natural := 24 ;
-         WAITBAK  => 49
+         WAITSRAM => 10,           -- wait for 10 cycles before data is present
+         WAITREG  => 5264,         -- Transmit wait time. FIX THIS for LAG         
+         WAITBAK  => 4869					 --	WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
       )
       PORT MAP (
          CLK       => CLK,
@@ -209,12 +204,12 @@ BEGIN
          ANT_LIN   => DATAOUT1,
          EMPTY     => EMPTY,
          RESEND_EN => RESEND_EN,
-         TRANS_EN  => TRANS_EN
+         BLUE_EN  => BLUE_EN
       );
-   U_2 : B_EncodePacket
+   encode : B_EncodePacket
       GENERIC MAP (
          STROBCYC => 15,         -- MUST NOT EXCEED WAITREG!!!!!!!!
-         WAITSRAM => 24,         -- wait for 24 cycles before data is present after strobe??
+         WAITSRAM => 10,         -- wait for 10 cycles before data is present after strobe??
          -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en strobcyc clks Strobe
          WAITREG  => 5264
       )
@@ -228,7 +223,7 @@ BEGIN
          NEXT_EN   => NEXT_EN,
          READ_EN   => READ_EN
       );
-   U_1 : B_Header
+   hdr : B_Header
       GENERIC MAP (
          WAITREG => 5264
       )
@@ -237,12 +232,12 @@ BEGIN
          RST       => RST,
          HEADER_EN => HEADER_EN,
          HEADER    => HEADER,
-         TRANS_EN  => TRANS_EN1,
+         TRANS_EN  => TRANS_EN,
          ENCODE_EN => ENCODE_EN
       );
-   U_6 : B_NextPacket
+   nxtpkt : B_NextPacket
       GENERIC MAP (
-         WAITSRAM => 24,           -- wait for 24 cycles before data is present
+         WAITSRAM => 10,           -- wait for 10 > 8 cycles before data is present
          WAITREG  => 5264,         -- Transmit wait time. FIX THIS for LAG
          WAITBAK  => 4869
       )
@@ -251,26 +246,27 @@ BEGIN
          RST      => RST,
          REPLY_EN => REPLY_EN,
          ERR      => ERR,
-         DATAOUT  => DATAOUT1
+         ANT_ROUT  => DATAOUT1
       );
-   U_5 : B_StripPayload
+   strp : B_StripPayload
       GENERIC MAP (
-         WAITSRAM => 24,         -- wait for 24 cycles before data is present
-         WAITREG  => 5264
+         WAITSRAM => 10,         -- wait for 10 cycles before data is present
+         WAITREG  => 5264,
+         WAITBIT	=> 658
       )
       PORT MAP (
          CLK        => CLK,
          RST        => RST,
-         ANTINR     => ANTINR,
-         READ_EN    => READ_EN1,
+         ANT_INR     => ANT_INR,
+         R_ENABLE    => R_ENABLE,
          EMPTY_SRAM => EMPTY_SRAM,
          REPLY_EN   => REPLY_EN,
          ERR        => ERR,
          DATAOUT    => DATAOUT
       );
-   U_3 : B_UAT
+   uat : B_UAT
       GENERIC MAP (
-         WAITSRAM => 24,         -- wait for 24 cycles before data is present after strobe??
+         WAITSRAM => 10,         -- wait for 10 > 8 cycles before data is present after strobe??
          WAITREG  => 5264
       )
       PORT MAP (
@@ -279,9 +275,9 @@ BEGIN
          ACCESS_CODE => ACESS_CODE,
          HEADER      => HEADER,
          PAYLOAD     => PAYLOAD,
-         TRAN_EN     => TRANS_EN1,
+         TRANS_EN     => TRANS_EN,
          ESTORE_EN   => ESTORE_EN,
-         ANT_LOUT    => ANTINR
+         ANT_LOUT    => ANT_INR
       );
 
 END struct;

@@ -39,8 +39,8 @@ architecture TEST of tb_B_StripPayload is
     PORT(
     		 CLK : in std_logic;
          RST : in std_logic;
-         ANTINR : in std_logic;
-         READ_EN : in std_logic;
+         ANT_RIN : in std_logic;
+         R_ENABLE : in std_logic;
          EMPTY : OUT std_logic;
          REPLY_EN : OUT std_logic;
          ERR : OUT std_logic;
@@ -51,8 +51,8 @@ architecture TEST of tb_B_StripPayload is
 -- Insert signals Declarations here
   signal CLK : std_logic;
   signal RST : std_logic;
-  signal ANTINR : std_logic;
-  signal READ_EN : std_logic;
+  signal ANT_RIN : std_logic;
+  signal R_ENABLE : std_logic;
   signal EMPTY : std_logic;
   signal REPLY_EN : std_logic;
   signal ERR : std_logic;
@@ -62,8 +62,8 @@ architecture TEST of tb_B_StripPayload is
 	constant	test_cases : test_case_array := (	("01010000"),-- acode
 																							("01101110"), -- headers...x17
 																							("10101010"), -- data
-																							("11001010"), -- crc1
-																							("01100010")); -- crc2
+																							("11101100"), -- crc1
+																							("11100010")); -- crc2
 
 begin
 
@@ -78,8 +78,8 @@ begin
   DUT: B_StripPayload port map(
                 CLK => CLK,
                 RST => RST,
-                ANTINR => ANTINR,
-                READ_EN => READ_EN,
+                ANT_RIN => ANT_RIN,
+                R_ENABLE => R_ENABLE,
                 EMPTY => EMPTY,
                 REPLY_EN => REPLY_EN,
                 ERR => ERR,
@@ -93,55 +93,56 @@ data : process
 	    report "Access Code" severity NOTE; 
 	  	newsend := test_cases(0);
       for i in 7 downto 0 loop
-    	  	ANTINR	<= newsend(i);
+    	  	ANT_RIN	<= newsend(i);
 					wait for data_period;
 	    end loop;	    		
 	-- 136 bits of headers
     report "136 bits incoming headers" severity NOTE; 
-	  for j in 0 to 17 loop 
+	  for j in 1 to 17 loop -- 17 bytes of headers
 	  	newsend := test_cases(1);
       for i in 7 downto 0 loop
-    	  	ANTINR	<= newsend(i);
+    	  	ANT_RIN	<= newsend(i);
 					wait for data_period;
 	    end loop;
 
 	  end loop;	
    report "256 bits Data" severity NOTE; 
 	-- send data	  
- 	  for j in 0 to 32 loop --
+ 	  for j in 1 to 32 loop --
 	  	newsend := test_cases(2);
-      for i in 7 downto 0 loop
-    	  	ANTINR	<= newsend(i);
+      for i in 0 to 7 loop
+    	  	ANT_RIN	<= newsend(i);
 					wait for data_period;
 	    end loop;
 	  end loop;	
 	    report "CRC1 0- 7 incoming" severity NOTE; 
 	-- send crc 0-7  of 011001011001010
 	  	newsend := test_cases(3);
-      for i in 7 downto 0 loop
-    	  	ANTINR	<= newsend(i);
+      for i in 0 to 7 loop
+    	  	ANT_RIN	<= newsend(i);
 					wait for data_period;
 	    end loop;
 	-- send crc 15-8  of 011001011001010
 	    report "CRC2 15-8 incoming" severity NOTE; 
 	  	newsend := test_cases(4);
-      for i in 7 downto 0 loop
-    	  	ANTINR	<= newsend(i);
+      for i in 0 to 7 loop
+    	  	ANT_RIN	<= newsend(i);
 					wait for data_period;
 	    end loop;
-	    -- Total cycles 416bits*data_period + 10.5 = 
+	    -- Total cycles = 416bits*data_period + 10.5 = 
+      report "Packet transmission Done!" severity NOTE; 
 	    wait;
   end process data;
   
 signalprocess : process 
 	begin		
     RST <= '1';
-    READ_EN <= '0';
+    R_ENABLE <= '0';
     wait for 7 ns;
     RST <= '0';
-    READ_EN <= '0';
+    R_ENABLE <= '0';
     wait for 3.5 ns;
-    READ_EN <= '1';
+    R_ENABLE <= '1';
     wait;
   end process signalprocess;  
 end TEST;
