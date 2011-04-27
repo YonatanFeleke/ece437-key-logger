@@ -107,7 +107,7 @@ begin
   	case state is 
   		when idle =>
 	  		nxtANT <= '0';
-  			tHeader <= ACCESS_CODE & HEADER & "11";
+  			tHeader <=  HEADER & ACCESS_CODE & "01";
 	  		pload <= "00000000"; -- ADDED MAY CAUSE ISSUES
   		when sendHA => 
   				nxtANT <= tHEADER(0);

@@ -175,7 +175,6 @@ Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the 
 							nswcnt <= swcnt + 1;
 							nestore_en <= '0';
 							if (swcnt = 0) then
---							if (swcnt < STROBCYC) then
 								PAYLOAD <= lfsr( 7 downto 0);
 								nestore_en <= '1';
 							elsif ( swcnt = WAITREG) then
