@@ -12,11 +12,9 @@ USE IEEE.std_logic_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 ENTITY B_Controller IS
-		generic (	WAITSRAM : natural := 24; -- wait for 24 cycles before data is present
+		generic (	WAITSRAM : natural := 10; -- wait for 24 cycles before data is present
 							WAITREG	:	natural := 5264;-- Transmit wait time. FIX THIS for LAG
 --						WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
---						WAITBAK/2	: natural := 2435 ); -- back transmit 57.6 kb/s or 4869 cycles/bit
---					 	WAITBAK/2	: natural := 24 ; 
 						 	WAITBAK	: natural := 49 ); -- DEBUG! must be even!!!!!!!!!!!!
 						 	
 		port (	CLK 						:		in	std_logic;
@@ -25,7 +23,7 @@ ENTITY B_Controller IS
 						ANT_LIN					:		in 	std_logic;
 						EMPTY 					:		in 	std_logic;
 						RESEND_EN				:		OUT std_logic;
-						TRANS_EN				:		OUT std_logic);
+						BLUE_EN				:		OUT std_logic);
 END B_Controller;
 
 architecture b_cont of B_Controller IS
@@ -203,12 +201,12 @@ architecture b_cont of B_Controller IS
 		outlogic : process (RST,CLK, state) --0111_(1=ebit)010 => resend; if 01110101 => newsend			
 			begin	
 				RESEND_EN <= '0';
-				TRANS_EN	<= '0';
+				BLUE_EN	<= '0';
         if (state = pulse) then
  	        	RESEND_EN	<= ebit;-- empty doens't chagnge unless i get data ------->>>>>>>####
- 	        	TRANS_EN <= '1';
+ 	        	BLUE_EN <= '1';
           	if ( empty = '1' and ebit = '0') 
-          			then 	TRANS_EN	<= '0';------------->>>>>>>????          
+          			then 	BLUE_EN	<= '0';------------->>>>>>>????          
           						RESEND_EN	<= '0';
 	          end if;-- DON'T enable on first empty found but others okay
 				end if;

@@ -15,7 +15,7 @@ USE IEEE.std_logic_1164.ALL;
 ENTITY B_AppendAccessCode IS
 		port(		CLK 						:		in	std_logic;
 						RST							:		in	std_logic;
-						TRANS_EN					:		in	std_logic;
+						BLUE_EN					:		in	std_logic;
 						ACESS_CODE			:		OUT	std_logic_vector(71 downto 0);
 						HEADER_EN				:		OUT	std_logic);
 END B_AppendAccessCode;
@@ -29,7 +29,7 @@ architecture b_code of B_AppendAccessCode is
 			signal trailer		 	: std_logic_vector(3 downto 0);
 
 begin
-		assignprocess : process (CLK,RST,TRANS_EN)
+		assignprocess : process (CLK,RST,BLUE_EN)
 			begin
 				SYN <= "1110101101100110110001111110101101100110110001110000000000000000";
 				if ( SYN(0) = '1') then
@@ -44,13 +44,13 @@ begin
 				end if;
 		end process assignprocess;
 				
-outputcode : process (CLK,RST,TRANS_EN)	
+outputcode : process (CLK,RST,BLUE_EN)	
     begin 
       if ( RST = '1') then-- on reset what is the stop
 					ACESS_CODE <= "000000000000000000000000000000000000000000000000000000000000000000000000";	 
 					HEADER_EN <= '0';
       elsif ( rising_edge(clk)) then
-      		if (TRANS_EN = '1') then -- DON'T CARE ABOUT DORIG W/O SHIFT ENABLE
+      		if (BLUE_EN = '1') then -- DON'T CARE ABOUT DORIG W/O SHIFT ENABLE
       			ACESS_CODE <= trailer&SYN&preamble; -- Notice inverted because ACESS_CODE(0) = preamble
       			HEADER_EN <= '1';
   				else -- value indicating not valid via premable => check on sram accept that all are complements

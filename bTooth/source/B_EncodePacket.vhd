@@ -14,7 +14,7 @@ USE IEEE.std_logic_1164.ALL;
 ENTITY B_EncodePacket IS
 		generic (	
 							STROBCYC: natural := 15; -- MUST NOT EXCEED WAITREG!!!!!!!!
-							WAITSRAM : natural := 24; -- wait for 24 cycles before data is present after strobe??
+							WAITSRAM : natural := 10; -- wait for 10 cycles before data is present after strobe to sram >8
 						 -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en strobcyc clks Strobe
 						 	WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS DOESN'T HAVE LAG CLKS.							 
 --						 WAITREG	:	integer := 264 ); -- DEBUGGING PURPOSE
@@ -136,7 +136,7 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);
 										txwait := '0';
 									 	ncnt8 <= cnt8 + 1;
 									end if;
-								else -- calclulate the crc of the 8 bit data
+								else -- calclulate the crc of the 8 bit data !!looks
 									ncnt8 <= cnt8 + 1;
 									if (cnt8 = 8) then
 										ncnt8  <= 0;

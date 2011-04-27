@@ -37,7 +37,7 @@ architecture TEST of tb_B_AppendAccessCode is
     PORT(
          CLK : in std_logic;
          RST : in std_logic;
-         TRANS_EN : in std_logic;
+         BLUE_EN : in std_logic;
          ACESS_CODE : OUT std_logic_vector(71 downto 0);
          HEADER_EN : OUT std_logic
     );
@@ -46,7 +46,7 @@ architecture TEST of tb_B_AppendAccessCode is
 -- Insert signals Declarations here
   signal CLK : std_logic;
   signal RST : std_logic;
-  signal TRANS_EN : std_logic;
+  signal BLUE_EN : std_logic;
   signal ACESS_CODE : std_logic_vector(71 downto 0);
   signal HEADER_EN : std_logic;
 
@@ -65,7 +65,7 @@ end process;
   DUT: B_AppendAccessCode port map(
                 CLK => CLK,
                 RST => RST,
-                TRANS_EN => TRANS_EN,
+                BLUE_EN => BLUE_EN,
                 ACESS_CODE => ACESS_CODE,
                 HEADER_EN => HEADER_EN
                 );
@@ -76,20 +76,28 @@ process
 
   begin
 
--- Insert TEST BENCH Code Here    RST <=     TRANS_EN <= 
-
+-- Insert TEST BENCH Code Here    RST <=     BLUE_EN <= 
     RST <= '1';
-    TRANS_EN <=  '0';
-    wait for 7 ns;
+    BLUE_EN <=  '0';
+    wait for period;
     RST <= '0';
-    TRANS_EN <=  '1';
-    wait for 7 ns;
-    TRANS_EN <=  '0';
+    BLUE_EN <=  '0';
+    wait for period;
+    RST <= '1';
+    BLUE_EN <=  '0';
+    wait for period;
+    RST <= '0';
+    BLUE_EN <=  '0';
+    wait for period;
+    RST <= '0';
+    BLUE_EN <=  '1';
+    wait for 2*period;
+    BLUE_EN <=  '0';
     RST<= '0';
-    wait for 35 ns;
-    TRANS_EN <= '1';
-    wait for 7 ns;
-    TRANS_EN <= '0';
-
+    wait for 5*period;
+    BLUE_EN <=  '1';
+    wait for 2*period;
+    BLUE_EN <=  '0';    
+		wait;
   end process;
 end TEST;
