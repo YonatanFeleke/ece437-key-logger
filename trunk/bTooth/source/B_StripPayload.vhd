@@ -92,9 +92,11 @@ architecture b_strip of B_StripPayload is
 					fstzero <= '0';
 					middata <= '0';
 					prev := ANT_INR;
+--					DATAOUT <= "00000000";
 			elsif (rising_edge(clk)) then
 					state <= state;
-					cnt658 <= cnt658 + 1;					
+					cnt658 <= cnt658 + 1;
+					middata <= '0';					
 					if ( cnt658 = WAITBIT/2 ) then middata <= '1';
 					elsif (cnt658 = WAITBIT-1/2) then cnt658 <= 0; 					
 					elsif (not (prev = ANT_INR)) then cnt658 <= 0; 	
@@ -111,16 +113,18 @@ architecture b_strip of B_StripPayload is
 			end if;
 		end process statelogic;
 --_____________________________________________--		
-	outputlogic : process (state)
+	outputlogic : process (state, R_ENABLE) -- If error checking done <= err out and if idle ask for send
+
 	begin
 			REPLY_EN <= '0';
 			ERR <= '0';
 			if ( RSt = '1') then 
 					ERR <= '0';
-					REPLY_EN <= '0';
+					REPLY_EN <= '0';					
 			elsif (state = seterr) then 
 						ERR <= errval;
-					 	REPLY_EN <= '1';
+					 	REPLY_EN <= '1';			
+			elsif ( state = idle) then REPLY_EN <= '1';
 			end if;
 		end process outputlogic;
 
@@ -200,7 +204,8 @@ architecture b_strip of B_StripPayload is
 							end if;
 							edgelogic := middata;
 		--SKIP136_________________________________________	 									
-						when skip136=>	
+						when skip136=>
+				    report "Start Sequence Recognized skipping remaining header" severity NOTE; 	
 						if ( edgelogic = '0' and middata = '1') then 
 								cnt4 <= 0;
 								cnt136 <= cnt136 + 1;
@@ -250,11 +255,12 @@ architecture b_strip of B_StripPayload is
 				end if;
 				edgelogic := middata;										
 		--SETERR________________________________________	 														
-					when seterr=>				
+					when seterr=>
+						    report "Done with the data setting error and requesting next" severity NOTE; 					
 								nstate <= idle;
 				end case;
 				
-				
+--NOTMID________________________________________	 			
 			elsif (state = idle) then			
 --						ncnt8 <= 0;
 --						ncnt16 <= 0;
@@ -269,16 +275,16 @@ architecture b_strip of B_StripPayload is
 --						nstate <= state;
 						Data_in <= '0';
 						errval <= '0';
+						writebuff <= "00000000";		
 						newcrc <= "0000000011011001";
 						oldcrc <= "0000000011011001";
 						write_en <= '0'; --wen is it only one clk cycle
 						wdataport <= "00000000"; -- wdata		
-						-- NEXT_READY not here 			
 			elsif ( state= calcnewcrc) then
 						write_en <= '0';								
 						edgelogic := '0';		
 			else
-						edgelogic := '0';			
+						edgelogic := '0';
 			end if;
 	end process nextstatelogic;
     				
