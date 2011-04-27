@@ -55,6 +55,10 @@ begin
   begin   
   case state is 
   	when idle => 
+  		nxtcnt658 <= "0000000000";
+	 		nxtcnt128 <= "00000000";
+  		nxtcnt34 <=		"000000";
+  		nxtcnt8 <=  "0000";
   		if (TRANS_EN = '1') then
   			nxtstate <= sendHA;
   		else
@@ -104,20 +108,15 @@ begin
   		when idle =>
 	  		nxtANT <= '0';
   			tHeader <= ACCESS_CODE & HEADER & "11";
+	  		pload <= "00000000"; -- ADDED MAY CAUSE ISSUES
   		when sendHA => 
-  			--if (cnt658 ="0000000000") then
   				nxtANT <= tHEADER(0);
-	  		--end if;
   		when eStoreidle =>
   			nxtANT <= '0';
   			pLoad <= PAYLOAD;
   		when sendEight =>
-  			--if(cnt658 = "0000000000") then
-  				nxtANT <= pLOAD(0);  			
-	  		--end if;		
-  	end case;
-  		
-  	
+  				nxtANT <= pLOAD(0);
+  	end case;  	
   	if (RST = '1') then
   		ANT_LOUT <= '1';
 		  cnt658 <= "0000000000";

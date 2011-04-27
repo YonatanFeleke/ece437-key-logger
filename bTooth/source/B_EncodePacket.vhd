@@ -32,6 +32,7 @@ END B_EncodePacket;
 
 architecture b_edata of B_EncodePacket IS
 		signal length 			: 		std_logic_vector(8 downto 0);-- length is constant 256
+		signal latchdata		: 		std_logic_vector(7 downto 0);-- length is constant 256
 		signal LCH					: 		std_logic_vector(1 downto 0);-- hardcoded to be 11 always set flow =1 
 		signal flowBIT			: 		std_logic; -- resend reply not imlemented 
 		signal lfsr					: 		std_logic_vector( 15 downto 0);
@@ -72,11 +73,10 @@ begin
 				end if;
 			end process stateprocess;
 --_____________________________________________________________________--
-Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);				
+Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);		-- follows the data bus and gets the count bit		
 --_____________________________________________________________________---
 	statelogic : process (CLK,STATE)
 			variable txwait								: 		std_logic;
-			variable cnt2 								: 		std_logic;
 		begin
      		case state is 
 	 		--IDLE_________________________________________________________________     		
@@ -125,7 +125,7 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);
       				if (cnt32 = 0) then
       					nstate <= getdata; -- first request for data.    					
       				else
-     						PAYLOAD <= DATA;
+     						PAYLOAD <= DATA; -- possibly change to a generate>>!!!!!!!!!!!!!!!!!!
       					if (txwait = '1' ) then -- strobe and wait until 8 bits have been transmitted
       						nswcnt <= swcnt + 1;      						     				
       						if (swcnt = 0 ) then
@@ -155,11 +155,13 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);
       				nstate <= getdata;
 							nswcnt <= swcnt + 1;
 							ncnt32 <= cnt32;
+							nread_en <= '1';
 							if (swcnt = WAITSRAM) then 
 								nswcnt <= 0;
 								nstate <= calccrc;
-								txwait := '1';																															 -- new data got!
-								
+								txwait := '1';																						 -- new data got!
+								nread_en<= '0';
+								latchdata <= DATA;								
 							elsif (swcnt = 0 ) then 
 								nread_en <= '1';
 								ncnt32 <= cnt32 + 1;
