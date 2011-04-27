@@ -1,0 +1,332 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP3 for amd64 -- Jul 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# Step 1:  Read in the source file
+analyze -format vhdl -lib WORK {e_rndCount.vhd e_rkeyGen.vhd e_fiestel.vhd e_encController.vhd e_DeCompile.vhd RCV_FIFO.vhd ENCRYPTION.vhd}
+Running PRESTO HDLC
+-- Compiling Source File ./source/e_rndCount.vhd
+Compiling Entity Declaration E_RNDCOUNT
+Compiling Architecture BEHAV of E_RNDCOUNT
+Warning:  ./source/e_rndCount.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_rkeyGen.vhd
+Compiling Entity Declaration E_RKEYGEN
+Compiling Architecture BEHAV of E_RKEYGEN
+Warning:  ./source/e_rkeyGen.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_fiestel.vhd
+Compiling Entity Declaration E_FIESTEL
+Compiling Architecture BEHAV of E_FIESTEL
+Warning:  ./source/e_fiestel.vhd:25: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_encController.vhd
+Compiling Entity Declaration E_ENCCONTROLLER
+Compiling Architecture BEHAV of E_ENCCONTROLLER
+Warning:  ./source/e_encController.vhd:29: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_DeCompile.vhd
+Compiling Entity Declaration E_DECOMPILE
+Compiling Architecture BEHAV of E_DECOMPILE
+Warning:  ./source/e_DeCompile.vhd:23: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/RCV_FIFO.vhd
+Compiling Entity Declaration RCV_FIFO
+Compiling Architecture WRAPPER of RCV_FIFO
+Warning:  ./source/RCV_FIFO.vhd:32: The architecture wrapper has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/ENCRYPTION.vhd
+
+-------------------
+     2: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Package Declaration CONV_PACK_ENCRYPTION
+
+-------------------
+    13: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration READ_PTR
+Compiling Architecture SYN_RTL of READ_PTR
+
+-------------------
+    26: architecture SYN_rtl of read_ptr is
+                                         ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+   107: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+   107: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration WRITE_PTR
+Compiling Architecture SYN_RTL of WRITE_PTR
+
+-------------------
+   120: architecture SYN_rtl of write_ptr is
+                                          ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+   201: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+   201: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration READ_FIFO_CTRL
+Compiling Architecture SYN_RTL of READ_FIFO_CTRL
+
+-------------------
+   215: architecture SYN_rtl of read_fifo_ctrl is
+                                               ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+   317: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+   317: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration WRITE_FIFO_CTRL
+Compiling Architecture SYN_RTL of WRITE_FIFO_CTRL
+
+-------------------
+   332: architecture SYN_rtl of write_fifo_ctrl is
+                                                ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+   440: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+   440: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration FIFORAM
+Compiling Architecture SYN_RTL of FIFORAM
+
+-------------------
+   454: architecture SYN_rtl of fiforam is
+                                        ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+   969: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+   969: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration FIFO
+Compiling Architecture SYN_RTL of FIFO
+
+-------------------
+   983: architecture SYN_RTL of fifo is
+                                     ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  1041: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_RTL
+
+-------------------
+  1041: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration E_RNDCOUNT
+Compiling Architecture SYN_BEHAV of E_RNDCOUNT
+
+-------------------
+  1054: architecture SYN_behav of e_rndCount is
+                                             ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  1133: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_BEHAV
+
+-------------------
+  1133: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration E_RKEYGEN
+Compiling Architecture SYN_BEHAV of E_RKEYGEN
+
+-------------------
+  1146: architecture SYN_behav of e_rkeyGen is
+                                            ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  1352: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_BEHAV
+
+-------------------
+  1352: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration E_FIESTEL
+Compiling Architecture SYN_BEHAV of E_FIESTEL
+
+-------------------
+  1367: architecture SYN_behav of e_fiestel is
+                                            ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  3125: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_BEHAV
+
+-------------------
+  3125: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration E_ENCCONTROLLER
+Compiling Architecture SYN_BEHAV of E_ENCCONTROLLER
+
+-------------------
+  3139: architecture SYN_behav of e_encController is
+                                                  ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  3955: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_BEHAV
+
+-------------------
+  3955: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration E_DECOMPILE
+Compiling Architecture SYN_BEHAV of E_DECOMPILE
+
+-------------------
+  3969: architecture SYN_behav of e_DeCompile is
+                                              ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  4160: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_BEHAV
+
+-------------------
+  4160: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration RCV_FIFO
+Compiling Architecture SYN_PORTING of RCV_FIFO
+
+-------------------
+  4174: architecture SYN_porting of RCV_FIFO is
+                                             ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  4197: library IEEE,OSU_AMI05;
+        ^^^^^^^
+[Failure] End of compilation: error(s) in design unit SYN_PORTING
+
+-------------------
+  4197: library IEEE,OSU_AMI05;
+                     ^^^^^^^^^^
+[Warning] Library OSU_AMI05 not found
+Compiling Entity Declaration ENCRYPTION
+Compiling Architecture SYN_STRUCT of ENCRYPTION
+
+-------------------
+  4211: architecture SYN_struct of ENCRYPTION is
+                                              ^^
+[Error] Library OSU_AMI05 not found
+
+-------------------
+  4570: 
+        ^
+[Failure] End of compilation: error(s) in design unit SYN_STRUCT
+*** Presto compilation was unsuccessful. ***
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+0
+elaborate ENCRYPTION -arch "SYN_rtl" -lib WORK -update
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Error: Can't find the architecture 'ENCRYPTION(SYN_rtl)' in the library 'WORK'
+0
+uniquify
+Error: Current design is not defined. (UID-4)
+0
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Error: Current design is not defined. (UID-4)
+0
+# Step 4: Output reports
+current_design .
+Error: Can't find design '.'. (UID-109)
+Error: Current design is not defined. (UID-4)
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$current_design.rep
+report_area >> reports/$current_design.rep
+report_power -hier >> reports/$current_design.rep
+# Step 5: Output final VHDL and Verilog files
+write -format vhdl -hierarchy -output "mapped/$current_design.vhd"
+Error: No files or designs were specified. (UID-22)
+0
+write -format verilog -hierarchy -output "mapped/$current_design.v"
+Error: No files or designs were specified. (UID-22)
+0
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+Error: Current design is not defined. (UID-4)
+0
+exit
+
+Thank you...

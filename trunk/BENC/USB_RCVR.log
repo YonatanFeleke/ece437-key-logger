@@ -1,0 +1,679 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP3 for amd64 -- Jul 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# Step 1:  Read in the source file
+analyze -format vhdl -lib WORK {RCV_FIFO.vhd USB_SHIFT.vhd U_BUFFER.vhd U_CLKDIV.vhd U_CRC.vhd U_DECODE.vhd U_EDGE_DETECT.vhd U_EOP_DETECT.vhd U_FCU.vhd U_RCU.vhd U_TIMER.vhd USB_RCVR.vhd}
+Running PRESTO HDLC
+-- Compiling Source File ./source/RCV_FIFO.vhd
+Compiling Entity Declaration RCV_FIFO
+Compiling Architecture WRAPPER of RCV_FIFO
+Warning:  ./source/RCV_FIFO.vhd:32: The architecture wrapper has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/USB_SHIFT.vhd
+Compiling Entity Declaration USB_SHIFT
+Compiling Architecture BEHAVIORAL of USB_SHIFT
+Warning:  ./source/USB_SHIFT.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_BUFFER.vhd
+Compiling Entity Declaration U_BUFFER
+Compiling Architecture BUFFER16 of U_BUFFER
+Warning:  ./source/U_BUFFER.vhd:18: The architecture buffer16 has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_CLKDIV.vhd
+Compiling Entity Declaration U_CLKDIV
+Compiling Architecture CLOCKDIVIDER of U_CLKDIV
+Warning:  ./source/U_CLKDIV.vhd:23: The architecture clockdivider has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_CRC.vhd
+Compiling Entity Declaration U_CRC
+Compiling Architecture SIMPLE_SHIFT_REG of U_CRC
+Warning:  ./source/U_CRC.vhd:26: The architecture simple_shift_reg has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_DECODE.vhd
+Compiling Entity Declaration U_DECODE
+Compiling Architecture BEHAVIORAL of U_DECODE
+Warning:  ./source/U_DECODE.vhd:22: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_EDGE_DETECT.vhd
+Compiling Entity Declaration U_EDGE_DETECT
+Compiling Architecture BEHAVIORAL of U_EDGE_DETECT
+Warning:  ./source/U_EDGE_DETECT.vhd:20: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_EOP_DETECT.vhd
+Compiling Entity Declaration U_EOP_DETECT
+Compiling Architecture DATAFLOW of U_EOP_DETECT
+Warning:  ./source/U_EOP_DETECT.vhd:19: The architecture dataflow has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_FCU.vhd
+Compiling Entity Declaration U_FCU
+Compiling Architecture BEHAVIORAL of U_FCU
+Warning:  ./source/U_FCU.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_RCU.vhd
+Compiling Entity Declaration U_RCU
+Compiling Architecture BEHAVIORAL of U_RCU
+Warning:  ./source/U_RCU.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_TIMER.vhd
+Compiling Entity Declaration U_TIMER
+Compiling Architecture BEHAVIORAL of U_TIMER
+Warning:  ./source/U_TIMER.vhd:21: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/USB_RCVR.vhd
+Compiling Entity Declaration USB_RCVR
+Compiling Architecture STRUCT of USB_RCVR
+Warning:  ./source/USB_RCVR.vhd:48: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+1
+elaborate USB_RCVR -arch "struct" -lib WORK -update
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'USB_RCVR'.
+Information: Building the design 'RCV_FIFO'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'USB_SHIFT'. (HDL-193)
+Warning:  ./source/USB_SHIFT.vhd:71: 'ctr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/USB_SHIFT.vhd:84: 'EOP' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 54 in file
+	'./source/USB_SHIFT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 90 in file
+	'./source/USB_SHIFT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 34 in file
+		'./source/USB_SHIFT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     current_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 54 in file
+		'./source/USB_SHIFT.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    nextstate_reg    | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 90 in file
+		'./source/USB_SHIFT.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   STUFF_ERROR_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_BUFFER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_BUFFER line 24 in file
+		'./source/U_BUFFER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  W_ENABLE_OUT_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      Byte0_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      Byte1_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     W_DATA_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_CLKDIV'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_CLKDIV line 30 in file
+		'./source/U_CLKDIV.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr1_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_CLKDIV line 54 in file
+		'./source/U_CLKDIV.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr0_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_CRC'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_CRC line 34 in file
+		'./source/U_CRC.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   present_val_reg   | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_DECODE'. (HDL-193)
+
+Statistics for case statements in always block at line 36 in file
+	'./source/U_DECODE.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+Warning:  ./source/U_DECODE.vhd:60: 'prevbit' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_DECODE.vhd:60: 'currentbit' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 53 in file
+	'./source/U_DECODE.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_DECODE line 27 in file
+		'./source/U_DECODE.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_DECODE line 53 in file
+		'./source/U_DECODE.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     prevbit_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     d_orig_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   currentbit_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_EDGE_DETECT'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_EDGE_DETECT line 23 in file
+		'./source/U_EDGE_DETECT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    previous_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     d_edge_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     current_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_EOP_DETECT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'U_FCU'. (HDL-193)
+
+Statistics for case statements in always block at line 47 in file
+	'./source/U_FCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 82 in file
+	'./source/U_FCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            84            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_FCU line 34 in file
+		'./source/U_FCU.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ctr_reg       | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_RCU'. (HDL-193)
+Warning:  ./source/U_RCU.vhd:40: 'state' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:54: 'STUFF_ERROR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:58: 'shift_ctr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:115: 'CRC_ERROR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 44 in file
+	'./source/U_RCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 136 in file
+	'./source/U_RCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           138            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_RCU line 33 in file
+		'./source/U_RCU.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_ctr_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_RCU line 136 in file
+		'./source/U_RCU.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     CRC_EN_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     rcving_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    w_enable_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     r_error_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_TIMER'. (HDL-193)
+
+Statistics for case statements in always block at line 32 in file
+	'./source/U_TIMER.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 81 in file
+	'./source/U_TIMER.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_TIMER line 25 in file
+		'./source/U_TIMER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_TIMER line 32 in file
+		'./source/U_TIMER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr2_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      ctr8_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fiforam'. (HDL-193)
+Warning:  ./ECE337_IPsource/FIFO/source/fiforam.vhd:43: 'waddr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine fiforam line 48 in file
+		'./ECE337_IPsource/FIFO/source/fiforam.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fiforeg_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 76 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wrptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wrptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 102 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   full_flag_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 115 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 75 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rwptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rwptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 100 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  empty_flag_r_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 114 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+uniquify
+Removing uniquified design 'RCV_FIFO'.
+Removing uniquified design 'fifo'.
+Removing uniquified design 'fiforam'.
+Removing uniquified design 'write_fifo_ctrl'.
+Removing uniquified design 'read_fifo_ctrl'.
+Removing uniquified design 'write_ptr'.
+Removing uniquified design 'read_ptr'.
+  Uniquified 2 instances of design 'RCV_FIFO'.
+  Uniquified 2 instances of design 'fifo'.
+  Uniquified 2 instances of design 'fiforam'.
+  Uniquified 2 instances of design 'write_fifo_ctrl'.
+  Uniquified 2 instances of design 'read_fifo_ctrl'.
+  Uniquified 2 instances of design 'write_ptr'.
+  Uniquified 2 instances of design 'read_ptr'.
+1
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | D-2010.03-DWBB_1007 |    *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 11 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'U_TIMER'
+  Processing 'U_RCU'
+  Processing 'U_FCU'
+  Processing 'U_EOP_DETECT'
+  Processing 'U_EDGE_DETECT'
+  Processing 'U_DECODE'
+  Processing 'U_CRC'
+  Processing 'U_CLKDIV'
+Warning: The register 'ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+  Processing 'U_BUFFER'
+  Processing 'USB_SHIFT'
+  Processing 'read_ptr_0'
+  Processing 'read_fifo_ctrl_0'
+  Processing 'write_ptr_0'
+  Processing 'write_fifo_ctrl_0'
+  Processing 'fiforam_0'
+  Processing 'fifo_0'
+  Processing 'RCV_FIFO_0'
+  Processing 'USB_RCVR'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'USB_RCVR' has no optimization constraints set. (OPT-108)
+Warning: The register 'U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'read_ptr_0'
+  Mapping 'read_ptr_0'
+  Structuring 'write_ptr_0'
+  Mapping 'write_ptr_0'
+  Structuring 'read_fifo_ctrl_0'
+  Mapping 'read_fifo_ctrl_0'
+  Structuring 'write_fifo_ctrl_0'
+  Mapping 'write_fifo_ctrl_0'
+  Structuring 'fiforam_0'
+  Mapping 'fiforam_0'
+  Structuring 'read_ptr_1'
+  Mapping 'read_ptr_1'
+  Structuring 'write_ptr_1'
+  Mapping 'write_ptr_1'
+  Structuring 'read_fifo_ctrl_1'
+  Mapping 'read_fifo_ctrl_1'
+  Structuring 'write_fifo_ctrl_1'
+  Mapping 'write_fifo_ctrl_1'
+  Structuring 'fiforam_1'
+  Mapping 'fiforam_1'
+  Structuring 'U_TIMER'
+  Mapping 'U_TIMER'
+  Structuring 'U_RCU'
+  Mapping 'U_RCU'
+  Structuring 'U_FCU'
+  Mapping 'U_FCU'
+  Structuring 'U_EOP_DETECT'
+  Mapping 'U_EOP_DETECT'
+  Structuring 'U_EDGE_DETECT'
+  Mapping 'U_EDGE_DETECT'
+  Structuring 'U_DECODE'
+  Mapping 'U_DECODE'
+  Structuring 'U_CRC'
+  Mapping 'U_CRC'
+  Structuring 'U_CLKDIV'
+  Mapping 'U_CLKDIV'
+  Structuring 'U_BUFFER'
+  Mapping 'U_BUFFER'
+  Structuring 'USB_SHIFT'
+  Mapping 'USB_SHIFT'
+  Structuring 'USB_RCVR'
+  Mapping 'USB_RCVR'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  656802.0      0.00       0.0       5.3                          
+    0:00:05  656802.0      0.00       0.0       5.3                          
+    0:00:05  656802.0      0.00       0.0       5.3                          
+    0:00:05  656802.0      0.00       0.0       5.3                          
+    0:00:05  656802.0      0.00       0.0       5.3                          
+    0:00:05  656082.0      0.00       0.0       5.3                          
+    0:00:05  656082.0      0.00       0.0       5.3                          
+    0:00:05  656082.0      0.00       0.0       5.3                          
+    0:00:05  656082.0      0.00       0.0       5.3                          
+    0:00:05  656082.0      0.00       0.0       5.3                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  656730.0      0.00       0.0       3.9                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  656730.0      0.00       0.0       3.9                          
+    0:00:05  659250.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05  659250.0      0.00       0.0       0.0                          
+    0:00:05  659250.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+    0:00:05  659106.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Step 4: Output reports
+current_design .
+Current design is 'USB_RCVR'.
+{USB_RCVR}
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$current_design.rep
+report_area >> reports/$current_design.rep
+report_power -hier >> reports/$current_design.rep
+# Step 5: Output final VHDL and Verilog files
+write -format vhdl -hierarchy -output "mapped/$current_design.vhd"
+Writing vhdl file '/home/ecegrid/a/mg34/ece337/BENC/mapped/USB_RCVR.vhd'.
+Warning: A dummy net 'n_1000' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1001' is created to connect open pin 'QN'. (VHDL-290)
+1
+write -format verilog -hierarchy -output "mapped/$current_design.v"
+Writing verilog file '/home/ecegrid/a/mg34/ece337/BENC/mapped/USB_RCVR.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+Warning: In design 'U_RCU', port 'STUFF_ERROR' is not connected to any nets. (LINT-28)
+1
+exit
+Information: Defining new variable 'compile_group_pull_control_logic'. (CMD-041)
+
+Thank you...

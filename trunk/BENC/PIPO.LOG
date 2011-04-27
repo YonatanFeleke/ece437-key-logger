@@ -1,0 +1,26 @@
+
+********************************************************************************
+Product   : Virtuoso(R) STREAM In
+Program   : @(#)$CDS: pipo.exe version 5.1.0 06/28/2009 23:42 (cicln04) $
+SubVersion: sub-version 5.10.41.500.6.136
+Started at: 26-Apr-2011  07:47:05
+User Name : mg34
+Host Name : ecelinux26.ecn.purdue.edu
+Directory : /home/ecegrid/a/mg34/ece337/BENC
+CADENCE Design Systems, Inc.
+********************************************************************************
+
+Stream file   : /home/ecegrid/a/mg34/ece337/BENC/final.gds2
+
+Reading Stream File ...
+VERSION      : 3
+MODIFICATION : Tue Apr 26 07:46:22 2011
+ACCESS       : Tue Apr 26 07:46:22 2011
+WARNING (158): Years in non-standard four-digit format encountered in the Stream file.
+GDS LIBRARY  : DesignLib
+U-UNIT/DBU   : 0.001000000000
+METRIC/DBU   : 0.000000001000
+
+TARGET LIBRARY PATH: /home/ecegrid/a/mg34/ece337/BENC/My_Layout
+
+FATAL (259): Failed to open layer map file `/home/ecegrid/a/mg34/ece337/BENC/gds2_icfb.map'. Check that the file exists in the run directory and that you have permission to read it.

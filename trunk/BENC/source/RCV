@@ -1,0 +1,5 @@
+vcom source/tb_RCV_FIFO.vhd
+vcom source/RCV_FIFO.vhd
+vsim -i -coverage work.tb_RCV_FIFO
+add wave -r sim:/tb_RCV_FIFO/*
+run 150 ns

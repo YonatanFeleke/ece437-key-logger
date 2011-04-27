@@ -1,0 +1,5 @@
+vcom source/tb_e_Decompile.vhd
+vcom mapped/e_DeCompile.vhd
+vsim -i -coverage work.tb_e_decompile
+add wave -r sim:/tb_e_decompile/*
+run 150 ns

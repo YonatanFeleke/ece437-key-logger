@@ -1,0 +1,17 @@
+\o Program:		@(#)$CDS: libManager.exe version Exp 03/23/2009 19:17 (ocelot-linux) $
+\o Sub version:		sub-version none
+\o Arguments:		-mpssession icfb15426 -mpshost ecelinux26.ecn.purdue.edu 
+\o Working Directory:	ecelinux26.ecn.purdue.edu:/home/ecegrid/a/mg34/ece337/BENC
+\o Extended color mode (TrueColor 32 0x84) in use.
+\o Loading customization file "/package/eda/cells/ncsu-cdk-1.5.1/local/cdssetup/cdsLibMgr.il"
+\o Loading NCSU Library Manager customizations...done.
+\o Log file is "/home/ecegrid/a/mg34/ece337/BENC/libManager.log".
+Opening libManager window.
+No main selection
+\o Library Manager customization server connected.
+MPS service: map window
+Main selection: My_Layout USB_RCVR
+\o Opening design file through session server.
+MPS request: edit design
+Main selection: My_Layout USB_RCVR layout
+MPS request: update library list

@@ -1,0 +1,39 @@
+rm -rf work
+vlib work
+vcom source/tb_encryption.vhd
+vcom mapped/ENCRYPTION.vhd
+vsim -i -coverage work.tb_encryption
+add wave sim:/tb_encryption/*
+add wave sim:/tb_encryption/dut/u_5/*
+add wave \
+{sim:/tb_encryption/dut/u_4/clk } \
+{sim:/tb_encryption/dut/u_4/rst } \
+{sim:/tb_encryption/dut/u_4/start } \
+{sim:/tb_encryption/dut/u_4/in_select } \
+{sim:/tb_encryption/dut/u_4/fiestelclk } \
+{sim:/tb_encryption/dut/u_4/rnd_cnt } \
+{sim:/tb_encryption/dut/u_2/fiestelclk } \
+{sim:/tb_encryption/dut/u_2/start } \
+{sim:/tb_encryption/dut/u_2/enc_left } \
+{sim:/tb_encryption/dut/u_2/enc_right } \
+{sim:/tb_encryption/dut/u_2/rkey } \
+{sim:/tb_encryption/dut/u_2/in_select } \
+{sim:/tb_encryption/dut/u_2/outdata } \
+{sim:/tb_encryption/dut/u_3/rndnum } \
+{sim:/tb_encryption/dut/u_3/start_rst } \
+{sim:/tb_encryption/dut/u_3/in_select } \
+{sim:/tb_encryption/dut/u_3/clk } \
+{sim:/tb_encryption/dut/u_3/rkey } \
+{sim:/tb_encryption/dut/u_0/outdata } \
+{sim:/tb_encryption/dut/u_0/d_enable } \
+{sim:/tb_encryption/dut/u_0/clk } \
+{sim:/tb_encryption/dut/u_0/data } \
+{sim:/tb_encryption/dut/u_0/w_enable } \
+{sim:/tb_encryption/dut/u_0/state_3_port } \
+{sim:/tb_encryption/dut/u_0/state_2_port } \
+{sim:/tb_encryption/dut/u_0/state_1_port } \
+{sim:/tb_encryption/dut/u_0/state_0_port } \
+{sim:/tb_encryption/dut/u_0/nextstate_2_port } \
+{sim:/tb_encryption/dut/u_0/nextstate_1_port } \
+{sim:/tb_encryption/dut/u_0/nextstate_0_port } 
+run 400 ns

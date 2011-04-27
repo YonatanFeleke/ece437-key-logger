@@ -1,0 +1,133 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:40:13 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: U_5/MAPPING/URFC/raddr_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: R_DATA[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  U_5/MAPPING/URFC/raddr_reg[0]/CLK (DFFSR)               0.00       0.00 r
+  U_5/MAPPING/URFC/raddr_reg[0]/Q (DFFSR)                 0.60       0.60 r
+  U_5/MAPPING/URFC/raddr[0] (read_fifo_ctrl_1)            0.00       0.60 r
+  U_5/MAPPING/UFIFORAM/raddr[0] (fiforam_1)               0.00       0.60 r
+  U_5/MAPPING/UFIFORAM/U74/Y (INVX1)                      0.34       0.95 f
+  U_5/MAPPING/UFIFORAM/U67/Y (NAND3X1)                    0.24       1.18 r
+  U_5/MAPPING/UFIFORAM/U66/Y (INVX1)                      0.65       1.83 f
+  U_5/MAPPING/UFIFORAM/U18/Y (AOI22X1)                    0.23       2.06 r
+  U_5/MAPPING/UFIFORAM/U14/Y (NAND3X1)                    0.02       2.08 f
+  U_5/MAPPING/UFIFORAM/rdata[7] (fiforam_1)               0.00       2.08 f
+  U_5/MAPPING/rdata[7] (fifo_1)                           0.00       2.08 f
+  U_5/R_DATA[7] (RCV_FIFO_1)                              0.00       2.08 f
+  R_DATA[7] (out)                                         0.00       2.08 f
+  data arrival time                                                  2.08
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:40:13 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               17
+Number of nets:                59
+Number of cells:               15
+Number of references:          14
+
+Combinational area:       297666.000000
+Noncombinational area:    361440.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          659106.000000
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : USB_RCVR
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:40:14 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+USB_RCVR                                  9.983   12.208  198.457   22.191 100.0
+  U_6 (U_TIMER)                           0.161    0.268    9.663    0.429   1.9
+  U_4 (U_RCU)                             0.354    0.239   11.817    0.593   2.7
+  U_12 (U_FCU)                            0.501    0.683    4.286    1.184   5.3
+  U_3 (U_EOP_DETECT)                      0.270 5.10e-02 5.10e-02    0.321   1.4
+  U_2 (U_EDGE_DETECT)                     0.153    0.279    1.810    0.432   1.9
+  U_1 (U_DECODE)                          0.304    0.554    2.512    0.857   3.9
+  U_0 (U_CRC)                             0.784    0.806   13.072    1.591   7.2
+  U_8 (U_CLKDIV)                          0.248    0.560    1.484    0.808   3.6
+  U_10 (U_BUFFER)                         1.188    0.847   16.412    2.035   9.2
+  U_7 (USB_SHIFT)                         0.313    0.477    8.446    0.790   3.6
+  U_11 (RCV_FIFO_0)                       0.472    2.814   64.278    3.286  14.8
+    MAPPING (fifo_0)                      0.472    2.814   64.278    3.286  14.8
+      URFC (read_fifo_ctrl_0)          7.84e-03    0.510   13.466    0.518   2.3
+        RPU1 (read_ptr_0)              4.04e-03    0.198    5.746    0.202   0.9
+      UWFC (write_fifo_ctrl_0)         7.86e-04    0.455   13.551    0.456   2.1
+        WPU1 (write_ptr_0)                0.000    0.178    5.746    0.178   0.8
+      UFIFORAM (fiforam_0)                0.463    1.849   37.261    2.312  10.4
+  U_5 (RCV_FIFO_1)                        0.495    4.403   64.278    4.898  22.1
+    MAPPING (fifo_1)                      0.495    4.403   64.278    4.898  22.1
+      URFC (read_fifo_ctrl_1)          3.94e-02    2.109   13.466    2.148   9.7
+        RPU1 (read_ptr_1)              2.56e-03    0.826    5.746    0.828   3.7
+      UWFC (write_fifo_ctrl_1)            0.000    0.446   13.551    0.446   2.0
+        WPU1 (write_ptr_1)                0.000    0.178    5.746    0.178   0.8
+      UFIFORAM (fiforam_1)                0.456    1.848   37.261    2.304  10.4
+1

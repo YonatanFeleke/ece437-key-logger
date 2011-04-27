@@ -1,0 +1,16 @@
+rm -rf work
+vlib work
+vcom source/tb_encryption.vhd
+vcom source/encryption.vhd
+vcom source/e_fiestel.vhd
+vcom source/e_encController.vhd
+vcom source/e_rkeyGen.vhd
+vcom source/e_rndCount.vhd
+vcom source/e_DeCompile.vhd
+vcom source/RCV_FIFO.vhd
+
+vsim -i -coverage work.tb_encryption
+add wave -r sim:/tb_encryption/* 
+add wave sim:/tb_encryption/dut/u_0/*
+add wave sim:/tb_encryption/dut/u_5/*
+run 400 ns

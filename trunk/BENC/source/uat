@@ -1,0 +1,5 @@
+vcom source/tb_B_UAT.vhd
+vcom source/B_UAT.vhd
+vsim -i work.tb_b_uat
+add wave -r *
+run 1 ms
