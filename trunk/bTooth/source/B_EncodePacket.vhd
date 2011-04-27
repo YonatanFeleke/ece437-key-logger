@@ -73,7 +73,7 @@ begin
 				end if;
 			end process stateprocess;
 --_____________________________________________________________________--
-Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);		-- follows the data bus and gets the count bit		
+Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the data bus and gets the count bit		
 --_____________________________________________________________________---
 	statelogic : process (CLK,STATE)
 			variable txwait								: 		std_logic;
@@ -125,7 +125,7 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);		-- follows the data bus a
       				if (cnt32 = 0) then
       					nstate <= getdata; -- first request for data.    					
       				else
-     						PAYLOAD <= DATA; -- possibly change to a generate>>!!!!!!!!!!!!!!!!!!
+     						PAYLOAD <= latchdata; -- possibly change to a generate>>!!!!!!!!!!!!!!!!!!
       					if (txwait = '1' ) then -- strobe and wait until 8 bits have been transmitted
       						nswcnt <= swcnt + 1;      						     				
       						if (swcnt = 0 ) then
@@ -156,19 +156,19 @@ Data_in <= DATA(0) when (cnt8 = 0) else DATA(cnt8-1);		-- follows the data bus a
 							nswcnt <= swcnt + 1;
 							ncnt32 <= cnt32;
 							nread_en <= '1';
-							if (swcnt = WAITSRAM) then 
+							if (swcnt = WAITSRAM) then -- time for data available
 								nswcnt <= 0;
 								nstate <= calccrc;
 								txwait := '1';																						 -- new data got!
 								nread_en<= '0';
-								latchdata <= DATA;								
+								latchdata <= DATA;			 -- IF HAPPENING ON write cycle then high impedence response					
 							elsif (swcnt = 0 ) then 
 								nread_en <= '1';
 								ncnt32 <= cnt32 + 1;
-							elsif (swcnt < 2) then -- EVAN****** adujst the read_enable clock cycles
-								nread_en <= '1';								
-							else
-								nread_en <= '0';
+--							elsif (swcnt < 2) then -- EVAN****** adujst the read_enable clock cycles. NO LONGER STROBING WRITE CYCLE IS 64 MAX
+--								nread_en <= '1';								
+--							else
+--								nread_en <= '0';
 							end if;						
       		when outcrc=>
 							nstate <= outcrc;
