@@ -1,0 +1,16 @@
+rm -rf work
+vlib work
+vcom source/USB_SHIFT.vhd
+#vcom mapped/USB_SHIFT.vhd
+vcom source/tb_USB_SHIFT.vhd
+vsim -i work.tb_usb_shift
+
+add wave *
+add wave \
+{sim:/tb_usb_shift/dut/rcv_data } \
+{sim:/tb_usb_shift/dut/state } \
+{sim:/tb_usb_shift/dut/nextstate } \
+{sim:/tb_usb_shift/dut/ctr } \
+{sim:/tb_usb_shift/dut/current } \
+{sim:/tb_usb_shift/dut/next_val } 
+run 2000 ns

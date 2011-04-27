@@ -1,0 +1,28 @@
+vdel -all -lib work
+vlib work
+vcom source/U_CLKDIV.vhd
+vcom source/U_TIMER.vhd
+vcom source/U_EOP_DETECT.vhd
+vcom source/U_EDGE_DETECT.vhd
+vcom source/U_RCU.vhd
+vcom source/RCV_FIFO.vhd
+vcom source/U_DECODE.vhd
+vcom source/USB_SHIFT.vhd
+vcom source/U_CRC.vhd
+vcom source/U_BUFFER.vhd
+vcom source/U_FCU.vhd
+vcom source/USB_RCVR.vhd
+vcom source/tb_encryption.vhd
+vcom source/encryption.vhd
+vcom source/e_fiestel.vhd
+vcom source/e_encController.vhd
+vcom source/e_rkeyGen.vhd
+vcom source/e_rndCount.vhd
+vcom source/e_DeCompile.vhd
+vcom source/s_Control.vhd
+vcom source/RCV_FIFO.vhd
+vcom source/benc.vhd
+vcom source/tb_benc.vhd
+vsim -i work.tb_benc
+
+

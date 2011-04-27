@@ -1,0 +1,119 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ENCRYPTION
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:39:52 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: U_5/MAPPING/URFC/raddr_reg[0]
+              (rising edge-triggered flip-flop)
+  Endpoint: RDATA[7] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  U_5/MAPPING/URFC/raddr_reg[0]/CLK (DFFSR)               0.00       0.00 r
+  U_5/MAPPING/URFC/raddr_reg[0]/Q (DFFSR)                 0.60       0.60 r
+  U_5/MAPPING/URFC/raddr[0] (read_fifo_ctrl)              0.00       0.60 r
+  U_5/MAPPING/UFIFORAM/raddr[0] (fiforam)                 0.00       0.60 r
+  U_5/MAPPING/UFIFORAM/U69/Y (INVX1)                      0.34       0.95 f
+  U_5/MAPPING/UFIFORAM/U62/Y (NAND3X1)                    0.24       1.18 r
+  U_5/MAPPING/UFIFORAM/U61/Y (INVX1)                      0.65       1.83 f
+  U_5/MAPPING/UFIFORAM/U13/Y (AOI22X1)                    0.23       2.06 r
+  U_5/MAPPING/UFIFORAM/U9/Y (NAND3X1)                     0.02       2.08 f
+  U_5/MAPPING/UFIFORAM/rdata[7] (fiforam)                 0.00       2.08 f
+  U_5/MAPPING/rdata[7] (fifo)                             0.00       2.08 f
+  U_5/R_DATA[7] (RCV_FIFO)                                0.00       2.08 f
+  RDATA[7] (out)                                          0.00       2.08 f
+  data arrival time                                                  2.08
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : ENCRYPTION
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:39:52 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               24
+Number of nets:               218
+Number of cells:                7
+Number of references:           7
+
+Combinational area:       498249.000000
+Noncombinational area:    447120.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          945369.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : ENCRYPTION
+Version: D-2010.03-SP3
+Date   : Tue Apr 26 04:39:52 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+ENCRYPTION                               10.860   30.750  291.859   41.609 100.0
+  U_4 (e_rndCount)                        0.000    0.409    3.651    0.409   1.0
+  U_3 (e_rkeyGen)                         0.000    5.732   29.847    5.732  13.8
+  U_2 (e_fiestel)                         0.000    0.000  123.919 1.24e-04   0.0
+  U_1 (e_encController)                   8.669   14.800   58.529   23.469  56.4
+  U_0 (e_DeCompile)                       0.000    0.409   11.978    0.409   1.0
+  U_5 (RCV_FIFO)                       4.44e-02    9.302   63.873    9.347  22.5
+    MAPPING (fifo)                     4.44e-02    9.302   63.873    9.347  22.5
+      URFC (read_fifo_ctrl)            4.09e-02    2.113   13.466    2.154   5.2
+        RPU1 (read_ptr)                3.81e-03    0.828    5.746    0.832   2.0
+      UWFC (write_fifo_ctrl)           1.44e-04    2.050   13.551    2.050   4.9
+        WPU1 (write_ptr)                  0.000    0.819    5.746    0.819   2.0
+      UFIFORAM (fiforam)               3.35e-03    5.139   36.856    5.143  12.4
+1

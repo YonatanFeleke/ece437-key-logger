@@ -1,0 +1,47 @@
+#/**************************************************
+# * Timing constraint file in PT format
+# **************************************************/
+create_clock  -period 84.0000000 -waveform { 0.0000000 42.0000000}\
+   [get_ports {CLK}] 
+set_input_delay -clock CLK 1.0000 \
+   [get_ports {RST}] 
+set_input_delay -clock CLK 1.0000 \
+   [get_ports {D_PLUS}] 
+set_input_delay -clock CLK 1.0000 \
+   [get_ports {D_MINUS}] 
+set_input_delay -clock CLK 1.0000 \
+   [get_ports {R_ENABLE}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {FULL}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {EMPTY}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_ERROR}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {RCVING}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[7]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[6]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[5]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[4]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[3]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[2]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[1]}] 
+set_output_delay -clock CLK 1.0000 \
+   [get_ports {R_DATA[0]}] 
+set_driving_cell -lib_cell INVX8\
+   [get_ports {CLK}] 
+set_driving_cell -lib_cell INVX8\
+   [get_ports {RST}] 
+set_driving_cell -lib_cell INVX8\
+   [get_ports {D_PLUS}] 
+set_driving_cell -lib_cell INVX8\
+   [get_ports {D_MINUS}] 
+set_driving_cell -lib_cell INVX8\
+   [get_ports {R_ENABLE}] 

@@ -1,0 +1,8 @@
+vcom source/e_rkeyGen.vhd
+vsim work.e_rkeygen(behav)
+add wave sim:/e_rkeygen/*
+force clk 1 0ns, 0 5ns -r 10ns
+force START_RST 0 0ns, 1 15ns
+force IN_SELECT 0 0ns, 1 15ns
+force RNDNUM 10#0 10ns, 10#1 20ns,10#2 30ns,10#3 40ns,10#4 50ns,10#5 60ns,10#6 70ns,10#7 80ns,10#8 90ns,10#9 100ns,10#10 110ns,10#11 120ns,10#12 130ns,10#13 140ns,10#14 150ns,10#15 160ns,10#16 170ns -r 180ns
+run 200ns

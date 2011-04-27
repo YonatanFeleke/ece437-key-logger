@@ -1,0 +1,5 @@
+vcom source/tb_e_encController.vhd
+vcom mapped/e_encController.vhd
+vsim -i -coverage work.tb_e_enccontroller
+add wave -r sim:/tb_e_enccontroller/*
+run 400 ns

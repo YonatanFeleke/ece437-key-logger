@@ -1,0 +1,1696 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP3 for amd64 -- Jul 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# Step 1:  Read in the source file
+analyze -format vhdl -lib WORK {RCV_FIFO.vhd e_DeCompile.vhd e_encController.vhd e_fiestel.vhd e_rkeyGen.vhd e_rndCount.vhd encryption.vhd USB_SHIFT.vhd U_BUFFER.vhd U_CLKDIV.vhd U_CRC.vhd U_DECODE.vhd U_EDGE_DETECT.vhd U_EOP_DETECT.vhd U_FCU.vhd U_RCU.vhd U_TIMER.vhd USB_RCVR.vhd B_AppendAccessCode.vhd B_Controller.vhd B_EncodePacket.vhd B_Header.vhd B_NextPacket.vhd B_StripPayload.vhd B_UAT.vhd bToothTop.vhd s_Control.vhd benc.vhd}
+Running PRESTO HDLC
+-- Compiling Source File ./source/RCV_FIFO.vhd
+Compiling Entity Declaration RCV_FIFO
+Compiling Architecture WRAPPER of RCV_FIFO
+Warning:  ./source/RCV_FIFO.vhd:32: The architecture wrapper has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_DeCompile.vhd
+Compiling Entity Declaration E_DECOMPILE
+Compiling Architecture BEHAV of E_DECOMPILE
+Warning:  ./source/e_DeCompile.vhd:23: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_encController.vhd
+Compiling Entity Declaration E_ENCCONTROLLER
+Compiling Architecture BEHAV of E_ENCCONTROLLER
+Warning:  ./source/e_encController.vhd:29: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_fiestel.vhd
+Compiling Entity Declaration E_FIESTEL
+Compiling Architecture BEHAV of E_FIESTEL
+Warning:  ./source/e_fiestel.vhd:25: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_rkeyGen.vhd
+Compiling Entity Declaration E_RKEYGEN
+Compiling Architecture BEHAV of E_RKEYGEN
+Warning:  ./source/e_rkeyGen.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_rndCount.vhd
+Compiling Entity Declaration E_RNDCOUNT
+Compiling Architecture BEHAV of E_RNDCOUNT
+Warning:  ./source/e_rndCount.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/encryption.vhd
+Compiling Entity Declaration ENCRYPTION
+Compiling Architecture STRUCT of ENCRYPTION
+Warning:  ./source/encryption.vhd:50: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/USB_SHIFT.vhd
+Compiling Entity Declaration USB_SHIFT
+Compiling Architecture BEHAVIORAL of USB_SHIFT
+Warning:  ./source/USB_SHIFT.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_BUFFER.vhd
+Compiling Entity Declaration U_BUFFER
+Compiling Architecture BUFFER16 of U_BUFFER
+Warning:  ./source/U_BUFFER.vhd:18: The architecture buffer16 has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_CLKDIV.vhd
+Compiling Entity Declaration U_CLKDIV
+Compiling Architecture CLOCKDIVIDER of U_CLKDIV
+Warning:  ./source/U_CLKDIV.vhd:23: The architecture clockdivider has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_CRC.vhd
+Compiling Entity Declaration U_CRC
+Compiling Architecture SIMPLE_SHIFT_REG of U_CRC
+Warning:  ./source/U_CRC.vhd:26: The architecture simple_shift_reg has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_DECODE.vhd
+Compiling Entity Declaration U_DECODE
+Compiling Architecture BEHAVIORAL of U_DECODE
+Warning:  ./source/U_DECODE.vhd:22: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_EDGE_DETECT.vhd
+Compiling Entity Declaration U_EDGE_DETECT
+Compiling Architecture BEHAVIORAL of U_EDGE_DETECT
+Warning:  ./source/U_EDGE_DETECT.vhd:20: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_EOP_DETECT.vhd
+Compiling Entity Declaration U_EOP_DETECT
+Compiling Architecture DATAFLOW of U_EOP_DETECT
+Warning:  ./source/U_EOP_DETECT.vhd:19: The architecture dataflow has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_FCU.vhd
+Compiling Entity Declaration U_FCU
+Compiling Architecture BEHAVIORAL of U_FCU
+Warning:  ./source/U_FCU.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/U_RCU.vhd
+
+-------------------
+     5: <!DOCTYPE html>
+        ^^
+[Failure] Syntax error : received '<'
+          while expecting COMMENT
+                       or 'architecture' or 'configuration' or 'entity' or 'library'
+                       or 'package' or 'use'
+ 
+-- Compiling Source File ./source/U_TIMER.vhd
+Compiling Entity Declaration U_TIMER
+Compiling Architecture BEHAVIORAL of U_TIMER
+Warning:  ./source/U_TIMER.vhd:21: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/USB_RCVR.vhd
+Compiling Entity Declaration USB_RCVR
+Compiling Architecture STRUCT of USB_RCVR
+Warning:  ./source/USB_RCVR.vhd:48: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_AppendAccessCode.vhd
+Compiling Entity Declaration B_APPENDACCESSCODE
+Compiling Architecture B_CODE of B_APPENDACCESSCODE
+Warning:  ./source/B_AppendAccessCode.vhd:24: The architecture b_code has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_Controller.vhd
+Compiling Entity Declaration B_CONTROLLER
+Compiling Architecture B_CONT of B_CONTROLLER
+Warning:  ./source/B_Controller.vhd:31: The architecture b_cont has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_EncodePacket.vhd
+Compiling Entity Declaration B_ENCODEPACKET
+Compiling Architecture B_EDATA of B_ENCODEPACKET
+Warning:  ./source/B_EncodePacket.vhd:33: The architecture b_edata has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_Header.vhd
+Compiling Entity Declaration B_HEADER
+Compiling Architecture B_HDR of B_HEADER
+Warning:  ./source/B_Header.vhd:24: The architecture b_hdr has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_NextPacket.vhd
+Compiling Entity Declaration B_NEXTPACKET
+Compiling Architecture B_NEXT of B_NEXTPACKET
+Warning:  ./source/B_NextPacket.vhd:25: The architecture b_next has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_StripPayload.vhd
+Compiling Entity Declaration B_STRIPPAYLOAD
+Compiling Architecture B_STRIP of B_STRIPPAYLOAD
+Warning:  ./source/B_StripPayload.vhd:28: The architecture b_strip has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/B_UAT.vhd
+Compiling Entity Declaration B_UAT
+Compiling Architecture B_SERIALTX of B_UAT
+Warning:  ./source/B_UAT.vhd:27: The architecture b_serialtx has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/bToothTop.vhd
+Compiling Entity Declaration BTOOTHTOP
+Compiling Architecture STRUCT of BTOOTHTOP
+Warning:  ./source/bToothTop.vhd:46: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/s_Control.vhd
+Compiling Entity Declaration S_CONTROL
+Compiling Architecture BEHAV of S_CONTROL
+Warning:  ./source/s_Control.vhd:31: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/benc.vhd
+Compiling Entity Declaration BENC
+Compiling Architecture STRUCT of BENC
+Warning:  ./source/benc.vhd:50: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+*** Presto compilation was unsuccessful. ***
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+0
+elaborate benc -arch "struct" -lib WORK -update
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'BENC'.
+Information: Building the design 'encryption'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'USB_RCVR'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'bToothTop'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 's_Control'. (HDL-193)
+Warning:  ./source/s_Control.vhd:78: 'RADDR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/s_Control.vhd:78: 'sWrite' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/s_Control.vhd:79: 'WADDR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/s_Control.vhd:84: 'PRADDR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/s_Control.vhd:88: 'nPRADDR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 65 in file
+	'./source/s_Control.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            95            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 145 in file
+	'./source/s_Control.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           152            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine s_Control line 43 in file
+		'./source/s_Control.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      WADDR_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt8_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      icnt8_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      RADDR_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     PRADDR_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine s_Control line 65 in file
+		'./source/s_Control.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     nPRADDR_reg     | Latch |  12   |  Y  | N  | N  | N  | -  | -  | -  |
+|     sWrite_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     nWADDR_reg      | Latch |  12   |  Y  | N  | N  | N  | -  | -  | -  |
+|     nRADDR_reg      | Latch |  12   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine s_Control line 145 in file
+		'./source/s_Control.vhd'.
+============================================================================
+|    Register Name     | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+============================================================================
+|      ODATA_reg       | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| ODATA_tri_enable_reg | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+|      SDATA_reg       | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| SDATA_tri_enable_reg | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+============================================================================
+
+Inferred tri-state devices in process
+	in routine s_Control line 145 in file
+		'./source/s_Control.vhd'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+|   ADDR_tri    | Tri-State Buffer |  12   | N  |
+|   ODATA_tri   | Tri-State Buffer |   8   | N  |
+|   SDATA_tri   | Tri-State Buffer |   8   | N  |
+=================================================
+Presto compilation completed successfully.
+Information: Building the design 'RCV_FIFO'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'e_DeCompile'. (HDL-193)
+
+Statistics for case statements in always block at line 43 in file
+	'./source/e_DeCompile.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 113 in file
+	'./source/e_DeCompile.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           113            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_DeCompile line 31 in file
+		'./source/e_DeCompile.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_encController'. (HDL-193)
+
+Statistics for case statements in always block at line 72 in file
+	'./source/e_encController.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 153 in file
+	'./source/e_encController.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           179            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_encController line 41 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cD_ENABLE_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    compileCT_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_encController line 153 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CompData2_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData1_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData2_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData3_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData4_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData5_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData6_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData7_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData8_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_encController line 223 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rndCT_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_fiestel'. (HDL-193)
+Warning:  ./source/e_fiestel.vhd:72: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:109: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:146: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:183: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:69: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:238: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:277: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:316: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:354: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:236: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:404: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:442: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:480: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:518: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:402: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:564: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:601: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:638: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:675: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:562: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:721: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:758: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:795: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:832: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:719: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:879: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:916: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:953: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:990: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:877: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1036: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1073: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1110: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1147: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1034: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1193: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1230: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1267: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1304: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1191: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 43 in file
+	'./source/e_fiestel.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            69            |    auto/auto     |
+|            72            |    auto/auto     |
+|           109            |    auto/auto     |
+|           146            |    auto/auto     |
+|           183            |    auto/auto     |
+|           236            |    auto/auto     |
+|           238            |    auto/auto     |
+|           277            |    auto/auto     |
+|           316            |    auto/auto     |
+|           354            |    auto/auto     |
+|           402            |    auto/auto     |
+|           404            |    auto/auto     |
+|           442            |    auto/auto     |
+|           480            |    auto/auto     |
+|           518            |    auto/auto     |
+|           562            |    auto/auto     |
+|           564            |    auto/auto     |
+|           601            |    auto/auto     |
+|           638            |    auto/auto     |
+|           675            |    auto/auto     |
+|           719            |    auto/auto     |
+|           721            |    auto/auto     |
+|           758            |    auto/auto     |
+|           795            |    auto/auto     |
+|           832            |    auto/auto     |
+|           877            |    auto/auto     |
+|           879            |    auto/auto     |
+|           916            |    auto/auto     |
+|           953            |    auto/auto     |
+|           990            |    auto/auto     |
+|           1034           |    auto/auto     |
+|           1036           |    auto/auto     |
+|           1073           |    auto/auto     |
+|           1110           |    auto/auto     |
+|           1147           |    auto/auto     |
+|           1191           |    auto/auto     |
+|           1193           |    auto/auto     |
+|           1230           |    auto/auto     |
+|           1267           |    auto/auto     |
+|           1304           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_fiestel line 31 in file
+		'./source/e_fiestel.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  CUR_ENC_RIGHT_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  CUR_ENC_LEFT_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_fiestel line 1356 in file
+		'./source/e_fiestel.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     OUTDATA_reg     | Latch |  64   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_rkeyGen'. (HDL-193)
+
+Inferred memory devices in process
+	in routine e_rkeyGen line 33 in file
+		'./source/e_rkeyGen.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ENC_RIGHT_reg    | Flip-flop |  18   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    ENC_RIGHT_reg    | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ENC_LEFT_reg     | Flip-flop |  15   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    ENC_LEFT_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_rndCount'. (HDL-193)
+Warning:  ./source/e_rndCount.vhd:32: 'START' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine e_rndCount line 30 in file
+		'./source/e_rndCount.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CUR_CNT_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'USB_SHIFT'. (HDL-193)
+Warning:  ./source/USB_SHIFT.vhd:71: 'ctr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/USB_SHIFT.vhd:84: 'EOP' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 54 in file
+	'./source/USB_SHIFT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 90 in file
+	'./source/USB_SHIFT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 34 in file
+		'./source/USB_SHIFT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     current_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 54 in file
+		'./source/USB_SHIFT.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    nextstate_reg    | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine USB_SHIFT line 90 in file
+		'./source/USB_SHIFT.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   STUFF_ERROR_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_BUFFER'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_BUFFER line 24 in file
+		'./source/U_BUFFER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  W_ENABLE_OUT_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      Byte0_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      Byte1_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     W_DATA_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_CLKDIV'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_CLKDIV line 30 in file
+		'./source/U_CLKDIV.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr1_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_CLKDIV line 54 in file
+		'./source/U_CLKDIV.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr0_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_CRC'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_CRC line 34 in file
+		'./source/U_CRC.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   present_val_reg   | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_DECODE'. (HDL-193)
+
+Statistics for case statements in always block at line 36 in file
+	'./source/U_DECODE.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+Warning:  ./source/U_DECODE.vhd:60: 'prevbit' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_DECODE.vhd:60: 'currentbit' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 53 in file
+	'./source/U_DECODE.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_DECODE line 27 in file
+		'./source/U_DECODE.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_DECODE line 53 in file
+		'./source/U_DECODE.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     prevbit_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     d_orig_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   currentbit_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_EDGE_DETECT'. (HDL-193)
+
+Inferred memory devices in process
+	in routine U_EDGE_DETECT line 23 in file
+		'./source/U_EDGE_DETECT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    previous_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     d_edge_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     current_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_EOP_DETECT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Re-analyzing the out of date architecture 'U_FCU(BEHAVIORAL)'. (LBR-15)
+Information: Re-analyzing the out of date entity 'U_FCU'. (LBR-15)
+Compiling Entity Declaration U_FCU
+Compiling Architecture BEHAVIORAL of U_FCU
+Warning:  ./source/U_FCU.vhd:28: The architecture behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Information: Building the design 'U_FCU'. (HDL-193)
+
+Statistics for case statements in always block at line 47 in file
+	'./source/U_FCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 83 in file
+	'./source/U_FCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            85            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_FCU line 34 in file
+		'./source/U_FCU.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ctr_reg       | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Re-analyzing the out of date architecture 'U_RCU(BEHAVIORAL)'. (LBR-15)
+Information: Re-analyzing the out of date entity 'U_RCU'. (LBR-15)
+
+-------------------
+     5: <!DOCTYPE html>
+        ^^
+[Failure] Syntax error : received '<'
+          while expecting COMMENT
+                       or 'architecture' or 'configuration' or 'entity' or 'library'
+                       or 'package' or 'use'
+ 
+*** Presto compilation was unsuccessful. ***
+Information: Building the design 'U_RCU'. (HDL-193)
+Warning:  ./source/U_RCU.vhd:40: 'state' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:54: 'STUFF_ERROR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:58: 'shift_ctr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/U_RCU.vhd:115: 'CRC_ERROR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 44 in file
+	'./source/U_RCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 136 in file
+	'./source/U_RCU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           138            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_RCU line 33 in file
+		'./source/U_RCU.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_ctr_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_RCU line 136 in file
+		'./source/U_RCU.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     CRC_EN_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     rcving_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    w_enable_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     r_error_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'U_TIMER'. (HDL-193)
+
+Statistics for case statements in always block at line 32 in file
+	'./source/U_TIMER.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 81 in file
+	'./source/U_TIMER.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine U_TIMER line 25 in file
+		'./source/U_TIMER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine U_TIMER line 32 in file
+		'./source/U_TIMER.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      ctr2_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      ctr8_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_AppendAccessCode'. (HDL-193)
+Warning:  ./source/B_AppendAccessCode.vhd:35: 'SYN[0]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine B_AppendAccessCode line 47 in file
+		'./source/B_AppendAccessCode.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    HEADER_EN_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   ACESS_CODE_reg    | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_Controller' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264,WAITBAK=49". (HDL-193)
+Warning:  ./source/B_Controller.vhd:82: 'EMPTY' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:82: 'latch_not_empty' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:90: 'cnt4' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:91: 'bluewait' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:101: 'ANT_LIN' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:131: 'ebit' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:190: 'NEXT_EN' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:192: 'nstate' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Controller.vhd:195: 'cnt2' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 68 in file
+	'./source/B_Controller.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            72            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49 line 42 in file
+		'./source/B_Controller.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    bluewait_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt4_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt2_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49 line 68 in file
+		'./source/B_Controller.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     nnstate_reg     | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+|   resynstate_reg    | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+|      ncnt4_reg      | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+|    nbluewait_reg    | Latch |   6   |  Y  | N  | N  | N  | -  | -  | -  |
+|      ebit_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      ncnt2_reg      | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49 line 203 in file
+		'./source/B_Controller.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+| latch_not_empty_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49 line 220 in file
+		'./source/B_Controller.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      edge_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_EncodePacket' instantiated from design 'bToothTop' with
+	the parameters "STROBCYC=15,WAITSRAM=24,WAITREG=5264". (HDL-193)
+Warning:  ./source/B_EncodePacket.vhd:87: 'length' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:87: 'flowBIT' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:87: 'LCH' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:99: 'ENCODE_EN' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:104: 'swcnt' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:109: 'packet_hdr[7:0]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:112: 'packet_hdr[15:8]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:125: 'cnt32' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:128: 'DATA' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:137: 'cnt8' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[14:12]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[15]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'Data_in' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[11]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[10:5]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[4]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_EncodePacket.vhd:143: 'lfsr[3:0]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 77 in file
+	'./source/B_EncodePacket.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            81            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264 line 54 in file
+		'./source/B_EncodePacket.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      lfsr_reg       | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      lfsr_reg       | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt32_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      swcnt_reg      | Flip-flop |  15   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt8_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ESTORE_EN_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     READ_EN_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264 line 77 in file
+		'./source/B_EncodePacket.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     txwait_reg      | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     length_reg      | Latch |   9   |  Y  | N  | N  | N  | -  | -  | -  |
+|       LCH_reg       | Latch |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+|     flowBIT_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|   packet_hdr_reg    | Latch |  16   |  Y  | N  | N  | N  | -  | -  | -  |
+|     PAYLOAD_reg     | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+|     NEXT_EN_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      nlfsr_reg      | Latch |  16   |  Y  | N  | N  | N  | -  | -  | -  |
+|   nestore_en_reg    | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|    nread_en_reg     | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|     ncnt32_reg      | Latch |   6   |  Y  | N  | N  | N  | -  | -  | -  |
+|      ncnt8_reg      | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|     nswcnt_reg      | Latch |  15   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_Header' instantiated from design 'bToothTop' with
+	the parameters "WAITREG=5264". (HDL-193)
+Warning:  ./source/B_Header.vhd:44: 'SEQN' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Header.vhd:44: 'ARQN' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Header.vhd:44: 'FLOW' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Header.vhd:44: 'PTYPE' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_Header.vhd:44: 'AM_ADDR' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine B_Header_WAITREG5264 line 57 in file
+		'./source/B_Header.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     waittx_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     HEADER_reg      | Flip-flop |  54   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    TRANS_EN_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    ENCODE_EN_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     waitcnt_reg     | Flip-flop |  17   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B_Header_WAITREG5264 line 89 in file
+		'./source/B_Header.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        A_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      SEQN_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        B_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_NextPacket' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264,WAITBAK=4869". (HDL-193)
+Warning:  ./source/B_NextPacket.vhd:74: 'stop' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_NextPacket.vhd:77: 'a' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_NextPacket.vhd:79: 'b' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869 line 31 in file
+		'./source/B_NextPacket.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    bluewait_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt8_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     DATAOUT_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     txbuff_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      stop_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869 line 67 in file
+		'./source/B_NextPacket.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|        a_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|       run_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|        b_reg        | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'B_StripPayload' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264". (HDL-193)
+Error:  WAITSRAM is not a parameter in module B_StripPayload (VER-216)
+Error:  WAITREG is not a parameter in module B_StripPayload (VER-216)
+*** Presto compilation terminated with 2 errors. ***
+Information: Building the design 'B_UAT' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264". (HDL-193)
+Warning:  ./source/B_UAT.vhd:88: 'cnt8' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 53 in file
+	'./source/B_UAT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |    auto/auto     |
+===============================================
+Warning:  ./source/B_UAT.vhd:107: 'ACCESS_CODE' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_UAT.vhd:107: 'HEADER' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_UAT.vhd:110: 'tHeader[0]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_UAT.vhd:114: 'PAYLOAD' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_UAT.vhd:117: 'pLoad[0]' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+Warning:  ./source/B_UAT.vhd:122: 'RST' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Statistics for case statements in always block at line 102 in file
+	'./source/B_UAT.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine B_UAT_WAITSRAM24_WAITREG5264 line 41 in file
+		'./source/B_UAT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine B_UAT_WAITSRAM24_WAITREG5264 line 53 in file
+		'./source/B_UAT.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     nxtcnt8_reg     | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+|    nxtcnt658_reg    | Latch |  10   |  Y  | N  | N  | N  | -  | -  | -  |
+|    nxtcnt128_reg    | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+|    nxtcnt34_reg     | Latch |   6   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine B_UAT_WAITSRAM24_WAITREG5264 line 102 in file
+		'./source/B_UAT.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      pLoad_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     tHeader_reg     | Flip-flop |  126  |  Y  | N  | N  | N  | N  | N  | N  |
+|     tHeader_reg     | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      cnt8_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ANT_LOUT_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     cnt658_reg      | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cnt34_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cnt128_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fiforam'. (HDL-193)
+Warning:  ./ECE337_IPsource/FIFO/source/fiforam.vhd:43: 'waddr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine fiforam line 48 in file
+		'./ECE337_IPsource/FIFO/source/fiforam.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fiforeg_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 76 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wrptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wrptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 102 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   full_flag_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 115 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 75 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rwptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rwptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 100 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  empty_flag_r_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 114 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+uniquify
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Removing uniquified design 'RCV_FIFO'.
+Removing uniquified design 'fifo'.
+Removing uniquified design 'fiforam'.
+Removing uniquified design 'write_fifo_ctrl'.
+Removing uniquified design 'read_fifo_ctrl'.
+Removing uniquified design 'write_ptr'.
+Removing uniquified design 'read_ptr'.
+  Uniquified 3 instances of design 'RCV_FIFO'.
+  Uniquified 3 instances of design 'fifo'.
+  Uniquified 3 instances of design 'fiforam'.
+  Uniquified 3 instances of design 'write_fifo_ctrl'.
+  Uniquified 3 instances of design 'read_fifo_ctrl'.
+  Uniquified 3 instances of design 'write_ptr'.
+  Uniquified 3 instances of design 'read_ptr'.
+Information: Building the design 'B_StripPayload' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264". (HDL-193)
+Error:  WAITSRAM is not a parameter in module B_StripPayload (VER-216)
+Error:  WAITREG is not a parameter in module B_StripPayload (VER-216)
+*** Presto compilation terminated with 2 errors. ***
+1
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | D-2010.03-DWBB_1007 |    *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 127 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 's_Control'
+  Processing 'B_UAT_WAITSRAM24_WAITREG5264'
+  Processing 'B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869'
+Information: The register 'txbuff_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'cnt8_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'B_Header_WAITREG5264'
+Information: The register 'HEADER_reg[50]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[49]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[48]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[47]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[46]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[45]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'HEADER_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264'
+Information: The register 'packet_hdr_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'flowBIT_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'LCH_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'LCH_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'length_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'packet_hdr_reg[3]' is a constant and will be removed. (OPT-1206)
+  Processing 'B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49'
+  Processing 'B_AppendAccessCode'
+Information: The register 'ACESS_CODE_reg[70]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[68]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[64]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[62]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[59]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[56]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[55]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[52]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[49]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[48]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[47]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[40]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[38]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[35]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[32]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ACESS_CODE_reg[0]' is a constant and will be removed. (OPT-1206)
+  Processing 'bToothTop'
+  Processing 'U_TIMER'
+  Processing 'U_RCU'
+  Processing 'U_FCU'
+  Processing 'U_EOP_DETECT'
+  Processing 'U_EDGE_DETECT'
+  Processing 'U_DECODE'
+  Processing 'U_CRC'
+  Processing 'U_CLKDIV'
+Warning: The register 'ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+  Processing 'U_BUFFER'
+  Processing 'USB_SHIFT'
+  Processing 'read_ptr_0'
+  Processing 'read_fifo_ctrl_0'
+  Processing 'write_ptr_0'
+  Processing 'write_fifo_ctrl_0'
+  Processing 'fiforam_0'
+  Processing 'fifo_0'
+  Processing 'RCV_FIFO_0'
+  Processing 'USB_RCVR'
+  Processing 'e_rndCount'
+  Processing 'e_rkeyGen'
+  Processing 'e_fiestel'
+  Processing 'e_encController'
+  Processing 'e_DeCompile'
+  Processing 'ENCRYPTION'
+  Processing 'BENC'
+Information: Building the design 'B_StripPayload' instantiated from design 'bToothTop' with
+	the parameters "WAITSRAM=24,WAITREG=5264". (HDL-193)
+Error:  WAITSRAM is not a parameter in module B_StripPayload (VER-216)
+Error:  WAITREG is not a parameter in module B_StripPayload (VER-216)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Unable to resolve reference 'B_StripPayload' in 'bToothTop'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	U_2/U_2/U107/A U_2/U_2/U107/Y U_2/U_2/U154/A U_2/U_2/U154/Y U_2/U_2/U153/C U_2/U_2/U153/Y U_2/U_2/txwait_reg/CLK U_2/U_2/txwait_reg/Q U_2/U_2/U196/A U_2/U_2/U196/Y 
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'U_2/U_2/txwait_reg'
+         to break a timing loop. (OPT-314)
+Information: Design 'BENC' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 's_Control_DW01_dec_0'
+  Processing 's_Control_DW01_inc_0'
+  Processing 's_Control_DW01_sub_0'
+  Processing 'B_UAT_WAITSRAM24_WAITREG5264_DW01_inc_0'
+  Processing 'B_UAT_WAITSRAM24_WAITREG5264_DW01_inc_1'
+  Processing 'B_UAT_WAITSRAM24_WAITREG5264_DW01_inc_2'
+  Processing 'B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869_DW01_inc_0'
+  Processing 'B_Header_WAITREG5264_DW01_inc_0'
+  Processing 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264_DW01_inc_0'
+  Processing 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264_DW01_add_0'
+  Processing 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264_DW01_cmp2_0'
+  Processing 'B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49_DW01_inc_0'
+  Processing 'e_encController_DW01_cmp2_0'
+  Processing 'e_encController_DW01_inc_0'
+  Processing 'e_encController_DW01_cmp2_1'
+  Processing 'e_encController_DW01_cmp2_2'
+Warning: The register 'U_1/U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[0]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+Warning: The register 'U_1/U_8/ctr0_reg[1]' may not be optimally implemented because of a lack of compatible components with correct clock/enable phase. (OPT-1205)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'read_ptr_1'
+  Mapping 'read_ptr_1'
+  Structuring 'read_ptr_0'
+  Mapping 'read_ptr_0'
+  Structuring 'write_ptr_1'
+  Mapping 'write_ptr_1'
+  Structuring 'write_ptr_0'
+  Mapping 'write_ptr_0'
+  Structuring 'read_fifo_ctrl_1'
+  Mapping 'read_fifo_ctrl_1'
+  Structuring 'read_fifo_ctrl_0'
+  Mapping 'read_fifo_ctrl_0'
+  Structuring 'write_fifo_ctrl_1'
+  Mapping 'write_fifo_ctrl_1'
+  Structuring 'write_fifo_ctrl_0'
+  Mapping 'write_fifo_ctrl_0'
+  Structuring 'fiforam_1'
+  Mapping 'fiforam_1'
+  Structuring 'fiforam_0'
+  Mapping 'fiforam_0'
+  Structuring 'read_ptr_2'
+  Mapping 'read_ptr_2'
+  Structuring 'write_ptr_2'
+  Mapping 'write_ptr_2'
+  Structuring 'read_fifo_ctrl_2'
+  Mapping 'read_fifo_ctrl_2'
+  Structuring 'write_fifo_ctrl_2'
+  Mapping 'write_fifo_ctrl_2'
+  Structuring 'fiforam_2'
+  Mapping 'fiforam_2'
+  Structuring 'B_UAT_WAITSRAM24_WAITREG5264'
+  Mapping 'B_UAT_WAITSRAM24_WAITREG5264'
+  Structuring 'B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869'
+  Mapping 'B_NextPacket_WAITSRAM24_WAITREG5264_WAITBAK4869'
+  Structuring 'B_Header_WAITREG5264'
+  Mapping 'B_Header_WAITREG5264'
+  Structuring 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264'
+  Mapping 'B_EncodePacket_STROBCYC15_WAITSRAM24_WAITREG5264'
+  Structuring 'B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49'
+  Mapping 'B_Controller_WAITSRAM24_WAITREG5264_WAITBAK49'
+  Structuring 'B_AppendAccessCode'
+  Mapping 'B_AppendAccessCode'
+  Structuring 'U_TIMER'
+  Mapping 'U_TIMER'
+  Structuring 'U_RCU'
+  Mapping 'U_RCU'
+  Structuring 'U_FCU'
+  Mapping 'U_FCU'
+  Structuring 'U_EOP_DETECT'
+  Mapping 'U_EOP_DETECT'
+  Structuring 'U_EDGE_DETECT'
+  Mapping 'U_EDGE_DETECT'
+  Structuring 'U_DECODE'
+  Mapping 'U_DECODE'
+  Structuring 'U_CRC'
+  Mapping 'U_CRC'
+  Structuring 'U_CLKDIV'
+  Mapping 'U_CLKDIV'
+  Structuring 'U_BUFFER'
+  Mapping 'U_BUFFER'
+  Structuring 'USB_SHIFT'
+  Mapping 'USB_SHIFT'
+  Structuring 'e_rndCount'
+  Mapping 'e_rndCount'
+  Structuring 'e_fiestel'
+  Mapping 'e_fiestel'
+  Structuring 'e_encController'
+  Mapping 'e_encController'
+  Structuring 'e_DeCompile'
+  Mapping 'e_DeCompile'
+  Structuring 's_Control'
+  Mapping 's_Control'
+  Structuring 'USB_RCVR'
+  Mapping 'USB_RCVR'
+  Structuring 'ENCRYPTION'
+  Mapping 'ENCRYPTION'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:26 2726703.0      0.00       0.0      39.0                          
+    0:00:26 2726703.0      0.00       0.0      39.0                          
+    0:00:26 2726703.0      0.00       0.0      39.0                          
+    0:00:26 2726703.0      0.00       0.0      39.0                          
+    0:00:26 2726703.0      0.00       0.0      39.0                          
+    0:00:26 2717919.0      0.00       0.0      38.8                          
+    0:00:26 2717919.0      0.00       0.0      38.8                          
+    0:00:27 2717919.0      0.00       0.0      38.8                          
+    0:00:27 2717919.0      0.00       0.0      38.8                          
+    0:00:27 2717919.0      0.00       0.0      38.8                          
+    0:00:27 2721222.0      0.00       0.0      27.4                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:28 2721654.0      0.00       0.0      27.3                          
+    0:00:28 2730222.0      0.00       0.0       0.0 U_0/U_2/START            
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:28 2730222.0      0.00       0.0       0.0                          
+    0:00:28 2730222.0      0.00       0.0       0.0                          
+    0:00:30 2728638.0      0.00       0.0       0.0                          
+    0:00:30 2728278.0      0.00       0.0       0.0                          
+    0:00:30 2728134.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+    0:00:30 2727990.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Step 4: Output reports
+current_design .
+Current design is 'BENC'.
+{BENC}
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$current_design.rep
+report_area >> reports/$current_design.rep
+report_power -hier >> reports/$current_design.rep
+# Step 5: Output final VHDL and Verilog files
+write -format vhdl -hierarchy -output "mapped/$current_design.vhd"
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing vhdl file '/home/ecegrid/a/mg34/ece337/BENC/mapped/BENC.vhd'.
+Warning: A dummy net 'n_1000' is created to connect open pin 'CI'. (VHDL-290)
+Warning: A dummy net 'n_1001' is created to connect open pin 'CO'. (VHDL-290)
+Warning: A dummy net 'n_1002' is created to connect open pin 'SUM[0]'. (VHDL-290)
+Warning: A dummy net 'n_1003' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1004' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1005' is created to connect open pin 'SUM[0]'. (VHDL-290)
+Warning: A dummy net 'n_1006' is created to connect open pin 'CO'. (VHDL-290)
+Warning: A dummy net 'n_1007' is created to connect open pin 'ACESS_CODE[70]'. (VHDL-290)
+Warning: A dummy net 'n_1008' is created to connect open pin 'ACESS_CODE[68]'. (VHDL-290)
+Warning: A dummy net 'n_1009' is created to connect open pin 'ACESS_CODE[64]'. (VHDL-290)
+Warning: A dummy net 'n_1010' is created to connect open pin 'ACESS_CODE[62]'. (VHDL-290)
+Warning: A dummy net 'n_1011' is created to connect open pin 'ACESS_CODE[59]'. (VHDL-290)
+Warning: A dummy net 'n_1012' is created to connect open pin 'ACESS_CODE[56]'. (VHDL-290)
+Warning: A dummy net 'n_1013' is created to connect open pin 'ACESS_CODE[55]'. (VHDL-290)
+Warning: A dummy net 'n_1014' is created to connect open pin 'ACESS_CODE[52]'. (VHDL-290)
+Warning: A dummy net 'n_1015' is created to connect open pin 'ACESS_CODE[49]'. (VHDL-290)
+Warning: A dummy net 'n_1016' is created to connect open pin 'ACESS_CODE[48]'. (VHDL-290)
+Warning: A dummy net 'n_1017' is created to connect open pin 'ACESS_CODE[47]'. (VHDL-290)
+Warning: A dummy net 'n_1018' is created to connect open pin 'ACESS_CODE[40]'. (VHDL-290)
+Warning: A dummy net 'n_1019' is created to connect open pin 'ACESS_CODE[38]'. (VHDL-290)
+Warning: A dummy net 'n_1020' is created to connect open pin 'ACESS_CODE[35]'. (VHDL-290)
+Warning: A dummy net 'n_1021' is created to connect open pin 'ACESS_CODE[32]'. (VHDL-290)
+Warning: A dummy net 'n_1022' is created to connect open pin 'ACESS_CODE[31]'. (VHDL-290)
+Warning: A dummy net 'n_1023' is created to connect open pin 'ACESS_CODE[28]'. (VHDL-290)
+Warning: A dummy net 'n_1024' is created to connect open pin 'ACESS_CODE[25]'. (VHDL-290)
+Warning: A dummy net 'n_1025' is created to connect open pin 'ACESS_CODE[24]'. (VHDL-290)
+Warning: A dummy net 'n_1026' is created to connect open pin 'ACESS_CODE[23]'. (VHDL-290)
+Warning: A dummy net 'n_1027' is created to connect open pin 'ACESS_CODE[19]'. (VHDL-290)
+Warning: A dummy net 'n_1028' is created to connect open pin 'ACESS_CODE[18]'. (VHDL-290)
+Warning: A dummy net 'n_1029' is created to connect open pin 'ACESS_CODE[17]'. (VHDL-290)
+Warning: A dummy net 'n_1030' is created to connect open pin 'ACESS_CODE[16]'. (VHDL-290)
+Warning: A dummy net 'n_1031' is created to connect open pin 'ACESS_CODE[15]'. (VHDL-290)
+Warning: A dummy net 'n_1032' is created to connect open pin 'ACESS_CODE[14]'. (VHDL-290)
+Warning: A dummy net 'n_1033' is created to connect open pin 'ACESS_CODE[13]'. (VHDL-290)
+Warning: A dummy net 'n_1034' is created to connect open pin 'ACESS_CODE[12]'. (VHDL-290)
+Warning: A dummy net 'n_1035' is created to connect open pin 'ACESS_CODE[11]'. (VHDL-290)
+Warning: A dummy net 'n_1036' is created to connect open pin 'ACESS_CODE[10]'. (VHDL-290)
+Warning: A dummy net 'n_1037' is created to connect open pin 'ACESS_CODE[9]'. (VHDL-290)
+Warning: A dummy net 'n_1038' is created to connect open pin 'ACESS_CODE[8]'. (VHDL-290)
+Warning: A dummy net 'n_1039' is created to connect open pin 'ACESS_CODE[7]'. (VHDL-290)
+Warning: A dummy net 'n_1040' is created to connect open pin 'ACESS_CODE[6]'. (VHDL-290)
+Warning: A dummy net 'n_1041' is created to connect open pin 'ACESS_CODE[5]'. (VHDL-290)
+Warning: A dummy net 'n_1042' is created to connect open pin 'ACESS_CODE[4]'. (VHDL-290)
+Warning: A dummy net 'n_1043' is created to connect open pin 'ACESS_CODE[2]'. (VHDL-290)
+Warning: A dummy net 'n_1044' is created to connect open pin 'ACESS_CODE[0]'. (VHDL-290)
+Warning: A dummy net 'n_1045' is created to connect open pin 'HEADER[50]'. (VHDL-290)
+Warning: A dummy net 'n_1046' is created to connect open pin 'HEADER[49]'. (VHDL-290)
+Warning: A dummy net 'n_1047' is created to connect open pin 'HEADER[48]'. (VHDL-290)
+Warning: A dummy net 'n_1048' is created to connect open pin 'HEADER[47]'. (VHDL-290)
+Warning: A dummy net 'n_1049' is created to connect open pin 'HEADER[46]'. (VHDL-290)
+Warning: A dummy net 'n_1050' is created to connect open pin 'HEADER[45]'. (VHDL-290)
+Warning: A dummy net 'n_1051' is created to connect open pin 'HEADER[8]'. (VHDL-290)
+Warning: A dummy net 'n_1052' is created to connect open pin 'HEADER[7]'. (VHDL-290)
+Warning: A dummy net 'n_1053' is created to connect open pin 'HEADER[6]'. (VHDL-290)
+Warning: A dummy net 'n_1054' is created to connect open pin 'HEADER[5]'. (VHDL-290)
+Warning: A dummy net 'n_1055' is created to connect open pin 'HEADER[4]'. (VHDL-290)
+Warning: A dummy net 'n_1056' is created to connect open pin 'HEADER[3]'. (VHDL-290)
+Warning: A dummy net 'n_1057' is created to connect open pin 'EMPTY1'. (VHDL-290)
+1
+write -format verilog -hierarchy -output "mapped/$current_design.v"
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing verilog file '/home/ecegrid/a/mg34/ece337/BENC/mapped/BENC.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 50 nets to module bToothTop using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module s_Control using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+Warning: Design 'BENC' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Net 'DATA[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'DATA[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'SDATA[7]' has a single tri-state driver.  (LINT-63)
+Warning: In design 'ENCRYPTION', the same net is connected to more than one pin on submodule 'U_5'. (LINT-33)
+   Net 'CLK' is connected to pins 'CLK', 'D_CLK'. 
+Warning: In design 'bToothTop', a pin on submodule 'U_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'ACCESS_CODE[70]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[68]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[64]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[62]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[59]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[56]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[55]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[52]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[49]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[48]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[47]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[40]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[38]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[35]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[32]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[31]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[28]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[25]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[24]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[23]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[19]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[18]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[17]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[16]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[15]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[14]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[13]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[12]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[11]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[10]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[9]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[8]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[7]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[6]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[5]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[4]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[2]' is connected to logic 0. 
+   Pin 'ACCESS_CODE[0]' is connected to logic 0. 
+   Pin 'HEADER[50]' is connected to logic 0. 
+   Pin 'HEADER[49]' is connected to logic 0. 
+   Pin 'HEADER[48]' is connected to logic 0. 
+   Pin 'HEADER[47]' is connected to logic 0. 
+   Pin 'HEADER[46]' is connected to logic 0. 
+   Pin 'HEADER[45]' is connected to logic 0. 
+   Pin 'HEADER[8]' is connected to logic 0. 
+   Pin 'HEADER[7]' is connected to logic 0. 
+   Pin 'HEADER[6]' is connected to logic 0. 
+   Pin 'HEADER[5]' is connected to logic 0. 
+   Pin 'HEADER[4]' is connected to logic 0. 
+   Pin 'HEADER[3]' is connected to logic 0. 
+Warning: In design 's_Control', a pin on submodule 'sub_84' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'e_encController', port 'EMPTY' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'IN_SELECT' is not connected to any nets. (LINT-28)
+Warning: In design 'U_RCU', port 'STUFF_ERROR' is not connected to any nets. (LINT-28)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[70]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[68]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[64]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[62]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[59]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[56]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[55]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[52]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[49]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[48]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[47]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[40]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[38]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[35]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[32]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[31]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[28]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[25]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[24]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[23]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[19]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[18]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[17]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[16]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[15]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[14]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[13]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[12]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[11]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[10]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[9]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_AppendAccessCode', output port 'ACESS_CODE[0]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[50]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[49]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[48]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[47]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[46]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[45]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[8]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[7]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[6]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[5]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[4]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'B_Header_WAITREG5264', output port 'HEADER[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 's_Control_DW01_dec_0', port 'SUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 's_Control_DW01_sub_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 's_Control_DW01_sub_0', port 'CO' is not connected to any nets. (LINT-28)
+1
+exit
+Information: Defining new variable 'compile_group_pull_control_logic'. (CMD-041)
+
+Thank you...

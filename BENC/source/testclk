@@ -1,0 +1,13 @@
+rm -rf work
+vlib work
+vcom mapped/U_CLKDIV.vhd
+#vcom source/U_CLKDIV.vhd
+vcom source/tb_U_CLKDIV.vhd
+vsim -i work.tb_u_clkdiv
+add wave *
+add wave \
+{sim:/tb_u_clkdiv/dut/ctr1_1_port } \
+{sim:/tb_u_clkdiv/dut/ctr1_0_port } \
+{sim:/tb_u_clkdiv/dut/ctr0_1_port } \
+{sim:/tb_u_clkdiv/dut/ctr0_0_port } 
+run 100 ns

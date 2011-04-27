@@ -1,0 +1,6 @@
+vcom source/tb_e_fiestel.vhd
+vcom mapped/e_fiestel.vhd
+vsim -i -coverage work.tb_e_fiestel
+add wave -r sim:/tb_e_fiestel/*
+add wave -r sim:/tb_e_fiestel/dut/func/*
+run 170 ns

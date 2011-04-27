@@ -1,0 +1,617 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ecegrid/a/mg34/ece337/BENC
+T_opt
+Z1 V8TD;d7eDeZ9:40Qa:h9OV0
+Z2 04 7 4 work tb_benc test 1
+Z3 =1-001422b0289e-4db76191-da891-1672
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OL;O;6.6b;45
+Z7 d/home/ecegrid/a/mg34/ece337/BENC
+Ebenc
+Z8 w1303850990
+Z9 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z10 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+R7
+Z11 8source/benc.vhd
+Z12 Fsource/benc.vhd
+l0
+L13
+Z13 V8jfQ;kgb51jRPdVV@bUYB1
+Z14 OL;C;6.6b;45
+Z15 tExplicit 1 Coverage 47 CoverOpt 1 CoverFEC 0 CoverShortCircuit 0
+Z16 !s100 DCK94REil<C01U6UBiJa60
+Astruct
+Z17 DEx47 /home/ecegrid/a/ece337/Class0.5u/ECE337_IP/vsim 4 fifo 0 22 nfXl2T3WdYEB:Vg17[_oA1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 10 e_rndcount 0 22 8=i4^C=UIQgQ2VT`]EeON2
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 9 e_rkeygen 0 22 =_X2Uz_BmQJ^o>>Pg1ZOL3
+Z18 DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 9 e_fiestel 0 22 bZFVjM>KFYcJ^;=LS_D1K3
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 15 e_enccontroller 0 22 GbnBfo?Q]6>0Z4DF4ZzRz2
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 11 e_decompile 0 22 JEHO;IaPmFcCN[^cK?=O^0
+Z19 DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 8 rcv_fifo 0 22 KdQ7El[Y:dlOSSi_g`T@F1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 9 s_control 0 22 H79oB11]834n=iUU2mgHF0
+Z20 DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 8 usb_rcvr 0 22 YFS;U1h[kkNg1;WURlfSo3
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 10 encryption 0 22 iIH5`BmZXXkGXA`XBRK_70
+Z21 DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 4 benc 0 22 8jfQ;kgb51jRPdVV@bUYB1
+Z22 DPx17 __model_tech/ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R9
+R10
+31
+Z23 Mx3 17 __model_tech/ieee 14 std_logic_1164
+Z24 Mx2 17 __model_tech/ieee 15 std_logic_arith
+Z25 Mx1 17 __model_tech/ieee 18 std_logic_unsigned
+l137
+L50
+Z26 Vnfz5eNQQ`jcFHc52T2;?>0
+R14
+R15
+Z27 !s100 =Cn1KMU<D`j`=gmo0JKh>2
+Ee_decompile
+Z28 w1303593797
+Z29 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z30 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z31 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R7
+Z32 8source/e_DeCompile.vhd
+Z33 Fsource/e_DeCompile.vhd
+l0
+L14
+Z34 VJEHO;IaPmFcCN[^cK?=O^0
+R14
+31
+R15
+Z35 !s100 LJ?V739IEVRJ@zLVH`kA91
+Abehav
+R29
+R30
+R31
+Z36 DEx4 work 11 e_decompile 0 22 JEHO;IaPmFcCN[^cK?=O^0
+l29
+L23
+Z37 V3WC?3L_jmenEPFmRM_??X0
+R14
+31
+Z38 Mx3 4 ieee 14 std_logic_1164
+Z39 Mx2 4 ieee 18 std_logic_unsigned
+Z40 Mx1 4 ieee 15 std_logic_arith
+R15
+Z41 !s100 LgKMn_EFW_h?z6alSLTo[0
+Ee_enccontroller
+Z42 w1303675292
+R29
+R30
+R31
+R7
+Z43 8source/e_encController.vhd
+Z44 Fsource/e_encController.vhd
+l0
+L14
+Z45 VGbnBfo?Q]6>0Z4DF4ZzRz2
+R14
+31
+R15
+Z46 !s100 n@_2m08e=zROID[?BccW23
+Abehav
+R29
+R30
+R31
+Z47 DEx4 work 15 e_enccontroller 0 22 GbnBfo?Q]6>0Z4DF4ZzRz2
+l39
+L29
+Z48 Vek9DnYTcZgL]DP]UGniSl0
+R14
+31
+R38
+R39
+R40
+R15
+Z49 !s100 I7Fz@7j_bM:46aa8I9k=12
+Ee_fiestel
+Z50 w1303675336
+R9
+R10
+31
+R7
+Z51 8source/e_fiestel.vhd
+Z52 Fsource/e_fiestel.vhd
+l0
+L14
+Z53 VbZFVjM>KFYcJ^;=LS_D1K3
+R14
+R15
+Z54 !s100 OGTgKBo=lMLdiaAK^80J72
+Abehav
+R9
+R10
+R18
+31
+Z55 Mx2 17 __model_tech/ieee 14 std_logic_1164
+Z56 Mx1 17 __model_tech/ieee 15 std_logic_arith
+l29
+L25
+Z57 V_k2HH30?3`5n^Ll6cT>E31
+R14
+R15
+Z58 !s100 `LR@00e?F4cGzLm=3j36=1
+Ee_rkeygen
+Z59 w1303589210
+R29
+R30
+R31
+R7
+Z60 8source/e_rkeyGen.vhd
+Z61 Fsource/e_rkeyGen.vhd
+l0
+L15
+Z62 V=_X2Uz_BmQJ^o>>Pg1ZOL3
+R14
+31
+R15
+Z63 !s100 eK=ghPQm:WI78K?=FDfKR0
+Abehav
+R29
+R30
+R31
+Z64 DEx4 work 9 e_rkeygen 0 22 =_X2Uz_BmQJ^o>>Pg1ZOL3
+l30
+L24
+Z65 VA2io4P:ik7]VNchT?An0J3
+R14
+31
+R38
+R39
+R40
+R15
+Z66 !s100 3UGdFeI34W;AhGKiIUl`20
+Ee_rndcount
+Z67 w1303589427
+R29
+R30
+R31
+R7
+Z68 8source/e_rndCount.vhd
+Z69 Fsource/e_rndCount.vhd
+l0
+L14
+Z70 V8=i4^C=UIQgQ2VT`]EeON2
+R14
+31
+R15
+Z71 !s100 efh5Kd[>UBMfS@8keG`kW3
+Abehav
+R29
+R30
+R31
+Z72 DEx4 work 10 e_rndcount 0 22 8=i4^C=UIQgQ2VT`]EeON2
+l28
+L24
+Z73 Vj]6WZ:?hV1Ya^[ZeUm@7<1
+R14
+31
+R38
+R39
+R40
+R15
+Z74 !s100 VBkza]BPhkb881O[VVgQ91
+Eencryption
+Z75 w1303804572
+R29
+R31
+R7
+Z76 8source/encryption.vhd
+Z77 Fsource/encryption.vhd
+l0
+L13
+Z78 ViIH5`BmZXXkGXA`XBRK_70
+R14
+31
+R15
+Z79 !s100 mlmkV9n[cYClIRRN>9hV>3
+Astruct
+Z80 DEx4 work 10 encryption 0 22 iIH5`BmZXXkGXA`XBRK_70
+R30
+R29
+R31
+l148
+L50
+Z81 VcNl`d74dd1^NeU_iC2U]<2
+R14
+31
+R38
+Z82 Mx2 4 ieee 15 std_logic_arith
+Z83 Mx1 4 ieee 18 std_logic_unsigned
+R15
+Z84 !s100 dXn`bU`cH8nBcE0^GnNIg1
+Ercv_fifo
+Z85 w1303802317
+R31
+R7
+Z86 8source/RCV_FIFO.vhd
+Z87 Fsource/RCV_FIFO.vhd
+l0
+L16
+Z88 VKdQ7El[Y:dlOSSi_g`T@F1
+R14
+31
+R15
+Z89 !s100 oP;83UE992CTW56Z<D0RY2
+Awrapper
+R31
+Z90 DEx4 work 8 rcv_fifo 0 22 KdQ7El[Y:dlOSSi_g`T@F1
+l47
+L32
+Z91 VFIW@SdEkV4jA0dP]XC3dP3
+R14
+31
+Z92 Mx1 4 ieee 14 std_logic_1164
+R15
+Z93 !s100 bRJDmM_OD8L:QYoLaMeha0
+Es_control
+Z94 w1303851607
+R29
+R30
+R31
+R7
+Z95 8source/s_Control.vhd
+Z96 Fsource/s_Control.vhd
+l0
+L14
+Z97 VH79oB11]834n=iUU2mgHF0
+R14
+31
+R15
+Z98 !s100 8YCkMfM9DX2F?5[39cSIF3
+Abehav
+R29
+R30
+R31
+Z99 DEx4 work 9 s_control 0 22 H79oB11]834n=iUU2mgHF0
+l40
+L31
+Z100 VFM^bT:^3[Mf0DlXAXZ=<I0
+R14
+31
+R38
+R39
+R40
+R15
+Z101 !s100 NDa@b=iQ0HVKkW>IEb7a`0
+Etb_benc
+Z102 w1303851139
+R22
+R9
+R10
+31
+R7
+Z103 8source/tb_benc.vhd
+Z104 Fsource/tb_benc.vhd
+l0
+L17
+Z105 VBk;:QR<<Ec]jCjOhH>3]K3
+R14
+R15
+Z106 !s100 gWhHDYOKzAJW<[BKl=4nB0
+Atest
+Z107 DEx47 /home/ecegrid/a/ece337/Class0.5u/ECE337_IP/vsim 22 scalable_off_chip_sram 0 22 gDPd@D_RVR^43OU<V0>mm0
+R21
+R22
+R9
+R10
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 7 tb_benc 0 22 Bk;:QR<<Ec]jCjOhH>3]K3
+31
+R23
+R24
+R25
+l1511
+L22
+Z108 V9<XQjcMCTPQ:^n<_7LLjK0
+R14
+R15
+Z109 !s100 jYmi5;:TCZOfIWV[Z7FnD0
+Etb_encryption
+Z110 w1303680048
+R31
+R7
+Z111 8source/tb_encryption.vhd
+Z112 Fsource/tb_encryption.vhd
+l0
+L16
+Z113 ViIQ@m=Pb:PiInKg=g@OLh2
+R14
+31
+R15
+Z114 !s100 ?TK^c1?C5IFfj>JCfI][e1
+Atest
+R31
+Z115 DEx4 work 13 tb_encryption 0 22 iIQ@m=Pb:PiInKg=g@OLh2
+l67
+L20
+Z116 VBQdaUJZ?7o;1=`kQ3ij^43
+R14
+31
+R92
+R15
+Z117 !s100 iNja:MmT<4EcIIzPOL;e21
+Eu_buffer
+R85
+R31
+R7
+Z118 8source/U_BUFFER.vhd
+Z119 Fsource/U_BUFFER.vhd
+l0
+L4
+Z120 V69NQ70bOGiEX[X`8fFfRH3
+R14
+31
+R15
+Z121 !s100 2o42;en9lUn50dcD[P^Uk0
+Abuffer16
+R31
+Z122 DEx4 work 8 u_buffer 0 22 69NQ70bOGiEX[X`8fFfRH3
+l21
+L18
+Z123 VgIT`Z69?AAk<23c]eYmRW0
+R14
+31
+R92
+R15
+Z124 !s100 :Z=EQ5EzB2m:Db?1BZ05H0
+Eu_clkdiv
+R85
+R31
+R7
+Z125 8source/U_CLKDIV.vhd
+Z126 Fsource/U_CLKDIV.vhd
+l0
+L13
+Z127 VaiR<EmfkGBl;Tc1;2CkTC1
+R14
+31
+R15
+Z128 !s100 V2QQ]z]QLmJXDEO5<aO_c0
+Aclockdivider
+R31
+Z129 DEx4 work 8 u_clkdiv 0 22 aiR<EmfkGBl;Tc1;2CkTC1
+l27
+L23
+Z130 VIk]PDCH9:URRo7[J?IEz<3
+R14
+31
+R92
+R15
+Z131 !s100 Zc[BKeTGgU:;GHG2LM=In0
+Eu_crc
+R85
+R31
+R7
+Z132 8source/U_CRC.vhd
+Z133 Fsource/U_CRC.vhd
+l0
+L13
+Z134 Vi`<A7mG8XnGgH>PcNJUfK3
+R14
+31
+R15
+Z135 !s100 oeEWn@L<ZWCTfBDS0<C`N0
+Asimple_shift_reg
+R31
+Z136 DEx4 work 5 u_crc 0 22 i`<A7mG8XnGgH>PcNJUfK3
+l31
+L26
+Z137 V]09Edm[jRo:k`JQ9Wji]30
+R14
+31
+R92
+R15
+Z138 !s100 RnYUm31Q[g;>PYQa[f3ck0
+Eu_decode
+R85
+R31
+R7
+Z139 8source/U_DECODE.vhd
+Z140 Fsource/U_DECODE.vhd
+l0
+L13
+Z141 VG<119Q;_V67n;I34c>FUd1
+R14
+31
+R15
+Z142 !s100 lRkCNlBVeaJonARH47QG?2
+Abehavioral
+R31
+Z143 DEx4 work 8 u_decode 0 22 G<119Q;_V67n;I34c>FUd1
+l26
+L22
+Z144 V_3_ZcWMk3jDdB30]H[Y@@3
+R14
+31
+R92
+R15
+Z145 !s100 =j>nWH_d]Q;ZlKg^ddo>23
+Eu_edge_detect
+R85
+R31
+R7
+Z146 8source/U_EDGE_DETECT.vhd
+Z147 Fsource/U_EDGE_DETECT.vhd
+l0
+L13
+Z148 VoHK9LR43N:mSPUD[DZJ=c0
+R14
+31
+R15
+Z149 !s100 _U_8E:<`5:_6LRP82CFJQ2
+Abehavioral
+R31
+Z150 DEx4 work 13 u_edge_detect 0 22 oHK9LR43N:mSPUD[DZJ=c0
+l22
+L20
+Z151 V[>7h89Rol7CjEC9TYkICg0
+R14
+31
+R92
+R15
+Z152 !s100 RiD1lk;>6?iAP5z@mGgSO1
+Eu_eop_detect
+Z153 w1303802316
+R31
+R7
+Z154 8source/U_EOP_DETECT.vhd
+Z155 Fsource/U_EOP_DETECT.vhd
+l0
+L13
+Z156 VXE<8Lc1aZd0VaRAQQikmb1
+R14
+31
+R15
+Z157 !s100 kQiZjeXb^gGSFlcI=85fX0
+Adataflow
+R31
+Z158 DEx4 work 12 u_eop_detect 0 22 XE<8Lc1aZd0VaRAQQikmb1
+l20
+L19
+Z159 V[NBZ8bm^N=4?e>o5R2h4L1
+R14
+31
+R92
+R15
+Z160 !s100 7bAlKI=7oASjmz8KfcgQ02
+Eu_fcu
+Z161 w1303858578
+R31
+R7
+Z162 8source/U_FCU.vhd
+Z163 Fsource/U_FCU.vhd
+l0
+L13
+Z164 VGHBzdU=d`i]?J@g?z2Zzh2
+R14
+31
+R15
+Z165 !s100 4lP03Mo7H6zBK6@R^=cha0
+Abehavioral
+R31
+Z166 DEx4 work 5 u_fcu 0 22 GHBzdU=d`i]?J@g?z2Zzh2
+l33
+L28
+Z167 VYK86eV11_U6V7M7<i2]Jd0
+R14
+31
+R92
+R15
+Z168 !s100 TNRb0`MD=86zaP:nC4A<n2
+Eu_rcu
+Z169 w1303863664
+R31
+R7
+Z170 8source/U_RCU.vhd
+Z171 Fsource/U_RCU.vhd
+l0
+L13
+Z172 VaQHlL4i:A<VjeOXMZPLm93
+R14
+31
+R15
+Z173 !s100 <TWM`4XJEhVUo[Sz1N^1N0
+Abehavioral
+R31
+Z174 DEx4 work 5 u_rcu 0 22 aQHlL4i:A<VjeOXMZPLm93
+l32
+L28
+Z175 VF]]jl5UVWVV18JTlzdJj`0
+R14
+31
+R92
+R15
+Z176 !s100 DTYZSBGiG1X@=QZDo_[ZJ0
+Eu_timer
+R85
+R31
+R7
+Z177 8source/U_TIMER.vhd
+Z178 Fsource/U_TIMER.vhd
+l0
+L13
+Z179 VDYO<DTmAobUz08:QN?]H:1
+R14
+31
+R15
+Z180 !s100 c:3:TRSO3ZXXI?AD[WZAC2
+Abehavioral
+R31
+Z181 DEx4 work 7 u_timer 0 22 DYO<DTmAobUz08:QN?]H:1
+l24
+L21
+Z182 V0>O<AN>8gg>cX][<N_lS73
+R14
+31
+R92
+R15
+Z183 !s100 jW^2ZkVfRdECTR:fA89J^1
+Eusb_rcvr
+R85
+R9
+R10
+31
+R7
+Z184 8source/USB_RCVR.vhd
+Z185 Fsource/USB_RCVR.vhd
+l0
+L13
+Z186 VYFS;U1h[kkNg1;WURlfSo3
+R14
+R15
+Z187 !s100 ^l;bBB[D]c4RXG_Pn4V`b3
+Astruct
+R17
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 7 u_timer 0 22 DYO<DTmAobUz08:QN?]H:1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 5 u_rcu 0 22 aQHlL4i:A<VjeOXMZPLm93
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 5 u_fcu 0 22 GHBzdU=d`i]?J@g?z2Zzh2
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 12 u_eop_detect 0 22 XE<8Lc1aZd0VaRAQQikmb1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 13 u_edge_detect 0 22 oHK9LR43N:mSPUD[DZJ=c0
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 8 u_decode 0 22 G<119Q;_V67n;I34c>FUd1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 5 u_crc 0 22 i`<A7mG8XnGgH>PcNJUfK3
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 8 u_clkdiv 0 22 aiR<EmfkGBl;Tc1;2CkTC1
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 8 u_buffer 0 22 69NQ70bOGiEX[X`8fFfRH3
+DEx37 /home/ecegrid/a/mg34/ece337/BENC/work 9 usb_shift 0 22 mVzRfeU_0m?HkNPlgbM3D2
+R19
+R20
+R9
+R10
+31
+R55
+R56
+l216
+L48
+Z188 V<=R1mVm]Q?bTbXmGmIS`23
+R14
+R15
+Z189 !s100 FbM^Q1eTLmFhb746`>]NJ0
+Eusb_shift
+R85
+R31
+R7
+Z190 8source/USB_SHIFT.vhd
+Z191 Fsource/USB_SHIFT.vhd
+l0
+L14
+Z192 VmVzRfeU_0m?HkNPlgbM3D2
+R14
+31
+R15
+Z193 !s100 [:eB<U7=6f]3:JC8T5IAd2
+Abehavioral
+R31
+Z194 DEx4 work 9 usb_shift 0 22 mVzRfeU_0m?HkNPlgbM3D2
+l33
+L28
+Z195 VTTO>:eHm2e`D8n4>9HaNH2
+R14
+31
+R92
+R15
+Z196 !s100 ce?1RJjeS[dDl8[QnONBj3

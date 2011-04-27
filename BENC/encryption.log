@@ -1,0 +1,575 @@
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version D-2010.03-SP3 for amd64 -- Jul 18, 2010
+              Copyright (c) 1988-2010 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+# Step 1:  Read in the source file
+analyze -format vhdl -lib WORK {RCV_FIFO.vhd e_DeCompile.vhd e_encController.vhd e_fiestel.vhd e_rkeyGen.vhd e_rndCount.vhd encryption.vhd}
+Running PRESTO HDLC
+-- Compiling Source File ./source/RCV_FIFO.vhd
+Compiling Entity Declaration RCV_FIFO
+Compiling Architecture WRAPPER of RCV_FIFO
+Warning:  ./source/RCV_FIFO.vhd:32: The architecture wrapper has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_DeCompile.vhd
+Compiling Entity Declaration E_DECOMPILE
+Compiling Architecture BEHAV of E_DECOMPILE
+Warning:  ./source/e_DeCompile.vhd:23: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_encController.vhd
+Compiling Entity Declaration E_ENCCONTROLLER
+Compiling Architecture BEHAV of E_ENCCONTROLLER
+Warning:  ./source/e_encController.vhd:29: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_fiestel.vhd
+Compiling Entity Declaration E_FIESTEL
+Compiling Architecture BEHAV of E_FIESTEL
+Warning:  ./source/e_fiestel.vhd:25: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_rkeyGen.vhd
+Compiling Entity Declaration E_RKEYGEN
+Compiling Architecture BEHAV of E_RKEYGEN
+Warning:  ./source/e_rkeyGen.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/e_rndCount.vhd
+Compiling Entity Declaration E_RNDCOUNT
+Compiling Architecture BEHAV of E_RNDCOUNT
+Warning:  ./source/e_rndCount.vhd:24: The architecture behav has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ./source/encryption.vhd
+Compiling Entity Declaration ENCRYPTION
+Compiling Architecture STRUCT of ENCRYPTION
+Warning:  ./source/encryption.vhd:50: The architecture struct has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+1
+elaborate encryption -arch "struct" -lib WORK -update
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-D-2010.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'ENCRYPTION'.
+Information: Building the design 'RCV_FIFO'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'e_DeCompile'. (HDL-193)
+
+Statistics for case statements in always block at line 43 in file
+	'./source/e_DeCompile.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 113 in file
+	'./source/e_DeCompile.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           113            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_DeCompile line 31 in file
+		'./source/e_DeCompile.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_encController'. (HDL-193)
+
+Statistics for case statements in always block at line 72 in file
+	'./source/e_encController.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 153 in file
+	'./source/e_encController.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           179            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_encController line 41 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cD_ENABLE_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    compileCT_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_encController line 153 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CompData2_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData1_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData2_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData3_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData4_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData5_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData6_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData7_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|     cData8_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_encController line 223 in file
+		'./source/e_encController.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rndCT_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_fiestel'. (HDL-193)
+Warning:  ./source/e_fiestel.vhd:72: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:109: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:146: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:183: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:69: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:238: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:277: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:316: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:354: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:236: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:404: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:442: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:480: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:518: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:402: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:564: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:601: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:638: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:675: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:562: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:721: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:758: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:795: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:832: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:719: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:879: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:916: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:953: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:990: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:877: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1036: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1073: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1110: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1147: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1034: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1193: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1230: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1267: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1304: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./source/e_fiestel.vhd:1191: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 43 in file
+	'./source/e_fiestel.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            69            |    auto/auto     |
+|            72            |    auto/auto     |
+|           109            |    auto/auto     |
+|           146            |    auto/auto     |
+|           183            |    auto/auto     |
+|           236            |    auto/auto     |
+|           238            |    auto/auto     |
+|           277            |    auto/auto     |
+|           316            |    auto/auto     |
+|           354            |    auto/auto     |
+|           402            |    auto/auto     |
+|           404            |    auto/auto     |
+|           442            |    auto/auto     |
+|           480            |    auto/auto     |
+|           518            |    auto/auto     |
+|           562            |    auto/auto     |
+|           564            |    auto/auto     |
+|           601            |    auto/auto     |
+|           638            |    auto/auto     |
+|           675            |    auto/auto     |
+|           719            |    auto/auto     |
+|           721            |    auto/auto     |
+|           758            |    auto/auto     |
+|           795            |    auto/auto     |
+|           832            |    auto/auto     |
+|           877            |    auto/auto     |
+|           879            |    auto/auto     |
+|           916            |    auto/auto     |
+|           953            |    auto/auto     |
+|           990            |    auto/auto     |
+|           1034           |    auto/auto     |
+|           1036           |    auto/auto     |
+|           1073           |    auto/auto     |
+|           1110           |    auto/auto     |
+|           1147           |    auto/auto     |
+|           1191           |    auto/auto     |
+|           1193           |    auto/auto     |
+|           1230           |    auto/auto     |
+|           1267           |    auto/auto     |
+|           1304           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine e_fiestel line 31 in file
+		'./source/e_fiestel.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  CUR_ENC_RIGHT_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  CUR_ENC_LEFT_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine e_fiestel line 1356 in file
+		'./source/e_fiestel.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     OUTDATA_reg     | Latch |  64   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_rkeyGen'. (HDL-193)
+
+Inferred memory devices in process
+	in routine e_rkeyGen line 33 in file
+		'./source/e_rkeyGen.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    ENC_RIGHT_reg    | Flip-flop |  18   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    ENC_RIGHT_reg    | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ENC_LEFT_reg     | Flip-flop |  15   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    ENC_LEFT_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'e_rndCount'. (HDL-193)
+Warning:  ./source/e_rndCount.vhd:32: 'START' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine e_rndCount line 30 in file
+		'./source/e_rndCount.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     CUR_CNT_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Fifo'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fiforam'. (HDL-193)
+Warning:  ./ECE337_IPsource/FIFO/source/fiforam.vhd:43: 'waddr' is being read, but does not appear in the sensitivity list of the block. (ELAB-292)
+
+Inferred memory devices in process
+	in routine fiforam line 48 in file
+		'./ECE337_IPsource/FIFO/source/fiforam.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     fiforeg_reg     | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 76 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wrptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    wrptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 102 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   full_flag_r_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_fifo_ctrl line 115 in file
+		'./ECE337_IPsource/FIFO/source/write_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_fifo_ctrl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 75 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rwptr_r1_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    rwptr_r2_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 100 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  empty_flag_r_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_fifo_ctrl line 114 in file
+		'./ECE337_IPsource/FIFO/source/read_fifo_ctrl.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'write_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine write_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/write_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_ptr'. (HDL-193)
+
+Inferred memory devices in process
+	in routine read_ptr line 79 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    binary_r_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_ptr line 89 in file
+		'./ECE337_IPsource/FIFO/source/read_ptr.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     gray_r_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+uniquify
+1
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | D-2010.03-DWBB_1007 |    *     |
+| Licensed DW Building Blocks             |                    |           |
+============================================================================
+
+
+Information: There are 10 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'e_rndCount'
+  Processing 'e_rkeyGen'
+  Processing 'e_fiestel'
+  Processing 'e_encController'
+  Processing 'e_DeCompile'
+  Processing 'read_ptr'
+  Processing 'read_fifo_ctrl'
+  Processing 'write_ptr'
+  Processing 'write_fifo_ctrl'
+  Processing 'fiforam'
+  Processing 'fifo'
+  Processing 'RCV_FIFO'
+  Processing 'ENCRYPTION'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'ENCRYPTION' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'e_encController_DW01_cmp2_0'
+  Processing 'e_encController_DW01_inc_0'
+  Processing 'e_encController_DW01_cmp2_1'
+  Processing 'e_encController_DW01_cmp2_2'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'read_ptr'
+  Mapping 'read_ptr'
+  Structuring 'write_ptr'
+  Mapping 'write_ptr'
+  Structuring 'read_fifo_ctrl'
+  Mapping 'read_fifo_ctrl'
+  Structuring 'write_fifo_ctrl'
+  Mapping 'write_fifo_ctrl'
+  Structuring 'fiforam'
+  Mapping 'fiforam'
+  Structuring 'e_rndCount'
+  Mapping 'e_rndCount'
+  Structuring 'e_fiestel'
+  Mapping 'e_fiestel'
+  Structuring 'e_encController'
+  Mapping 'e_encController'
+  Structuring 'e_DeCompile'
+  Mapping 'e_DeCompile'
+  Structuring 'ENCRYPTION'
+  Mapping 'ENCRYPTION'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  942345.0      0.00       0.0      13.1                          
+    0:00:08  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  943497.0      0.00       0.0       8.0                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09  943497.0      0.00       0.0       8.0                          
+    0:00:09  946305.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09  946305.0      0.00       0.0       0.0                          
+    0:00:09  946305.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+    0:00:09  945369.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+  Optimization Complete
+  ---------------------
+1
+# Step 4: Output reports
+current_design .
+Current design is 'ENCRYPTION'.
+{ENCRYPTION}
+report_timing -path full -delay max -max_paths 1 -nworst 1 > reports/$current_design.rep
+report_area >> reports/$current_design.rep
+report_power -hier >> reports/$current_design.rep
+# Step 5: Output final VHDL and Verilog files
+write -format vhdl -hierarchy -output "mapped/$current_design.vhd"
+Writing vhdl file '/home/ecegrid/a/mg34/ece337/BENC/mapped/ENCRYPTION.vhd'.
+1
+write -format verilog -hierarchy -output "mapped/$current_design.v"
+Writing verilog file '/home/ecegrid/a/mg34/ece337/BENC/mapped/ENCRYPTION.v'.
+1
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+Warning: In design 'ENCRYPTION', the same net is connected to more than one pin on submodule 'U_5'. (LINT-33)
+   Net 'CLK' is connected to pins 'CLK', 'D_CLK'. 
+Warning: In design 'e_encController', port 'EMPTY' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'RNDNUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'e_rkeyGen', port 'IN_SELECT' is not connected to any nets. (LINT-28)
+1
+exit
+Information: Defining new variable 'compile_group_pull_control_logic'. (CMD-041)
+
+Thank you...
