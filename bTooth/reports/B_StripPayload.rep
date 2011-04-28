@@ -1,0 +1,143 @@
+Information: Updating graph... (UID-83)
+Information: Timing loop detected. (OPT-150)
+	U58/A U58/Y U311/A U311/Y U56/B U56/Y cnt4_reg[0]/CLK cnt4_reg[0]/Q U234/A U234/Y U352/A U352/Y 
+Information: Timing loop detected. (OPT-150)
+	cnt4_reg[1]/CLK cnt4_reg[1]/Q U355/A U355/Y U235/A U235/Y U233/A U233/Y U231/B U231/Y U329/A U329/Y U58/C U58/Y U311/A U311/Y U56/B U56/Y 
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
+         to break a timing loop. (OPT-314)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : B_StripPayload
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:37:01 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: wrapper/UWFC/waddr_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: wrapper/UFIFORAM/fiforeg_reg[1][7]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  wrapper/UWFC/waddr_reg[1]/CLK (DFFSR)                   0.00       0.00 r
+  wrapper/UWFC/waddr_reg[1]/Q (DFFSR)                     0.73       0.73 f
+  wrapper/UWFC/waddr[1] (write_fifo_ctrl)                 0.00       0.73 f
+  wrapper/UFIFORAM/waddr[1] (fiforam)                     0.00       0.73 f
+  wrapper/UFIFORAM/U19/Y (INVX1)                          0.23       0.96 r
+  wrapper/UFIFORAM/U283/Y (NAND3X1)                       0.41       1.37 f
+  wrapper/UFIFORAM/U34/Y (INVX2)                          0.64       2.01 r
+  wrapper/UFIFORAM/U164/Y (AOI22X1)                       0.16       2.17 f
+  wrapper/UFIFORAM/U162/Y (NAND2X1)                       0.20       2.36 r
+  wrapper/UFIFORAM/U158/Y (OAI21X1)                       0.10       2.47 f
+  wrapper/UFIFORAM/U27/Y (INVX1)                          0.11       2.57 r
+  wrapper/UFIFORAM/U157/Y (AOI21X1)                       0.15       2.72 f
+  wrapper/UFIFORAM/U2/Y (BUFX2)                           0.30       3.02 f
+  wrapper/UFIFORAM/U155/Y (OAI22X1)                       0.11       3.13 r
+  wrapper/UFIFORAM/fiforeg_reg[1][7]/D (DFFPOSX1)         0.00       3.13 r
+  data arrival time                                                  3.13
+
+  clock CLK (rise edge)                                   3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  wrapper/UFIFORAM/fiforeg_reg[1][7]/CLK (DFFPOSX1)       0.00       3.50 r
+  library setup time                                     -0.36       3.14
+  data required time                                                 3.14
+  --------------------------------------------------------------------------
+  data required time                                                 3.14
+  data arrival time                                                 -3.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+ 
+****************************************
+Report : area
+Design : B_StripPayload
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:37:01 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               15
+Number of nets:               445
+Number of cells:              392
+Number of references:          21
+
+Combinational area:       188190.000000
+Noncombinational area:    142416.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          330606.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : B_StripPayload
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:37:01 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+B_StripPayload                            1.478   63.861  113.057   65.339 100.0
+  add_98 (B_StripPayload_DW01_inc_3)      0.116    0.238    2.339    0.354   0.5
+  add_211 (B_StripPayload_DW01_inc_2)     0.000    0.000    1.807 1.81e-06   0.0
+  add_226 (B_StripPayload_DW01_inc_1)     0.000    0.000    2.073 2.07e-06   0.0
+  wrapper (fifo)                       2.65e-02   52.811   62.737   52.838  80.9
+    URFC (read_fifo_ctrl)              1.85e-02   11.738   13.437   11.757  18.0
+      RPU1 (read_ptr)                  6.11e-03    4.692    5.717    4.698   7.2
+    UWFC (write_fifo_ctrl)             1.27e-03   11.706   13.437   11.707  17.9
+      WPU1 (write_ptr)                    0.000    4.679    5.717    4.679   7.2
+    UFIFORAM (fiforam)                 6.75e-03   29.368   35.863   29.374  45.0
+1

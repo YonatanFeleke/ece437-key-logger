@@ -1,0 +1,98 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : B_Header
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:51:42 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: HEADER_reg[53]
+              (rising edge-triggered flip-flop)
+  Endpoint: HEADER[53] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  HEADER_reg[53]/CLK (DFFSR)               0.00       0.00 r
+  HEADER_reg[53]/Q (DFFSR)                 0.48       0.48 f
+  HEADER[53] (out)                         0.00       0.48 f
+  data arrival time                                   0.48
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : B_Header
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:51:42 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               59
+Number of nets:               295
+Number of cells:              199
+Number of references:          11
+
+Combinational area:       40464.000000
+Noncombinational area:    102960.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          143424.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : B_Header
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:51:42 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+B_Header                                  4.824   15.915   47.675   20.739 100.0
+  add_80 (B_Header_DW01_inc_0)         1.27e-03 3.43e-03    4.202 4.70e-03   0.0
+1
