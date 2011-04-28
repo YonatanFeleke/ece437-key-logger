@@ -205,6 +205,8 @@ process
 		R_ENABLE <= '0';
 		wait for Period2*8;
 		end loop;
+		testdata <= "11111111" & "10000000" & "01000000" & "11000000" & "11000100" & "10100010" & "11100110" & "10010001";
+		wait for Period2;
 		outputpacket(testdata,CRC, D_PLUS, D_MINUS, testvector);
 
 
