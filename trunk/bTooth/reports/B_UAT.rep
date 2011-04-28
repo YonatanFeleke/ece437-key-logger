@@ -1,0 +1,99 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : B_UAT
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 12:57:42 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: ANT_LOUT_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: ANT_LOUT (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANT_LOUT_reg/CLK (DFFSR)                 0.00       0.00 r
+  ANT_LOUT_reg/Q (DFFSR)                   0.42       0.42 f
+  ANT_LOUT (out)                           0.00       0.42 f
+  data arrival time                                   0.42
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : B_UAT
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 12:57:42 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:              139
+Number of nets:              1252
+Number of cells:             1065
+Number of references:          18
+
+Combinational area:       220248.000000
+Noncombinational area:    264528.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          484776.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : B_UAT
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 12:57:43 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+B_UAT                                    45.403  103.538  159.403  148.941 100.0
+  add_75 (B_UAT_DW01_inc_2)               0.000    0.000    1.807 1.81e-06   0.0
+  r117 (B_UAT_DW01_inc_0)              2.68e-03 8.10e-03    2.339 1.08e-02   0.0
+1

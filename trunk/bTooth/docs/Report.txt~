@@ -1,0 +1,12 @@
+3 Final Design
+
+3.1 Design Architecture
+- old design architecture w/o RCU and r_enable added
+- fifo added to the desi
+3.2
+ The rationale for implementing bluetooth as a transmission method is because we can easily have a number of paired devices transmit to a single master adress and the fact that a bluetooth setup can be made more compact than a wifi.
+Bluetooth utilizez bluetooth 1.0b. The data packet transmission occurs via an LCAP protol ACL DHL5 packets meaning that  multiple slave devices can connect to a master and  a maximum data packet size of 336 bits is allowe since the data is not 1/3 FEC encoded. The system utilizies a hardcoded bluetooth adress of 00:0A:D9:EB:66:C7 (00000000 : 00001010 : 11011001 : 11101011:01100110:11000111). As such device discovery is not available, the rationale for not implementing this is to add security of the data by restricting the hardware that can acess this data. 
+
+3.3
+
+The total time between a readenable and 256 bits of data being available is 1.104 ms. 

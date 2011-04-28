@@ -1,0 +1,101 @@
+Information: Updating graph... (UID-83)
+Information: Timing loop detected. (OPT-150)
+	txwait_reg/Q U404/C U404/Y U302/C U302/Y txwait_reg/CLK 
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'txwait_reg'
+         to break a timing loop. (OPT-314)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : B_EncodePacket
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:48:48 2011
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: ESTORE_EN_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: ESTORE_EN (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ESTORE_EN_reg/CLK (DFFSR)                0.00       0.00 r
+  ESTORE_EN_reg/Q (DFFSR)                  0.42       0.42 f
+  ESTORE_EN (out)                          0.00       0.42 f
+  data arrival time                                   0.42
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+ 
+****************************************
+Report : area
+Design : B_EncodePacket
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:48:48 2011
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:               22
+Number of nets:               434
+Number of cells:              377
+Number of references:          18
+
+Combinational area:       69345.000000
+Noncombinational area:    72864.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          142209.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : B_EncodePacket
+Version: D-2010.03-SP3
+Date   : Wed Apr 27 17:48:49 2011
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+B_EncodePacket                            3.251    6.948   52.768   10.199 100.0
+1

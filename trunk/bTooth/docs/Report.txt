@@ -1,0 +1,45 @@
+3 Final Design
+
+3.1 Design Architecture
+- old design architecture w/o RCU and r_enable added
+- fifo added to the desi
+3.2
+ The rationale for implementing bluetooth as a transmission method is because we can easily have a number of paired devices transmit to a single master adress and the fact that a bluetooth setup can be made more compact than a wifi.
+Bluetooth utilizez bluetooth 1.0b. The data packet transmission occurs via an LCAP protol ACL DHL5 packets meaning that  multiple slave devices can connect to a master and  a maximum data packet size of 336 bits is allowe since the data is not 1/3 FEC encoded. The system utilizies a hardcoded bluetooth adress of 00:0A:D9:EB:66:C7 (00000000 : 00001010 : 11011001 : 11101011:01100110:11000111). As such device discovery is not available, the rationale for not implementing this is to add security of the data by restricting the hardware that can acess this data. 
+
+3.3
+
+The total time between a readenable and 256 bits of data being available is 1.104 ms. 
+
+4.Testing 
+
+
+
+
+
+
+
+Block descriptions
+
+B_AppendAcessCode (~2 cycles = 7 ns after EN)
+ - On RST AcessCode = 72 bits of zeroes on the header bus to be transmitted by the UAT. However on enable this block outputs the access code portion of the header which primarily comprises of the recieving bluetooth adress preappended and trailed with 1010 or 0101.Once finished enables the header.
+
+B_Header ( 84213 Clock cycles =.295 ms)
+ This block computes the HEC ( an 8 bit crc with polynomial x8+x7+x5+x2+x+1) of the remaining header portion and then 1/3 FEC encodes this (repeat everybit three times to tolerate noise), for every packet sent it complements the SEQN component of the header. Once all the steps are completed 54 bits of data are put on the data bus to the UAT to serially transmit it storbes the UAT and then waits 16*5,200 cycles for all bits to be transmitted and then sends an enable signal to the encode block.
+Into B_Header look at testbench. A HEADER_EN runs this in to outputting the headerwith a flopping sqn signal
+    - how long the HEADER_EN determines how many clock cycles the h_store stays high and leaves data out
+output is a Trans_EN that is asserted while data is on the line-> sram must detect transition and start storing the data
+    - this data has to be appeded to the end (MSB) of the AccessCode
+Once clock cycle ENCODE_EN signal to B_EncodePacket
+
+B_EncodePacket (~190531 cycles = .7 ms)
+ Upon recieving an enable signal this block puts 16 bits of additional payload headers then sends them 8 bits at a time to the UAT when done it moves on to strobe the sram for 8 bits of data and then sends them to the uat after strobing the UAT while computing the crc ccitt( crc-16) at the same time. Once data is transmitted it appends the CRC data and then sends them 8 bits at a time.
+  
+B_Controller( 136395 cycles = 0.47738 ms)
+  This block recognizes sequnces from the bluetooth to start or resend a packet sequence and controlls the system. The block also checks if there is data on the off chip SRAM before enabling the transmit side of the bluetooth block. Reverse bluetooth rates used require a 57.6Kbs data rate or 4869 cycles per bit 17microS per bit. As such it was limited to an 8 bit packet sequence of 01110101 for send new packet and 01111010  for a retransmit comman. Also checks if system is busy with a previous command before sending a transmit command.
+
+B_NextPacket (~38,952 = 0.136ms)
+ - Based on error signal input from the reciever of the data transmitted this sends the sequence packets to the controller above at the same data rate of 59 kbs reverse bluetooth rate are used requiring 4869 cycles per bit 17microS per bit = 136 microS
+
+B_UAT (956800 ns = 262857 cycles)
+    - serial transmitter for 416 bits of packet data at 479kbps ( forward bluetooth rates).
