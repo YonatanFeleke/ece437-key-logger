@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : B_UAT
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 12:57:42 2011
+Date   : Thu Apr 28 23:42:43 2011
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -36,7 +36,7 @@ Wire Load Model Mode: top
 Report : area
 Design : B_UAT
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 12:57:42 2011
+Date   : Thu Apr 28 23:42:43 2011
 ****************************************
 
 Library(s) Used:
@@ -44,15 +44,15 @@ Library(s) Used:
     osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
 
 Number of ports:              139
-Number of nets:              1252
-Number of cells:             1065
-Number of references:          18
+Number of nets:              1285
+Number of cells:             1098
+Number of references:          19
 
-Combinational area:       220248.000000
+Combinational area:       226557.000000
 Noncombinational area:    264528.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:          484776.000000
+Total cell area:          491085.000000
 Total area:                 undefined
 1
 Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
@@ -67,7 +67,7 @@ Report : power
         -analysis_effort low
 Design : B_UAT
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 12:57:43 2011
+Date   : Thu Apr 28 23:42:44 2011
 ****************************************
 
 
@@ -93,7 +93,7 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-B_UAT                                    45.403  103.538  159.403  148.941 100.0
-  add_75 (B_UAT_DW01_inc_2)               0.000    0.000    1.807 1.81e-06   0.0
-  r117 (B_UAT_DW01_inc_0)              2.68e-03 8.10e-03    2.339 1.08e-02   0.0
+B_UAT                                    46.022  103.196  160.951  149.218 100.0
+  add_74 (B_UAT_DW01_inc_2)               0.000    0.000    1.807 1.81e-06   0.0
+  r123 (B_UAT_DW01_inc_0)              2.99e-03 9.14e-03    2.339 1.21e-02   0.0
 1

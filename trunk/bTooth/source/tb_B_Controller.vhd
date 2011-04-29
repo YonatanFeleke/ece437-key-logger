@@ -13,7 +13,7 @@ entity tb_B_Controller is
 generic (Period : Time := 3.5 ns;
 --			  WAITBAK	: natural := 49 ;
 				WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
-				DATA_PERIOD : Time := 168 ns); -- WAIT BAK*3.5
+				DATA_PERIOD : Time := 17041.5 ns); -- WAIT BAK*3.5 171.5 or 17041.5
 end tb_B_Controller;
 
 architecture TEST of tb_B_Controller is

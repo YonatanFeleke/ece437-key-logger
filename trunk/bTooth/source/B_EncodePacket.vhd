@@ -13,10 +13,10 @@ USE IEEE.std_logic_1164.ALL;
 
 ENTITY B_EncodePacket IS
 		generic (	
-							STROBCYC: natural := 15; -- MUST NOT EXCEED WAITREG!!!!!!!!
+							STROBCYC: natural := 8; -- MUST NOT EXCEED WAITREG!!!!!!!!
 							WAITSRAM : natural := 10; -- wait for 10 cycles before data is present after strobe to sram >8
 						 -- wait for 5264 cycles before 8 bit data is transmitted after nestore_en strobcyc clks Strobe
-						 	WAITREG	:	natural := 5264 ); -- Transmit wait time. FIX THIS DOESN'T HAVE LAG CLKS.							 
+						 	WAITREG	:	natural := 5265 ); -- Transmit wait time. 8 bit transmit = 5264 including lag = 5272
 --						 WAITREG	:	integer := 264 ); -- DEBUGGING PURPOSE
 
 		port (	CLK 						:		in	std_logic;
@@ -52,9 +52,14 @@ architecture b_edata of B_EncodePacket IS
 		--PAYLOAD <= crc&DATA&length&flowBIT&LCH;
 begin
 --______________________________________			
-		stateprocess : process (RST,CLK)
+		stateprocess : process (RST,CLK,nstate,ncnt32,ncnt8,nestore_en,nlfsr,nswcnt,length,flowBIT,LCH)
 			begin
 				if ( RST = '1') then
+					length <= "100000000"; -- Need to append 4 bits to make this header 16
+					LCH <= "11";
+					flowBIT <= '1';
+					packet_hdr <= "0000"&length&flowBIT&LCH;
+					-----------------------------------------------------------
 					state <= idle;
 					cnt32<= 0;
 					swcnt<= 0;
@@ -63,6 +68,11 @@ begin
 					READ_EN <= '0';
 					lfsr<= "0000000011011001";
 				elsif (rising_edge(clk)) then
+					length <= "100000000"; -- Need to append 4 bits to make this header 16
+					LCH <= "11";
+					flowBIT <= '1';
+					packet_hdr <= "0000"&length&flowBIT&LCH;
+					-----------------------------------------------------------				
 					state <= nstate;
 					cnt32<= ncnt32;					
 					cnt8<= ncnt8;
@@ -73,20 +83,18 @@ begin
 				end if;
 			end process stateprocess;
 --_____________________________________________________________________--
-Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the data bus and gets the count bit		
+--Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the data bus and gets the count bit
+Data_in <= latchdata(cnt8);
 --_____________________________________________________________________---
-	statelogic : process (CLK,STATE)
-			variable txwait								: 		std_logic;
+	statelogic : process (CLK,STATE,ENCODE_EN,swcnt,packet_hdr,cnt32,latchdata,cnt8,lfsr,Data_in,DATA)
+			variable txwait								: 			std_logic;
 		begin
      		case state is 
 	 		--IDLE_________________________________________________________________     		
 					when idle => -- initialize all reset mode
-							length <= "100000000"; -- Need to append 4 bits to make this header 16
-							LCH <= "11";
-							flowBIT <= '1';
-							packet_hdr <= "0000"&length&flowBIT&LCH;
 							PAYLOAD<="00000000";
 							NEXT_EN		<= '1';	 -- ask for next data to controller
+							latchdata <= "00000000";
 							-- next state initializations
 							nlfsr<= "0000000011011001"; --innit with 8 bit 00000000&UAP[7 downto 0];
 							nestore_en <= '0';
@@ -105,9 +113,10 @@ Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the 
       				nestore_en <= '0';
 	      			nstate <= header;	 
 	      			if (swcnt = 0) then -- SAM**** Updated num cylces for ESTROBE
---	      			if (swcnt < STROBCYC) then
 	      				PAYLOAD <= packet_hdr(7 downto 0);
 	      				nestore_en <= '1';     				
+--	      			elsif (swcnt < STROBCYC) then
+--	      				nestore_en <= '1';     				
 	      			elsif (swcnt = 2*WAITREG) then -- 8 bit data transmitted? done?
 	      				PAYLOAD <= packet_hdr(15 downto 8);
 	      				nestore_en <= '1';
@@ -134,13 +143,16 @@ Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the 
       					  elsif (swcnt = WAITREG) then-- wait for the payload to be transmitted
 										nswcnt <= 0;
 										txwait := '0';
-									 	ncnt8 <= cnt8 + 1;
+--									 	ncnt8 <= cnt8 + 1;
+--									 elsif (swcnt < STROBCYC) then
+--      							nestore_en <= '1';
 									end if;
 								else -- calclulate the crc of the 8 bit data !!looks
 									ncnt8 <= cnt8 + 1;
-									if (cnt8 = 8) then
+				nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
+									if (cnt8 = 7) then
 										ncnt8  <= 0;
-										nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
+				nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
 										if (cnt32 = 32) then
 												nstate <= outcrc;
 												ncnt32 <= 0;      									   
@@ -148,6 +160,7 @@ Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the 
 												nstate <= getData;												
 										end if; -- cnt32 = 32
 									end if; -- ncnt8
+				
 								end if; -- txwait
 							end if; -- cnt32 = 0
 	 		--GETDATA_________________________________________________________________											
@@ -165,6 +178,7 @@ Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the 
 							elsif (swcnt = 0 ) then 
 								nread_en <= '1';
 								ncnt32 <= cnt32 + 1;
+								latchdata <= "00000000";--??????????????????
 --							elsif (swcnt < 2) then -- EVAN****** adujst the read_enable clock cycles. NO LONGER STROBING WRITE CYCLE IS 64 MAX
 --								nread_en <= '1';								
 --							else

@@ -21,7 +21,7 @@ architecture TEST of tb_B_NextPacket is
          RST : in std_logic;
          REPLY_EN : in std_logic;
          ERR : in std_logic;
-         DATAOUT : OUT std_logic
+         ANT_ROUT : OUT std_logic
     );
   end component;
 
@@ -30,7 +30,7 @@ architecture TEST of tb_B_NextPacket is
   signal RST : std_logic;
   signal REPLY_EN : std_logic;
   signal ERR : std_logic;
-  signal DATAOUT : std_logic;
+  signal ANT_ROUT : std_logic;
 
 -- signal <name> : <type>;
 
@@ -49,7 +49,7 @@ end process;
                 RST => RST,
                 REPLY_EN => REPLY_EN,
                 ERR => ERR,
-                DATAOUT => DATAOUT
+                ANT_ROUT => ANT_ROUT
                 );
 
 --   GOLD: <GOLD_NAME> port map(<put mappings here>);

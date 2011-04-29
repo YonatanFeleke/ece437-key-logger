@@ -29,7 +29,7 @@ architecture b_code of B_AppendAccessCode is
 			signal trailer		 	: std_logic_vector(3 downto 0);
 
 begin
-		assignprocess : process (CLK,RST,BLUE_EN)
+		assignprocess : process (CLK,RST,BLUE_EN,SYN)
 			begin
 				SYN <= "1110101101100110110001111110101101100110110001110000000000000000";
 				if ( SYN(0) = '1') then

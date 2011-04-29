@@ -58,7 +58,7 @@ architecture b_strip of B_StripPayload is
 --	signal ncnt136									:		integer range 0 to 137;
 
 	signal fstzero,	middata, Data_in		: 	std_logic;
-	signal errval, nextready						: 	std_logic;
+	signal nextready						: 	std_logic;
 	signal newcrc, oldcrc								:		std_logic_vector (15 downto 0); -- init 0000000011011001
 	-- FIFO signals
 	signal write_en, fifofull						: 	std_logic;
@@ -122,8 +122,9 @@ architecture b_strip of B_StripPayload is
 					ERR <= '0';
 					REPLY_EN <= '0';					
 			elsif (state = seterr) then 
-						ERR <= errval;
-					 	REPLY_EN <= '1';			
+					if (oldcrc = newcrc) then ERR <= '0';
+					else 	ERR <= '1'; end if;
+					REPLY_EN <= '1';			
 			elsif ( state = idle) then REPLY_EN <= '1';
 			end if;
 		end process outputlogic;
@@ -150,7 +151,7 @@ architecture b_strip of B_StripPayload is
 							--Signal initializations
 --								nstate <= idle;
 								Data_in <= '0';
-								errval <= '0';
+--								errval <= '0';
 								writebuff <= "00000000";								
 								newcrc <= "0000000011011001";
 								oldcrc <= "0000000011011001";
@@ -211,7 +212,8 @@ architecture b_strip of B_StripPayload is
 								cnt136 <= cnt136 + 1;
 --							ncnt136 <= cnt136 + 1;								
 --								nstate <= skip136;
-								if (cnt136 = 135) then 
+--								if (cnt136 = 135) then
+								if (cnt136 = 133) then  -- resync purposes the uat loses one byte
 										nstate <= calcnewcrc;
 										cnt136 <= 0;
 								end if;		
@@ -248,9 +250,6 @@ architecture b_strip of B_StripPayload is
 								if ( cnt16 = 15 ) then
 										nstate <= seterr;
 										cnt16 <= 0;
-										if (oldcrc = newcrc) then errval <= '0';
-										else errval <= '1';
-										end if;
 								end if;
 				end if;
 				edgelogic := middata;										
@@ -274,7 +273,7 @@ architecture b_strip of B_StripPayload is
 					--Signal initializations
 --						nstate <= state;
 						Data_in <= '0';
-						errval <= '0';
+--						errval <= '0';
 						writebuff <= "00000000";		
 						newcrc <= "0000000011011001";
 						oldcrc <= "0000000011011001";

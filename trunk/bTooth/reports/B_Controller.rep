@@ -8,30 +8,47 @@ Report : timing
         -max_paths 1
 Design : B_Controller
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:55:00 2011
+Date   : Thu Apr 28 20:39:50 2011
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: state_reg[1]
-              (rising edge-triggered flip-flop)
-  Endpoint: BLUE_EN (output port)
-  Path Group: (none)
+  Startpoint: state_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: state_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
   Path Type: max
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  state_reg[1]/CLK (DFFSR)                 0.00       0.00 r
-  state_reg[1]/Q (DFFSR)                   0.69       0.69 f
-  U316/Y (NAND3X1)                         0.47       1.17 r
-  U314/Y (NOR2X1)                          0.17       1.34 f
-  U313/Y (INVX1)                           0.10       1.44 r
-  U312/Y (OAI21X1)                         0.05       1.49 f
-  BLUE_EN (out)                            0.00       1.49 f
-  data arrival time                                   1.49
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[2]/CLK (DFFSR)                 0.00       0.00 r
+  state_reg[2]/Q (DFFSR)                   0.73       0.73 f
+  U200/Y (INVX2)                           0.23       0.96 r
+  U157/Y (NAND3X1)                         0.37       1.33 f
+  U155/Y (NAND2X1)                         0.49       1.82 r
+  U195/Y (INVX2)                           0.20       2.02 f
+  U119/Y (OAI21X1)                         0.16       2.18 r
+  U175/Y (INVX2)                           0.10       2.28 f
+  U115/Y (NAND3X1)                         0.16       2.43 r
+  U171/Y (INVX2)                           0.12       2.56 f
+  U73/Y (OAI21X1)                          0.11       2.67 r
+  state_reg[0]/D (DFFSR)                   0.00       2.67 r
+  data arrival time                                   2.67
+
+  clock CLK (rise edge)                    3.50       3.50
+  clock network delay (ideal)              0.00       3.50
+  state_reg[0]/CLK (DFFSR)                 0.00       3.50 r
+  library setup time                      -0.23       3.27
+  data required time                                  3.27
   -----------------------------------------------------------
-  (Path is unconstrained)
+  data required time                                  3.27
+  data arrival time                                  -2.67
+  -----------------------------------------------------------
+  slack (MET)                                         0.60
 
 
 1
@@ -40,7 +57,7 @@ Wire Load Model Mode: top
 Report : area
 Design : B_Controller
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:55:00 2011
+Date   : Thu Apr 28 20:39:50 2011
 ****************************************
 
 Library(s) Used:
@@ -48,20 +65,19 @@ Library(s) Used:
     osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
 
 Number of ports:                7
-Number of nets:               206
+Number of nets:               211
 Number of cells:              187
-Number of references:          15
+Number of references:          17
 
-Combinational area:       38133.000000
-Noncombinational area:    22176.000000
+Combinational area:       40329.000000
+Noncombinational area:    23760.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:          60309.000000
+Total cell area:          64089.000000
 Total area:                 undefined
 1
 Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: There is no defined clock in the design. (PWR-80)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
@@ -71,7 +87,7 @@ Report : power
         -analysis_effort low
 Design : B_Controller
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:55:00 2011
+Date   : Thu Apr 28 20:39:51 2011
 ****************************************
 
 
@@ -97,5 +113,5 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-B_Controller                              2.197    3.163   21.045    5.359 100.0
+B_Controller                              2.071   11.536   21.609   13.606 100.0
 1

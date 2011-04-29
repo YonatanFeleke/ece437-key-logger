@@ -28,7 +28,7 @@ architecture b_next of B_NextPacket is
 		signal  bluewait			: integer range 0 to WAITBAK+1;
 		signal  run,a,b,stop  :	std_logic;
 begin	
-	updatestate : process (CLK, RST)
+	updatestate : process (CLK, RST,stop,a,b)
 		begin
       if ( RST = '1') then
 			  	bluewait <= 0;
@@ -64,7 +64,7 @@ begin
 	end process updatestate;
 --_____________________________________________
 
-  RUN_EDGElogic: Process(clk,REPLY_EN, RST)
+  RUN_EDGElogic: Process(clk,REPLY_EN, RST,A,B,stop)
 		begin		
 			if (RST = '1') then
 				run <= '0';
