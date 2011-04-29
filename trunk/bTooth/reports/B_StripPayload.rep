@@ -1,17 +1,15 @@
 Information: Updating graph... (UID-83)
 Information: Timing loop detected. (OPT-150)
-	U58/A U58/Y U311/A U311/Y U56/B U56/Y cnt4_reg[0]/CLK cnt4_reg[0]/Q U234/A U234/Y U352/A U352/Y 
+	cnt4_reg[0]/CLK cnt4_reg[0]/Q U203/A U203/Y U202/B U202/Y U194/B U194/Y U193/A U193/Y 
 Information: Timing loop detected. (OPT-150)
-	cnt4_reg[1]/CLK cnt4_reg[1]/Q U355/A U355/Y U235/A U235/Y U233/A U233/Y U231/B U231/Y U329/A U329/Y U58/C U58/Y U311/A U311/Y U56/B U56/Y 
+	cnt4_reg[2]/CLK cnt4_reg[2]/Q U327/A U327/Y U203/B U203/Y U202/B U202/Y U194/B U194/Y U193/A U193/Y 
 Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
-         to break a timing loop. (OPT-314)
-Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[1]'
          to break a timing loop. (OPT-314)
 Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[2]'
          to break a timing loop. (OPT-314)
-Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[1]'
          to break a timing loop. (OPT-314)
-Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[0]'
+Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'cnt4_reg[1]'
          to break a timing loop. (OPT-314)
 Information: Updating design information... (UID-85)
  
@@ -22,7 +20,7 @@ Report : timing
         -max_paths 1
 Design : B_StripPayload
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:37:01 2011
+Date   : Fri Apr 29 06:44:51 2011
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -74,7 +72,7 @@ Wire Load Model Mode: top
 Report : area
 Design : B_StripPayload
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:37:01 2011
+Date   : Fri Apr 29 06:44:51 2011
 ****************************************
 
 Library(s) Used:
@@ -82,15 +80,15 @@ Library(s) Used:
     osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
 
 Number of ports:               15
-Number of nets:               445
-Number of cells:              392
-Number of references:          21
+Number of nets:               435
+Number of cells:              382
+Number of references:          22
 
-Combinational area:       188190.000000
+Combinational area:       187731.000000
 Noncombinational area:    142416.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:          330606.000000
+Total cell area:          330147.000000
 Total area:                 undefined
 1
 Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
@@ -104,7 +102,7 @@ Report : power
         -analysis_effort low
 Design : B_StripPayload
 Version: D-2010.03-SP3
-Date   : Wed Apr 27 17:37:01 2011
+Date   : Fri Apr 29 06:44:51 2011
 ****************************************
 
 
@@ -130,14 +128,14 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-B_StripPayload                            1.478   63.861  113.057   65.339 100.0
-  add_98 (B_StripPayload_DW01_inc_3)      0.116    0.238    2.339    0.354   0.5
-  add_211 (B_StripPayload_DW01_inc_2)     0.000    0.000    1.807 1.81e-06   0.0
-  add_226 (B_StripPayload_DW01_inc_1)     0.000    0.000    2.073 2.07e-06   0.0
-  wrapper (fifo)                       2.65e-02   52.811   62.737   52.838  80.9
-    URFC (read_fifo_ctrl)              1.85e-02   11.738   13.437   11.757  18.0
+B_StripPayload                            1.526   63.973  112.666   65.499 100.0
+  add_93 (B_StripPayload_DW01_inc_3)      0.116    0.238    2.339    0.354   0.5
+  add_196 (B_StripPayload_DW01_inc_2)     0.000    0.000    1.807 1.81e-06   0.0
+  add_210 (B_StripPayload_DW01_inc_1)     0.000    0.000    2.073 2.07e-06   0.0
+  wrapper (fifo)                       2.65e-02   52.811   62.737   52.838  80.7
+    URFC (read_fifo_ctrl)              1.85e-02   11.738   13.437   11.757  17.9
       RPU1 (read_ptr)                  6.11e-03    4.692    5.717    4.698   7.2
     UWFC (write_fifo_ctrl)             1.27e-03   11.706   13.437   11.707  17.9
-      WPU1 (write_ptr)                    0.000    4.679    5.717    4.679   7.2
-    UFIFORAM (fiforam)                 6.75e-03   29.368   35.863   29.374  45.0
+      WPU1 (write_ptr)                    0.000    4.679    5.717    4.679   7.1
+    UFIFORAM (fiforam)                 6.75e-03   29.368   35.863   29.374  44.8
 1
