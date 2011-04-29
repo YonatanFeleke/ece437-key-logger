@@ -1,6 +1,6 @@
 Information: Updating graph... (UID-83)
 Information: Timing loop detected. (OPT-150)
-	U313/A U313/Y txwait_reg/CLK txwait_reg/Q U425/A U425/Y 
+	U309/A U309/Y txwait_reg/CLK txwait_reg/Q U414/A U414/Y 
 Warning: Disabling timing arc between pins 'CLK' and 'Q' on cell 'txwait_reg'
          to break a timing loop. (OPT-314)
 Information: Updating design information... (UID-85)
@@ -12,7 +12,7 @@ Report : timing
         -max_paths 1
 Design : B_EncodePacket
 Version: D-2010.03-SP3
-Date   : Fri Apr 29 03:26:26 2011
+Date   : Fri Apr 29 04:10:29 2011
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -40,7 +40,7 @@ Wire Load Model Mode: top
 Report : area
 Design : B_EncodePacket
 Version: D-2010.03-SP3
-Date   : Fri Apr 29 03:26:26 2011
+Date   : Fri Apr 29 04:10:29 2011
 ****************************************
 
 Library(s) Used:
@@ -48,15 +48,15 @@ Library(s) Used:
     osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
 
 Number of ports:               22
-Number of nets:               436
-Number of cells:              379
-Number of references:          19
+Number of nets:               424
+Number of cells:              367
+Number of references:          20
 
-Combinational area:       69165.000000
+Combinational area:       65988.000000
 Noncombinational area:    72864.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:          142029.000000
+Total cell area:          138852.000000
 Total area:                 undefined
 1
 Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
@@ -71,7 +71,7 @@ Report : power
         -analysis_effort low
 Design : B_EncodePacket
 Version: D-2010.03-SP3
-Date   : Fri Apr 29 03:26:26 2011
+Date   : Fri Apr 29 04:10:29 2011
 ****************************************
 
 
@@ -97,5 +97,5 @@ Power-specific unit information :
                                        Switch   Int      Leak     Total
 Hierarchy                              Power    Power    Power    Power    %
 --------------------------------------------------------------------------------
-B_EncodePacket                            3.416    7.366   53.029   10.782 100.0
+B_EncodePacket                            3.413    7.587   52.141   11.000 100.0
 1

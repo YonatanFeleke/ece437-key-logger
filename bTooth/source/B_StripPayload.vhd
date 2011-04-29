@@ -79,20 +79,15 @@ architecture b_strip of B_StripPayload is
          	FULL		=> 	fifofull);  -- NOT A USED SIGNAL     
 			--_________________________________________________________________
 --_______________________________________________________________________			
-	statelogic :process (CLK,RST)
+	statelogic :process (CLK,RST,ANT_INR)
 		variable 	prev			: std_logic;
 		begin
 			if ( RST = '1') then
 					state <= idle;
---					cnt8 <= 0;
---					cnt16 <= 0;
---					cnt136 <= 0;
---					cnt256 <= 0;
 					cnt658 <= 0;
 					fstzero <= '0';
 					middata <= '0';
 					prev := ANT_INR;
---					DATAOUT <= "00000000";
 			elsif (rising_edge(clk)) then
 					state <= state;
 					cnt658 <= cnt658 + 1;
@@ -104,16 +99,12 @@ architecture b_strip of B_StripPayload is
 					end if; -- cnt 658
 					if ( cnt658 = 0) then 
 							state<= nstate; -- if implemented no need for nnstate and a fin state			
---							cnt8 <= ncnt8;
---							cnt16 <= ncnt16;
---							cnt136 <= ncnt136;
---							cnt256 <= ncnt256;
 					end if;-- cnt658 = 0 a clock divider
 					prev := ANT_INR;
 			end if;
 		end process statelogic;
 --_____________________________________________--		
-	outputlogic : process (state, R_ENABLE) -- If error checking done <= err out and if idle ask for send
+	outputlogic : process (state, R_ENABLE,RST,oldcrc,newcrc,nextready,cnt4,cnt136,writebuff,cnt256,cnt8,cnt16)
 
 	begin
 			REPLY_EN <= '0';
@@ -130,26 +121,21 @@ architecture b_strip of B_StripPayload is
 		end process outputlogic;
 
 	
-	nextstatelogic : process(CLK, RST, middata)
-			variable edgelogic	: std_logic := '0';
+	nextstatelogic : process(CLK, RST, middata,state,ANT_INR,nextready,cnt4,cnt136,writebuff,cnt256,cnt8,newcrc,oldcrc,cnt16)
+			variable edgelogic	: std_logic;
 	begin
 		if ( middata = '1') then
 			Data_in <= ANT_INR;
 			case state is
 		--IDLE_______________________________________-	
 						when idle =>
---						ncnt8 <= 0;
---						ncnt16 <= 0;
---						ncnt256 <= 0;
---						ncnt136 <= 0;
 							--modified counters
+								cnt136 <= 0;	
+								cnt4 <= 0;
 								cnt8 <= 0;
 								cnt16 <= 0;
-								cnt256 <= 0;
-								cnt136 <= 0;		
-						
+								cnt256 <= 0;	
 							--Signal initializations
---								nstate <= idle;
 								Data_in <= '0';
 --								errval <= '0';
 								writebuff <= "00000000";								
@@ -175,55 +161,51 @@ architecture b_strip of B_StripPayload is
 								end if;
 		--found010_________________________________________-								
 						when found010=> 
-						 		--nstate <= found010;
 								if ( ANT_INR = '1') then 					
 	 								nstate <= wait4zero;
+	 								cnt4 <= 0;
 	 							else
 	 								nstate <= idle;
 	 								nextready <= '1';
 								end if;								
 		--wait4zero________________________________________	 									
 						when wait4zero=>
---								ncnt4 <= cnt4;
 --								nstate <= wait4zero;
-							if ( edgelogic = '0' and middata = '1') then 
+						if ( edgelogic = '0' and middata = '1') then 
 								if ( cnt4 = 3) then
 										 nstate <= skip136;
---										ncnt4 <= 0;
---											cnt4 <= 0;-- moved to next state
-								elsif ( ANT_INR = '0') then -- count the zeroes
---										ncnt4 <= cnt4 + 1;
+--									 cnt4 <= 0;-- moved to next state
+								elsif ( ANT_INR = '0') then 
 											cnt4 <= cnt4 + 1;		-- might increment in doubles ~~~~>>>??								
 								elsif (cnt4 =0) then 
 										nstate <= idle;
 										nextready <= '0';
 								else			  -- cnt <2 and ant = 1 
---										ncnt4 <= 0;
-										cnt4 <= 0;
 										nstate <= found01;
+										cnt4 <= 0;
 								end if;
-							end if;
+						elsif ( cnt4 = 3) then
+										 nstate <= skip136;
+						end if; -- rising edge
 							edgelogic := middata;
 		--SKIP136_________________________________________	 									
 						when skip136=>
-				    report "Start Sequence Recognized skipping remaining header" severity NOTE; 	
+						cnt4 <= 0;
+--				    report "Start Sequence Recognized skipping remaining header" severity NOTE; 	
 						if ( edgelogic = '0' and middata = '1') then 
-								cnt4 <= 0;
-								cnt136 <= cnt136 + 1;
---							ncnt136 <= cnt136 + 1;								
---								nstate <= skip136;
+								cnt136 <= cnt136 + 1;							
 --								if (cnt136 = 135) then
-								if (cnt136 = 133) then  -- resync purposes the uat loses one byte
+								if (cnt136 = 134) then  -- resync purposes the uat loses one byte
 										nstate <= calcnewcrc;
-										cnt136 <= 0;
-								end if;		
+--									cnt136 <= 0;
+								end if;	
 						end if;
 					edgelogic := middata;					
 
 		--CALCNEWCRC_________________________________________	 									
 						when calcnewcrc=>
+									cnt136 <= 0;
 				if ( edgelogic = '0' and middata = '1') then 			
---								nstate <= calcnewcrc;
 								writebuff <= ANT_INR & writebuff( 7 downto 1);
 								cnt256 <= cnt256 + 1;
 								cnt8 <= cnt8 + 1;								
@@ -243,7 +225,7 @@ architecture b_strip of B_StripPayload is
 									
 		--chkcrc______________________________________	 													
 					when chkcrc=>
-			if ( edgelogic = '0' and middata = '1') then 					
+						if ( edgelogic = '0' and middata = '1') then 				
 								oldcrc <= ANT_INR & oldcrc(15 downto 1); --shift in the value
 								cnt16 <= cnt16 + 1;								
 --								nstate <= chkcrc;
@@ -270,8 +252,9 @@ architecture b_strip of B_StripPayload is
 						cnt16 <= 0;
 						cnt256 <= 0;
 						cnt136 <= 0;
+						cnt4 <= 0;
 					--Signal initializations
---						nstate <= state;
+						if (RST = '1') then	nstate <= state; end if;
 						Data_in <= '0';
 --						errval <= '0';
 						writebuff <= "00000000";		
