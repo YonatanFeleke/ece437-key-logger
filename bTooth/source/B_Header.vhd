@@ -19,8 +19,6 @@ ENTITY B_Header IS
 						TRANS_EN				:		OUT	std_logic;
 						ENCODE_EN				:		OUT	std_logic);
 END B_Header;
-
-
 architecture b_hdr of B_Header is
   signal AM_ADDR: std_logic_vector( 2 downto 0 );--001To identify each slave separately,each slave is assigned a temporary 3-bit address
   signal PTYPE: std_logic_vector( 3 downto 0); -- TYPE The 4-bit TYPE code specifies which packet type is used ACL, SOC
@@ -32,7 +30,7 @@ architecture b_hdr of B_Header is
   signal HEADER_1:	std_logic_vector(53 downto 0);
 begin
 --__________________________________________________________
-		getHECprocess : process (CLK,RST)
+		getHECprocess : process (CLK,RST,SEQN,ARQN,FLOW,PTYPE,AM_ADDR)
 --		variable HEC: std_logic_vector(7 downto 0);		--8-bit header error checksum with polynomial 0 1 2 5 7 8
     variable D: std_logic_vector(9 downto 0);
     variable C: std_logic_vector(7 downto 0); -- holder for the initialization via the top 10 bits of the UAP

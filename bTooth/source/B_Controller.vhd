@@ -14,8 +14,8 @@ use ieee.std_logic_unsigned.all;
 ENTITY B_Controller IS
 		generic (	WAITSRAM : natural := 10; -- wait for 24 cycles before data is present
 							WAITREG	:	natural := 5264;-- Transmit wait time. FIX THIS for LAG
---						WAITBAK	: natural := 4869; -- back transmit 57.6 kb/s or 4869 cycles/bit
-						 	WAITBAK	: natural := 49 ); -- DEBUG! must be even!!!!!!!!!!!!
+							WAITBAK	: natural := 4869); -- back transmit 57.6 kb/s or 4869 cycles/bit
+--						 	WAITBAK	: natural := 49 ); -- DEBUG! must be even!!!!!!!!!!!!
 						 	
 		port (	CLK 						:		in	std_logic;
 						RST							:		in	std_logic;
@@ -30,50 +30,60 @@ architecture b_cont of B_Controller IS
 		type	 	state_type is	(idle,listen,bit1,	bit2,bit3,bit4, waitnxt, pulse);
 		signal	state,nstate,resynstate			: 		state_type;
 		signal 	ebit												:			std_logic;
-		signal	latch_not_empty 			: 				std_logic;
+		signal	latch_not_empty 						: 				std_logic;
 		signal 	cnt4,ncnt4									:			integer range 0 to 5;
 		signal 	cnt2,ncnt2									:			integer range 0 to 2; -- ADJUST TO INCREASE ENABLE strobe cyc length
-		signal 	nbluewait,bluewait					: 		integer range 0 to WAITBAK +1;
-		signal 	edge												: 		std_logic;
+		signal 	bluewait										: 		integer range 0 to WAITBAK +1;
+--		signal	debugmid									:			std_logic;
+-- 		signal	debugend									:			std_logic;
 
 	begin
-		contstates : process (RST,CLK) 
---		variable	 prev												:			std_logic;-- EDGE detect variable
---		variable	 edge												:			std_logic;-- EDGE detect variable
+		contstates : process (RST,CLK, ANT_LIN) 
+		variable	 prev												:			std_logic;-- EDGE detect variable
 			begin
 				if ( RST = '1') then
 					state <= idle;
 					cnt4 <= 0;
 					cnt2 <= 0;
 					bluewait <= 0;
---					prev := '0';
---					edge := '0';
+					prev := '0';
 				elsif (rising_edge(clk)) then
 					state <= nstate;
 					cnt4	<= ncnt4;
-					bluewait <= nbluewait;
 					cnt2 <= ncnt2;	
---					edge := (ANT_LIN xor prev);
---					prev := ANT_LIN;
-				--RESYNC ON EVERY EDGE; throws 1/3 tolerance
-					if (edge = '1') then 
-						bluewait <= 0;
-						state <= resynstate;
+					bluewait <= 0;
+					if ( bluewait = WAITBAK-1) then bluewait <= 0;
+					elsif (prev = ANT_LIN) then
+							bluewait <= bluewait + 1;
+							state <= resynstate;
 					end if;					
+					prev := ANT_LIN;		
 				end if;
 			end process contstates;
---_______________________________________		
-		nextstatelogic : process (CLK, state) 
+--________________________________________________________________________		
+--debug : process (CLK, bluewait)
+--begin
+--	debugmid <= '0';
+--	debugend <= '0';
+--	if (bluewait = WAITBAK/2) then
+--			debugmid <= '1';
+--	elsif (bluewait = 0) then debugend <= '1';
+--	end if;	
+--end process debug;
+--debugmid <= '1' when (bluewait = WAITBAK/2) else '0';		-- follows the data bus and gets the count bit		
+--debugend <= '1' when (bluewait = WAITBAK) else '0';		-- follows the data bus and gets the count bit		
+--________________________________________________________________________			
+--____________________________________________________________________________________________________________		
+		nextstatelogic : process (CLK, state,ANT_LIN,EMPTY,cnt4,bluewait,ebit,NEXT_EN,nstate,cnt2,latch_not_empty) 
 			variable 	nnstate			: 		state_type;
-
 			begin
 				case state is
 		--IDLE_______________________________________-	
 						when idle =>
+							nnstate := idle;
 							nstate <= idle;
 							resynstate <= idle;
 							ncnt4 <= 0;
-							nbluewait <= 0;
 							ebit <= '0';
 							ncnt2 <= 0;
 							nnstate := idle;
@@ -84,24 +94,22 @@ architecture b_cont of B_Controller IS
 		--LISTEN______________________________________-	
  						when listen=> -- 4bits of 1 initiate enable
  							nstate <= listen;
--- 							resynstate <= listen;
 							ncnt4 <= cnt4;
- 							nbluewait <= bluewait + 1;
+							if ( bluewait = 0) then -- INNIT FOR MAPPED VERSION
+									resynstate <= listen;
+							end if;
  							if (cnt4 = 4) then 							
  									if (bluewait = WAITBAK) then
- 										nstate <= bit1;--
- 										nbluewait <= 0;
+ 										nstate <= bit1;
  										ncnt4 <= 0;
  									elsif (bluewait = 2*WAITBAK/3) then resynstate <= bit1;	 									
- 									end if; -- wait for 4th one to finish form teh line 									
+ 									end if; -- wait for 4th one to finish form teh line
  							elsif (bluewait = WAITBAK/2) then-- mid data and cnt< 3 
  									if (cnt4 = 0) then
  											if (ANT_LIN = '0')	 then ncnt4 <= cnt4 + 1; end if; -- start with a zero to sync
  									elsif (ANT_LIN = '1') then ncnt4<= cnt4+1;
  									else ncnt4 <= 1; -- 00
  									end if;-- mid data 			 									
- 							elsif (bluewait = WAITBAK) then
- 									nbluewait<= 0;
  							elsif (bluewait = 2*WAITBAK/3) then resynstate <= listen;	 	
  							end if; -- bluewait
 -- 							end if; -- cnt4 
@@ -109,23 +117,22 @@ architecture b_cont of B_Controller IS
 
 		--BIT1_________________________________________-								
 						when bit1=> --4 bits verified looking for 01010 or 10101 patter
-							nbluewait <= bluewait + 1;
 							nstate <= bit1;
---							resynstate <= bit1;
- 							if (bluewait = WAITBAK/2) then-- mid data
+							if ( bluewait = 0) then -- INNIT FOR MAPPED VERSION
+									resynstate <= bit1;
+ 							elsif (bluewait = WAITBAK/2) then-- mid data
  								ebit <= ANT_LIN;
  							elsif (bluewait = WAITBAK) then
- 								nbluewait<= 0;
  								nstate <= bit2;
 							elsif (bluewait = 2*WAITBAK/3) then resynstate <= bit2;
 							end if; -- bluewait. AUTO NEXT to BIT2 after WAITBAK
 		--BIT2_________________________________________	 									
 						when bit2=>-- 5 bits work
 							nstate <= bit2;
---							resynstate <= bit2;
-							nbluewait <= bluewait +1;
---							nnstate := bit2;
- 							if (bluewait = WAITBAK/2) then
+							if ( bluewait = 0) then -- INNIT FOR MAPPED VERSION
+									resynstate <= bit2;
+									nnstate := bit2;
+ 							elsif (bluewait = WAITBAK/2) then
  								if (ANT_LIN = ebit) then 
  										if (ebit = '1') then -- 0111_11
  											nnstate := bit2;
@@ -138,16 +145,17 @@ architecture b_cont of B_Controller IS
  									nnstate := bit3;
  								end if; --ANT_LIN = ebit
  							elsif (bluewait = WAITBAK) then
- 								nbluewait<= 0;
+-- 								nbluewait<= 0;
  								nstate <= nnstate;								
 							elsif (bluewait = 2*WAITBAK/3) then resynstate <= nnstate;			 		
  							end if; -- bluewait			 							 							
 		--BIT3_________________________________________	 									
 					when bit3=>-- 6 bits work
 							nstate <= bit3;
-							nbluewait <= bluewait +1;
---							nnstate := bit3;
- 							if (bluewait = WAITBAK/2) then
+							if ( bluewait = 0) then -- INNIT FOR MAPPED VERSION
+									resynstate <= bit3;
+									nnstate := bit3;
+ 							elsif (bluewait = WAITBAK/2) then
  									if (ANT_LIN = ebit) then 				-- 0111_101 or 0111_010										
  											nnstate := bit4;
  									else --0111_100 or 0111_011 DATA!=ebit
@@ -159,26 +167,26 @@ architecture b_cont of B_Controller IS
  											end if; -- ebit 
  									end if; --ANT_LIN != ebit 								
  							elsif (bluewait = WAITBAK) then
- 									nbluewait<= 0;
+-- 									nbluewait<= 0;
  									nstate <= nnstate;
  							elsif (bluewait = 2*WAITBAK/3) then resynstate <= nnstate;	
  							end if; -- bluewait			 	
 		--BIT4_________________________________________	 														
 					when bit4=>-- 7 bits work = command recieved to do either
 							nstate <= bit4;
-							nbluewait <= bluewait +1;
---							nnstate := bit4;
- 							if (bluewait = WAITBAK/2) then
- 								if (ANT_LIN = ebit) then-- 1111_1011 or 1111_0100 	
+							if ( bluewait = 0) then -- INNIT FOR MAPPED VERSION
+									resynstate <= bit4;
+									nnstate := bit4;
+ 							elsif (bluewait = WAITBAK/2) then
+ 									if (ANT_LIN = ebit) then-- 1111_1011 or 1111_0100 	
 										nnstate := listen;			
  										if (ebit = '1') then 		ncnt4 <= 0;				-- 1111_1011 											
  										else 										ncnt4 <= 1;				-- 1111_0100
  										end if;
- 								else -- 1111_1010 or 1111_0101
- 									nnstate := waitnxt; -- command recieved
- 								end if; --ANT_LIN = ebit
+ 									else -- 1111_1010 or 1111_0101
+ 										nnstate := waitnxt; -- command recieved
+ 									end if; --ANT_LIN = ebit
  							elsif (bluewait = WAITBAK) then
- 								nbluewait<= 0;
  								nstate <= nnstate;
  							elsif (bluewait = 2*WAITBAK/3) then resynstate <= nnstate;										
  							end if; -- bluewait			 
@@ -192,13 +200,15 @@ architecture b_cont of B_Controller IS
 					when pulse=>				
 							ncnt2 <= cnt2 + 1;
 							nstate <= pulse;
-							if ( cnt2 = 1) then nstate <= idle;
+							if ( cnt2 = 1) then 
+								nstate <= idle;
+								ncnt2 <= 0;
 							end if;
 							resynstate <= nstate;
 				end case;
 			end process nextstatelogic;
 --_______________________________________
-		outlogic : process (RST,CLK, state) --0111_(1=ebit)010 => resend; if 01110101 => newsend			
+		outlogic : process (RST,CLK, state,ebit,EMPTY) --0111_(1=ebit)010 => resend; if 01110101 => newsend			
 			begin	
 				RESEND_EN <= '0';
 				BLUE_EN	<= '0';
@@ -214,18 +224,4 @@ architecture b_cont of B_Controller IS
 					elsif ( EMPTY = '0') then latch_not_empty <= '1'; -- nvr goes to zero
 				end if ;
 			end process outlogic;	
---________________________________________________			
-    EDGElogic: Process(clk, RST)
-    variable prev		: std_logic;
-		begin			
-			if (RST = '1') then
-					prev := ANT_LIN;
-					edge <= '0';			
-			else
-					if ((ANT_LIN xor prev ) = '1') then 	edge <= '1'; end if;
-					if ( bluewait = 0) then edge <= '0'; end if; -- edge is turned off when bluewait is changed
-					prev := ANT_LIN;	
-			end if;
-		end process EDGElogic;			
---_________________________________________________
 end b_cont;

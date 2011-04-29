@@ -101,7 +101,7 @@ process
 --    DATA <= INT_TO_STD_LOGIC(119,8);
     DATA <= "10101010";
     -- STATE = HEADER
-    wait for 3.5 ns;
+    wait for 7 ns;
     ENCODE_EN <= '0';
     -- see if 2 clk needed & falling edge doesn't mess up.
     wait for 669858.5 ns;
