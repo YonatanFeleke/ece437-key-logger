@@ -84,12 +84,11 @@ begin
 			end process stateprocess;
 --_____________________________________________________________________--
 --Data_in <= latchdata(0) when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the data bus and gets the count bit
--- when (cnt8 = 0) else latchdata(cnt8-1);		-- follows the data bus and gets the count bit				
+Data_in <= latchdata(cnt8);
 --_____________________________________________________________________---
 	statelogic : process (CLK,STATE,ENCODE_EN,swcnt,packet_hdr,cnt32,latchdata,cnt8,lfsr,Data_in,DATA)
 			variable txwait								: 			std_logic;
 		begin
-				Data_in <= latchdata(cnt8);
      		case state is 
 	 		--IDLE_________________________________________________________________     		
 					when idle => -- initialize all reset mode
@@ -131,7 +130,7 @@ begin
 	 		--CALCCRC_________________________________________________________________
       		when calccrc =>
 							nstate <= calccrc;	
-							nestore_en <= '0';												
+							nestore_en <= '0';				
       				if (cnt32 = 0) then
       					nstate <= getdata; -- first request for data.    					
       				else
@@ -144,15 +143,16 @@ begin
       					  elsif (swcnt = WAITREG) then-- wait for the payload to be transmitted
 										nswcnt <= 0;
 										txwait := '0';
---									 	ncnt8 <= cnt8 + 1;
+									 	ncnt8 <= cnt8 + 1;
 --									 elsif (swcnt < STROBCYC) then
 --      							nestore_en <= '1';
 									end if;
 								else -- calclulate the crc of the 8 bit data !!looks
 									ncnt8 <= cnt8 + 1;
+				nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
 									if (cnt8 = 7) then
 										ncnt8  <= 0;
-nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
+				nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in);
 										if (cnt32 = 32) then
 												nstate <= outcrc;
 												ncnt32 <= 0;      									   
@@ -160,7 +160,7 @@ nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 down
 												nstate <= getData;												
 										end if; -- cnt32 = 32
 									end if; -- ncnt8
-nlfsr	<= lfsr(14 downto 12) & (lfsr(15) xor Data_in xor lfsr(11)) & lfsr(10 downto 5) & (lfsr(15) xor Data_in  xor lfsr(4)) & lfsr(3 downto 0) & (lfsr(15) xor Data_in); 									
+				
 								end if; -- txwait
 							end if; -- cnt32 = 0
 	 		--GETDATA_________________________________________________________________											

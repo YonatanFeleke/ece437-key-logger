@@ -1,4 +1,4 @@
-# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.9.1.el5
+# //  ModelSim SE-64 6.6b May 21 2010 Linux 2.6.18-238.1.1.el5
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.
@@ -8,7 +8,7 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-do d/top
+do d/topm
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
@@ -17,144 +17,24 @@ do d/top
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity b_appendaccesscode
-# -- Compiling architecture b_code of b_appendaccesscode
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity b_controller
-# -- Compiling architecture b_cont of b_controller
-# -- Compiling entity b_encodepacket
-# -- Compiling architecture b_edata of b_encodepacket
-# -- Compiling entity b_header
-# -- Compiling architecture b_hdr of b_header
-# -- Compiling entity b_nextpacket
-# -- Compiling architecture b_next of b_nextpacket
-# -- Compiling entity b_strippayload
-# -- Compiling architecture b_strip of b_strippayload
-# -- Compiling entity b_toplevel
-# -- Compiling architecture struct of b_toplevel
-# -- Compiling entity b_uat
-# -- Compiling architecture b_serialtx of b_uat
-# vsim -voptargs=+acc work.tb_b_toplevel 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_encodepacket(b_edata)".
-# ** Warning: [13] source/B_Header.vhd(45): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(46): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(50): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_strippayload(b_strip)".
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_uat(b_serialtx)".
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_b_toplevel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.b_toplevel(struct)#1
-# Loading work.b_appendaccesscode(b_code)#1
-# Loading work.b_controller(b_cont)#1
-# Loading work.b_encodepacket(b_edata)#1
-# Loading work.b_header(b_hdr)#1
-# Loading work.b_nextpacket(b_next)#1
-# Loading work.b_strippayload(b_strip)#1
-# Loading ece337_ip.fifo(rtl)#1
-# Loading ece337_ip.fiforam(rtl)#1
-# Loading ece337_ip.write_fifo_ctrl(rtl)#1
-# Loading ece337_ip.write_ptr(rtl)#1
-# Loading ece337_ip.read_fifo_ctrl(rtl)#1
-# Loading ece337_ip.read_ptr(rtl)#1
-# Loading work.b_uat(b_serialtx)#1
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1089651500 ps  Iteration: 2  Instance: /tb_b_toplevel/dut/strp
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1089653250 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1089655 ns  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
-do d/top
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_b_toplevel
-# -- Compiling architecture test of tb_b_toplevel
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity b_appendaccesscode
-# -- Compiling architecture b_code of b_appendaccesscode
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity b_controller
-# -- Compiling architecture b_cont of b_controller
-# -- Compiling entity b_encodepacket
-# -- Compiling architecture b_edata of b_encodepacket
-# -- Compiling entity b_header
-# -- Compiling architecture b_hdr of b_header
-# -- Compiling entity b_nextpacket
-# -- Compiling architecture b_next of b_nextpacket
-# -- Compiling entity b_strippayload
-# -- Compiling architecture b_strip of b_strippayload
-# -- Compiling entity b_toplevel
-# -- Compiling architecture struct of b_toplevel
-# -- Compiling entity b_uat
-# -- Compiling architecture b_serialtx of b_uat
-# vsim -voptargs=+acc work.tb_b_toplevel 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_encodepacket(b_edata)".
-# ** Warning: [13] source/B_Header.vhd(45): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(46): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(47): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(49): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(50): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(51): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Warning: [13] source/B_Header.vhd(52): Expression Coverage ignoring this statement: number of rows exceeds max limit(192).
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_strippayload(b_strip)".
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "b_uat(b_serialtx)".
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_b_toplevel(test)#1
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.b_toplevel(struct)#1
-# Loading work.b_appendaccesscode(b_code)#1
-# Loading work.b_controller(b_cont)#1
-# Loading work.b_encodepacket(b_edata)#1
-# Loading work.b_header(b_hdr)#1
-# Loading work.b_nextpacket(b_next)#1
-# Loading work.b_strippayload(b_strip)#1
-# Loading ece337_ip.fifo(rtl)#1
-# Loading ece337_ip.fiforam(rtl)#1
-# Loading ece337_ip.write_fifo_ctrl(rtl)#1
-# Loading ece337_ip.write_ptr(rtl)#1
-# Loading ece337_ip.read_fifo_ctrl(rtl)#1
-# Loading ece337_ip.read_ptr(rtl)#1
-# Loading work.b_uat(b_serialtx)#1
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1091958 ns  Iteration: 2  Instance: /tb_b_toplevel/dut/strp
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1091959750 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
-# ** Note: Done with the data setting error and requesting next
-#    Time: 1091961500 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
-do d/atrm
-# Cannot open macro file: d/atrm
-do d/strpm
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_b_strippayload
-# -- Compiling architecture test of tb_b_strippayload
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling package conv_pack_b_strippayload
-# -- Loading package conv_pack_b_strippayload
-# -- Compiling entity b_strippayload_dw01_inc_3
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_3
-# -- Compiling entity b_strippayload_dw01_inc_2
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_2
-# -- Compiling entity b_strippayload_dw01_inc_1
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_1
+# -- Compiling package conv_pack_b_toplevel
+# -- Loading package conv_pack_b_toplevel
+# -- Compiling entity b_controller_waitsram10_waitreg5264_waitbak4869_dw01_inc_0
+# -- Compiling architecture syn_rpl of b_controller_waitsram10_waitreg5264_waitbak4869_dw01_inc_0
+# -- Compiling entity b_header_waitreg5264_dw01_inc_0
+# -- Compiling architecture syn_rpl of b_header_waitreg5264_dw01_inc_0
+# -- Compiling entity b_nextpacket_waitsram10_waitreg5264_waitbak4869_dw01_inc_0
+# -- Compiling architecture syn_rpl of b_nextpacket_waitsram10_waitreg5264_waitbak4869_dw01_inc_0
+# -- Compiling entity b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_3
+# -- Compiling architecture syn_rpl of b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_3
+# -- Compiling entity b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_2
+# -- Compiling architecture syn_rpl of b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_2
+# -- Compiling entity b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_1
+# -- Compiling architecture syn_rpl of b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_1
+# -- Compiling entity b_uat_waitsram10_waitreg5264_dw01_inc_2
+# -- Compiling architecture syn_rpl of b_uat_waitsram10_waitreg5264_dw01_inc_2
+# -- Compiling entity b_uat_waitsram10_waitreg5264_dw01_inc_0
+# -- Compiling architecture syn_rpl of b_uat_waitsram10_waitreg5264_dw01_inc_0
 # -- Compiling entity read_ptr
 # -- Compiling architecture syn_rtl of read_ptr
 # -- Compiling entity write_ptr
@@ -167,61 +47,127 @@ do d/strpm
 # -- Compiling architecture syn_rtl of fiforam
 # -- Compiling entity fifo
 # -- Compiling architecture syn_rtl of fifo
-# -- Compiling entity b_strippayload
-# -- Compiling architecture syn_b_strip of b_strippayload
-# vsim work.tb_b_strippayload 
+# -- Compiling entity b_uat_waitsram10_waitreg5264
+# -- Compiling architecture syn_b_serialtx of b_uat_waitsram10_waitreg5264
+# -- Compiling entity b_strippayload_waitsram10_waitbit658_waitreg5264
+# -- Compiling architecture syn_b_strip of b_strippayload_waitsram10_waitbit658_waitreg5264
+# -- Compiling entity b_nextpacket_waitsram10_waitreg5264_waitbak4869
+# -- Compiling architecture syn_b_next of b_nextpacket_waitsram10_waitreg5264_waitbak4869
+# -- Compiling entity b_header_waitreg5264
+# -- Compiling architecture syn_b_hdr of b_header_waitreg5264
+# -- Compiling entity b_encodepacket_strobcyc15_waitsram10_waitreg5264
+# -- Compiling architecture syn_b_edata of b_encodepacket_strobcyc15_waitsram10_waitreg5264
+# -- Compiling entity b_controller_waitsram10_waitreg5264_waitbak4869
+# -- Compiling architecture syn_b_cont of b_controller_waitsram10_waitreg5264_waitbak4869
+# -- Compiling entity b_appendaccesscode
+# -- Compiling architecture syn_b_code of b_appendaccesscode
+# -- Compiling entity b_toplevel
+# -- Compiling architecture syn_struct of b_toplevel
+# vsim -voptargs=+acc work.tb_b_toplevel 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_b_strippayload(test)#1
-# Loading work.conv_pack_b_strippayload
-# Loading work.b_strippayload(syn_b_strip)#1
+# Loading work.tb_b_toplevel(test)#1
+# Loading work.conv_pack_b_toplevel
+# Loading work.b_toplevel(syn_struct)#1
+# Loading work.b_appendaccesscode(syn_b_code)#1
 # Loading std.textio(body)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading osu_ami05.prim(body)
 # Loading osu_ami05.dffsr(behavioral)#1
+# Loading osu_ami05.invx4(behavioral)#1
+# Loading osu_ami05.bufx4(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading work.b_controller_waitsram10_waitreg5264_waitbak4869(syn_b_cont)#1
 # Loading osu_ami05.latch(behavioral)#1
-# Loading osu_ami05.oai21x1(behavioral)#1
-# Loading osu_ami05.nand2x1(behavioral)#1
-# Loading osu_ami05.nand3x1(behavioral)#1
-# Loading osu_ami05.nor2x1(behavioral)#1
-# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading work.b_controller_waitsram10_waitreg5264_waitbak4869_dw01_inc_0(syn_rpl)#1
+# Loading osu_ami05.hax1(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
 # Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.and2x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
 # Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
 # Loading osu_ami05.oai22x1(behavioral)#1
-# Loading osu_ami05.and2x2(behavioral)#1
+# Loading work.b_encodepacket_strobcyc15_waitsram10_waitreg5264(syn_b_edata)#1
+# Loading osu_ami05.invx8(behavioral)#1
 # Loading osu_ami05.or2x2(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# Loading work.b_header_waitreg5264(syn_b_hdr)#1
+# Loading work.b_header_waitreg5264_dw01_inc_0(syn_rpl)#1
+# Loading work.b_nextpacket_waitsram10_waitreg5264_waitbak4869(syn_b_next)#1
+# Loading work.b_nextpacket_waitsram10_waitreg5264_waitbak4869_dw01_inc_0(syn_rpl)#1
+# Loading work.b_strippayload_waitsram10_waitbit658_waitreg5264(syn_b_strip)#1
 # Loading work.fifo(syn_rtl)#1
 # Loading work.fiforam(syn_rtl)#1
 # Loading osu_ami05.dffposx1(behavioral)#1
 # Loading osu_ami05.bufx2(behavioral)#1
-# Loading osu_ami05.invx1(behavioral)#1
-# Loading osu_ami05.invx2(behavioral)#1
 # Loading work.write_fifo_ctrl(syn_rtl)#1
-# Loading osu_ami05.xnor2x1(behavioral)#1
 # Loading work.write_ptr(syn_rtl)#1
 # Loading work.read_fifo_ctrl(syn_rtl)#1
 # Loading work.read_ptr(syn_rtl)#1
-# Loading work.b_strippayload_dw01_inc_1(syn_rpl)#1
-# Loading osu_ami05.hax1(behavioral)#1
-# Loading work.b_strippayload_dw01_inc_2(syn_rpl)#1
-# Loading work.b_strippayload_dw01_inc_3(syn_rpl)#1
+# Loading work.b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_1(syn_rpl)#1
+# Loading work.b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_2(syn_rpl)#1
+# Loading work.b_strippayload_waitsram10_waitbit658_waitreg5264_dw01_inc_3(syn_rpl)#1
+# Loading osu_ami05.and2x2(behavioral)#1
+# Loading work.b_uat_waitsram10_waitreg5264(syn_b_serialtx)#1
+# Loading work.b_uat_waitsram10_waitreg5264_dw01_inc_0(syn_rpl)#1
+# Loading work.b_uat_waitsram10_waitreg5264_dw01_inc_2(syn_rpl)#1
+do d/epm
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
+# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package conv_pack_b_encodepacket
+# -- Loading package conv_pack_b_encodepacket
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture syn_b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_b_encodepacket(test)#1
+# Loading work.conv_pack_b_encodepacket
+# Loading work.b_encodepacket(syn_b_edata)#1
+# Loading std.textio(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading osu_ami05.prim(body)
+# Loading osu_ami05.latch(behavioral)#1
+# Loading osu_ami05.dffsr(behavioral)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.invx2(behavioral)#1
+# Loading osu_ami05.or2x2(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.invx1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
 # Loading osu_ami05.and2x1(behavioral)#1
-# Loading osu_ami05.oai22x1(behavioral)#2
-# Loading osu_ami05.oai22x1(behavioral)#3
-# ** Note: Access Code
-#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 136 bits incoming headers
-#    Time: 18400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 256 bits Data
-#    Time: 331200 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC1 0- 7 incoming
-#    Time: 920 us  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC2 15-8 incoming
-#    Time: 938400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: Packet transmission Done!
-#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 669900500 ps  Iteration: 0  Instance: /tb_b_encodepacket
 do d/top
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
@@ -237,6 +183,8 @@ do d/top
 # -- Loading package std_logic_unsigned
 # -- Compiling entity b_controller
 # -- Compiling architecture b_cont of b_controller
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
 # -- Compiling entity b_encodepacket
 # -- Compiling architecture b_edata of b_encodepacket
 # -- Compiling entity b_header
@@ -286,190 +234,85 @@ do d/top
 #    Time: 1091959750 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
 # ** Note: Done with the data setting error and requesting next
 #    Time: 1091961500 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
-do d/strpm
+add wave \
+{sim:/tb_b_toplevel/dut/encode/lfsr } 
+add wave sim:/tb_b_toplevel/dut/nxtpkt/*
+add wave sim:/tb_b_toplevel/dut/strp/*
+add wave sim:/tb_b_toplevel/dut/cont/*
+restart
+run 1 ms
+run 1 ms
+# ** Note: Done with the data setting error and requesting next
+#    Time: 1091958 ns  Iteration: 2  Instance: /tb_b_toplevel/dut/strp
+# ** Note: Done with the data setting error and requesting next
+#    Time: 1091959750 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
+# ** Note: Done with the data setting error and requesting next
+#    Time: 1091961500 ps  Iteration: 1  Instance: /tb_b_toplevel/dut/strp
+do d/epm
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_b_strippayload
-# -- Compiling architecture test of tb_b_strippayload
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling package conv_pack_b_strippayload
-# -- Loading package conv_pack_b_strippayload
-# -- Compiling entity b_strippayload_dw01_inc_3
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_3
-# -- Compiling entity b_strippayload_dw01_inc_2
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_2
-# -- Compiling entity b_strippayload_dw01_inc_1
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_1
-# -- Compiling entity read_ptr
-# -- Compiling architecture syn_rtl of read_ptr
-# -- Compiling entity write_ptr
-# -- Compiling architecture syn_rtl of write_ptr
-# -- Compiling entity read_fifo_ctrl
-# -- Compiling architecture syn_rtl of read_fifo_ctrl
-# -- Compiling entity write_fifo_ctrl
-# -- Compiling architecture syn_rtl of write_fifo_ctrl
-# -- Compiling entity fiforam
-# -- Compiling architecture syn_rtl of fiforam
-# -- Compiling entity fifo
-# -- Compiling architecture syn_rtl of fifo
-# -- Compiling entity b_strippayload
-# -- Compiling architecture syn_b_strip of b_strippayload
-# vsim work.tb_b_strippayload 
+# -- Compiling package conv_pack_b_encodepacket
+# -- Loading package conv_pack_b_encodepacket
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture syn_b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_b_strippayload(test)#1
-# Loading work.conv_pack_b_strippayload
-# Loading work.b_strippayload(syn_b_strip)#1
+# Loading work.tb_b_encodepacket(test)#1
+# Loading work.conv_pack_b_encodepacket
+# Loading work.b_encodepacket(syn_b_edata)#1
 # Loading std.textio(body)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading osu_ami05.prim(body)
-# Loading osu_ami05.dffsr(behavioral)#1
 # Loading osu_ami05.latch(behavioral)#1
-# Loading osu_ami05.oai21x1(behavioral)#1
-# Loading osu_ami05.nand2x1(behavioral)#1
-# Loading osu_ami05.nand3x1(behavioral)#1
-# Loading osu_ami05.nor2x1(behavioral)#1
-# Loading osu_ami05.xnor2x1(behavioral)#1
-# Loading osu_ami05.oai22x1(behavioral)#1
-# Loading osu_ami05.aoi21x1(behavioral)#1
-# Loading osu_ami05.xor2x1(behavioral)#1
-# Loading osu_ami05.and2x2(behavioral)#1
+# Loading osu_ami05.dffsr(behavioral)#1
 # Loading osu_ami05.or2x2(behavioral)#1
-# Loading work.fifo(syn_rtl)#1
-# Loading work.fiforam(syn_rtl)#1
-# Loading osu_ami05.dffposx1(behavioral)#1
-# Loading osu_ami05.aoi22x1(behavioral)#1
-# Loading osu_ami05.bufx2(behavioral)#1
 # Loading osu_ami05.invx1(behavioral)#1
 # Loading osu_ami05.invx2(behavioral)#1
-# Loading work.write_fifo_ctrl(syn_rtl)#1
-# Loading work.write_ptr(syn_rtl)#1
-# Loading work.read_fifo_ctrl(syn_rtl)#1
-# Loading work.read_ptr(syn_rtl)#1
-# Loading work.b_strippayload_dw01_inc_1(syn_rpl)#1
-# Loading osu_ami05.hax1(behavioral)#1
-# Loading work.b_strippayload_dw01_inc_2(syn_rpl)#1
-# Loading work.b_strippayload_dw01_inc_3(syn_rpl)#1
+# Loading osu_ami05.invx8(behavioral)#1
+# Loading osu_ami05.bufx2(behavioral)#1
+# Loading osu_ami05.oai21x1(behavioral)#1
+# Loading osu_ami05.nand3x1(behavioral)#1
+# Loading osu_ami05.oai22x1(behavioral)#1
+# Loading osu_ami05.nand2x1(behavioral)#1
+# Loading osu_ami05.aoi22x1(behavioral)#1
+# Loading osu_ami05.nor2x1(behavioral)#1
+# Loading osu_ami05.xnor2x1(behavioral)#1
 # Loading osu_ami05.and2x1(behavioral)#1
-# Loading osu_ami05.oai22x1(behavioral)#2
-# Loading osu_ami05.oai22x1(behavioral)#3
-# ** Note: Access Code
-#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 136 bits incoming headers
-#    Time: 18400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 256 bits Data
-#    Time: 331200 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC1 0- 7 incoming
-#    Time: 920 us  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC2 15-8 incoming
-#    Time: 938400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: Packet transmission Done!
-#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
-do d/strp
+# Loading osu_ami05.aoi21x1(behavioral)#1
+# Loading osu_ami05.or2x1(behavioral)#1
+# Loading osu_ami05.mux2x1(behavioral)#1
+# Loading osu_ami05.nor3x1(behavioral)#1
+# Loading osu_ami05.xor2x1(behavioral)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 669900500 ps  Iteration: 0  Instance: /tb_b_encodepacket
+do d/ep
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity tb_b_strippayload
-# -- Compiling architecture test of tb_b_strippayload
+# -- Compiling entity tb_b_encodepacket
+# -- Compiling architecture test of tb_b_encodepacket
 # Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
 # -- Loading package standard
 # -- Loading package std_logic_1164
-# -- Compiling entity b_strippayload
-# -- Compiling architecture b_strip of b_strippayload
-# ** Error: source/B_StripPayload.vhd(185): Illegal target for signal assignment.
-# ** Error: source/B_StripPayload.vhd(185): (vcom-1136) Unknown identifier "count4".
-# ** Error: source/B_StripPayload.vhd(273): VHDL Compiler exiting
-# ** Error: /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-# Error in macro ./d/strp line 5
-# /package/eda/mg/modeltech_6.6b/modeltech/linux_x86_64/vcom failed.
-#     while executing
-# "vcom source/B_StripPayload.vhd"
-do d/strpm
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_b_strippayload
-# -- Compiling architecture test of tb_b_strippayload
-# Model Technology ModelSim SE-64 vcom 6.6b Compiler 2010.05 May 21 2010
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling package conv_pack_b_strippayload
-# -- Loading package conv_pack_b_strippayload
-# -- Compiling entity b_strippayload_dw01_inc_3
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_3
-# -- Compiling entity b_strippayload_dw01_inc_2
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_2
-# -- Compiling entity b_strippayload_dw01_inc_1
-# -- Compiling architecture syn_rpl of b_strippayload_dw01_inc_1
-# -- Compiling entity read_ptr
-# -- Compiling architecture syn_rtl of read_ptr
-# -- Compiling entity write_ptr
-# -- Compiling architecture syn_rtl of write_ptr
-# -- Compiling entity read_fifo_ctrl
-# -- Compiling architecture syn_rtl of read_fifo_ctrl
-# -- Compiling entity write_fifo_ctrl
-# -- Compiling architecture syn_rtl of write_fifo_ctrl
-# -- Compiling entity fiforam
-# -- Compiling architecture syn_rtl of fiforam
-# -- Compiling entity fifo
-# -- Compiling architecture syn_rtl of fifo
-# -- Compiling entity b_strippayload
-# -- Compiling architecture syn_b_strip of b_strippayload
-# vsim work.tb_b_strippayload 
+# -- Compiling entity b_encodepacket
+# -- Compiling architecture b_edata of b_encodepacket
+# vsim work.tb_b_encodepacket 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
-# Loading work.tb_b_strippayload(test)#1
-# Loading work.conv_pack_b_strippayload
-# Loading work.b_strippayload(syn_b_strip)#1
-# Loading std.textio(body)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading osu_ami05.prim(body)
-# Loading osu_ami05.dffsr(behavioral)#1
-# Loading osu_ami05.latch(behavioral)#1
-# Loading osu_ami05.oai21x1(behavioral)#1
-# Loading osu_ami05.nand2x1(behavioral)#1
-# Loading osu_ami05.nand3x1(behavioral)#1
-# Loading osu_ami05.nor2x1(behavioral)#1
-# Loading osu_ami05.aoi21x1(behavioral)#1
-# Loading osu_ami05.xor2x1(behavioral)#1
-# Loading osu_ami05.aoi22x1(behavioral)#1
-# Loading osu_ami05.oai22x1(behavioral)#1
-# Loading osu_ami05.and2x2(behavioral)#1
-# Loading osu_ami05.or2x2(behavioral)#1
-# Loading work.fifo(syn_rtl)#1
-# Loading work.fiforam(syn_rtl)#1
-# Loading osu_ami05.dffposx1(behavioral)#1
-# Loading osu_ami05.bufx2(behavioral)#1
-# Loading osu_ami05.invx1(behavioral)#1
-# Loading osu_ami05.invx2(behavioral)#1
-# Loading work.write_fifo_ctrl(syn_rtl)#1
-# Loading osu_ami05.xnor2x1(behavioral)#1
-# Loading work.write_ptr(syn_rtl)#1
-# Loading work.read_fifo_ctrl(syn_rtl)#1
-# Loading work.read_ptr(syn_rtl)#1
-# Loading work.b_strippayload_dw01_inc_1(syn_rpl)#1
-# Loading osu_ami05.hax1(behavioral)#1
-# Loading work.b_strippayload_dw01_inc_2(syn_rpl)#1
-# Loading work.b_strippayload_dw01_inc_3(syn_rpl)#1
-# Loading osu_ami05.and2x1(behavioral)#1
-# Loading osu_ami05.oai22x1(behavioral)#2
-# Loading osu_ami05.oai22x1(behavioral)#3
-# ** Note: Access Code
-#    Time: 0 ps  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 136 bits incoming headers
-#    Time: 18400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: 256 bits Data
-#    Time: 331200 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC1 0- 7 incoming
-#    Time: 920 us  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: CRC2 15-8 incoming
-#    Time: 938400 ns  Iteration: 0  Instance: /tb_b_strippayload
-# ** Note: Packet transmission Done!
-#    Time: 956800 ns  Iteration: 0  Instance: /tb_b_strippayload
+# Loading work.tb_b_encodepacket(test)#1
+# ** Note: Test 1 BEGIN for CORRECT EXEC
+#    Time: 35 ns  Iteration: 0  Instance: /tb_b_encodepacket
+# ** Note: Test 1 END for CORRECT EXEC
+#    Time: 669900500 ps  Iteration: 0  Instance: /tb_b_encodepacket
